@@ -1,0 +1,10 @@
+2022/11/09 16:36:14 File initialization.
+2022/11/09 16:36:14 Version go1.19.3
+2022/11/09 16:36:14 NumCPU 6
+2022/11/09 16:36:14 GOMAXPROCS 6
+2022/11/09 16:36:14 Running test on plain...
+2022/11/09 16:36:14 FEN: 3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1
+2022/11/09 16:36:14 Starting engine Minimax Parallel Plain
+2022/11/09 16:36:14 Features: {true true false false false}
+2022/11/09 16:36:17 Parellel results d5g8 9223372036854775807
+2022/11/09 16:36:17 Exiting engine.

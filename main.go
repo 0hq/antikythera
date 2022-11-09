@@ -46,7 +46,7 @@ func init() {
 func main() {
 	defer exit()
 	fmt.Println("Running engine...")
-	// test_m2(engine_minimax_parallel_plain)
+	test_m2(engine_minimax_parallel_plain)
 	// benchmark_range(2, 6, engine_minimax_parallel_plain, chess.NewGame().Position())
 	// benchmark_pll(4)
 }
