@@ -1,0 +1,54 @@
+2022/11/09 14:29:52 File initialization.
+2022/11/09 14:29:52 Running mate in two test on plain...
+2022/11/09 14:29:52 FEN: 3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1
+2022/11/09 14:29:52 Starting engine Minimax Plain
+2022/11/09 14:29:52 Features: {true false false false false}
+2022/11/09 14:29:52 Top Level Move: g1h1 Eval: -530
+2022/11/09 14:29:52 New best move: g1h1
+2022/11/09 14:29:52 Top Level Move: d5d1 Eval: -60
+2022/11/09 14:29:52 New best move: d5d1
+2022/11/09 14:29:53 Top Level Move: d5d2 Eval: -540
+2022/11/09 14:29:53 Top Level Move: d5d3 Eval: -60
+2022/11/09 14:29:53 Top Level Move: d5d4 Eval: -60
+2022/11/09 14:29:53 Top Level Move: d5a5 Eval: -540
+2022/11/09 14:29:53 Top Level Move: d5b5 Eval: -60
+2022/11/09 14:29:53 Top Level Move: d5c5 Eval: -540
+2022/11/09 14:29:54 Top Level Move: d5e5 Eval: -540
+2022/11/09 14:29:54 Top Level Move: d5f5 Eval: -60
+2022/11/09 14:29:54 Top Level Move: d5g5 Eval: -210
+2022/11/09 14:29:54 Top Level Move: d5c6 Eval: -540
+2022/11/09 14:29:54 Top Level Move: d5d6 Eval: -540
+2022/11/09 14:29:54 Top Level Move: d5e6 Eval: -540
+2022/11/09 14:29:54 Top Level Move: d5b7 Eval: 370
+2022/11/09 14:29:54 New best move: d5b7
+2022/11/09 14:29:55 Top Level Move: d5d7 Eval: -760
+2022/11/09 14:29:55 Top Level Move: d5f7 Eval: -60
+2022/11/09 14:29:55 Top Level Move: d5g8 Eval: 9223372036854775807
+2022/11/09 14:29:55 New best move: d5g8
+2022/11/09 14:29:55 Top Level Move: a1b1 Eval: -530
+2022/11/09 14:29:55 Top Level Move: a1c1 Eval: -710
+2022/11/09 14:29:55 Top Level Move: a1d1 Eval: -530
+2022/11/09 14:29:55 Top Level Move: a1e1 Eval: -530
+2022/11/09 14:29:56 Top Level Move: a1a2 Eval: -530
+2022/11/09 14:29:56 Top Level Move: f1b1 Eval: -530
+2022/11/09 14:29:56 Top Level Move: f1c1 Eval: -710
+2022/11/09 14:29:56 Top Level Move: f1d1 Eval: -530
+2022/11/09 14:29:56 Top Level Move: f1e1 Eval: -530
+2022/11/09 14:29:56 Top Level Move: h6g4 Eval: -210
+2022/11/09 14:29:57 Top Level Move: h6f5 Eval: -210
+2022/11/09 14:29:57 Top Level Move: h6f7 Eval: 370
+2022/11/09 14:29:57 Top Level Move: h6g8 Eval: -530
+2022/11/09 14:29:57 Top Level Move: b2b3 Eval: -530
+2022/11/09 14:29:57 Top Level Move: b2b4 Eval: -530
+2022/11/09 14:29:57 Top Level Move: c2c3 Eval: -530
+2022/11/09 14:29:57 Top Level Move: f2f3 Eval: -540
+2022/11/09 14:29:58 Top Level Move: f2f4 Eval: -530
+2022/11/09 14:29:58 Top Level Move: g2g3 Eval: -530
+2022/11/09 14:29:58 Top Level Move: g2g4 Eval: -530
+2022/11/09 14:29:58 Top Level Move: h2h3 Eval: -530
+2022/11/09 14:29:58 Top Level Move: h2h4 Eval: -530
+2022/11/09 14:29:59 Top Level Move: a3a4 Eval: -530
+2022/11/09 14:29:59 Top Level Move: c4c5 Eval: -530
+2022/11/09 14:29:59 Top Level Move: e4e5 Eval: -530
+2022/11/09 14:29:59 Plain minimax results d5g8 9223372036854775807
+2022/11/09 14:29:59 Test passed...

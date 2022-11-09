@@ -3,9 +3,6 @@ package main
 import (
 	"fmt"
 	"math"
-	"runtime"
-	"time"
-
 	"github.com/notnil/chess"
 )
 
@@ -17,36 +14,6 @@ UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 
 
 */
-
-var explored int = 0
-
-func main() {
-	fmt.Println("Version", runtime.Version())
-    fmt.Println("NumCPU", runtime.NumCPU())
-    fmt.Println("GOMAXPROCS", runtime.GOMAXPROCS(0))
-	// defer profile.Start().Stop()
-
-	test_m2()
-
-	// for i := 0; i < 6; i++ {
-	// 	elapsed :=  benchmark(i + 1)
-	// 	fmt.Println("ply:", i+1)
-	// 	fmt.Println("Benchmark:", explored, elapsed)
-	// 	fmt.Println("Nodes per second:", float64(explored)/elapsed, "\n")
-	// }
-}
-
-func test_m2() {
-	fmt.Println("\nRunning mate in two test...")
-	fen, _ := chess.FEN("3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1")
-	game := chess.NewGame(fen)
-	// move := minimax_parallel_test(game.Position())
-	move := minimax_plain_test(game.Position())
-	if move.String() != "d5g8" {
-		panic("TEST FAILED")
-	}
-	fmt.Println("Tests passed...\n")
-}
 
 func minimax_plain_test(pos *chess.Position) (best *chess.Move) {
 	move, eval := minimax_plain_starter(pos, 4, false)
@@ -64,59 +31,6 @@ func minimax_parallel_test(pos *chess.Position) (best *chess.Move) {
 	return move
 }
 
-// measure how long minimax_plain takes run
-// returns time in seconds
-func benchmark(ply int) float64 {
-	start := time.Now()
-	minimax_plain_starter(chess.NewGame().Position(), ply, true)
-	elapsed := time.Since(start)
-	return elapsed.Seconds()
-}
-
-func benchmark_pll(ply int) float64 {
-	start := time.Now()
-	move_channel := make(chan *chess.Move)
-	eval_channel := make(chan int)
-	go minimax_pll(chess.NewGame().Position(), ply, true, nil, move_channel, eval_channel, true)
-	move := <-move_channel
-	eval := <- eval_channel
-	fmt.Println(move, eval)
-	elapsed := time.Since(start)
-	return elapsed.Seconds()
-}
-
-func minimax_plain_starter(position *chess.Position, ply int, max bool) (best *chess.Move, eval int) {
-	moves := position.ValidMoves()
-	eval = -1 * math.MaxInt
-	for _, move := range moves {
-		tempeval := -1 * minimax_plain_searcher(position.Update(move), ply-1, !max)
-		fmt.Println("Move:", move, "Eval:", tempeval)
-		if tempeval > eval {
-			fmt.Println("New best move:", move)
-			eval = tempeval
-			best = move
-		}
-	}
-	return best, eval
-}
-
-func minimax_plain_searcher(position *chess.Position, ply int, max bool) (eval int) {
-	explored++
-	if ply == 0 {
-		return evaluate_position(position.Board(), max)
-	}
-
-	moves := position.ValidMoves()
-    eval = -1 * math.MaxInt
-    for _, move := range moves {
-        tempeval := -1 * minimax_plain_searcher(position.Update(move), ply - 1, !max)
-        if tempeval > eval {
-            eval = tempeval
-        }
-    }
-
-	return eval
-}
 
 func minimax_pll(position *chess.Position, ply int, max bool, last_move *chess.Move, move_channel chan *chess.Move, eval_channel chan int, isRoot bool) {
 	explored++
