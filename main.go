@@ -6,7 +6,7 @@ import (
 	"time"
 	"log"
 	"os"
-	// "github.com/notnil/chess"
+	"github.com/notnil/chess"
 
 )
 
@@ -15,6 +15,7 @@ import (
 // Replace position with board.
 // Evaluation function.
 UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
+Add in auto-testing using EPD files.
 
 */
 
@@ -46,7 +47,8 @@ func init() {
 func main() {
 	defer exit()
 	fmt.Println("Running engine...")
-	test_m2(engine_minimax_parallel_plain)
+	// test_m2(engine_minimax_parallel_plain)
+	benchmark_engines(plain_engines, chess.NewGame().Position())
 	// benchmark_range(2, 6, engine_minimax_parallel_plain, chess.NewGame().Position())
 	// benchmark_pll(4)
 }

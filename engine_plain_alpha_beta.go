@@ -29,31 +29,33 @@ func minimax_plain_ab_starter(position *chess.Position, ply int, max bool) (best
 	moves := position.ValidMoves()
 	eval = -1 * math.MaxInt
 	for _, move := range moves {
-		tempeval := -1 * minimax_plain_ab_searcher(position.Update(move), ply-1, !max)
-		log.Println("Top Level Move:", move, "Eval:", tempeval)
-		if tempeval > eval {
+		score := -1 * minimax_plain_ab_searcher(position.Update(move), ply-1, !max, -1 * math.MaxInt, math.MaxInt)
+		log.Println("Top Level Move:", move, "Eval:", score)
+		if score > eval {
 			log.Println("New best move:", move)
-			eval = tempeval
+			eval = score
 			best = move
 		}
 	}
 	return best, eval
 }
 
-func minimax_plain_ab_searcher(position *chess.Position, ply int, max bool) (eval int) {
+func minimax_plain_ab_searcher(position *chess.Position, ply int, max bool, alpha int, beta int) (eval int) {
 	explored++
 	if ply == 0 {
 		return evaluate_position_v1(position.Board()) * bool_to_int(max)
 	}
 
 	moves := position.ValidMoves()
-    eval = -1 * math.MaxInt
     for _, move := range moves {
-        tempeval := -1 * minimax_plain_ab_searcher(position.Update(move), ply - 1, !max)
-        if tempeval > eval {
-            eval = tempeval
+        score := -1 * minimax_plain_ab_searcher(position.Update(move), ply - 1, !max, -beta, -alpha)
+		if score >= beta {
+			return beta
+		}
+        if score > alpha {
+            alpha = score
         }
     }
 
-	return eval
+	return alpha
 }

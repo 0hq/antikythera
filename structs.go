@@ -29,4 +29,6 @@ func (e *Engine) Run(pos *chess.Position, cfg EngineConfig) (best *chess.Move, e
 	return e.engine_func(pos, cfg)
 }
 
-// 
+func (e *Engine) Name() string {
+	return e.name
+}

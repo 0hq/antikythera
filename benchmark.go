@@ -11,17 +11,20 @@ import (
 // returns time in seconds
 func benchmark(ply int, engine Engine, pos *chess.Position) float64 {
 	explored = 0
-	log.Println("Benchmarking ply", ply)
-	log.Println("Starting benchmark at time", time.Now())
+	log.Println("BEGIN BENCHMARKING -", engine.Name())
+	log.Println("Ply:", ply)
+	log.Println("Starting at time", time.Now())
 
 	start := time.Now()
 	move, eval := engine.Run(pos, EngineConfig{ply: ply})
 	elapsed := time.Since(start)
 
+	log.Println("Complete at time", time.Now())
 	log.Println("Best move:", move)
 	log.Println("Evaluation:", eval)
-	log.Println("Benchmark complete at time", time.Now())
 	log.Println("Elapsed time:", elapsed.Seconds(), "seconds")
+	log.Println("Nodes explored:", explored)
+	log.Println("END BENCHMARKING -")
 
 	return elapsed.Seconds()
 }
@@ -33,5 +36,11 @@ func benchmark_range(plymin int, plymax int, engine Engine, pos *chess.Position)
 		fmt.Println("Benchmark:", explored, elapsed)
 		fmt.Println("Nodes per second:", float64(explored)/elapsed)
 		fmt.Println()
+	}
+}
+
+func benchmark_engines(engines []Engine, pos *chess.Position) {
+	for _, engine := range engines {
+		benchmark_range(2, 4, engine, pos)
 	}
 }
