@@ -93,7 +93,8 @@ func minimax_parallel_plain_searcher(position *chess.Position, ply int, max bool
 	// max ply reached
 	if ply == 0 {
 		// evaluate position and send back to parent
-		eval_channel <- evaluate_position_v1(position.Board(), max)
+		// multiply by -1 to flip sign if we are minimizing,
+		eval_channel <- evaluate_position_v1(position.Board()) * bool_to_int(max)
 		return
 	}
 
@@ -123,3 +124,4 @@ func minimax_parallel_plain_searcher(position *chess.Position, ply int, max bool
 
 	return
 }
+

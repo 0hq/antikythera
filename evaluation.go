@@ -25,7 +25,7 @@ var piece_map_v1 map[chess.PieceType]int = map[chess.PieceType]int{
 	6: pawn_v1,
 }
 
-func evaluate_position_v1(board *chess.Board, max bool) int {
+func evaluate_position_v1(board *chess.Board) int {
 	squares := board.SquareMap()
 	var material int = 0
 	for _, piece := range squares {
