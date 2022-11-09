@@ -19,8 +19,8 @@ var engine_minimax_plain Engine = Engine{
 	engine_func: minimax_plain_engine_func,
 }
 
-func minimax_plain_engine_func(pos *chess.Position) (best *chess.Move, eval int) {
-	best, eval = minimax_plain_starter(pos, ENGINE_MINIMAX_PLAIN_PLY, pos.Turn() == chess.White)
+func minimax_plain_engine_func(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
+	best, eval = minimax_plain_starter(pos, cfg.ply, pos.Turn() == chess.White)
 	log.Println("Plain minimax results", best, eval)
 	return
 }

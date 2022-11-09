@@ -19,8 +19,8 @@ var engine_minimax_parallel_plain Engine = Engine{
 	engine_func: minimax_parallel_plain_engine_func,
 }
 
-func minimax_parallel_plain_engine_func(pos *chess.Position) (best *chess.Move, eval int) {
-	best, eval = minimax_pll_starter(pos, 4, true)
+func minimax_parallel_plain_engine_func(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
+	best, eval = minimax_parallel_plain_starter(pos, cfg.ply, true)
 	log.Println("Parellel results", best, eval)
 	return 
 }
@@ -29,7 +29,7 @@ func minimax_parallel_plain_engine_func(pos *chess.Position) (best *chess.Move, 
 // midstep is a concurrent function, but is passed the top level move and a move channel to send back instantly once done, so we know which process it is
 // searcher is a concurrent function, handles the actual search, just returns a value
 
-func minimax_pll_starter(position *chess.Position, ply int, max bool) (best *chess.Move, eval int) {
+func minimax_parallel_plain_starter(position *chess.Position, ply int, max bool) (best *chess.Move, eval int) {
 	// generate moves
 	var moves []*chess.Move = position.ValidMoves()
 	var length int = len(moves)
@@ -40,7 +40,7 @@ func minimax_pll_starter(position *chess.Position, ply int, max bool) (best *che
 
 	// create goroutines for each move
     for _, move := range moves {
-        go minimax_pll_midstep(position.Update(move), ply-1, !max, eval_channel_local, move_channel_local, move)
+        go minimax_parallel_plain_midstep(position.Update(move), ply-1, !max, eval_channel_local, move_channel_local, move)
     }
 
 	// wait for all goroutines to finish
@@ -58,7 +58,7 @@ func minimax_pll_starter(position *chess.Position, ply int, max bool) (best *che
 	return best, eval
 }
 
-func minimax_pll_midstep(position *chess.Position, ply int, max bool, eval_channel chan int, move_channel chan *chess.Move, last_move *chess.Move) {
+func minimax_parallel_plain_midstep(position *chess.Position, ply int, max bool, eval_channel chan int, move_channel chan *chess.Move, last_move *chess.Move) {
 	// generate moves
 	var moves []*chess.Move = position.ValidMoves()
 	var length int = len(moves)
@@ -68,7 +68,7 @@ func minimax_pll_midstep(position *chess.Position, ply int, max bool, eval_chann
 
 	// create goroutines for each move
     for _, move := range moves {
-        go minimax_pll_plain_searcher(position.Update(move), ply-1, !max, eval_channel_local)
+        go minimax_parallel_plain_searcher(position.Update(move), ply-1, !max, eval_channel_local)
     }
 
 	// wait for all goroutines to finish
@@ -87,7 +87,7 @@ func minimax_pll_midstep(position *chess.Position, ply int, max bool, eval_chann
 	return
 }
 
-func minimax_pll_plain_searcher(position *chess.Position, ply int, max bool, eval_channel chan int) {
+func minimax_parallel_plain_searcher(position *chess.Position, ply int, max bool, eval_channel chan int) {
 	explored++
 
 	// max ply reached
@@ -106,7 +106,7 @@ func minimax_pll_plain_searcher(position *chess.Position, ply int, max bool, eva
 
 	// create goroutines for each move
     for _, move := range moves {
-        go minimax_pll_plain_searcher(position.Update(move), ply-1, !max, eval_channel_local)
+        go minimax_parallel_plain_searcher(position.Update(move), ply-1, !max, eval_channel_local)
     }
 
 	// wait for all goroutines to finish
@@ -119,52 +119,6 @@ func minimax_pll_plain_searcher(position *chess.Position, ply int, max bool, eva
 	}
 
 	// pass value back to parent goroutine
-	eval_channel <- eval
-
-	return
-}
-
-func minimax_pll(position *chess.Position, ply int, max bool, last_move *chess.Move, move_channel chan *chess.Move, eval_channel chan int, isRoot bool) {
-	explored++
-
-	// max ply reached
-	if ply == 0 {
-		// evaluate position and send back to parent
-		move_channel <- last_move
-		eval_channel <- evaluate_position_v1(position.Board(), max)
-		return
-	}
-
-	// generate moves
-	var moves []*chess.Move = position.ValidMoves()
-	if (isRoot) {
-		log.Println("Moves:", moves)
-	}
-	var length int = len(moves)
-
-	// create channel to pass back move and eval
-	move_channel_local := make(chan *chess.Move, length)
-	eval_channel_local := make(chan int, length)
-
-	// create goroutines for each move
-    for _, move := range moves {
-        go minimax_pll(position.Update(move), ply-1, !max, move, move_channel_local, eval_channel_local, false)
-    }
-
-	// wait for all goroutines to finish
-	var eval int = -1 * math.MaxInt
-	var best *chess.Move = nil
-	for i := 0; i < length; i++ {
-		move := <-move_channel_local
-		tempeval := -1 * <-eval_channel_local
-		if tempeval > eval {
-			eval = tempeval
-			best = move
-		}
-	}
-
-	// pass value back to parent goroutine
-	move_channel <- best
 	eval_channel <- eval
 
 	return

@@ -1,0 +1,31 @@
+2022/11/09 16:23:13 File initialization.
+2022/11/09 16:23:13 Version go1.19.3
+2022/11/09 16:23:13 NumCPU 6
+2022/11/09 16:23:13 GOMAXPROCS 6
+2022/11/09 16:23:13 Benchmarking ply 2
+2022/11/09 16:23:13 Starting benchmark at time 2022-11-09 16:23:13.0245448 -0500 EST m=+0.014746701
+2022/11/09 16:23:13 Starting engine Minimax Parallel Plain
+2022/11/09 16:23:13 Features: {true true false false false}
+2022/11/09 16:23:13 Parellel results g2g4 0
+2022/11/09 16:23:13 Best move: g2g4
+2022/11/09 16:23:13 Evaluation: 0
+2022/11/09 16:23:13 Benchmark complete at time 2022-11-09 16:23:13.4034551 -0500 EST m=+0.393657001
+2022/11/09 16:23:13 Elapsed time: 0.3789103 seconds
+2022/11/09 16:23:13 Benchmarking ply 3
+2022/11/09 16:23:13 Starting benchmark at time 2022-11-09 16:23:13.4044556 -0500 EST m=+0.394657501
+2022/11/09 16:23:13 Starting engine Minimax Parallel Plain
+2022/11/09 16:23:13 Features: {true true false false false}
+2022/11/09 16:23:13 Parellel results g1h3 0
+2022/11/09 16:23:13 Best move: g1h3
+2022/11/09 16:23:13 Evaluation: 0
+2022/11/09 16:23:13 Benchmark complete at time 2022-11-09 16:23:13.817389 -0500 EST m=+0.807590901
+2022/11/09 16:23:13 Elapsed time: 0.4129334 seconds
+2022/11/09 16:23:13 Benchmarking ply 4
+2022/11/09 16:23:13 Starting benchmark at time 2022-11-09 16:23:13.8183895 -0500 EST m=+0.808591401
+2022/11/09 16:23:13 Starting engine Minimax Parallel Plain
+2022/11/09 16:23:13 Features: {true true false false false}
+2022/11/09 16:23:14 Parellel results a2a3 0
+2022/11/09 16:23:14 Best move: a2a3
+2022/11/09 16:23:14 Evaluation: 0
+2022/11/09 16:23:14 Benchmark complete at time 2022-11-09 16:23:14.2348028 -0500 EST m=+1.225004701
+2022/11/09 16:23:14 Elapsed time: 0.4164133 seconds

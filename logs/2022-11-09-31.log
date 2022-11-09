@@ -1,0 +1,49 @@
+2022/11/09 16:24:53 File initialization.
+2022/11/09 16:24:53 Version go1.19.3
+2022/11/09 16:24:53 NumCPU 6
+2022/11/09 16:24:53 GOMAXPROCS 6
+2022/11/09 16:24:53 Benchmarking ply 2
+2022/11/09 16:24:53 Starting benchmark at time 2022-11-09 16:24:53.7241367 -0500 EST m=+0.007995301
+2022/11/09 16:24:53 Starting engine Minimax Parallel Plain
+2022/11/09 16:24:53 Features: {true true false false false}
+2022/11/09 16:24:54 Parellel results b1a3 0
+2022/11/09 16:24:54 Best move: b1a3
+2022/11/09 16:24:54 Evaluation: 0
+2022/11/09 16:24:54 Benchmark complete at time 2022-11-09 16:24:54.1077725 -0500 EST m=+0.391631101
+2022/11/09 16:24:54 Elapsed time: 0.3836358 seconds
+2022/11/09 16:24:54 Benchmarking ply 3
+2022/11/09 16:24:54 Starting benchmark at time 2022-11-09 16:24:54.1087727 -0500 EST m=+0.392631301
+2022/11/09 16:24:54 Starting engine Minimax Parallel Plain
+2022/11/09 16:24:54 Features: {true true false false false}
+2022/11/09 16:24:54 Parellel results b1c3 0
+2022/11/09 16:24:54 Best move: b1c3
+2022/11/09 16:24:54 Evaluation: 0
+2022/11/09 16:24:54 Benchmark complete at time 2022-11-09 16:24:54.5359455 -0500 EST m=+0.819804101
+2022/11/09 16:24:54 Elapsed time: 0.4271728 seconds
+2022/11/09 16:24:54 Benchmarking ply 4
+2022/11/09 16:24:54 Starting benchmark at time 2022-11-09 16:24:54.5369855 -0500 EST m=+0.820844101
+2022/11/09 16:24:54 Starting engine Minimax Parallel Plain
+2022/11/09 16:24:54 Features: {true true false false false}
+2022/11/09 16:24:54 Parellel results b2b3 0
+2022/11/09 16:24:54 Best move: b2b3
+2022/11/09 16:24:54 Evaluation: 0
+2022/11/09 16:24:54 Benchmark complete at time 2022-11-09 16:24:54.9516969 -0500 EST m=+1.235555501
+2022/11/09 16:24:54 Elapsed time: 0.4147114 seconds
+2022/11/09 16:24:54 Benchmarking ply 5
+2022/11/09 16:24:54 Starting benchmark at time 2022-11-09 16:24:54.9522158 -0500 EST m=+1.236074401
+2022/11/09 16:24:54 Starting engine Minimax Parallel Plain
+2022/11/09 16:24:54 Features: {true true false false false}
+2022/11/09 16:24:55 Parellel results f2f3 0
+2022/11/09 16:24:55 Best move: f2f3
+2022/11/09 16:24:55 Evaluation: 0
+2022/11/09 16:24:55 Benchmark complete at time 2022-11-09 16:24:55.3806536 -0500 EST m=+1.664512201
+2022/11/09 16:24:55 Elapsed time: 0.4284378 seconds
+2022/11/09 16:24:55 Benchmarking ply 6
+2022/11/09 16:24:55 Starting benchmark at time 2022-11-09 16:24:55.3806536 -0500 EST m=+1.664512201
+2022/11/09 16:24:55 Starting engine Minimax Parallel Plain
+2022/11/09 16:24:55 Features: {true true false false false}
+2022/11/09 16:24:55 Parellel results a2a3 0
+2022/11/09 16:24:55 Best move: a2a3
+2022/11/09 16:24:55 Evaluation: 0
+2022/11/09 16:24:55 Benchmark complete at time 2022-11-09 16:24:55.770698 -0500 EST m=+2.054556601
+2022/11/09 16:24:55 Elapsed time: 0.3900444 seconds
