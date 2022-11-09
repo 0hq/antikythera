@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"github.com/notnil/chess"
-
+	"fmt"
 )
 
 func test_m2(engine Engine) {
@@ -22,5 +22,6 @@ func test(engine Engine, cfg EngineConfig, pos string, expected string) {
 		panic("TEST FAILED")
 	} else {
 		log.Println("TEST PASSED")
+		fmt.Println("Test passed.")
 	}
 }

@@ -6,7 +6,7 @@ import (
 	"time"
 	"log"
 	"os"
-	"github.com/notnil/chess"
+	// "github.com/notnil/chess"
 
 )
 
@@ -47,9 +47,9 @@ func init() {
 func main() {
 	defer exit()
 	fmt.Println("Running engine...")
-	// test_m2(engine_minimax_parallel_plain)
-	benchmark_engines(plain_engines, chess.NewGame().Position())
-	// benchmark_range(2, 6, engine_minimax_parallel_plain, chess.NewGame().Position())
+	// test_m2(engine_minimax_plain_ab)
+	// benchmark_engines(plain_engines, newGame)
+	
 	// benchmark_pll(4)
 }
 
@@ -57,3 +57,4 @@ func exit()	{
 	fmt.Println("Exiting engine.")
 	log.Println("Exiting engine.")
 }
+

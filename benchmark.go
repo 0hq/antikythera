@@ -44,3 +44,13 @@ func benchmark_engines(engines []Engine, pos *chess.Position) {
 		benchmark_range(2, 4, engine, pos)
 	}
 }
+
+func benchmark_plain_ab_move_ordering() {
+	fen, _ := chess.FEN("3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1")
+	game := chess.NewGame(fen)
+	benchmark_range(4, 4, engine_minimax_plain, game.Clone().Position())
+	DO_MOVE_SORTING = false
+	benchmark_range(4, 4, engine_minimax_plain_ab, game.Clone().Position())
+	DO_MOVE_SORTING = true
+	benchmark_range(4, 4, engine_minimax_plain_ab, game.Clone().Position())
+}

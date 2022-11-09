@@ -1,0 +1,182 @@
+2022/11/09 18:11:24 File initialization.
+2022/11/09 18:11:24 Version go1.19.3
+2022/11/09 18:11:24 NumCPU 6
+2022/11/09 18:11:24 GOMAXPROCS 6
+2022/11/09 18:11:24 BEGIN BENCHMARKING - Minimax Plain
+2022/11/09 18:11:24 Ply: 4
+2022/11/09 18:11:24 Starting at time 2022-11-09 18:11:24.1219762 -0500 EST m=+0.010817301
+2022/11/09 18:11:24 Starting engine Minimax Plain
+2022/11/09 18:11:24 Features: {true false false false false}
+2022/11/09 18:11:24 Top Level Move: g1h1 Eval: -530
+2022/11/09 18:11:24 New best move: g1h1
+2022/11/09 18:11:24 Top Level Move: d5d1 Eval: -60
+2022/11/09 18:11:24 New best move: d5d1
+2022/11/09 18:11:24 Top Level Move: d5d2 Eval: -540
+2022/11/09 18:11:24 Top Level Move: d5d3 Eval: -60
+2022/11/09 18:11:24 Top Level Move: d5d4 Eval: -60
+2022/11/09 18:11:25 Top Level Move: d5a5 Eval: -540
+2022/11/09 18:11:25 Top Level Move: d5b5 Eval: -60
+2022/11/09 18:11:25 Top Level Move: d5c5 Eval: -540
+2022/11/09 18:11:25 Top Level Move: d5e5 Eval: -540
+2022/11/09 18:11:25 Top Level Move: d5f5 Eval: -60
+2022/11/09 18:11:25 Top Level Move: d5g5 Eval: -210
+2022/11/09 18:11:26 Top Level Move: d5c6 Eval: -540
+2022/11/09 18:11:26 Top Level Move: d5d6 Eval: -540
+2022/11/09 18:11:26 Top Level Move: d5e6 Eval: -540
+2022/11/09 18:11:26 Top Level Move: d5b7 Eval: 370
+2022/11/09 18:11:26 New best move: d5b7
+2022/11/09 18:11:26 Top Level Move: d5d7 Eval: -760
+2022/11/09 18:11:26 Top Level Move: d5f7 Eval: -60
+2022/11/09 18:11:26 Top Level Move: d5g8 Eval: 9223372036854775807
+2022/11/09 18:11:26 New best move: d5g8
+2022/11/09 18:11:27 Top Level Move: a1b1 Eval: -530
+2022/11/09 18:11:27 Top Level Move: a1c1 Eval: -710
+2022/11/09 18:11:27 Top Level Move: a1d1 Eval: -530
+2022/11/09 18:11:27 Top Level Move: a1e1 Eval: -530
+2022/11/09 18:11:27 Top Level Move: a1a2 Eval: -530
+2022/11/09 18:11:27 Top Level Move: f1b1 Eval: -530
+2022/11/09 18:11:28 Top Level Move: f1c1 Eval: -710
+2022/11/09 18:11:28 Top Level Move: f1d1 Eval: -530
+2022/11/09 18:11:28 Top Level Move: f1e1 Eval: -530
+2022/11/09 18:11:28 Top Level Move: h6g4 Eval: -210
+2022/11/09 18:11:28 Top Level Move: h6f5 Eval: -210
+2022/11/09 18:11:28 Top Level Move: h6f7 Eval: 370
+2022/11/09 18:11:28 Top Level Move: h6g8 Eval: -530
+2022/11/09 18:11:29 Top Level Move: b2b3 Eval: -530
+2022/11/09 18:11:29 Top Level Move: b2b4 Eval: -530
+2022/11/09 18:11:29 Top Level Move: c2c3 Eval: -530
+2022/11/09 18:11:29 Top Level Move: f2f3 Eval: -540
+2022/11/09 18:11:29 Top Level Move: f2f4 Eval: -530
+2022/11/09 18:11:29 Top Level Move: g2g3 Eval: -530
+2022/11/09 18:11:30 Top Level Move: g2g4 Eval: -530
+2022/11/09 18:11:30 Top Level Move: h2h3 Eval: -530
+2022/11/09 18:11:30 Top Level Move: h2h4 Eval: -530
+2022/11/09 18:11:30 Top Level Move: a3a4 Eval: -530
+2022/11/09 18:11:30 Top Level Move: c4c5 Eval: -530
+2022/11/09 18:11:30 Top Level Move: e4e5 Eval: -530
+2022/11/09 18:11:30 Plain minimax results d5g8 9223372036854775807
+2022/11/09 18:11:30 Complete at time 2022-11-09 18:11:30.9264963 -0500 EST m=+6.815337401
+2022/11/09 18:11:30 Best move: d5g8
+2022/11/09 18:11:30 Evaluation: 9223372036854775807
+2022/11/09 18:11:30 Elapsed time: 6.8045200999999995 seconds
+2022/11/09 18:11:30 Nodes explored: 1747619
+2022/11/09 18:11:30 END BENCHMARKING -
+2022/11/09 18:11:30 BEGIN BENCHMARKING - Minimax Plain Alpha Beta
+2022/11/09 18:11:30 Ply: 4
+2022/11/09 18:11:30 Starting at time 2022-11-09 18:11:30.927466 -0500 EST m=+6.816307101
+2022/11/09 18:11:30 Starting engine Minimax Plain Alpha Beta
+2022/11/09 18:11:30 Features: {true false true false false}
+2022/11/09 18:11:30 Top Level Move: g1h1 Eval: -530
+2022/11/09 18:11:30 New best move: g1h1
+2022/11/09 18:11:30 Top Level Move: d5d1 Eval: -60
+2022/11/09 18:11:30 New best move: d5d1
+2022/11/09 18:11:30 Top Level Move: d5d2 Eval: -540
+2022/11/09 18:11:31 Top Level Move: d5d3 Eval: -60
+2022/11/09 18:11:31 Top Level Move: d5d4 Eval: -60
+2022/11/09 18:11:31 Top Level Move: d5a5 Eval: -540
+2022/11/09 18:11:31 Top Level Move: d5b5 Eval: -60
+2022/11/09 18:11:31 Top Level Move: d5c5 Eval: -540
+2022/11/09 18:11:31 Top Level Move: d5e5 Eval: -540
+2022/11/09 18:11:31 Top Level Move: d5f5 Eval: -60
+2022/11/09 18:11:31 Top Level Move: d5g5 Eval: -210
+2022/11/09 18:11:31 Top Level Move: d5c6 Eval: -540
+2022/11/09 18:11:31 Top Level Move: d5d6 Eval: -540
+2022/11/09 18:11:31 Top Level Move: d5e6 Eval: -540
+2022/11/09 18:11:31 Top Level Move: d5b7 Eval: 370
+2022/11/09 18:11:31 New best move: d5b7
+2022/11/09 18:11:31 Top Level Move: d5d7 Eval: -760
+2022/11/09 18:11:31 Top Level Move: d5f7 Eval: -60
+2022/11/09 18:11:31 Top Level Move: d5g8 Eval: 9223372036854775807
+2022/11/09 18:11:31 New best move: d5g8
+2022/11/09 18:11:31 Top Level Move: a1b1 Eval: -530
+2022/11/09 18:11:31 Top Level Move: a1c1 Eval: -710
+2022/11/09 18:11:31 Top Level Move: a1d1 Eval: -530
+2022/11/09 18:11:31 Top Level Move: a1e1 Eval: -530
+2022/11/09 18:11:31 Top Level Move: a1a2 Eval: -530
+2022/11/09 18:11:31 Top Level Move: f1b1 Eval: -530
+2022/11/09 18:11:31 Top Level Move: f1c1 Eval: -710
+2022/11/09 18:11:31 Top Level Move: f1d1 Eval: -530
+2022/11/09 18:11:31 Top Level Move: f1e1 Eval: -530
+2022/11/09 18:11:31 Top Level Move: h6g4 Eval: -210
+2022/11/09 18:11:31 Top Level Move: h6f5 Eval: -210
+2022/11/09 18:11:31 Top Level Move: h6f7 Eval: 370
+2022/11/09 18:11:31 Top Level Move: h6g8 Eval: -530
+2022/11/09 18:11:31 Top Level Move: b2b3 Eval: -530
+2022/11/09 18:11:31 Top Level Move: b2b4 Eval: -530
+2022/11/09 18:11:31 Top Level Move: c2c3 Eval: -530
+2022/11/09 18:11:31 Top Level Move: f2f3 Eval: -540
+2022/11/09 18:11:31 Top Level Move: f2f4 Eval: -530
+2022/11/09 18:11:31 Top Level Move: g2g3 Eval: -530
+2022/11/09 18:11:31 Top Level Move: g2g4 Eval: -530
+2022/11/09 18:11:31 Top Level Move: h2h3 Eval: -530
+2022/11/09 18:11:31 Top Level Move: h2h4 Eval: -530
+2022/11/09 18:11:31 Top Level Move: a3a4 Eval: -530
+2022/11/09 18:11:31 Top Level Move: c4c5 Eval: -530
+2022/11/09 18:11:31 Top Level Move: e4e5 Eval: -530
+2022/11/09 18:11:31 Plain minimax results d5g8 9223372036854775807
+2022/11/09 18:11:31 Complete at time 2022-11-09 18:11:31.9054877 -0500 EST m=+7.794328801
+2022/11/09 18:11:31 Best move: d5g8
+2022/11/09 18:11:31 Evaluation: 9223372036854775807
+2022/11/09 18:11:31 Elapsed time: 0.9780217 seconds
+2022/11/09 18:11:31 Nodes explored: 241635
+2022/11/09 18:11:31 END BENCHMARKING -
+2022/11/09 18:11:31 BEGIN BENCHMARKING - Minimax Plain Alpha Beta
+2022/11/09 18:11:31 Ply: 4
+2022/11/09 18:11:31 Starting at time 2022-11-09 18:11:31.9064586 -0500 EST m=+7.795299701
+2022/11/09 18:11:31 Starting engine Minimax Plain Alpha Beta
+2022/11/09 18:11:31 Features: {true false true false false}
+2022/11/09 18:11:31 Top Level Move: d5d7 Eval: -760
+2022/11/09 18:11:31 New best move: d5d7
+2022/11/09 18:11:31 Top Level Move: d5g5 Eval: -210
+2022/11/09 18:11:31 New best move: d5g5
+2022/11/09 18:11:31 Top Level Move: d5b7 Eval: 370
+2022/11/09 18:11:31 New best move: d5b7
+2022/11/09 18:11:31 Top Level Move: g1h1 Eval: -530
+2022/11/09 18:11:31 Top Level Move: d5d1 Eval: -60
+2022/11/09 18:11:32 Top Level Move: d5d2 Eval: -540
+2022/11/09 18:11:32 Top Level Move: d5d3 Eval: -60
+2022/11/09 18:11:32 Top Level Move: d5d4 Eval: -60
+2022/11/09 18:11:32 Top Level Move: d5a5 Eval: -540
+2022/11/09 18:11:32 Top Level Move: d5b5 Eval: -60
+2022/11/09 18:11:32 Top Level Move: d5c5 Eval: -540
+2022/11/09 18:11:32 Top Level Move: d5e5 Eval: -540
+2022/11/09 18:11:32 Top Level Move: d5f5 Eval: -60
+2022/11/09 18:11:32 Top Level Move: d5c6 Eval: -540
+2022/11/09 18:11:32 Top Level Move: d5d6 Eval: -540
+2022/11/09 18:11:32 Top Level Move: d5e6 Eval: -540
+2022/11/09 18:11:32 Top Level Move: d5f7 Eval: -60
+2022/11/09 18:11:32 Top Level Move: a1b1 Eval: -530
+2022/11/09 18:11:32 Top Level Move: a1c1 Eval: -710
+2022/11/09 18:11:32 Top Level Move: a1d1 Eval: -530
+2022/11/09 18:11:32 Top Level Move: a1e1 Eval: -530
+2022/11/09 18:11:32 Top Level Move: a1a2 Eval: -530
+2022/11/09 18:11:32 Top Level Move: f1b1 Eval: -530
+2022/11/09 18:11:32 Top Level Move: f1c1 Eval: -710
+2022/11/09 18:11:32 Top Level Move: f1d1 Eval: -530
+2022/11/09 18:11:32 Top Level Move: f1e1 Eval: -530
+2022/11/09 18:11:32 Top Level Move: h6g4 Eval: -210
+2022/11/09 18:11:32 Top Level Move: h6f5 Eval: -210
+2022/11/09 18:11:32 Top Level Move: h6g8 Eval: -530
+2022/11/09 18:11:32 Top Level Move: b2b3 Eval: -530
+2022/11/09 18:11:32 Top Level Move: b2b4 Eval: -530
+2022/11/09 18:11:32 Top Level Move: c2c3 Eval: -530
+2022/11/09 18:11:32 Top Level Move: f2f3 Eval: -540
+2022/11/09 18:11:32 Top Level Move: f2f4 Eval: -530
+2022/11/09 18:11:32 Top Level Move: g2g3 Eval: -530
+2022/11/09 18:11:32 Top Level Move: g2g4 Eval: -530
+2022/11/09 18:11:32 Top Level Move: h2h3 Eval: -530
+2022/11/09 18:11:32 Top Level Move: h2h4 Eval: -530
+2022/11/09 18:11:32 Top Level Move: a3a4 Eval: -530
+2022/11/09 18:11:32 Top Level Move: c4c5 Eval: -530
+2022/11/09 18:11:32 Top Level Move: e4e5 Eval: -530
+2022/11/09 18:11:32 Top Level Move: d5g8 Eval: 9223372036854775807
+2022/11/09 18:11:32 New best move: d5g8
+2022/11/09 18:11:32 Top Level Move: h6f7 Eval: 370
+2022/11/09 18:11:32 Plain minimax results d5g8 9223372036854775807
+2022/11/09 18:11:32 Complete at time 2022-11-09 18:11:32.8197235 -0500 EST m=+8.708564601
+2022/11/09 18:11:32 Best move: d5g8
+2022/11/09 18:11:32 Evaluation: 9223372036854775807
+2022/11/09 18:11:32 Elapsed time: 0.9132649 seconds
+2022/11/09 18:11:32 Nodes explored: 150936
+2022/11/09 18:11:32 END BENCHMARKING -
+2022/11/09 18:11:32 Exiting engine.

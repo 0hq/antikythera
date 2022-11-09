@@ -1,0 +1,71 @@
+2022/11/09 18:04:03 File initialization.
+2022/11/09 18:04:03 Version go1.19.3
+2022/11/09 18:04:03 NumCPU 6
+2022/11/09 18:04:03 GOMAXPROCS 6
+2022/11/09 18:04:03 BEGIN BENCHMARKING - Minimax Plain Alpha Beta
+2022/11/09 18:04:03 Ply: 6
+2022/11/09 18:04:03 Starting at time 2022-11-09 18:04:03.7951233 -0500 EST m=+0.010364001
+2022/11/09 18:04:03 Starting engine Minimax Plain Alpha Beta
+2022/11/09 18:04:03 Features: {true false true false false}
+2022/11/09 18:04:03 Top Level Move: b1a3 Eval: -100
+2022/11/09 18:04:03 New best move: b1a3
+2022/11/09 18:04:04 Top Level Move: b1c3 Eval: -100
+2022/11/09 18:04:04 Top Level Move: g1f3 Eval: -100
+2022/11/09 18:04:04 Top Level Move: g1h3 Eval: -100
+2022/11/09 18:04:04 Top Level Move: a2a3 Eval: -100
+2022/11/09 18:04:04 Top Level Move: a2a4 Eval: -100
+2022/11/09 18:04:04 Top Level Move: b2b3 Eval: -100
+2022/11/09 18:04:04 Top Level Move: b2b4 Eval: -100
+2022/11/09 18:04:04 Top Level Move: c2c3 Eval: -100
+2022/11/09 18:04:05 Top Level Move: c2c4 Eval: -100
+2022/11/09 18:04:05 Top Level Move: d2d3 Eval: -100
+2022/11/09 18:04:05 Top Level Move: d2d4 Eval: -100
+2022/11/09 18:04:05 Top Level Move: e2e3 Eval: -100
+2022/11/09 18:04:05 Top Level Move: e2e4 Eval: -100
+2022/11/09 18:04:05 Top Level Move: f2f3 Eval: -100
+2022/11/09 18:04:05 Top Level Move: f2f4 Eval: -100
+2022/11/09 18:04:06 Top Level Move: g2g3 Eval: -100
+2022/11/09 18:04:06 Top Level Move: g2g4 Eval: -100
+2022/11/09 18:04:06 Top Level Move: h2h3 Eval: -100
+2022/11/09 18:04:06 Top Level Move: h2h4 Eval: -100
+2022/11/09 18:04:06 Plain minimax results b1a3 -100
+2022/11/09 18:04:06 Complete at time 2022-11-09 18:04:06.3648677 -0500 EST m=+2.580108401
+2022/11/09 18:04:06 Best move: b1a3
+2022/11/09 18:04:06 Evaluation: -100
+2022/11/09 18:04:06 Elapsed time: 2.5697444000000003 seconds
+2022/11/09 18:04:06 Nodes explored: 464223
+2022/11/09 18:04:06 END BENCHMARKING -
+2022/11/09 18:04:06 BEGIN BENCHMARKING - Minimax Plain Alpha Beta
+2022/11/09 18:04:06 Ply: 6
+2022/11/09 18:04:06 Starting at time 2022-11-09 18:04:06.365838 -0500 EST m=+2.581078701
+2022/11/09 18:04:06 Starting engine Minimax Plain Alpha Beta
+2022/11/09 18:04:06 Features: {true false true false false}
+2022/11/09 18:04:06 Top Level Move: b1a3 Eval: -100
+2022/11/09 18:04:06 New best move: b1a3
+2022/11/09 18:04:06 Top Level Move: b1c3 Eval: -100
+2022/11/09 18:04:07 Top Level Move: g1f3 Eval: -100
+2022/11/09 18:04:07 Top Level Move: g1h3 Eval: -100
+2022/11/09 18:04:07 Top Level Move: a2a3 Eval: -100
+2022/11/09 18:04:08 Top Level Move: a2a4 Eval: -100
+2022/11/09 18:04:08 Top Level Move: b2b3 Eval: -100
+2022/11/09 18:04:09 Top Level Move: b2b4 Eval: -100
+2022/11/09 18:04:09 Top Level Move: c2c3 Eval: -100
+2022/11/09 18:04:09 Top Level Move: c2c4 Eval: -100
+2022/11/09 18:04:10 Top Level Move: d2d3 Eval: -100
+2022/11/09 18:04:10 Top Level Move: d2d4 Eval: -100
+2022/11/09 18:04:10 Top Level Move: e2e3 Eval: -100
+2022/11/09 18:04:11 Top Level Move: e2e4 Eval: -100
+2022/11/09 18:04:11 Top Level Move: f2f3 Eval: -100
+2022/11/09 18:04:11 Top Level Move: f2f4 Eval: -100
+2022/11/09 18:04:12 Top Level Move: g2g3 Eval: -100
+2022/11/09 18:04:12 Top Level Move: g2g4 Eval: -100
+2022/11/09 18:04:12 Top Level Move: h2h3 Eval: -100
+2022/11/09 18:04:13 Top Level Move: h2h4 Eval: -100
+2022/11/09 18:04:13 Plain minimax results b1a3 -100
+2022/11/09 18:04:13 Complete at time 2022-11-09 18:04:13.0926345 -0500 EST m=+9.307875201
+2022/11/09 18:04:13 Best move: b1a3
+2022/11/09 18:04:13 Evaluation: -100
+2022/11/09 18:04:13 Elapsed time: 6.7267965 seconds
+2022/11/09 18:04:13 Nodes explored: 1139588
+2022/11/09 18:04:13 END BENCHMARKING -
+2022/11/09 18:04:13 Exiting engine.
