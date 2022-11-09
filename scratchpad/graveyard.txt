@@ -1,0 +1,46 @@
+
+func minimax_pll(position *chess.Position, ply int, max bool, last_move *chess.Move, move_channel chan *chess.Move, eval_channel chan int, isRoot bool) {
+	explored++
+
+	// max ply reached
+	if ply == 0 {
+		// evaluate position and send back to parent
+		move_channel <- last_move
+		eval_channel <- evaluate_position_v1(position.Board(), max)
+		return
+	}
+
+	// generate moves
+	var moves []*chess.Move = position.ValidMoves()
+	if (isRoot) {
+		log.Println("Moves:", moves)
+	}
+	var length int = len(moves)
+
+	// create channel to pass back move and eval
+	move_channel_local := make(chan *chess.Move, length)
+	eval_channel_local := make(chan int, length)
+
+	// create goroutines for each move
+    for _, move := range moves {
+        go minimax_pll(position.Update(move), ply-1, !max, move, move_channel_local, eval_channel_local, false)
+    }
+
+	// wait for all goroutines to finish
+	var eval int = -1 * math.MaxInt
+	var best *chess.Move = nil
+	for i := 0; i < length; i++ {
+		move := <-move_channel_local
+		tempeval := -1 * <-eval_channel_local
+		if tempeval > eval {
+			eval = tempeval
+			best = move
+		}
+	}
+
+	// pass value back to parent goroutine
+	move_channel <- best
+	eval_channel <- eval
+
+	return
+}

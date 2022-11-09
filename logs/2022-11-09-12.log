@@ -1,0 +1,36 @@
+2022/11/09 15:02:11 File initialization.
+2022/11/09 15:02:11 Benchmarking ply 1
+2022/11/09 15:02:11 Starting benchmark at time 2022-11-09 15:02:11.9942394 -0500 EST m=+0.006346201
+2022/11/09 15:02:11 Moves: [b1a3 b1c3 g1f3 g1h3 a2a3 a2a4 b2b3 b2b4 c2c3 c2c4 d2d3 d2d4 e2e3 e2e4 f2f3 f2f4 g2g3 g2g4 h2h3 h2h4]
+2022/11/09 15:02:11 Best move: b1a3
+2022/11/09 15:02:11 Evaluation: 0
+2022/11/09 15:02:11 Benchmark complete at time 2022-11-09 15:02:11.9947491 -0500 EST m=+0.006855901
+2022/11/09 15:02:11 Elapsed time: 0 seconds
+2022/11/09 15:02:11 Nodes per second: +Inf
+2022/11/09 15:02:11 Benchmarking ply 2
+2022/11/09 15:02:11 Starting benchmark at time 2022-11-09 15:02:11.9953687 -0500 EST m=+0.007475401
+2022/11/09 15:02:11 Moves: [b1a3 b1c3 g1f3 g1h3 a2a3 a2a4 b2b3 b2b4 c2c3 c2c4 d2d3 d2d4 e2e3 e2e4 f2f3 f2f4 g2g3 g2g4 h2h3 h2h4]
+2022/11/09 15:02:11 Best move: h7h6
+2022/11/09 15:02:11 Evaluation: 0
+2022/11/09 15:02:11 Benchmark complete at time 2022-11-09 15:02:11.9964798 -0500 EST m=+0.008586501
+2022/11/09 15:02:11 Elapsed time: 0.0011111 seconds
+2022/11/09 15:02:11 Nodes per second: 373503.7350373503
+2022/11/09 15:02:11 Benchmarking ply 3
+2022/11/09 15:02:11 Starting benchmark at time 2022-11-09 15:02:11.9975895 -0500 EST m=+0.009696201
+2022/11/09 15:02:11 Moves: [b1a3 b1c3 g1f3 g1h3 a2a3 a2a4 b2b3 b2b4 c2c3 c2c4 d2d3 d2d4 e2e3 e2e4 f2f3 f2f4 g2g3 g2g4 h2h3 h2h4]
+2022/11/09 15:02:12 Best move: h4h5
+2022/11/09 15:02:12 Evaluation: 0
+2022/11/09 15:02:12 Benchmark complete at time 2022-11-09 15:02:12.0210735 -0500 EST m=+0.033179801
+2022/11/09 15:02:12 Elapsed time: 0.0234836 seconds
+2022/11/09 15:02:12 Nodes per second: 390229.77737655217
+2022/11/09 15:02:12 Benchmarking ply 4
+2022/11/09 15:02:12 Starting benchmark at time 2022-11-09 15:02:12.0221568 -0500 EST m=+0.034263001
+2022/11/09 15:02:12 Moves: [b1a3 b1c3 g1f3 g1h3 a2a3 a2a4 b2b3 b2b4 c2c3 c2c4 d2d3 d2d4 e2e3 e2e4 f2f3 f2f4 g2g3 g2g4 h2h3 h2h4]
+2022/11/09 15:02:12 Best move: h7h6
+2022/11/09 15:02:12 Evaluation: 0
+2022/11/09 15:02:12 Benchmark complete at time 2022-11-09 15:02:12.406524 -0500 EST m=+0.418623101
+2022/11/09 15:02:12 Elapsed time: 0.3843601 seconds
+2022/11/09 15:02:12 Nodes per second: 528288.446173263
+2022/11/09 15:02:12 Benchmarking ply 5
+2022/11/09 15:02:12 Starting benchmark at time 2022-11-09 15:02:12.4070757 -0500 EST m=+0.419174801
+2022/11/09 15:02:12 Moves: [b1a3 b1c3 g1f3 g1h3 a2a3 a2a4 b2b3 b2b4 c2c3 c2c4 d2d3 d2d4 e2e3 e2e4 f2f3 f2f4 g2g3 g2g4 h2h3 h2h4]

@@ -8,13 +8,17 @@ import (
 	"os"
 )
 
+/*
+
+// Replace position with board.
+// Evaluation function.
+UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
+
+
+*/
 
 func init() {
-	fmt.Println("Version", runtime.Version())
-    fmt.Println("NumCPU", runtime.NumCPU())
-    fmt.Println("GOMAXPROCS", runtime.GOMAXPROCS(0))
-	runtime.GOMAXPROCS(runtime.NumCPU())
-
+	fmt.Println("Initializing engine...")
 	// create new log file that doesn't exist
 	for i := 0; ; i++ {
 		// create file name from timestamp date and hour
@@ -32,20 +36,25 @@ func init() {
 	}
     log.Println("File initialization.")
 
+	log.Println("Version", runtime.Version())
+    log.Println("NumCPU", runtime.NumCPU())
+    log.Println("GOMAXPROCS", runtime.GOMAXPROCS(0))
+	runtime.GOMAXPROCS(runtime.NumCPU())
 }
 
 func main() {
-	fmt.Println("Version", runtime.Version())
-    fmt.Println("NumCPU", runtime.NumCPU())
-    fmt.Println("GOMAXPROCS", runtime.GOMAXPROCS(0))
-	// defer profile.Start().Stop()
+	fmt.Println("Running engine...")
+	test_m2(engine_minimax_parallel_plain)
 
-	test_m2(engine_minimax_plain)
+	// benchmark(5)
+}
 
-	// for i := 0; i < 6; i++ {
-	// 	elapsed :=  benchmark(i + 1)
-	// 	fmt.Println("ply:", i+1)
-	// 	fmt.Println("Benchmark:", explored, elapsed)
-	// 	fmt.Println("Nodes per second:", float64(explored)/elapsed, "\n")
-	// }
+func benchmark(ply int) {
+	for i := 2; i <= ply; i++ {
+		elapsed :=  benchmark_pll(i)
+		fmt.Println("Benchmark Ply:", i)
+		fmt.Println("Benchmark:", explored, elapsed)
+		fmt.Println("Nodes per second:", float64(explored)/elapsed)
+		fmt.Println()
+	}
 }

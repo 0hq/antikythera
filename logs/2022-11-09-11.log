@@ -1,0 +1,39 @@
+2022/11/09 14:57:43 File initialization.
+2022/11/09 14:57:43 Benchmarking ply 1
+2022/11/09 14:57:43 Starting benchmark at time 2022-11-09 14:57:43.1819322 -0500 EST m=+0.007666401
+2022/11/09 14:57:43 Moves: [b1a3 b1c3 g1f3 g1h3 a2a3 a2a4 b2b3 b2b4 c2c3 c2c4 d2d3 d2d4 e2e3 e2e4 f2f3 f2f4 g2g3 g2g4 h2h3 h2h4]
+2022/11/09 14:57:43 Best move: b1a3
+2022/11/09 14:57:43 Evaluation: 0
+2022/11/09 14:57:43 Benchmark complete at time 2022-11-09 14:57:43.1819689 -0500 EST m=+0.007703101
+2022/11/09 14:57:43 Elapsed time: 0 seconds
+2022/11/09 14:57:43 Benchmarking ply 2
+2022/11/09 14:57:43 Starting benchmark at time 2022-11-09 14:57:43.18316 -0500 EST m=+0.008894101
+2022/11/09 14:57:43 Moves: [b1a3 b1c3 g1f3 g1h3 a2a3 a2a4 b2b3 b2b4 c2c3 c2c4 d2d3 d2d4 e2e3 e2e4 f2f3 f2f4 g2g3 g2g4 h2h3 h2h4]
+2022/11/09 14:57:43 Best move: h7h6
+2022/11/09 14:57:43 Evaluation: 0
+2022/11/09 14:57:43 Benchmark complete at time 2022-11-09 14:57:43.1858659 -0500 EST m=+0.011600001
+2022/11/09 14:57:43 Elapsed time: 0.0016128 seconds
+2022/11/09 14:57:43 Benchmarking ply 3
+2022/11/09 14:57:43 Starting benchmark at time 2022-11-09 14:57:43.1863919 -0500 EST m=+0.012126001
+2022/11/09 14:57:43 Moves: [b1a3 b1c3 g1f3 g1h3 a2a3 a2a4 b2b3 b2b4 c2c3 c2c4 d2d3 d2d4 e2e3 e2e4 f2f3 f2f4 g2g3 g2g4 h2h3 h2h4]
+2022/11/09 14:57:43 Best move: a3a4
+2022/11/09 14:57:43 Evaluation: 0
+2022/11/09 14:57:43 Benchmark complete at time 2022-11-09 14:57:43.2087597 -0500 EST m=+0.034493401
+2022/11/09 14:57:43 Elapsed time: 0.0223674 seconds
+2022/11/09 14:57:43 Benchmarking ply 4
+2022/11/09 14:57:43 Starting benchmark at time 2022-11-09 14:57:43.2100146 -0500 EST m=+0.035748201
+2022/11/09 14:57:43 Moves: [b1a3 b1c3 g1f3 g1h3 a2a3 a2a4 b2b3 b2b4 c2c3 c2c4 d2d3 d2d4 e2e3 e2e4 f2f3 f2f4 g2g3 g2g4 h2h3 h2h4]
+2022/11/09 14:57:43 Best move: h7h6
+2022/11/09 14:57:43 Evaluation: 0
+2022/11/09 14:57:43 Benchmark complete at time 2022-11-09 14:57:43.5032006 -0500 EST m=+0.328928801
+2022/11/09 14:57:43 Elapsed time: 0.2928359 seconds
+2022/11/09 14:57:43 Benchmarking ply 5
+2022/11/09 14:57:43 Starting benchmark at time 2022-11-09 14:57:43.5037189 -0500 EST m=+0.329447101
+2022/11/09 14:57:43 Moves: [b1a3 b1c3 g1f3 g1h3 a2a3 a2a4 b2b3 b2b4 c2c3 c2c4 d2d3 d2d4 e2e3 e2e4 f2f3 f2f4 g2g3 g2g4 h2h3 h2h4]
+2022/11/09 14:57:51 Best move: h3h4
+2022/11/09 14:57:51 Evaluation: 0
+2022/11/09 14:57:51 Benchmark complete at time 2022-11-09 14:57:51.6191782 -0500 EST m=+8.444755401
+2022/11/09 14:57:51 Elapsed time: 8.1153083 seconds
+2022/11/09 14:57:51 Benchmarking ply 6
+2022/11/09 14:57:51 Starting benchmark at time 2022-11-09 14:57:51.6201777 -0500 EST m=+8.445754901
+2022/11/09 14:57:51 Moves: [b1a3 b1c3 g1f3 g1h3 a2a3 a2a4 b2b3 b2b4 c2c3 c2c4 d2d3 d2d4 e2e3 e2e4 f2f3 f2f4 g2g3 g2g4 h2h3 h2h4]

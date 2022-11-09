@@ -8,7 +8,7 @@ import (
 
 // measure how long minimax_plain takes run
 // returns time in seconds
-func benchmark(ply int) float64 {
+func benchmark_plain(ply int) float64 {
 	log.Println("Benchmarking ply", ply)
 	log.Println("Starting benchmark at time", time.Now())
 
@@ -25,6 +25,7 @@ func benchmark(ply int) float64 {
 }
 
 func benchmark_pll(ply int) float64 {
+	explored = 0
 	log.Println("Benchmarking ply", ply)
 	log.Println("Starting benchmark at time", time.Now())
 
@@ -41,6 +42,7 @@ func benchmark_pll(ply int) float64 {
 	log.Println("Evaluation:", eval)
 	log.Println("Benchmark complete at time", time.Now())
 	log.Println("Elapsed time:", elapsed.Seconds(), "seconds")
+	log.Println("Nodes per second:", float64(explored)/elapsed.Seconds())
 
 	return elapsed.Seconds()
 }

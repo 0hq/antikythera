@@ -1,0 +1,7 @@
+2022/11/09 15:08:50 File initialization.
+2022/11/09 15:08:50 Running mate in two test on plain...
+2022/11/09 15:08:50 FEN: 3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1
+2022/11/09 15:08:50 Starting engine Minimax Parallel Plain
+2022/11/09 15:08:50 Features: {true true false false false}
+2022/11/09 15:08:50 Moves: [b1a3 b1c3 g1f3 g1h3 a2a3 a2a4 b2b3 b2b4 c2c3 c2c4 d2d3 d2d4 e2e3 e2e4 f2f3 f2f4 g2g3 g2g4 h2h3 h2h4]
+2022/11/09 15:08:50 Parellel results h7h6 0
