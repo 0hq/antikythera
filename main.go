@@ -16,6 +16,7 @@ import (
 // Evaluation function.
 UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 Add in auto-testing using EPD files.
+Test different sorting algorithms.
 
 */
 

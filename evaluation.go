@@ -67,8 +67,7 @@ func evaluate_move_v1(move *chess.Move, board *chess.Board) int {
 	return aggr
 }
 
-// sucks
-func sort_moves_v0(moves []*chess.Move, board *chess.Board) []*chess.Move {
+func sort_moves_v1(moves []*chess.Move, board *chess.Board) []*chess.Move {
 	if !DO_MOVE_SORTING {
 		return moves
 	}

@@ -26,7 +26,7 @@ func minimax_plain_ab_engine_func(pos *chess.Position, cfg EngineConfig) (best *
 }
 
 func minimax_plain_ab_starter(position *chess.Position, ply int, max bool) (best *chess.Move, eval int) {
-	moves := sort_moves_v0(position.ValidMoves(), position.Board())
+	moves := sort_moves_v1(position.ValidMoves(), position.Board())
 	eval = -1 * math.MaxInt
 	for _, move := range moves {
 		score := -1 * minimax_plain_ab_searcher(position.Update(move), ply-1, !max, -1 * math.MaxInt, math.MaxInt)
@@ -46,7 +46,7 @@ func minimax_plain_ab_searcher(position *chess.Position, ply int, max bool, alph
 		return evaluate_position_v1(position.Board()) * bool_to_int(max)
 	}
 
-	moves := sort_moves_v0(position.ValidMoves(), position.Board())
+	moves := sort_moves_v1(position.ValidMoves(), position.Board())
     for _, move := range moves {
         score := -1 * minimax_plain_ab_searcher(position.Update(move), ply - 1, !max, -beta, -alpha)
 		if score >= beta {
