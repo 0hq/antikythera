@@ -9,8 +9,8 @@ import (
 )
 
 func main() {
-	// set up engine to use scidvsmac
-	eng, err := uci.New("scidvsmac")
+	// set up engine to use stockfish exe
+	eng, err := uci.New("stockfish")
 	if err != nil {
 		panic(err)
 	}
