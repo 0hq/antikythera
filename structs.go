@@ -27,6 +27,9 @@ type EngineConfig struct {
 func (e *Engine) Run(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
 	log.Println("Starting engine", e.name)
 	log.Println("Features:", e.features)
+	log.Println("Config:", cfg)
+	log.Println("Turn:", pos.Turn())
+	log.Println("Position:", pos.Board().Draw())
 	return e.engine_func(pos, cfg)
 }
 

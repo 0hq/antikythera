@@ -5,7 +5,7 @@ import (
 )
 
 // constants for minimax
-var newGame = chess.NewGame().Position()
+var newGame = chess.NewGame()
 var explored int = 0
 var q_explored int = 0
 const ENGINE_MINIMAX_PLAIN_PLY int = 4

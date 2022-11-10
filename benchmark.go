@@ -55,3 +55,81 @@ func benchmark_plain_ab_move_ordering() {
 	DO_MOVE_SORTING = true
 	benchmark_range(4, 4, engine_minimax_plain_ab, game.Clone().Position())
 }
+
+
+// define new engine
+var engine_perft Engine = Engine{
+	name: "Perft Test",
+	features: EngineFeatures{
+		plain: false,
+		parallel: false,
+		alphabeta: false,
+		iterative_deepening: false,
+		mtdf: false,
+	},
+	engine_func: perft_engine_func,
+}
+
+// define new engine
+var engine_perft_pll Engine = Engine{
+	name: "Parallel Perft Test",
+	features: EngineFeatures{
+		plain: false,
+		parallel: true,
+		alphabeta: false,
+		iterative_deepening: false,
+		mtdf: false,
+	},
+	engine_func: perft_engine_func,
+}
+
+func perft_engine_func(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
+	count := perft(cfg.ply, pos)
+	explored = count
+	log.Println("Perft nodes searched", count)
+	return nil, count
+}
+
+func perft_pll_engine_func(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
+	count_channel := make(chan int, 1)
+	go perft_parallel(cfg.ply, pos, count_channel)
+	count := <-count_channel
+	explored = count
+	log.Println("Perft nodes searched", count)
+	return nil, count
+}
+
+// perft test
+func perft(ply int, pos *chess.Position) int {
+	if ply == 0 {
+		return 1
+	}
+
+	moves := pos.ValidMoves()
+	count := 0
+	for _, move := range moves {
+		count += perft(ply-1, pos.Update(move))
+	}
+	return count
+}
+
+// perft test for parallel
+func perft_parallel(ply int, pos *chess.Position, count_channel chan int) int {
+	if ply == 0 {
+		return 1
+	}
+
+	moves := pos.ValidMoves()
+	length := len(moves)
+	count_channel_local := make(chan int, length)
+
+	for _, move := range moves {
+		go perft_parallel(ply-1, pos.Update(move), count_channel_local)
+	}
+
+	count := 0
+	for i := 0; i < length; i++ {
+		count += <-count_channel_local
+	}
+	return count
+}

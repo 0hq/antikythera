@@ -12,6 +12,9 @@ func bool_to_int(b bool) int {
 }
 
 func game_from_fen(pos string) *chess.Game {
-	fen, _ := chess.FEN(pos)
+	fen, err := chess.FEN(pos)
+	if err != nil {
+		panic(err)
+	}
 	return chess.NewGame(fen)
 }
