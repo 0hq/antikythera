@@ -2,8 +2,9 @@ package main
 
 import (
 	"log"
-	"github.com/notnil/chess"
 	"math"
+
+	"github.com/notnil/chess"
 )
 
 // define new engine

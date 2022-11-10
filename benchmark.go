@@ -1,16 +1,17 @@
 package main
 
 import (
-	"time"
-	"log"
-	"github.com/notnil/chess"
 	"fmt"
+	"log"
+	"time"
+
+	"github.com/notnil/chess"
 )
 
 // measure how long minimax_plain takes run
 // returns time in seconds
 func benchmark(ply int, engine Engine, pos *chess.Position) float64 {
-	explored = 0
+	reset_counters()
 	log.Println("BEGIN BENCHMARKING -", engine.Name())
 	log.Println("Ply:", ply)
 	log.Println("Starting at time", time.Now())

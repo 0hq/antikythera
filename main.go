@@ -2,12 +2,11 @@ package main
 
 import (
 	"fmt"
-	"runtime"
-	"time"
 	"log"
 	"os"
+	"runtime"
+	"time"
 	// "github.com/notnil/chess"
-
 )
 
 /*
@@ -50,8 +49,10 @@ func main() {
 	fmt.Println("Running engine...")
 	// test_m2(engine_minimax_plain_ab)
 	// benchmark_engines(plain_engines, newGame)
-	
 	// benchmark_pll(4)
+	// move_sort_test(game_from_fen("1k1r3r/pp1bbp1p/5p2/1B2n3/5B2/3P1N2/PP3PPP/R4RK1 w - - 3 16").Position())
+	
+	benchmark_range(2, 6, engine_minimax_plain_ab_q, game_from_fen("1k1r3r/pp1bbp1p/5p2/1B2n3/5B2/3P1N2/PP3PPP/R4RK1 w - - 3 16").Position())
 }
 
 func exit()	{
