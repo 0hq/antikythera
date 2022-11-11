@@ -1,0 +1,109 @@
+2022/11/11 16:23:24 File initialization.
+2022/11/11 16:23:24 Version go1.19.3
+2022/11/11 16:23:24 NumCPU 6
+2022/11/11 16:23:24 GOMAXPROCS 6
+2022/11/11 16:23:24 
+2022/11/11 16:23:24 Running minimax_plain_ab_q_engine_func
+2022/11/11 16:23:24 Top Level Move: f5h5 Eval: 100
+2022/11/11 16:23:24 New best move: f5h5
+2022/11/11 16:23:24 Top Level Move: f5g6 Eval: 30003
+2022/11/11 16:23:24 New best move: f5g6
+2022/11/11 16:23:24 Top Level Move: g1f1 Eval: 0
+2022/11/11 16:23:24 Top Level Move: g1h1 Eval: 0
+2022/11/11 16:23:24 Top Level Move: f5d3 Eval: -810
+2022/11/11 16:23:24 Top Level Move: f5f3 Eval: -570
+2022/11/11 16:23:24 Top Level Move: f5h3 Eval: 0
+2022/11/11 16:23:24 Top Level Move: f5e4 Eval: -570
+2022/11/11 16:23:24 Top Level Move: f5f4 Eval: 0
+2022/11/11 16:23:24 Top Level Move: f5g4 Eval: 0
+2022/11/11 16:23:24 Top Level Move: f5d5 Eval: -900
+2022/11/11 16:23:24 Top Level Move: f5e5 Eval: -570
+2022/11/11 16:23:24 Top Level Move: f5g5 Eval: -810
+2022/11/11 16:23:24 Top Level Move: a1a2 Eval: 0
+2022/11/11 16:23:24 Top Level Move: a1a3 Eval: 0
+2022/11/11 16:23:24 Top Level Move: e1c1 Eval: 0
+2022/11/11 16:23:24 Top Level Move: e1d1 Eval: 0
+2022/11/11 16:23:24 Top Level Move: e1f1 Eval: 0
+2022/11/11 16:23:24 Top Level Move: e1e2 Eval: 0
+2022/11/11 16:23:24 Top Level Move: e1e3 Eval: 0
+2022/11/11 16:23:24 Top Level Move: e1e4 Eval: -170
+2022/11/11 16:23:24 Top Level Move: e1e5 Eval: -100
+2022/11/11 16:23:24 Top Level Move: c2d1 Eval: 0
+2022/11/11 16:23:24 Top Level Move: c2b3 Eval: -330
+2022/11/11 16:23:24 Top Level Move: c2d3 Eval: -330
+2022/11/11 16:23:24 Top Level Move: c2e4 Eval: 0
+2022/11/11 16:23:24 Top Level Move: c5a3 Eval: 0
+2022/11/11 16:23:24 Top Level Move: c5e3 Eval: 0
+2022/11/11 16:23:24 Top Level Move: c5b4 Eval: 0
+2022/11/11 16:23:24 Top Level Move: c5d4 Eval: 0
+2022/11/11 16:23:24 Top Level Move: c5d6 Eval: -330
+2022/11/11 16:23:24 Top Level Move: c5e7 Eval: -330
+2022/11/11 16:23:24 Top Level Move: c5f8 Eval: -330
+2022/11/11 16:23:24 Top Level Move: b1d2 Eval: -320
+2022/11/11 16:23:24 Top Level Move: b1a3 Eval: 0
+2022/11/11 16:23:24 Top Level Move: f2f3 Eval: 0
+2022/11/11 16:23:24 Top Level Move: f2f4 Eval: 0
+2022/11/11 16:23:24 Top Level Move: g2g3 Eval: 0
+2022/11/11 16:23:24 Top Level Move: g2g4 Eval: 0
+2022/11/11 16:23:24 Top Level Move: h2h3 Eval: 0
+2022/11/11 16:23:24 Top Level Move: h2h4 Eval: 0
+2022/11/11 16:23:24 Top Level Move: e6e7 Eval: 0
+2022/11/11 16:23:24 Top Level Move: c5b6 Eval: 90
+2022/11/11 16:23:24 Top Level Move: c2a4 Eval: 90
+2022/11/11 16:23:24 Top Level Move: a1a4 Eval: -80
+2022/11/11 16:23:24 Top Level Move: f5f6 Eval: -480
+2022/11/11 16:23:24 Top Level Move: f5h7 Eval: 270
+2022/11/11 16:23:24 Plain minimax results f5g6 30003
+2022/11/11 16:23:24 Quiescence search explored 16926 nodes
+2022/11/11 16:23:24 Running minimax_plain_ab_q_engine_func
+2022/11/11 16:23:24 Top Level Move: f5h5 Eval: 30005
+2022/11/11 16:23:24 New best move: f5h5
+2022/11/11 16:23:24 Top Level Move: f5g6 Eval: 30003
+2022/11/11 16:23:25 Top Level Move: g1f1 Eval: 0
+2022/11/11 16:23:25 Top Level Move: g1h1 Eval: 0
+2022/11/11 16:23:25 Top Level Move: f5d3 Eval: -810
+2022/11/11 16:23:25 Top Level Move: f5f3 Eval: -570
+2022/11/11 16:23:25 Top Level Move: f5h3 Eval: 0
+2022/11/11 16:23:25 Top Level Move: f5e4 Eval: -570
+2022/11/11 16:23:25 Top Level Move: f5f4 Eval: -100
+2022/11/11 16:23:25 Top Level Move: f5g4 Eval: 0
+2022/11/11 16:23:25 Top Level Move: f5d5 Eval: -1000
+2022/11/11 16:23:25 Top Level Move: f5e5 Eval: -570
+2022/11/11 16:23:25 Top Level Move: f5g5 Eval: -810
+2022/11/11 16:23:25 Top Level Move: a1a2 Eval: 0
+2022/11/11 16:23:25 Top Level Move: a1a3 Eval: 0
+2022/11/11 16:23:25 Top Level Move: e1c1 Eval: 0
+2022/11/11 16:23:25 Top Level Move: e1d1 Eval: 0
+2022/11/11 16:23:25 Top Level Move: e1f1 Eval: 0
+2022/11/11 16:23:25 Top Level Move: e1e2 Eval: 0
+2022/11/11 16:23:25 Top Level Move: e1e3 Eval: 0
+2022/11/11 16:23:25 Top Level Move: e1e4 Eval: -170
+2022/11/11 16:23:25 Top Level Move: e1e5 Eval: -100
+2022/11/11 16:23:25 Top Level Move: c2d1 Eval: 0
+2022/11/11 16:23:25 Top Level Move: c2b3 Eval: -330
+2022/11/11 16:23:25 Top Level Move: c2d3 Eval: -330
+2022/11/11 16:23:25 Top Level Move: c2e4 Eval: 0
+2022/11/11 16:23:25 Top Level Move: c5a3 Eval: 0
+2022/11/11 16:23:25 Top Level Move: c5e3 Eval: 0
+2022/11/11 16:23:25 Top Level Move: c5b4 Eval: 0
+2022/11/11 16:23:25 Top Level Move: c5d4 Eval: 0
+2022/11/11 16:23:25 Top Level Move: c5d6 Eval: -330
+2022/11/11 16:23:25 Top Level Move: c5e7 Eval: -330
+2022/11/11 16:23:26 Top Level Move: c5f8 Eval: -230
+2022/11/11 16:23:26 Top Level Move: b1d2 Eval: -320
+2022/11/11 16:23:26 Top Level Move: b1a3 Eval: 0
+2022/11/11 16:23:26 Top Level Move: f2f3 Eval: 0
+2022/11/11 16:23:26 Top Level Move: f2f4 Eval: 0
+2022/11/11 16:23:26 Top Level Move: g2g3 Eval: 0
+2022/11/11 16:23:26 Top Level Move: g2g4 Eval: 0
+2022/11/11 16:23:26 Top Level Move: h2h3 Eval: 0
+2022/11/11 16:23:26 Top Level Move: h2h4 Eval: -10
+2022/11/11 16:23:26 Top Level Move: e6e7 Eval: 0
+2022/11/11 16:23:26 Top Level Move: c5b6 Eval: 90
+2022/11/11 16:23:26 Top Level Move: c2a4 Eval: 90
+2022/11/11 16:23:26 Top Level Move: a1a4 Eval: 90
+2022/11/11 16:23:26 Top Level Move: f5f6 Eval: -480
+2022/11/11 16:23:26 Top Level Move: f5h7 Eval: 930
+2022/11/11 16:23:26 Plain minimax results f5h5 30005
+2022/11/11 16:23:26 Quiescence search explored 115914 nodes
+2022/11/11 16:23:26 Exiting engine.

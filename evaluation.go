@@ -69,6 +69,44 @@ func evaluate_position_v1(pos *chess.Position) int {
 
 /*
 
+Version 1 of the evaluation function.
+Sums simple material values and detects checkmate and stalemate.
+Penalizes checkmates based on ply.
+
+*/
+
+func evaluate_position_v2(pos *chess.Position, engine_ply int, current_ply int, flip int) int {
+	squares := pos.Board().SquareMap()
+	var material int = 0
+	for _, piece := range squares {
+		var sign int = 1
+		if piece.Color() == chess.Black {
+			sign = -1
+		}
+		material += piece_map_v1[piece.Type()] * sign
+	}
+
+	// faster than doing two comparisons
+	if pos.Status() != chess.NoMethod { 
+		if pos.Status() == chess.Stalemate {
+			return 0
+		}
+		if pos.Status() == chess.Checkmate {
+			// calculate ply penalty
+			ply_penalty := (engine_ply - current_ply) * 1
+			if pos.Turn() == chess.White {
+				return -CHECKMATE_VALUE * flip + ply_penalty
+			} else {
+				return CHECKMATE_VALUE * flip + ply_penalty
+			}
+		}
+	}
+
+	return material * flip
+}
+
+/*
+
 Move ordering.
 
 */

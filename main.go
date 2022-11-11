@@ -18,6 +18,7 @@ UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 Test different sorting algorithms.
 Why isn't the parallel version faster for perft?
 // Change checkmate value to not be max int.
+// Engine now prioritize the shortest checkmate.
 
 Turn iterative deepening into an engine.
 Change engine struct to be smarter.
@@ -69,7 +70,11 @@ func main() {
 	// test_exchange_4move(engine_minimax_plain, EngineConfig{ply: 4})
 	// test_m2(&engine_minimax_plain_ab_q)
 	engine := engine_minimax_plain_ab_q
-	engine.Set_Config(EngineConfig{ply: 3})
+	// position := game_from_fen("r2qk2r/pb4pp/1n2Pb2/2B2Q2/p1p5/2P5/2B2PPP/RN2R1K1 w - - 1 1").Position()
+	engine.Set_Config(EngineConfig{ply: 4})
+	// fmt.Println(engine.Run_Engine(position))
+	// engine.Set_Config(EngineConfig{ply: 4})
+	// fmt.Println(engine.Run_Engine(position))
 	simple_tests(&engine)
 	// move, eval := engine.Run_Engine(game_from_fen("3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1").Position())
 	// fmt.Println(move, eval)
@@ -95,7 +100,9 @@ func exit()	{
 }
 
 func simple_tests(engine Engine) {
+	test_exchange_7move(engine)
 	test_exchange_5move(engine)
+	test_exchange_3move(engine)
 	test_m2(engine)
 	run_tests(engine, parse_test_file("tests/WillsMateInThree.txt", parse_fen_record))
 }
