@@ -1,49 +1,60 @@
 package main
 
-// // define new engine
-// var engine_meta_iterative_plain Engine = Engine{
-// 	name: "Iterative Deepening Plain",
-// 	features: EngineFeatures{
-// 		plain: true,
-// 		parallel: false,
-// 		alphabeta: true,
-// 		iterative_deepening: true,
-// 		mtdf: false,
-// 	},
-// 	engine_func: engine_meta_iterative_plain_func,
-// 	engine_config: EngineConfig{},
-// 	time_up: false,
-// }
+import (
+	"log"
+	"time"
 
-// // make method of engine
+	"github.com/notnil/chess"
+)
 
-// func engine_meta_iterative_plain_func(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
-// 	// fmt.Println(time_up)
-// 	// best, eval = minimax_plain_ab_q_starter(pos, cfg.ply, pos.Turn() == chess.White)
-// 	log.Println("Plain minimax results", best, eval)
-// 	log.Println("Quiescence search explored", q_explored, "nodes")
-// 	return
-// }
+type t_meta_engine_iterative_plain struct {
+	engine Engine
+	config MetaEngineConfig
+}
 
-// func iterative_deepening_v0(engine Engine, pos *chess.Position, time_control int) (output *chess.Move) {
-// 	depth := 1
-// 	var best *chess.Move
-// 	var eval int
-// 	start := time.Now()
-// 	for {
-// 		log.Println()
-// 		log.Println("Iterative deepening depth", depth)
-// 		best, eval = engine.engine_func(pos, EngineConfig{ply: depth})
-// 		elapsed := time.Since(start)
-// 		log.Println("Best move:", best, "Eval:", eval)
-// 		log.Println("Depth:", depth, "Time:", elapsed, "Nodes:", explored)
-// 		if elapsed.Seconds() > float64(time_control) {
-// 			break
-// 		}
-// 		if eval > 100000 { // break on checkmate
-// 			break
-// 		}
-// 		depth++
-// 	}
-// 	return best
-// }
+func (e *t_meta_engine_iterative_plain) Set_Engine(engine Engine) {
+	e.engine = engine
+}
+
+func (e *t_meta_engine_iterative_plain) Name() string {
+	return "Meta Engine Iterative Deepening v0 : " + e.engine.Name()
+}
+
+func (e *t_meta_engine_iterative_plain) Set_Meta_Config(c MetaEngineConfig) {
+	e.config = c
+}
+
+func (e *t_meta_engine_iterative_plain) Set_Config(c EngineConfig) {
+	panic("Not good practice, do not set internal engine config after meta engine is created.")
+	// e.engine.Set_Config(c)
+}
+
+func (e *t_meta_engine_iterative_plain) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
+	reset_counters()
+	log.Println("Running iterative deepening v0 with engine ", e.engine.Name())
+	best, eval = iterative_deepening_v0(e.engine, pos, e.config.max_time)
+	log.Println("Engine results", best, eval)
+	return 
+}
+
+func iterative_deepening_v0(engine Engine, pos *chess.Position, max_time int) (best *chess.Move, eval int) {
+	depth := 1
+	start := time.Now()
+	for {
+		log.Println()
+		log.Println("Iterative deepening depth", depth)
+		engine.Set_Config(EngineConfig{ply: depth})
+		best, eval = engine.Run_Engine(pos)
+		elapsed := time.Since(start)
+		log.Println("Best move:", best, "Eval:", eval)
+		log.Println("Depth:", depth, "Time:", elapsed, "Nodes:", explored)
+		if elapsed.Seconds() > float64(max_time) {
+			break
+		}
+		if eval > 100000 { // break on checkmate
+			break
+		}
+		depth++
+	}
+	return best, eval
+}

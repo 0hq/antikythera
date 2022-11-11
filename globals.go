@@ -16,6 +16,7 @@ const MAX_DEPTH int = 16
 const DO_Q_MOVE_PRUNING bool = true
 const DO_Q_MOVE_CHECKS bool = false
 const CHECKMATE_VALUE int = 30000
+const PRINT_TOP_MOVES bool = false
 // const DO_Q_MOVE_PROMOS bool = false // disabled manually
 
 var all_engines = []Engine{

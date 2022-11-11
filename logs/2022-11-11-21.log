@@ -1,0 +1,320 @@
+2022/11/11 17:05:49 File initialization.
+2022/11/11 17:05:49 Version go1.19.3
+2022/11/11 17:05:49 NumCPU 6
+2022/11/11 17:05:49 GOMAXPROCS 6
+2022/11/11 17:05:49 
+2022/11/11 17:05:49 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 17:05:49 FEN: r1bqk1r1/1p1p1n2/p1n2pN1/2p1b2Q/2P1Pp2/1PN5/PB4PP/R4RK1 w - - 0 1
+2022/11/11 17:05:49 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 17:05:49 
+2022/11/11 17:05:49 Iterative deepening depth 1
+2022/11/11 17:05:49 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:05:49 New best move: g6e5
+2022/11/11 17:05:49 New best move: g6f4
+2022/11/11 17:05:49 Plain minimax results g6f4 -230
+2022/11/11 17:05:49 Quiescence search explored 386 nodes
+2022/11/11 17:05:49 Best move: g6f4 Eval: -230
+2022/11/11 17:05:49 Depth: 1 Time: 7.1572ms Nodes: 432
+2022/11/11 17:05:49 
+2022/11/11 17:05:49 Iterative deepening depth 2
+2022/11/11 17:05:49 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:05:49 New best move: g6e5
+2022/11/11 17:05:49 Plain minimax results g6e5 -320
+2022/11/11 17:05:49 Quiescence search explored 2152 nodes
+2022/11/11 17:05:49 Best move: g6e5 Eval: -320
+2022/11/11 17:05:49 Depth: 2 Time: 31.4959ms Nodes: 3656
+2022/11/11 17:05:49 
+2022/11/11 17:05:49 Iterative deepening depth 3
+2022/11/11 17:05:49 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:05:49 New best move: g6e5
+2022/11/11 17:05:50 New best move: g6f4
+2022/11/11 17:05:50 Plain minimax results g6f4 -230
+2022/11/11 17:05:50 Quiescence search explored 15308 nodes
+2022/11/11 17:05:50 Best move: g6f4 Eval: -230
+2022/11/11 17:05:50 Depth: 3 Time: 297.7669ms Nodes: 21703
+2022/11/11 17:05:50 
+2022/11/11 17:05:50 Iterative deepening depth 4
+2022/11/11 17:05:50 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:05:50 New best move: g6e5
+2022/11/11 17:05:50 New best move: g6f4
+2022/11/11 17:05:50 Plain minimax results g6f4 -230
+2022/11/11 17:05:50 Quiescence search explored 75401 nodes
+2022/11/11 17:05:50 Best move: g6f4 Eval: -230
+2022/11/11 17:05:50 Depth: 4 Time: 1.0475169s Nodes: 143975
+2022/11/11 17:05:50 
+2022/11/11 17:05:50 Iterative deepening depth 5
+2022/11/11 17:05:50 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:05:50 New best move: g6e5
+2022/11/11 17:05:57 New best move: h5h7
+2022/11/11 17:06:10 Plain minimax results h5h7 -230
+2022/11/11 17:06:10 Quiescence search explored 1185878 nodes
+2022/11/11 17:06:10 Best move: h5h7 Eval: -230
+2022/11/11 17:06:10 Depth: 5 Time: 20.2450362s Nodes: 1698131
+2022/11/11 17:06:10 
+2022/11/11 17:06:10 Iterative deepening depth 6
+2022/11/11 17:06:10 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:06:10 New best move: g6e5
+2022/11/11 17:07:16 New best move: g6f4
+2022/11/11 17:07:23 Plain minimax results g6f4 -230
+2022/11/11 17:07:23 Quiescence search explored 6542679 nodes
+2022/11/11 17:07:23 Best move: g6f4 Eval: -230
+2022/11/11 17:07:23 Depth: 6 Time: 1m33.4056833s Nodes: 11794512
+2022/11/11 17:07:23 Engine results g6f4 -230
+2022/11/11 17:07:23 !!! POSSIBLE PASS: g6f4 Rxf4
+2022/11/11 17:07:23 Move is ambiguous, possible moves are: [f1f4 g6f4]
+2022/11/11 17:07:23 TEST FAILED g6f4 Rxf4
+2022/11/11 17:07:23 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 17:07:23 FEN: r1n2N1k/2n2K1p/3pp3/5Pp1/b5R1/8/1PPP4/8 w - - 0 1
+2022/11/11 17:07:23 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 17:07:23 
+2022/11/11 17:07:23 Iterative deepening depth 1
+2022/11/11 17:07:23 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:07:23 New best move: f8g6
+2022/11/11 17:07:23 New best move: f5e6
+2022/11/11 17:07:23 Plain minimax results f5e6 -550
+2022/11/11 17:07:23 Quiescence search explored 184 nodes
+2022/11/11 17:07:23 Best move: f5e6 Eval: -550
+2022/11/11 17:07:23 Depth: 1 Time: 1.9985ms Nodes: 208
+2022/11/11 17:07:23 
+2022/11/11 17:07:23 Iterative deepening depth 2
+2022/11/11 17:07:23 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:07:23 New best move: f8g6
+2022/11/11 17:07:23 New best move: f5e6
+2022/11/11 17:07:23 Plain minimax results f5e6 -550
+2022/11/11 17:07:23 Quiescence search explored 637 nodes
+2022/11/11 17:07:23 Best move: f5e6 Eval: -550
+2022/11/11 17:07:23 Depth: 2 Time: 8.0005ms Nodes: 1172
+2022/11/11 17:07:23 
+2022/11/11 17:07:23 Iterative deepening depth 3
+2022/11/11 17:07:23 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:07:23 New best move: f8g6
+2022/11/11 17:07:23 New best move: f5e6
+2022/11/11 17:07:23 Plain minimax results f5e6 -550
+2022/11/11 17:07:23 Quiescence search explored 4822 nodes
+2022/11/11 17:07:23 Best move: f5e6 Eval: -550
+2022/11/11 17:07:23 Depth: 3 Time: 82.737ms Nodes: 6609
+2022/11/11 17:07:23 
+2022/11/11 17:07:23 Iterative deepening depth 4
+2022/11/11 17:07:23 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:07:23 New best move: f8g6
+2022/11/11 17:07:23 New best move: f5e6
+2022/11/11 17:07:23 Plain minimax results f5e6 -550
+2022/11/11 17:07:23 Quiescence search explored 19579 nodes
+2022/11/11 17:07:23 Best move: f5e6 Eval: -550
+2022/11/11 17:07:23 Depth: 4 Time: 263.1606ms Nodes: 37155
+2022/11/11 17:07:23 
+2022/11/11 17:07:23 Iterative deepening depth 5
+2022/11/11 17:07:23 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:07:23 New best move: f8g6
+2022/11/11 17:07:23 New best move: f5e6
+2022/11/11 17:07:24 Plain minimax results f5e6 -550
+2022/11/11 17:07:24 Quiescence search explored 76406 nodes
+2022/11/11 17:07:24 Best move: f5e6 Eval: -550
+2022/11/11 17:07:24 Depth: 5 Time: 1.4720076s Nodes: 115547
+2022/11/11 17:07:24 
+2022/11/11 17:07:24 Iterative deepening depth 6
+2022/11/11 17:07:24 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:07:24 New best move: f8g6
+2022/11/11 17:07:25 New best move: f7f6
+2022/11/11 17:07:28 New best move: f8e6
+2022/11/11 17:07:28 Plain minimax results f8e6 -550
+2022/11/11 17:07:28 Quiescence search explored 393873 nodes
+2022/11/11 17:07:28 Best move: f8e6 Eval: -550
+2022/11/11 17:07:28 Depth: 6 Time: 5.1822578s Nodes: 760260
+2022/11/11 17:07:28 
+2022/11/11 17:07:28 Iterative deepening depth 7
+2022/11/11 17:07:28 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:07:28 New best move: f8g6
+2022/11/11 17:07:33 New best move: f7f6
+2022/11/11 17:07:33 New best move: g4g1
+2022/11/11 17:07:55 New best move: f8e6
+2022/11/11 17:07:58 Plain minimax results f8e6 -550
+2022/11/11 17:07:58 Quiescence search explored 1987749 nodes
+2022/11/11 17:07:58 Best move: f8e6 Eval: -550
+2022/11/11 17:07:58 Depth: 7 Time: 35.6827337s Nodes: 3096255
+2022/11/11 17:07:58 Engine results f8e6 -550
+2022/11/11 17:07:58 TEST FAILED f8e6 Ng6
+2022/11/11 17:07:58 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 17:07:58 FEN: r1b1r1k1/1pqn1pbp/p2pp1p1/P7/1n1NPP1Q/2NBBR2/1PP3PP/R6K w - - 0 1
+2022/11/11 17:07:58 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 17:07:58 
+2022/11/11 17:07:58 Iterative deepening depth 1
+2022/11/11 17:07:58 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:07:58 New best move: h1g1
+2022/11/11 17:07:58 New best move: d3f1
+2022/11/11 17:07:58 Plain minimax results d3f1 0
+2022/11/11 17:07:58 Quiescence search explored 619 nodes
+2022/11/11 17:07:58 Best move: d3f1 Eval: 0
+2022/11/11 17:07:58 Depth: 1 Time: 7.0205ms Nodes: 673
+2022/11/11 17:07:58 
+2022/11/11 17:07:58 Iterative deepening depth 2
+2022/11/11 17:07:58 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:07:58 New best move: h1g1
+2022/11/11 17:07:58 New best move: d3f1
+2022/11/11 17:07:58 Plain minimax results d3f1 0
+2022/11/11 17:07:58 Quiescence search explored 3194 nodes
+2022/11/11 17:07:58 Best move: d3f1 Eval: 0
+2022/11/11 17:07:58 Depth: 2 Time: 36.0286ms Nodes: 5428
+2022/11/11 17:07:58 
+2022/11/11 17:07:58 Iterative deepening depth 3
+2022/11/11 17:07:58 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:07:58 New best move: h1g1
+2022/11/11 17:07:59 New best move: d3f1
+2022/11/11 17:07:59 Plain minimax results d3f1 0
+2022/11/11 17:07:59 Quiescence search explored 30148 nodes
+2022/11/11 17:07:59 Best move: d3f1 Eval: 0
+2022/11/11 17:07:59 Depth: 3 Time: 529.1369ms Nodes: 39477
+2022/11/11 17:07:59 
+2022/11/11 17:07:59 Iterative deepening depth 4
+2022/11/11 17:07:59 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:07:59 New best move: h1g1
+2022/11/11 17:07:59 New best move: h4e1
+2022/11/11 17:08:00 New best move: f3h3
+2022/11/11 17:08:01 Plain minimax results f3h3 0
+2022/11/11 17:08:01 Quiescence search explored 179541 nodes
+2022/11/11 17:08:01 Best move: f3h3 Eval: 0
+2022/11/11 17:08:01 Depth: 4 Time: 2.5960686s Nodes: 310057
+2022/11/11 17:08:01 
+2022/11/11 17:08:01 Iterative deepening depth 5
+2022/11/11 17:08:01 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:08:01 New best move: h1g1
+2022/11/11 17:08:29 Plain minimax results h1g1 -10
+2022/11/11 17:08:29 Quiescence search explored 1824032 nodes
+2022/11/11 17:08:29 Best move: h1g1 Eval: -10
+2022/11/11 17:08:29 Depth: 5 Time: 30.8598677s Nodes: 2520939
+2022/11/11 17:08:29 Engine results h1g1 -10
+2022/11/11 17:08:29 TEST FAILED h1g1 f5
+2022/11/11 17:08:29 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 17:08:29 FEN: 5b2/p2k1p2/P3pP1p/n2pP1p1/1p1P2P1/1P1KBN2/7P/8 w - - 0 1
+2022/11/11 17:08:29 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 17:08:29 
+2022/11/11 17:08:29 Iterative deepening depth 1
+2022/11/11 17:08:29 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:08:29 New best move: d3c2
+2022/11/11 17:08:29 Plain minimax results d3c2 0
+2022/11/11 17:08:29 Quiescence search explored 70 nodes
+2022/11/11 17:08:29 Best move: d3c2 Eval: 0
+2022/11/11 17:08:29 Depth: 1 Time: 1.0002ms Nodes: 86
+2022/11/11 17:08:29 
+2022/11/11 17:08:29 Iterative deepening depth 2
+2022/11/11 17:08:29 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:08:29 New best move: d3c2
+2022/11/11 17:08:29 Plain minimax results d3c2 0
+2022/11/11 17:08:29 Quiescence search explored 295 nodes
+2022/11/11 17:08:29 Best move: d3c2 Eval: 0
+2022/11/11 17:08:29 Depth: 2 Time: 2.9997ms Nodes: 540
+2022/11/11 17:08:29 
+2022/11/11 17:08:29 Iterative deepening depth 3
+2022/11/11 17:08:29 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:08:29 New best move: d3c2
+2022/11/11 17:08:29 Plain minimax results d3c2 0
+2022/11/11 17:08:29 Quiescence search explored 1407 nodes
+2022/11/11 17:08:29 Best move: d3c2 Eval: 0
+2022/11/11 17:08:29 Depth: 3 Time: 19.9994ms Nodes: 2307
+2022/11/11 17:08:29 
+2022/11/11 17:08:29 Iterative deepening depth 4
+2022/11/11 17:08:29 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:08:29 New best move: d3c2
+2022/11/11 17:08:29 Plain minimax results d3c2 0
+2022/11/11 17:08:29 Quiescence search explored 5747 nodes
+2022/11/11 17:08:29 Best move: d3c2 Eval: 0
+2022/11/11 17:08:29 Depth: 4 Time: 67.0159ms Nodes: 11316
+2022/11/11 17:08:29 
+2022/11/11 17:08:29 Iterative deepening depth 5
+2022/11/11 17:08:29 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:08:29 New best move: d3c2
+2022/11/11 17:08:30 Plain minimax results d3c2 0
+2022/11/11 17:08:30 Quiescence search explored 22129 nodes
+2022/11/11 17:08:30 Best move: d3c2 Eval: 0
+2022/11/11 17:08:30 Depth: 5 Time: 336.2618ms Nodes: 35683
+2022/11/11 17:08:30 
+2022/11/11 17:08:30 Iterative deepening depth 6
+2022/11/11 17:08:30 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:08:30 New best move: d3c2
+2022/11/11 17:08:30 Plain minimax results d3c2 0
+2022/11/11 17:08:30 Quiescence search explored 89126 nodes
+2022/11/11 17:08:30 Best move: d3c2 Eval: 0
+2022/11/11 17:08:30 Depth: 6 Time: 1.0743751s Nodes: 173517
+2022/11/11 17:08:30 
+2022/11/11 17:08:30 Iterative deepening depth 7
+2022/11/11 17:08:30 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:08:31 New best move: d3c2
+2022/11/11 17:08:33 Plain minimax results d3c2 -100
+2022/11/11 17:08:33 Quiescence search explored 236305 nodes
+2022/11/11 17:08:33 Best move: d3c2 Eval: -100
+2022/11/11 17:08:33 Depth: 7 Time: 3.9826827s Nodes: 402546
+2022/11/11 17:08:33 
+2022/11/11 17:08:33 Iterative deepening depth 8
+2022/11/11 17:08:33 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:08:34 New best move: d3c2
+2022/11/11 17:08:41 Plain minimax results d3c2 -100
+2022/11/11 17:08:41 Quiescence search explored 924191 nodes
+2022/11/11 17:08:41 Best move: d3c2 Eval: -100
+2022/11/11 17:08:41 Depth: 8 Time: 12.0319566s Nodes: 1825469
+2022/11/11 17:08:41 
+2022/11/11 17:08:41 Iterative deepening depth 9
+2022/11/11 17:08:41 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:08:45 New best move: d3c2
+2022/11/11 17:09:26 Plain minimax results d3c2 -100
+2022/11/11 17:09:26 Quiescence search explored 3896652 nodes
+2022/11/11 17:09:26 Best move: d3c2 Eval: -100
+2022/11/11 17:09:26 Depth: 9 Time: 57.1726248s Nodes: 6609204
+2022/11/11 17:09:26 Engine results d3c2 -100
+2022/11/11 17:09:26 TEST FAILED d3c2 Nxg5
+2022/11/11 17:09:26 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 17:09:26 FEN: r3kbnr/1b3ppp/pqn5/1pp1P3/3p4/1BN2N2/PP2QPPP/R1BR2K1 w kq - 0 1
+2022/11/11 17:09:26 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 17:09:26 
+2022/11/11 17:09:26 Iterative deepening depth 1
+2022/11/11 17:09:26 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:09:26 New best move: g1f1
+2022/11/11 17:09:26 New best move: c3b1
+2022/11/11 17:09:26 Plain minimax results c3b1 -100
+2022/11/11 17:09:26 Quiescence search explored 394 nodes
+2022/11/11 17:09:26 Best move: c3b1 Eval: -100
+2022/11/11 17:09:26 Depth: 1 Time: 7.0006ms Nodes: 439
+2022/11/11 17:09:26 
+2022/11/11 17:09:26 Iterative deepening depth 2
+2022/11/11 17:09:26 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:09:26 New best move: g1f1
+2022/11/11 17:09:26 New best move: c3b1
+2022/11/11 17:09:26 Plain minimax results c3b1 -100
+2022/11/11 17:09:26 Quiescence search explored 1857 nodes
+2022/11/11 17:09:26 Best move: c3b1 Eval: -100
+2022/11/11 17:09:26 Depth: 2 Time: 22.0283ms Nodes: 3472
+2022/11/11 17:09:26 
+2022/11/11 17:09:26 Iterative deepening depth 3
+2022/11/11 17:09:26 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:09:26 New best move: g1f1
+2022/11/11 17:09:27 New best move: e2d2
+2022/11/11 17:09:27 New best move: e2d3
+2022/11/11 17:09:27 Plain minimax results e2d3 -100
+2022/11/11 17:09:27 Quiescence search explored 31263 nodes
+2022/11/11 17:09:27 Best move: e2d3 Eval: -100
+2022/11/11 17:09:27 Depth: 3 Time: 554.9275ms Nodes: 39654
+2022/11/11 17:09:27 
+2022/11/11 17:09:27 Iterative deepening depth 4
+2022/11/11 17:09:27 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:09:27 New best move: g1f1
+2022/11/11 17:09:27 New best move: e2d2
+2022/11/11 17:09:27 New best move: e2d3
+2022/11/11 17:09:28 Plain minimax results e2d3 -100
+2022/11/11 17:09:28 Quiescence search explored 82120 nodes
+2022/11/11 17:09:28 Best move: e2d3 Eval: -100
+2022/11/11 17:09:28 Depth: 4 Time: 1.5990843s Nodes: 148475
+2022/11/11 17:09:28 
+2022/11/11 17:09:28 Iterative deepening depth 5
+2022/11/11 17:09:28 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:09:29 New best move: g1f1
+2022/11/11 17:09:33 New best move: e2d2
+2022/11/11 17:09:46 New best move: c3e4
+2022/11/11 17:09:54 Plain minimax results c3e4 -90
+2022/11/11 17:09:54 Quiescence search explored 1654837 nodes
+2022/11/11 17:09:54 Best move: c3e4 Eval: -90
+2022/11/11 17:09:54 Depth: 5 Time: 27.5259656s Nodes: 2210836
+2022/11/11 17:09:54 
+2022/11/11 17:09:54 Iterative deepening depth 6
+2022/11/11 17:09:54 Running minimax_plain_ab_q_engine_func
+2022/11/11 17:09:55 New best move: g1f1
+2022/11/11 17:10:05 New best move: e2d2
+2022/11/11 17:10:38 New best move: c3e4

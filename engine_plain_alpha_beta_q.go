@@ -32,6 +32,7 @@ var engine_minimax_plain_ab_q = t_engine_p_ab_q{
 
 
 func (e *t_engine_p_ab_q) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
+	reset_counters()
 	log.Println("Running minimax_plain_ab_q_engine_func")
 	best, eval = e.minimax_plain_ab_q_starter(pos, e.engine_config.ply, pos.Turn() == chess.White)
 	log.Println("Plain minimax results", best, eval)
@@ -44,7 +45,9 @@ func (e *t_engine_p_ab_q) minimax_plain_ab_q_starter(position *chess.Position, p
 	eval = -1 * math.MaxInt
 	for _, move := range moves {
 		score := -1 * e.minimax_plain_ab_q_searcher(position.Update(move), ply-1, !max, -1 * math.MaxInt, math.MaxInt)
-		log.Println("Top Level Move:", move, "Eval:", score)
+		if PRINT_TOP_MOVES {
+			log.Println("Top Level Move:", move, "Eval:", score)
+		}
 		if score > eval {
 			log.Println("New best move:", move)
 			eval = score

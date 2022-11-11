@@ -26,6 +26,7 @@ var engine_minimax_parallel_plain = t_engine_p_pll{
 }
 
 func (e *t_engine_p_pll) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
+	reset_counters()
 	best, eval = e.minimax_parallel_plain_starter(pos, e.engine_config.ply, true)
 	log.Println("Parellel results", best, eval)
 	return 

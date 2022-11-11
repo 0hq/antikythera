@@ -1,0 +1,402 @@
+2022/11/11 16:57:37 File initialization.
+2022/11/11 16:57:37 Version go1.19.3
+2022/11/11 16:57:37 NumCPU 6
+2022/11/11 16:57:37 GOMAXPROCS 6
+2022/11/11 16:57:37 
+2022/11/11 16:57:37 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:37 FEN: r1bqk1r1/1p1p1n2/p1n2pN1/2p1b2Q/2P1Pp2/1PN5/PB4PP/R4RK1 w - - 0 1
+2022/11/11 16:57:37 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:37 
+2022/11/11 16:57:37 Iterative deepening depth 1
+2022/11/11 16:57:37 Running minimax_plain_ab_q_engine_func
+2022/11/11 16:57:37 Top Level Move: g6e5 Eval: -320
+2022/11/11 16:57:37 New best move: g6e5
+2022/11/11 16:57:37 Top Level Move: g1h1 Eval: -540
+2022/11/11 16:57:37 Top Level Move: g1f2 Eval: -650
+2022/11/11 16:57:37 Top Level Move: h5d1 Eval: -650
+2022/11/11 16:57:37 Top Level Move: h5e2 Eval: -650
+2022/11/11 16:57:37 Top Level Move: h5f3 Eval: -650
+2022/11/11 16:57:37 Top Level Move: h5h3 Eval: -650
+2022/11/11 16:57:38 Top Level Move: h5g4 Eval: -650
+2022/11/11 16:57:38 Top Level Move: h5h4 Eval: -650
+2022/11/11 16:57:38 Top Level Move: h5f5 Eval: -580
+2022/11/11 16:57:38 Top Level Move: h5g5 Eval: -1230
+2022/11/11 16:57:38 Top Level Move: h5h6 Eval: -1230
+2022/11/11 16:57:38 Top Level Move: h5h7 Eval: -330
+2022/11/11 16:57:38 Top Level Move: h5h8 Eval: -1130
+2022/11/11 16:57:38 Top Level Move: a1b1 Eval: -650
+2022/11/11 16:57:38 Top Level Move: a1c1 Eval: -650
+2022/11/11 16:57:38 Top Level Move: a1d1 Eval: -540
+2022/11/11 16:57:38 Top Level Move: a1e1 Eval: -650
+2022/11/11 16:57:38 Top Level Move: f1b1 Eval: -650
+2022/11/11 16:57:38 Top Level Move: f1c1 Eval: -650
+2022/11/11 16:57:38 Top Level Move: f1d1 Eval: -540
+2022/11/11 16:57:38 Top Level Move: f1e1 Eval: -650
+2022/11/11 16:57:38 Top Level Move: f1f2 Eval: -540
+2022/11/11 16:57:38 Top Level Move: f1f3 Eval: -650
+2022/11/11 16:57:38 Top Level Move: b2c1 Eval: -870
+2022/11/11 16:57:38 Top Level Move: b2a3 Eval: -870
+2022/11/11 16:57:38 Top Level Move: c3b1 Eval: -960
+2022/11/11 16:57:38 Top Level Move: c3d1 Eval: -550
+2022/11/11 16:57:38 Top Level Move: c3e2 Eval: -880
+2022/11/11 16:57:38 Top Level Move: c3a4 Eval: -550
+2022/11/11 16:57:38 Top Level Move: c3b5 Eval: -980
+2022/11/11 16:57:38 Top Level Move: c3d5 Eval: -660
+2022/11/11 16:57:38 Top Level Move: g6h4 Eval: -650
+2022/11/11 16:57:38 Top Level Move: g6e7 Eval: -650
+2022/11/11 16:57:38 Top Level Move: g6f8 Eval: -650
+2022/11/11 16:57:38 Top Level Move: g6h8 Eval: -650
+2022/11/11 16:57:38 Top Level Move: a2a3 Eval: -650
+2022/11/11 16:57:38 Top Level Move: a2a4 Eval: -650
+2022/11/11 16:57:38 Top Level Move: g2g3 Eval: -640
+2022/11/11 16:57:38 Top Level Move: g2g4 Eval: -650
+2022/11/11 16:57:38 Top Level Move: h2h3 Eval: -650
+2022/11/11 16:57:38 Top Level Move: h2h4 Eval: -650
+2022/11/11 16:57:38 Top Level Move: b3b4 Eval: -550
+2022/11/11 16:57:38 Top Level Move: g6f4 Eval: -230
+2022/11/11 16:57:38 New best move: g6f4
+2022/11/11 16:57:38 Top Level Move: f1f4 Eval: -550
+2022/11/11 16:57:38 Top Level Move: h5e5 Eval: -1020
+2022/11/11 16:57:38 Plain minimax results g6f4 -230
+2022/11/11 16:57:38 Quiescence search explored 75401 nodes
+2022/11/11 16:57:38 Best move: g6f4 Eval: -230
+2022/11/11 16:57:38 Depth: 1 Time: 758.2279ms Nodes: 143975
+2022/11/11 16:57:38 Engine results g6f4 -230
+2022/11/11 16:57:38 !!! POSSIBLE PASS: g6f4 Rxf4
+2022/11/11 16:57:38 Move is ambiguous, possible moves are: [f1f4 g6f4]
+2022/11/11 16:57:38 TEST FAILED g6f4 Rxf4
+2022/11/11 16:57:38 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:38 FEN: r1n2N1k/2n2K1p/3pp3/5Pp1/b5R1/8/1PPP4/8 w - - 0 1
+2022/11/11 16:57:38 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:38 
+2022/11/11 16:57:38 Iterative deepening depth 1
+2022/11/11 16:57:38 Running minimax_plain_ab_q_engine_func
+2022/11/11 16:57:38 Top Level Move: f8g6 Eval: -870
+2022/11/11 16:57:38 New best move: f8g6
+2022/11/11 16:57:38 Top Level Move: f5e6 Eval: -550
+2022/11/11 16:57:38 New best move: f5e6
+2022/11/11 16:57:38 Top Level Move: f7f6 Eval: -650
+2022/11/11 16:57:38 Top Level Move: g4g1 Eval: -750
+2022/11/11 16:57:38 Top Level Move: g4g2 Eval: -750
+2022/11/11 16:57:38 Top Level Move: g4g3 Eval: -750
+2022/11/11 16:57:38 Top Level Move: g4b4 Eval: -870
+2022/11/11 16:57:38 Top Level Move: g4c4 Eval: -650
+2022/11/11 16:57:38 Top Level Move: g4d4 Eval: -870
+2022/11/11 16:57:38 Top Level Move: g4e4 Eval: -750
+2022/11/11 16:57:38 Top Level Move: g4f4 Eval: -1150
+2022/11/11 16:57:38 Top Level Move: g4h4 Eval: -1150
+2022/11/11 16:57:38 Top Level Move: f8d7 Eval: -970
+2022/11/11 16:57:38 Top Level Move: b2b3 Eval: -650
+2022/11/11 16:57:38 Top Level Move: b2b4 Eval: -750
+2022/11/11 16:57:38 Top Level Move: c2c3 Eval: -650
+2022/11/11 16:57:38 Top Level Move: c2c4 Eval: -650
+2022/11/11 16:57:38 Top Level Move: d2d3 Eval: -750
+2022/11/11 16:57:38 Top Level Move: d2d4 Eval: -750
+2022/11/11 16:57:38 Top Level Move: f5f6 Eval: -29998
+2022/11/11 16:57:38 Top Level Move: g4a4 Eval: -720
+2022/11/11 16:57:38 Top Level Move: f8e6 Eval: -550
+2022/11/11 16:57:38 Top Level Move: f8h7 Eval: -770
+2022/11/11 16:57:38 Top Level Move: g4g5 Eval: -550
+2022/11/11 16:57:38 Plain minimax results f5e6 -550
+2022/11/11 16:57:38 Quiescence search explored 94980 nodes
+2022/11/11 16:57:38 Best move: f5e6 Eval: -550
+2022/11/11 16:57:38 Depth: 1 Time: 185.1511ms Nodes: 181130
+2022/11/11 16:57:38 Engine results f5e6 -550
+2022/11/11 16:57:38 TEST FAILED f5e6 Ng6
+2022/11/11 16:57:38 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:38 FEN: r1b1r1k1/1pqn1pbp/p2pp1p1/P7/1n1NPP1Q/2NBBR2/1PP3PP/R6K w - - 0 1
+2022/11/11 16:57:38 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:38 
+2022/11/11 16:57:38 Iterative deepening depth 1
+2022/11/11 16:57:38 Running minimax_plain_ab_q_engine_func
+2022/11/11 16:57:38 Top Level Move: h1g1 Eval: -90
+2022/11/11 16:57:38 New best move: h1g1
+2022/11/11 16:57:38 Top Level Move: h4e1 Eval: -10
+2022/11/11 16:57:38 New best move: h4e1
+2022/11/11 16:57:38 Top Level Move: h4f2 Eval: -10
+2022/11/11 16:57:38 Top Level Move: h4g3 Eval: -90
+2022/11/11 16:57:38 Top Level Move: h4h3 Eval: -90
+2022/11/11 16:57:38 Top Level Move: h4g4 Eval: -90
+2022/11/11 16:57:39 Top Level Move: h4g5 Eval: -90
+2022/11/11 16:57:39 Top Level Move: h4h5 Eval: -900
+2022/11/11 16:57:39 Top Level Move: h4f6 Eval: -900
+2022/11/11 16:57:39 Top Level Move: h4h6 Eval: -900
+2022/11/11 16:57:39 Top Level Move: h4e7 Eval: -900
+2022/11/11 16:57:39 Top Level Move: h4d8 Eval: -900
+2022/11/11 16:57:39 Top Level Move: a1b1 Eval: -110
+2022/11/11 16:57:39 Top Level Move: a1c1 Eval: -110
+2022/11/11 16:57:39 Top Level Move: a1d1 Eval: -110
+2022/11/11 16:57:39 Top Level Move: a1e1 Eval: -110
+2022/11/11 16:57:39 Top Level Move: a1f1 Eval: -110
+2022/11/11 16:57:39 Top Level Move: a1g1 Eval: -110
+2022/11/11 16:57:39 Top Level Move: a1a2 Eval: -280
+2022/11/11 16:57:39 Top Level Move: a1a3 Eval: -90
+2022/11/11 16:57:39 Top Level Move: a1a4 Eval: -90
+2022/11/11 16:57:39 Top Level Move: f3f1 Eval: -90
+2022/11/11 16:57:39 Top Level Move: f3f2 Eval: -90
+2022/11/11 16:57:39 Top Level Move: f3g3 Eval: -90
+2022/11/11 16:57:39 Top Level Move: f3h3 Eval: 0
+2022/11/11 16:57:39 New best move: f3h3
+2022/11/11 16:57:39 Top Level Move: d3f1 Eval: -90
+2022/11/11 16:57:39 Top Level Move: d3e2 Eval: -90
+2022/11/11 16:57:40 Top Level Move: d3c4 Eval: -330
+2022/11/11 16:57:40 Top Level Move: d3b5 Eval: -230
+2022/11/11 16:57:40 Top Level Move: e3c1 Eval: -330
+2022/11/11 16:57:40 Top Level Move: e3g1 Eval: -90
+2022/11/11 16:57:40 Top Level Move: e3d2 Eval: -330
+2022/11/11 16:57:40 Top Level Move: e3f2 Eval: -90
+2022/11/11 16:57:40 Top Level Move: c3b1 Eval: -90
+2022/11/11 16:57:40 Top Level Move: c3d1 Eval: -90
+2022/11/11 16:57:40 Top Level Move: c3a2 Eval: -310
+2022/11/11 16:57:40 Top Level Move: c3e2 Eval: -10
+2022/11/11 16:57:40 Top Level Move: c3a4 Eval: -110
+2022/11/11 16:57:40 Top Level Move: c3b5 Eval: -220
+2022/11/11 16:57:40 Top Level Move: c3d5 Eval: -320
+2022/11/11 16:57:40 Top Level Move: d4e2 Eval: -90
+2022/11/11 16:57:40 Top Level Move: d4b3 Eval: -100
+2022/11/11 16:57:40 Top Level Move: d4b5 Eval: -220
+2022/11/11 16:57:40 Top Level Move: d4f5 Eval: -330
+2022/11/11 16:57:40 Top Level Move: d4c6 Eval: -330
+2022/11/11 16:57:40 Top Level Move: b2b3 Eval: -330
+2022/11/11 16:57:40 Top Level Move: g2g3 Eval: -90
+2022/11/11 16:57:40 Top Level Move: g2g4 Eval: -90
+2022/11/11 16:57:40 Top Level Move: h2h3 Eval: -90
+2022/11/11 16:57:40 Top Level Move: e4e5 Eval: -100
+2022/11/11 16:57:40 Top Level Move: f4f5 Eval: -110
+2022/11/11 16:57:40 Top Level Move: d4e6 Eval: -230
+2022/11/11 16:57:40 Top Level Move: d3a6 Eval: -230
+2022/11/11 16:57:40 Top Level Move: h4h7 Eval: -800
+2022/11/11 16:57:40 Plain minimax results f3h3 0
+2022/11/11 16:57:40 Quiescence search explored 274521 nodes
+2022/11/11 16:57:40 Best move: f3h3 Eval: 0
+2022/11/11 16:57:40 Depth: 1 Time: 2.1077827s Nodes: 491187
+2022/11/11 16:57:40 Engine results f3h3 0
+2022/11/11 16:57:40 TEST FAILED f3h3 f5
+2022/11/11 16:57:40 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:40 FEN: 5b2/p2k1p2/P3pP1p/n2pP1p1/1p1P2P1/1P1KBN2/7P/8 w - - 0 1
+2022/11/11 16:57:40 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:40 
+2022/11/11 16:57:40 Iterative deepening depth 1
+2022/11/11 16:57:40 Running minimax_plain_ab_q_engine_func
+2022/11/11 16:57:40 Top Level Move: d3c2 Eval: 0
+2022/11/11 16:57:40 New best move: d3c2
+2022/11/11 16:57:40 Top Level Move: d3d2 Eval: -100
+2022/11/11 16:57:40 Top Level Move: d3e2 Eval: -100
+2022/11/11 16:57:40 Top Level Move: e3c1 Eval: -100
+2022/11/11 16:57:40 Top Level Move: e3g1 Eval: -100
+2022/11/11 16:57:40 Top Level Move: e3d2 Eval: -100
+2022/11/11 16:57:40 Top Level Move: e3f2 Eval: -100
+2022/11/11 16:57:40 Top Level Move: e3f4 Eval: -330
+2022/11/11 16:57:40 Top Level Move: f3e1 Eval: -100
+2022/11/11 16:57:40 Top Level Move: f3g1 Eval: -100
+2022/11/11 16:57:40 Top Level Move: f3d2 Eval: 0
+2022/11/11 16:57:40 Top Level Move: f3h4 Eval: -320
+2022/11/11 16:57:40 Top Level Move: h2h3 Eval: -100
+2022/11/11 16:57:40 Top Level Move: h2h4 Eval: -100
+2022/11/11 16:57:40 Top Level Move: f3g5 Eval: -220
+2022/11/11 16:57:40 Top Level Move: e3g5 Eval: -230
+2022/11/11 16:57:40 Plain minimax results d3c2 0
+2022/11/11 16:57:40 Quiescence search explored 280268 nodes
+2022/11/11 16:57:40 Best move: d3c2 Eval: 0
+2022/11/11 16:57:40 Depth: 1 Time: 50.0087ms Nodes: 502503
+2022/11/11 16:57:40 Engine results d3c2 0
+2022/11/11 16:57:40 TEST FAILED d3c2 Nxg5
+2022/11/11 16:57:40 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:40 FEN: r3kbnr/1b3ppp/pqn5/1pp1P3/3p4/1BN2N2/PP2QPPP/R1BR2K1 w kq - 0 1
+2022/11/11 16:57:40 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:40 
+2022/11/11 16:57:40 Iterative deepening depth 1
+2022/11/11 16:57:40 Running minimax_plain_ab_q_engine_func
+2022/11/11 16:57:40 Top Level Move: g1f1 Eval: -320
+2022/11/11 16:57:40 New best move: g1f1
+2022/11/11 16:57:40 Top Level Move: g1h1 Eval: -320
+2022/11/11 16:57:41 Top Level Move: e2e1 Eval: -320
+2022/11/11 16:57:41 Top Level Move: e2f1 Eval: -320
+2022/11/11 16:57:41 Top Level Move: e2c2 Eval: -330
+2022/11/11 16:57:41 Top Level Move: e2d2 Eval: -200
+2022/11/11 16:57:41 New best move: e2d2
+2022/11/11 16:57:41 Top Level Move: e2d3 Eval: -100
+2022/11/11 16:57:41 New best move: e2d3
+2022/11/11 16:57:41 Top Level Move: e2e3 Eval: -900
+2022/11/11 16:57:41 Top Level Move: e2c4 Eval: -1000
+2022/11/11 16:57:41 Top Level Move: e2e4 Eval: -320
+2022/11/11 16:57:41 Top Level Move: a1b1 Eval: -320
+2022/11/11 16:57:41 Top Level Move: d1e1 Eval: -320
+2022/11/11 16:57:41 Top Level Move: d1f1 Eval: -320
+2022/11/11 16:57:41 Top Level Move: d1d2 Eval: -320
+2022/11/11 16:57:41 Top Level Move: d1d3 Eval: -330
+2022/11/11 16:57:41 Top Level Move: c1d2 Eval: -320
+2022/11/11 16:57:41 Top Level Move: c1e3 Eval: -330
+2022/11/11 16:57:41 Top Level Move: c1f4 Eval: -320
+2022/11/11 16:57:41 Top Level Move: c1g5 Eval: -320
+2022/11/11 16:57:41 Top Level Move: c1h6 Eval: -430
+2022/11/11 16:57:41 Top Level Move: b3c2 Eval: -320
+2022/11/11 16:57:41 Top Level Move: b3a4 Eval: -420
+2022/11/11 16:57:41 Top Level Move: b3c4 Eval: -430
+2022/11/11 16:57:41 Top Level Move: b3d5 Eval: -320
+2022/11/11 16:57:41 Top Level Move: b3e6 Eval: -430
+2022/11/11 16:57:41 Top Level Move: c3b1 Eval: -100
+2022/11/11 16:57:41 Top Level Move: c3a4 Eval: -320
+2022/11/11 16:57:41 Top Level Move: c3e4 Eval: -100
+2022/11/11 16:57:41 Top Level Move: c3d5 Eval: -100
+2022/11/11 16:57:41 Top Level Move: f3e1 Eval: -420
+2022/11/11 16:57:41 Top Level Move: f3d2 Eval: -420
+2022/11/11 16:57:41 Top Level Move: f3h4 Eval: -420
+2022/11/11 16:57:41 Top Level Move: f3g5 Eval: -320
+2022/11/11 16:57:41 Top Level Move: a2a3 Eval: -320
+2022/11/11 16:57:41 Top Level Move: a2a4 Eval: -420
+2022/11/11 16:57:41 Top Level Move: g2g3 Eval: -320
+2022/11/11 16:57:41 Top Level Move: g2g4 Eval: -320
+2022/11/11 16:57:41 Top Level Move: h2h3 Eval: -320
+2022/11/11 16:57:41 Top Level Move: h2h4 Eval: -320
+2022/11/11 16:57:41 Top Level Move: e5e6 Eval: -100
+2022/11/11 16:57:41 Top Level Move: b3f7 Eval: -330
+2022/11/11 16:57:41 Top Level Move: c3b5 Eval: -320
+2022/11/11 16:57:41 Top Level Move: f3d4 Eval: -330
+2022/11/11 16:57:41 Top Level Move: d1d4 Eval: -500
+2022/11/11 16:57:42 Top Level Move: e2b5 Eval: -900
+2022/11/11 16:57:42 Plain minimax results e2d3 -100
+2022/11/11 16:57:42 Quiescence search explored 362388 nodes
+2022/11/11 16:57:42 Best move: e2d3 Eval: -100
+2022/11/11 16:57:42 Depth: 1 Time: 1.0730676s Nodes: 650978
+2022/11/11 16:57:42 Engine results e2d3 -100
+2022/11/11 16:57:42 TEST FAILED e2d3 bm
+2022/11/11 16:57:42 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:42 FEN: r2r2k1/1p1n1pp1/4pnp1/8/PpBRqP2/1Q2B1P1/1P5P/R5K1 b - - 1 2
+2022/11/11 16:57:42 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:42 
+2022/11/11 16:57:42 Iterative deepening depth 1
+2022/11/11 16:57:42 Running minimax_plain_ab_q_engine_func
+2022/11/11 16:57:42 Top Level Move: e4b1 Eval: -820
+2022/11/11 16:57:42 New best move: e4b1
+2022/11/11 16:57:42 Top Level Move: e4h1 Eval: -820
+2022/11/11 16:57:42 Top Level Move: e4g2 Eval: -820
+2022/11/11 16:57:42 Top Level Move: g8h7 Eval: -420
+2022/11/11 16:57:42 New best move: g8h7
+2022/11/11 16:57:42 Top Level Move: g8f8 Eval: -520
+2022/11/11 16:57:42 Top Level Move: g8h8 Eval: -420
+2022/11/11 16:57:42 Top Level Move: e4c2 Eval: -820
+2022/11/11 16:57:42 Top Level Move: e4d3 Eval: -820
+2022/11/11 16:57:42 Top Level Move: e4f3 Eval: 80
+2022/11/11 16:57:42 New best move: e4f3
+2022/11/11 16:57:42 Top Level Move: e4d5 Eval: -490
+2022/11/11 16:57:42 Top Level Move: e4e5 Eval: -810
+2022/11/11 16:57:42 Top Level Move: e4f5 Eval: -20
+2022/11/11 16:57:42 Top Level Move: e4c6 Eval: -10
+2022/11/11 16:57:42 Top Level Move: a8a5 Eval: -420
+2022/11/11 16:57:42 Top Level Move: a8a6 Eval: -590
+2022/11/11 16:57:42 Top Level Move: a8a7 Eval: -820
+2022/11/11 16:57:42 Top Level Move: a8b8 Eval: -420
+2022/11/11 16:57:42 Top Level Move: a8c8 Eval: -420
+2022/11/11 16:57:42 Top Level Move: d8b8 Eval: -420
+2022/11/11 16:57:42 Top Level Move: d8c8 Eval: -420
+2022/11/11 16:57:42 Top Level Move: d8e8 Eval: -420
+2022/11/11 16:57:42 Top Level Move: d8f8 Eval: -420
+2022/11/11 16:57:42 Top Level Move: f6g4 Eval: -810
+2022/11/11 16:57:42 Top Level Move: f6d5 Eval: -810
+2022/11/11 16:57:42 Top Level Move: f6h5 Eval: -820
+2022/11/11 16:57:42 Top Level Move: f6h7 Eval: -820
+2022/11/11 16:57:42 Top Level Move: f6e8 Eval: -640
+2022/11/11 16:57:42 Top Level Move: d7c5 Eval: -240
+2022/11/11 16:57:42 Top Level Move: d7e5 Eval: -640
+2022/11/11 16:57:42 Top Level Move: d7b6 Eval: -640
+2022/11/11 16:57:42 Top Level Move: d7b8 Eval: -420
+2022/11/11 16:57:42 Top Level Move: d7f8 Eval: -420
+2022/11/11 16:57:42 Top Level Move: e6e5 Eval: -520
+2022/11/11 16:57:42 Top Level Move: g6g5 Eval: -420
+2022/11/11 16:57:42 Top Level Move: b7b5 Eval: -420
+2022/11/11 16:57:42 Top Level Move: b7b6 Eval: -420
+2022/11/11 16:57:42 Top Level Move: e4d4 Eval: -410
+2022/11/11 16:57:42 Top Level Move: a8a4 Eval: -320
+2022/11/11 16:57:42 Top Level Move: e4e3 Eval: -490
+2022/11/11 16:57:43 Top Level Move: e4f4 Eval: -810
+2022/11/11 16:57:43 Plain minimax results e4f3 80
+2022/11/11 16:57:43 Quiescence search explored 464920 nodes
+2022/11/11 16:57:43 Best move: e4f3 Eval: 80
+2022/11/11 16:57:43 Depth: 1 Time: 994.6435ms Nodes: 833327
+2022/11/11 16:57:43 Engine results e4f3 80
+2022/11/11 16:57:43 TEST FAILED e4f3 Nc5
+2022/11/11 16:57:43 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:43 FEN: 2rq1rk1/pb1n1ppN/4p3/1pb5/3P1Pn1/P1N5/1PQ1B1PP/R1B2RK1 b - - 1 2
+2022/11/11 16:57:43 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:43 
+2022/11/11 16:57:43 Iterative deepening depth 1
+2022/11/11 16:57:43 Running minimax_plain_ab_q_engine_func
+2022/11/11 16:57:43 Top Level Move: g8h8 Eval: -610
+2022/11/11 16:57:43 New best move: g8h8
+2022/11/11 16:57:43 Top Level Move: d8h4 Eval: -320
+2022/11/11 16:57:43 New best move: d8h4
+2022/11/11 16:57:43 Top Level Move: d8a5 Eval: -610
+2022/11/11 16:57:43 Top Level Move: d8g5 Eval: -900
+2022/11/11 16:57:43 Top Level Move: d8b6 Eval: -500
+2022/11/11 16:57:43 Top Level Move: d8f6 Eval: -910
+2022/11/11 16:57:43 Top Level Move: d8c7 Eval: -500
+2022/11/11 16:57:44 Top Level Move: d8e7 Eval: -500
+2022/11/11 16:57:44 Top Level Move: d8e8 Eval: -610
+2022/11/11 16:57:44 Top Level Move: c8c6 Eval: -610
+2022/11/11 16:57:44 Top Level Move: c8c7 Eval: -610
+2022/11/11 16:57:44 Top Level Move: c8a8 Eval: -610
+2022/11/11 16:57:44 Top Level Move: c8b8 Eval: -610
+2022/11/11 16:57:44 Top Level Move: f8e8 Eval: -430
+2022/11/11 16:57:44 Top Level Move: c5b4 Eval: -610
+2022/11/11 16:57:44 Top Level Move: c5b6 Eval: -500
+2022/11/11 16:57:44 Top Level Move: c5d6 Eval: -600
+2022/11/11 16:57:44 Top Level Move: c5e7 Eval: -500
+2022/11/11 16:57:44 Top Level Move: b7f3 Eval: -500
+2022/11/11 16:57:44 Top Level Move: b7e4 Eval: -430
+2022/11/11 16:57:44 Top Level Move: b7d5 Eval: -500
+2022/11/11 16:57:44 Top Level Move: b7a6 Eval: -610
+2022/11/11 16:57:44 Top Level Move: b7c6 Eval: -610
+2022/11/11 16:57:44 Top Level Move: b7a8 Eval: -610
+2022/11/11 16:57:44 Top Level Move: g4f2 Eval: -610
+2022/11/11 16:57:44 Top Level Move: g4e3 Eval: -650
+2022/11/11 16:57:44 Top Level Move: g4e5 Eval: -610
+2022/11/11 16:57:44 Top Level Move: g4f6 Eval: -430
+2022/11/11 16:57:44 Top Level Move: g4h6 Eval: -430
+2022/11/11 16:57:44 Top Level Move: d7e5 Eval: -500
+2022/11/11 16:57:44 Top Level Move: d7b6 Eval: -500
+2022/11/11 16:57:45 Top Level Move: d7f6 Eval: -430
+2022/11/11 16:57:45 Top Level Move: d7b8 Eval: -500
+2022/11/11 16:57:45 Top Level Move: b5b4 Eval: -430
+2022/11/11 16:57:45 Top Level Move: e6e5 Eval: -610
+2022/11/11 16:57:45 Top Level Move: a7a5 Eval: -610
+2022/11/11 16:57:45 Top Level Move: a7a6 Eval: -610
+2022/11/11 16:57:45 Top Level Move: f7f5 Eval: -330
+2022/11/11 16:57:45 Top Level Move: f7f6 Eval: -610
+2022/11/11 16:57:45 Top Level Move: g7g5 Eval: -650
+2022/11/11 16:57:45 Top Level Move: g7g6 Eval: -330
+2022/11/11 16:57:45 Top Level Move: c5d4 Eval: -100
+2022/11/11 16:57:45 New best move: c5d4
+2022/11/11 16:57:45 Top Level Move: g4h2 Eval: -330
+2022/11/11 16:57:45 Top Level Move: c5a3 Eval: -510
+2022/11/11 16:57:45 Top Level Move: b7g2 Eval: -560
+2022/11/11 16:57:45 Plain minimax results c5d4 -100
+2022/11/11 16:57:45 Quiescence search explored 664696 nodes
+2022/11/11 16:57:45 Best move: c5d4 Eval: -100
+2022/11/11 16:57:45 Depth: 1 Time: 2.619284s Nodes: 1161926
+2022/11/11 16:57:45 Engine results c5d4 -100
+2022/11/11 16:57:45 TEST FAILED c5d4 Nde5
+2022/11/11 16:57:45 Running test on engine: Meta Engine Iterative Deepening v0 : Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:45 FEN: r2qk2r/ppp1bppp/2n5/3p1b2/3P1Bn1/1QN1P3/PP3P1P/R3KBNR w KQkq - 0 1
+2022/11/11 16:57:45 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:57:45 
+2022/11/11 16:57:45 Iterative deepening depth 1
+2022/11/11 16:57:45 Running minimax_plain_ab_q_engine_func
+2022/11/11 16:57:46 Top Level Move: e1c1 Eval: -280
+2022/11/11 16:57:46 New best move: e1c1
+2022/11/11 16:57:46 Top Level Move: e1d1 Eval: -600
+2022/11/11 16:57:46 Top Level Move: e1d2 Eval: -280
+2022/11/11 16:57:47 Top Level Move: e1e2 Eval: -100
+2022/11/11 16:57:47 New best move: e1e2
+2022/11/11 16:57:47 Top Level Move: b3d1 Eval: -100
+2022/11/11 16:57:47 Top Level Move: b3c2 Eval: -1000
+2022/11/11 16:57:47 Top Level Move: b3a3 Eval: -670
+2022/11/11 16:57:47 Top Level Move: b3a4 Eval: -200
+2022/11/11 16:57:47 Top Level Move: b3b4 Eval: -1000
+2022/11/11 16:57:47 Top Level Move: b3c4 Eval: -900
+2022/11/11 16:57:48 Top Level Move: b3b5 Eval: -100
+2022/11/11 16:57:48 Top Level Move: b3b6 Eval: -1000
+2022/11/11 16:57:48 Top Level Move: a1b1 Eval: -370
+2022/11/11 16:57:48 Top Level Move: a1c1 Eval: -100
+2022/11/11 16:57:49 Top Level Move: a1d1 Eval: -100
+2022/11/11 16:57:49 Top Level Move: f1e2 Eval: -100

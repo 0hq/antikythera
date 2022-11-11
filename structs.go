@@ -35,7 +35,8 @@ type EngineConfig struct {
 }
 
 type MetaEngineConfig struct {
-	ply int
+	max_time int
+	max_depth int
 }
 
 func (e *EngineClass) Set_Config(cfg EngineConfig) {

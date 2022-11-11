@@ -88,7 +88,7 @@ func test(engine Engine, pos string, expected string) {
 				log.Println("!!! POSSIBLE PASS:", move, expected)
 				log.Println("Move is ambiguous, possible moves are:", possible_moves)
 			} else {
-				fmt.Println("TEST PASSED")
+				log.Println("TEST PASSED")
 				return 
 			}
 		}

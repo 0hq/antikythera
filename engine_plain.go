@@ -27,6 +27,7 @@ var engine_minimax_plain = t_engine_p_ab_q{
 }
 
 func (e *t_engine_p) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
+	reset_counters()
 	best, eval = e.minimax_plain_starter(pos, e.engine_config.ply, pos.Turn() == chess.White)
 	log.Println("Plain minimax results", best, eval)
 	return
