@@ -2,8 +2,9 @@ package main
 
 import (
 	"log"
-	"github.com/notnil/chess"
 	"math"
+
+	"github.com/notnil/chess"
 )
 
 // define new engine
@@ -94,7 +95,7 @@ func minimax_parallel_plain_searcher(position *chess.Position, ply int, max bool
 	if ply == 0 {
 		// evaluate position and send back to parent
 		// multiply by -1 to flip sign if we are minimizing,
-		eval_channel <- evaluate_position_v1(position.Board()) * bool_to_int(max)
+		eval_channel <- evaluate_position_v1(position) * bool_to_int(max)
 		return
 	}
 

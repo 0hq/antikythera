@@ -44,7 +44,7 @@ func minimax_plain_ab_starter(position *chess.Position, ply int, max bool) (best
 func minimax_plain_ab_searcher(position *chess.Position, ply int, max bool, alpha int, beta int) (eval int) {
 	explored++
 	if ply == 0 {
-		return evaluate_position_v1(position.Board()) * bool_to_int(max)
+		return evaluate_position_v1(position) * bool_to_int(max)
 	}
 
 	moves := sort_moves_v1(position.ValidMoves(), position.Board())

@@ -10,9 +10,13 @@ var explored int = 0
 var q_explored int = 0
 const ENGINE_MINIMAX_PLAIN_PLY int = 4
 const ENGINE_MINIMAX_PARALLEL_PLAIN_PLY int = 4
-var DO_MOVE_SORTING bool = true
-var DO_Q_MOVE_SORTING bool = false
+const DO_MOVE_SORTING bool = true
+const DO_Q_MOVE_SORTING bool = false
 const MAX_DEPTH int = 16
+const DO_Q_MOVE_PRUNING bool = true
+const DO_Q_MOVE_CHECKS bool = false
+const CHECKMATE_VALUE int = 30000
+// const DO_Q_MOVE_PROMOS bool = false // disabled manually
 
 var all_engines = []Engine{
 	engine_minimax_plain_ab,

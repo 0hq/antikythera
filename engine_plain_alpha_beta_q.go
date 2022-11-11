@@ -49,6 +49,9 @@ func minimax_plain_ab_q_searcher(position *chess.Position, ply int, max bool, al
 	}
 
 	moves := sort_moves_v1(position.ValidMoves(), position.Board())
+	if len(moves) == 0 {
+		return evaluate_position_v1(position) * bool_to_int(max)
+	}
     for _, move := range moves {
         score := -1 * minimax_plain_ab_q_searcher(position.Update(move), ply - 1, !max, -beta, -alpha)
 		if score >= beta {
@@ -66,7 +69,7 @@ func quiescence_minimax_plain_ab_q(position *chess.Position, plycount int, max b
 	explored++
 	q_explored++
 
-	stand_pat := evaluate_position_v1(position.Board()) * bool_to_int(max)
+	stand_pat := evaluate_position_v1(position) * bool_to_int(max)
 	if stand_pat >= beta {
         return beta;
 	}
@@ -77,7 +80,7 @@ func quiescence_minimax_plain_ab_q(position *chess.Position, plycount int, max b
 	moves := quiescence_moves_v1(position.ValidMoves(), position.Board())
 
 	if plycount > MAX_DEPTH || len(moves) == 0 {
-		return 
+		return stand_pat 
 	}
 
     for _, move := range moves {

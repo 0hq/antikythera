@@ -2,8 +2,9 @@ package main
 
 import (
 	"log"
-	"github.com/notnil/chess"
 	"math"
+
+	"github.com/notnil/chess"
 )
 
 // define new engine
@@ -43,10 +44,15 @@ func minimax_plain_starter(position *chess.Position, ply int, max bool) (best *c
 func minimax_plain_searcher(position *chess.Position, ply int, max bool) (eval int) {
 	explored++
 	if ply == 0 {
-		return evaluate_position_v1(position.Board()) * bool_to_int(max)
+		return evaluate_position_v1(position) * bool_to_int(max)
 	}
 
 	moves := position.ValidMoves()
+	// if (len(moves) == 0) {
+	// 	log.Println("No moves left")
+	// 	log.Println(position, position.Board().Draw(), moves, position.Status(), evaluate_position_v1(position) * bool_to_int(max))
+	// 	return evaluate_position_v1(position) * bool_to_int(max) // checkmate or stalemate, fix this later
+	// }
     eval = -1 * math.MaxInt
     for _, move := range moves {
         tempeval := -1 * minimax_plain_searcher(position.Update(move), ply - 1, !max)

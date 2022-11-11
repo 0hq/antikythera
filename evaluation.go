@@ -4,6 +4,7 @@ import (
 	// "fmt"
 	// "log"
 	// "math"
+
 	"log"
 
 	"github.com/notnil/chess"
@@ -27,8 +28,8 @@ var piece_map_v1 map[chess.PieceType]int = map[chess.PieceType]int{
 	6: pawn_v1,
 }
 
-func evaluate_position_v1(board *chess.Board) int {
-	squares := board.SquareMap()
+func evaluate_position_v1(pos *chess.Position) int {
+	squares := pos.Board().SquareMap()
 	var material int = 0
 	for _, piece := range squares {
 		var sign int = 1
@@ -36,6 +37,20 @@ func evaluate_position_v1(board *chess.Board) int {
 			sign = -1
 		}
 		material += piece_map_v1[piece.Type()] * sign
+	}
+
+	// faster than doing two comparisons
+	if pos.Status() != chess.NoMethod { 
+		if pos.Status() == chess.Stalemate {
+			return 0
+		}
+		if pos.Status() == chess.Checkmate {
+			if pos.Turn() == chess.White {
+				return -CHECKMATE_VALUE
+			} else {
+				return CHECKMATE_VALUE
+			}
+		}
 	}
 
 	return material
@@ -102,16 +117,47 @@ func quicksort(moves []*chess.Move, board *chess.Board, heuristic func(*chess.Mo
 	return append(quicksort(left, board, heuristic), append([]*chess.Move{pivot}, quicksort(right, board, heuristic)...)...)
 }
 
+func quicksort_prune(moves []*chess.Move, board *chess.Board, heuristic func(*chess.Move, *chess.Board) (int)) []*chess.Move {
+	if len(moves) < 2 {
+		return moves
+	}
+	
+	pivot := moves[0]
+	var left, right []*chess.Move
+	for _, move := range moves[1:] {
+		// remove moves with negative scores
+		if heuristic(move, board) < 0 {
+			continue
+		}
+		if heuristic(move, board) > heuristic(pivot, board) {
+			left = append(left, move)
+		} else {
+			right = append(right, move)
+		}
+	}
+
+	return append(quicksort_prune(left, board, heuristic), append([]*chess.Move{pivot}, quicksort_prune(right, board, heuristic)...)...)
+}
+
 // only return moves that are captures or promotions or checks
 func quiescence_moves_v1(moves []*chess.Move, board *chess.Board) []*chess.Move {
 	var q_moves []*chess.Move = make([]*chess.Move, 0)
 	for _, move := range moves {
-		if move.HasTag(chess.Capture) || move.HasTag(chess.Check) || move.Promo() != chess.NoPieceType {
+		if move.HasTag(chess.Capture) { 
 			q_moves = append(q_moves, move)
 		}
+		// if move.HasTag(chess.Check) {
+		// 	q_moves = append(q_moves, move)
+		// }
+		// if move.Promo() != chess.NoPieceType {
+		// 	q_moves = append(q_moves, move)
+		// }
 	}
 	if !DO_Q_MOVE_SORTING {
 		return q_moves
+	}
+	if DO_Q_MOVE_PRUNING {
+		return quicksort_prune(q_moves, board, evaluate_move_v1)
 	}
 	return quicksort(q_moves, board, evaluate_q_move_v1)
 }
@@ -124,9 +170,9 @@ func evaluate_q_move_v1(move *chess.Move, board *chess.Board) int {
 	}
 
 	// if the move is a promotion, return promotion value
-	if move.Promo() != chess.NoPieceType {
-		return piece_map_v1[move.Promo()]
-	}
+	// if move.Promo() != chess.NoPieceType {
+	// 	return piece_map_v1[move.Promo()]
+	// }
 	
 	return 0
 }
