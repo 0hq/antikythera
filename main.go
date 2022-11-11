@@ -19,6 +19,7 @@ Test different sorting algorithms.
 Why isn't the parallel version faster for perft?
 // Change checkmate value to not be max int.
 // Engine now prioritize the shortest checkmate.
+// Add in Eigenmann rapid engine test.
 
 Turn iterative deepening into an engine.
 Change engine struct to be smarter.
@@ -69,16 +70,13 @@ func main() {
 	// benchmark_range(4, 4, engine_minimax_plain_ab_q, game_from_fen("3q2r1/4n3/p1p1rBpk/PpPpPp2/1P3P2/2P3R1/7P/1R5K w - - 0 2").Position())
 	// test_exchange_4move(engine_minimax_plain, EngineConfig{ply: 4})
 	// test_m2(&engine_minimax_plain_ab_q)
-	engine := engine_minimax_plain_ab_q
 	// position := game_from_fen("r2qk2r/pb4pp/1n2Pb2/2B2Q2/p1p5/2P5/2B2PPP/RN2R1K1 w - - 1 1").Position()
-	engine.Set_Config(EngineConfig{ply: 4})
 	// fmt.Println(engine.Run_Engine(position))
 	// engine.Set_Config(EngineConfig{ply: 4})
 	// fmt.Println(engine.Run_Engine(position))
-	simple_tests(&engine)
 	// move, eval := engine.Run_Engine(game_from_fen("3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1").Position())
-	// fmt.Println(move, eval)
-
+	// fmt.Println(parse_test_file("tests/EigenmannRapidEngineTest.txt", parse_epd_record))
+	go_simple_tests()
 
 	// simple_tests()
 	// benchmark_range(6, 6, engine_minimax_plain_ab_q, game_from_fen("5rk1/5Npp/8/3Q4/8/8/8/7K w - - 0 1").Position())
@@ -94,15 +92,22 @@ func main() {
 	// iterative_deepening_v0(engine_minimax_plain_ab_q, game_from_fen("5r1k/6pp/7N/3Q4/8/8/8/7K w - - 2 2").Position(), 30)
 }
 
+func go_simple_tests() {
+	engine := engine_minimax_plain_ab_q
+	engine.Set_Config(EngineConfig{ply: 4})
+	simple_tests(&engine)
+}
+
 func exit()	{
 	fmt.Println("Exiting engine.")
 	log.Println("Exiting engine.")
 }
 
 func simple_tests(engine Engine) {
-	test_exchange_7move(engine)
-	test_exchange_5move(engine)
-	test_exchange_3move(engine)
-	test_m2(engine)
-	run_tests(engine, parse_test_file("tests/WillsMateInThree.txt", parse_fen_record))
+	// test_exchange_7move(engine)
+	// test_exchange_5move(engine)
+	// test_exchange_3move(engine)
+	// test_m2(engine)
+	// run_tests(engine, parse_test_file("tests/WillsMateInThree.txt", parse_fen_record))
+	run_tests(engine, parse_test_file("tests/EigenmannRapidEngineTest.txt", parse_epd_record))
 }

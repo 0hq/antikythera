@@ -72,8 +72,28 @@ func test(engine Engine, pos string, expected string) {
 	game := chess.NewGame(fen)
 	move, _ := engine.Run_Engine(game.Position())
 
+	// this is to format the move in a way that is compatible with the test file
+	moves := game.Position().ValidMoves()
+	possible_moves := make([]string, 0)
+	for _, move := range moves {
+		// if last two characters are the same, save the move
+		if move.String()[2:4] == expected[len(expected)-2:] {
+			possible_moves = append(possible_moves, move.String())
+		}
+	}
+
 	if move.String() != expected {
+		if (move.String()[2:4] == expected[len(expected)-2:]) {
+			if len(possible_moves) > 1 {
+				log.Println("!!! POSSIBLE PASS:", move, expected)
+				log.Println("Move is ambiguous, possible moves are:", possible_moves)
+			} else {
+				fmt.Println("TEST PASSED")
+				return 
+			}
+		}
 		fmt.Println("TEST FAILED", move.String(), expected)
+		// fmt.Println("Possible moves:", possible_moves)
 		log.Println("TEST FAILED", move.String(), expected)
 	} else {
 		fmt.Println("TEST PASSED")
@@ -86,7 +106,6 @@ func run_tests(engine Engine,records []test_record) {
 	for _, record := range records {
 		test(engine, record.pos, record.expected)
 	}
-	return
 }
 
 /*

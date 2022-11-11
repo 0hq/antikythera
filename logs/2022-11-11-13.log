@@ -1,0 +1,8 @@
+2022/11/11 16:34:53 File initialization.
+2022/11/11 16:34:53 Version go1.19.3
+2022/11/11 16:34:53 NumCPU 6
+2022/11/11 16:34:53 GOMAXPROCS 6
+2022/11/11 16:34:53 
+2022/11/11 16:34:53 Running test on engine: Minimax Plain Alpha Beta + Quiescence
+2022/11/11 16:34:53 FEN: r1bqk1r1/1p1p1n2/p1n2pN1/2p1b2Q/2P1Pp2/1PN5/PB4PP/R4RK1 w - - bm Rxf4;
+2022/11/11 16:34:53 chess: fen invalid half move clock bmr1bqk1r1/1p1p1n2/p1n2pN1/2p1b2Q/2P1Pp2/1PN5/PB4PP/R4RK1 w - - bm Rxf4;
