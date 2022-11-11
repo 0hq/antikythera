@@ -14,11 +14,11 @@ import (
 // Replace position with board.
 // Evaluation function.
 UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
-Add in auto-testing using EPD files.
+// Add in auto-testing using EPD files.
 Test different sorting algorithms.
 Why isn't the parallel version faster for perft?
+// Change checkmate value to not be max int.
 
-Change checkmate value to not be max int.
 Turn iterative deepening into an engine.
 Change engine struct to be smarter.
 Make iterative deepening play in time.
@@ -67,6 +67,13 @@ func main() {
 
 	// benchmark_range(4, 4, engine_minimax_plain_ab_q, game_from_fen("3q2r1/4n3/p1p1rBpk/PpPpPp2/1P3P2/2P3R1/7P/1R5K w - - 0 2").Position())
 	// test_exchange_4move(engine_minimax_plain, EngineConfig{ply: 4})
+	// test_m2(&engine_minimax_plain_ab_q)
+	engine := engine_minimax_plain_ab_q
+	engine.Set_Config(EngineConfig{ply: 3})
+	simple_tests(&engine)
+	// move, eval := engine.Run_Engine(game_from_fen("3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1").Position())
+	// fmt.Println(move, eval)
+
 
 	// simple_tests()
 	// benchmark_range(6, 6, engine_minimax_plain_ab_q, game_from_fen("5rk1/5Npp/8/3Q4/8/8/8/7K w - - 0 1").Position())
@@ -87,8 +94,8 @@ func exit()	{
 	log.Println("Exiting engine.")
 }
 
-func simple_tests() {
-	test_exchange_5move(engine_minimax_plain_ab_q, EngineConfig{ply: 4})
-	test_m2(engine_minimax_plain_ab_q)
-	run_tests(engine_minimax_plain_ab_q, EngineConfig{ply: 4}, parse_test_file("tests/WillsMateInThree.txt", parse_fen_record))
+func simple_tests(engine Engine) {
+	test_exchange_5move(engine)
+	test_m2(engine)
+	run_tests(engine, parse_test_file("tests/WillsMateInThree.txt", parse_fen_record))
 }

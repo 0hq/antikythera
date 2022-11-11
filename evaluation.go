@@ -5,10 +5,14 @@ import (
 	// "log"
 	// "math"
 
-	"log"
-
 	"github.com/notnil/chess"
 )
+
+/*
+
+Version 1 piece values.
+
+*/
 
 // piece weights
 const pawn_v1 int = 100
@@ -27,6 +31,13 @@ var piece_map_v1 map[chess.PieceType]int = map[chess.PieceType]int{
 	5: knight_v1,
 	6: pawn_v1,
 }
+
+/*
+
+Version 1 of the evaluation function.
+Sums simple material values and detects checkmate and stalemate.
+
+*/
 
 func evaluate_position_v1(pos *chess.Position) int {
 	squares := pos.Board().SquareMap()
@@ -56,6 +67,26 @@ func evaluate_position_v1(pos *chess.Position) int {
 	return material
 }
 
+/*
+
+Move ordering.
+
+*/
+
+func sort_moves_v1(moves []*chess.Move, board *chess.Board) []*chess.Move {
+	if !DO_MOVE_SORTING {
+		return moves
+	}
+	return quicksort(moves, board, evaluate_move_v1)
+}
+
+/*
+
+Version 1 of the move ordering function.
+Sorts moves by how likely they are to be good.
+
+*/
+
 func evaluate_move_v1(move *chess.Move, board *chess.Board) int {
 	aggr := 0
 	// if the move is a capture, return the difference in material
@@ -84,20 +115,11 @@ func evaluate_move_v1(move *chess.Move, board *chess.Board) int {
 	return aggr
 }
 
-func move_sort_test(position *chess.Position) {
-	log.Println(position.Board().Draw())
-	moves := position.ValidMoves()
-	for _, move := range moves {
-		log.Println("Top Level Move:", move, "Move order score:", evaluate_move_v1(move, position.Board()))
-	}
-}
+/*
 
-func sort_moves_v1(moves []*chess.Move, board *chess.Board) []*chess.Move {
-	if !DO_MOVE_SORTING {
-		return moves
-	}
-	return quicksort(moves, board, evaluate_move_v1)
-}
+Quicksort for move ordering.
+
+*/
 
 func quicksort(moves []*chess.Move, board *chess.Board, heuristic func(*chess.Move, *chess.Board) (int)) []*chess.Move {
 	if len(moves) < 2 {
@@ -116,6 +138,13 @@ func quicksort(moves []*chess.Move, board *chess.Board, heuristic func(*chess.Mo
 
 	return append(quicksort(left, board, heuristic), append([]*chess.Move{pivot}, quicksort(right, board, heuristic)...)...)
 }
+
+/*
+
+Quicksort function for q moves.
+Removes all moves with negative scores.
+
+*/
 
 func quicksort_prune(moves []*chess.Move, board *chess.Board, heuristic func(*chess.Move, *chess.Board) (int)) []*chess.Move {
 	if len(moves) < 2 {
@@ -138,6 +167,13 @@ func quicksort_prune(moves []*chess.Move, board *chess.Board, heuristic func(*ch
 
 	return append(quicksort_prune(left, board, heuristic), append([]*chess.Move{pivot}, quicksort_prune(right, board, heuristic)...)...)
 }
+
+/*
+
+Generates a list of q moves and sorts them.
+Q moves may included moves that are captures, checks, or promotions.
+
+*/
 
 // only return moves that are captures or promotions or checks
 func quiescence_moves_v1(moves []*chess.Move, board *chess.Board) []*chess.Move {
@@ -162,6 +198,12 @@ func quiescence_moves_v1(moves []*chess.Move, board *chess.Board) []*chess.Move 
 	return quicksort(q_moves, board, evaluate_q_move_v1)
 }
 
+/*
+
+Version 1 of the quiescence move ordering function.
+Sorts moves by how likely they are to be good.
+
+*/
 
 func evaluate_q_move_v1(move *chess.Move, board *chess.Board) int {
 	// if the move is a capture, return the difference in material

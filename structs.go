@@ -1,15 +1,24 @@
 package main
 
-import (
-	"log"
+import "github.com/notnil/chess"
 
-	"github.com/notnil/chess"
-)
-	
-type Engine struct {
+// engine
+// owns config, features, name, and start engine_func
+
+// define new engine that houses the methods
+
+
+type Engine interface {
+	Run_Engine(*chess.Position) (*chess.Move, int)
+	Name() string
+	Set_Config(EngineConfig)
+}
+
+type EngineClass struct {
     name string
 	features EngineFeatures
-	engine_func func(*chess.Position, EngineConfig) (*chess.Move, int)
+	engine_config EngineConfig
+	time_up bool
 }
 
 type EngineFeatures struct {
@@ -18,21 +27,21 @@ type EngineFeatures struct {
 	alphabeta bool
 	iterative_deepening bool
 	mtdf bool
+	quiescence bool
 }
 
 type EngineConfig struct {
 	ply int
 }
 
-func (e *Engine) Run(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
-	log.Println("Starting engine", e.name)
-	log.Println("Features:", e.features)
-	log.Println("Config:", cfg)
-	log.Println("Turn:", pos.Turn())
-	log.Println("Position:", pos.Board().Draw())
-	return e.engine_func(pos, cfg)
+type MetaEngineConfig struct {
+	ply int
 }
 
-func (e *Engine) Name() string {
+func (e *EngineClass) Set_Config(cfg EngineConfig) {
+	e.engine_config = cfg
+}
+
+func (e EngineClass) Name() string {
 	return e.name
 }

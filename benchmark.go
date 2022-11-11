@@ -17,7 +17,7 @@ func benchmark(ply int, engine Engine, pos *chess.Position) float64 {
 	log.Println("Starting at time", time.Now())
 
 	start := time.Now()
-	move, eval := engine.Run(pos, EngineConfig{ply: ply})
+	move, eval := engine.Run_Engine(pos)
 	elapsed := time.Since(start)
 
 	fmt.Println("Best move:", move)
@@ -47,19 +47,21 @@ func benchmark_engines(engines []Engine, pos *chess.Position) {
 	}
 }
 
-// func benchmark_plain_ab_move_ordering() {
-// 	fen, _ := chess.FEN("3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1")
-// 	game := chess.NewGame(fen)
-// 	benchmark_range(4, 4, engine_minimax_plain, game.Clone().Position())
-// 	// DO_MOVE_SORTING = false
-// 	benchmark_range(4, 4, engine_minimax_plain_ab, game.Clone().Position())
-// 	// DO_MOVE_SORTING = true
-// 	benchmark_range(4, 4, engine_minimax_plain_ab, game.Clone().Position())
-// }
+/*
 
+Move ordering and generation benchmarks.
 
-// define new engine
-var engine_perft Engine = Engine{
+*/
+
+/*
+
+Perft Test
+
+Benchmarks move generation and board update.
+
+*/
+
+var engine_perft EngineClass = EngineClass{
 	name: "Perft Test",
 	features: EngineFeatures{
 		plain: false,
@@ -68,39 +70,17 @@ var engine_perft Engine = Engine{
 		iterative_deepening: false,
 		mtdf: false,
 	},
-	engine_func: perft_engine_func,
 }
 
-// define new engine
-var engine_perft_pll Engine = Engine{
-	name: "Parallel Perft Test",
-	features: EngineFeatures{
-		plain: false,
-		parallel: true,
-		alphabeta: false,
-		iterative_deepening: false,
-		mtdf: false,
-	},
-	engine_func: perft_engine_func,
-}
+type type_benchmark_perft EngineClass
 
-func perft_engine_func(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
+func (e *type_benchmark_perft) Run_Engine(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
 	count := perft(cfg.ply, pos)
 	explored = count
 	log.Println("Perft nodes searched", count)
 	return nil, count
 }
 
-func perft_pll_engine_func(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
-	count_channel := make(chan int, 1)
-	go perft_parallel(cfg.ply, pos, count_channel)
-	count := <-count_channel
-	explored = count
-	log.Println("Perft nodes searched", count)
-	return nil, count
-}
-
-// perft test
 func perft(ply int, pos *chess.Position) int {
 	if ply == 0 {
 		return 1
@@ -114,7 +94,38 @@ func perft(ply int, pos *chess.Position) int {
 	return count
 }
 
-// perft test for parallel
+/*
+
+Perft PLL Test
+Runs in parallel.
+
+Benchmarks move generation and board update.
+
+*/
+
+// define new engine
+var engine_perft_pll EngineClass = EngineClass{
+	name: "Parallel Perft Test",
+	features: EngineFeatures{
+		plain: false,
+		parallel: true,
+		alphabeta: false,
+		iterative_deepening: false,
+		mtdf: false,
+	},
+}
+
+type type_benchmark_perft_pll EngineClass
+
+func (e *type_benchmark_perft_pll) Run_Engine(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
+	count_channel := make(chan int, 1)
+	go perft_parallel(cfg.ply, pos, count_channel)
+	count := <-count_channel
+	explored = count
+	log.Println("Perft nodes searched", count)
+	return nil, count
+}
+
 func perft_parallel(ply int, pos *chess.Position, count_channel chan int) int {
 	if ply == 0 {
 		return 1

@@ -10,24 +10,57 @@ import (
 	"github.com/notnil/chess"
 )
 
+/*
+
+Move Sorting Test
+Tests the move ordering function on a given position.
+
+*/
+
+func move_sort_test(position *chess.Position) {
+	log.Println(position.Board().Draw())
+	moves := position.ValidMoves()
+	for _, move := range moves {
+		log.Println("Top Level Move:", move, "Move order score:", evaluate_move_v1(move, position.Board()))
+	}
+}
+
+/*
+
+Manual test positions.
+Simple checkmate or exchange positions.
+
+*/
+
 func test_m2(engine Engine) {
-	test(engine, EngineConfig{ply: 4}, "3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1", "d5g8")
+	test(engine, "3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1", "d5g8")
 }
 
-func test_exchange_7move(engine Engine, cfg EngineConfig) {
-	test(engine, cfg, "6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24", "g2g1")
+func test_exchange_7move(engine Engine) {
+	test(engine, "6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24", "g2g1")
 }
 
-func test_exchange_5move(engine Engine, cfg EngineConfig) {
-	test(engine, cfg, "6r1/pppk4/3p4/8/2PnPp1Q/7P/PP6/6RK b - - 0 25", "g8g1")
+func test_exchange_5move(engine Engine) {
+	test(engine, "6r1/pppk4/3p4/8/2PnPp1Q/7P/PP6/6RK b - - 0 25", "g8g1")
 }
 
-func test_exchange_3move(engine Engine, cfg EngineConfig) {
-	test(engine, cfg, "8/pppk4/3p4/8/2PnPp1Q/7P/PP6/6K1 b - - 0 26", "d4f3")
+func test_exchange_3move(engine Engine) {
+	test(engine, "8/pppk4/3p4/8/2PnPp1Q/7P/PP6/6K1 b - - 0 26", "d4f3")
+}
+
+/*
+
+Test position and expected move.
+
+*/
+
+type test_record struct {
+	pos string
+	expected string
 }
 
 
-func test(engine Engine, cfg EngineConfig, pos string, expected string) {
+func test(engine Engine, pos string, expected string) {
 	log.Println("Running test on engine:", engine.Name())
 	log.Println("FEN:", pos)
 
@@ -37,7 +70,7 @@ func test(engine Engine, cfg EngineConfig, pos string, expected string) {
 		panic(err)
 	}
 	game := chess.NewGame(fen)
-	move, _ := engine.Run(game.Position(), cfg)
+	move, _ := engine.Run_Engine(game.Position())
 
 	if move.String() != expected {
 		fmt.Println("TEST FAILED", move.String(), expected)
@@ -48,19 +81,21 @@ func test(engine Engine, cfg EngineConfig, pos string, expected string) {
 	}
 }
 
-type test_record struct {
-	pos string
-	expected string
-}
 
-func run_tests(engine Engine, cfg EngineConfig, records []test_record) {
+func run_tests(engine Engine,records []test_record) {
 	for _, record := range records {
-		test(engine, cfg, record.pos, record.expected)
+		test(engine, record.pos, record.expected)
 	}
 	return
 }
 
-// parse EPD-file and return positions and expected moves
+/*
+
+Load and test positions from test banks.
+Stored in .txt files, loaded and parsed.
+
+*/
+
 func parse_test_file(filename string, method func (string) (string, string)) ([]test_record) {
 	// read file
 	file, err := os.Open(filename)
@@ -85,7 +120,7 @@ func parse_test_file(filename string, method func (string) (string, string)) ([]
 	return records
 }
 
-// parse EPD-record and return position and expected move
+// parse normal EPD-record 
 func parse_epd_record(record string) (string, string) {
 	record = strings.TrimSpace(record)
 	parts := strings.Split(record, " ")
@@ -99,7 +134,7 @@ func parse_epd_record(record string) (string, string) {
 	return position, expected_move
 }
 
-// parse EPD-record and return position and expected move
+// parse special EPD-record
 func parse_epd_record_off(record string) (string, string) {
 	record = strings.TrimSpace(record)
 	parts := strings.Split(record, " ")
@@ -107,6 +142,7 @@ func parse_epd_record_off(record string) (string, string) {
 	return strings.Join(parts[:6], " "), parts[9]
 }
 
+// parse FEN-record
 func parse_fen_record(record string) (string, string) {
 	record = strings.TrimSpace(record)
 	parts := strings.Split(record, " ")

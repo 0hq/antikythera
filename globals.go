@@ -19,13 +19,13 @@ const CHECKMATE_VALUE int = 30000
 // const DO_Q_MOVE_PROMOS bool = false // disabled manually
 
 var all_engines = []Engine{
-	engine_minimax_plain_ab,
-	engine_minimax_parallel_plain,
-	engine_minimax_plain,
+	&engine_minimax_plain_ab,
+	&engine_minimax_parallel_plain,
+	&engine_minimax_plain,
 }
 var plain_engines = []Engine{
-	engine_minimax_plain_ab,
-	engine_minimax_plain,
+	&engine_minimax_plain_ab,
+	&engine_minimax_plain,
 }
 
 func reset_counters() {

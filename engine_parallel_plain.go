@@ -7,21 +7,26 @@ import (
 	"github.com/notnil/chess"
 )
 
-// define new engine
-var engine_minimax_parallel_plain Engine = Engine{
-	name: "Minimax Parallel Plain",
-	features: EngineFeatures{
-		plain: true,
-		parallel: true,
-		alphabeta: false,
-		iterative_deepening: false,
-		mtdf: false,
-	},
-	engine_func: minimax_parallel_plain_engine_func,
+type t_engine_p_pll struct {
+	EngineClass
 }
 
-func minimax_parallel_plain_engine_func(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
-	best, eval = minimax_parallel_plain_starter(pos, cfg.ply, true)
+// define new engine
+var engine_minimax_parallel_plain = t_engine_p_pll{
+	EngineClass{
+		name: "Minimax Parallel Plain",
+		features: EngineFeatures{
+			plain: true,
+			parallel: true,
+			alphabeta: false,
+			iterative_deepening: false,
+			mtdf: false,
+		},
+	},
+}
+
+func (e *t_engine_p_pll) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
+	best, eval = e.minimax_parallel_plain_starter(pos, e.engine_config.ply, true)
 	log.Println("Parellel results", best, eval)
 	return 
 }
@@ -30,7 +35,7 @@ func minimax_parallel_plain_engine_func(pos *chess.Position, cfg EngineConfig) (
 // midstep is a concurrent function, but is passed the top level move and a move channel to send back instantly once done, so we know which process it is
 // searcher is a concurrent function, handles the actual search, just returns a value
 
-func minimax_parallel_plain_starter(position *chess.Position, ply int, max bool) (best *chess.Move, eval int) {
+func (e *t_engine_p_pll) minimax_parallel_plain_starter(position *chess.Position, ply int, max bool) (best *chess.Move, eval int) {
 	// generate moves
 	var moves []*chess.Move = position.ValidMoves()
 	var length int = len(moves)
@@ -41,7 +46,7 @@ func minimax_parallel_plain_starter(position *chess.Position, ply int, max bool)
 
 	// create goroutines for each move
     for _, move := range moves {
-        go minimax_parallel_plain_midstep(position.Update(move), ply-1, !max, eval_channel_local, move_channel_local, move)
+        go e.minimax_parallel_plain_midstep(position.Update(move), ply-1, !max, eval_channel_local, move_channel_local, move)
     }
 
 	// wait for all goroutines to finish
@@ -59,7 +64,7 @@ func minimax_parallel_plain_starter(position *chess.Position, ply int, max bool)
 	return best, eval
 }
 
-func minimax_parallel_plain_midstep(position *chess.Position, ply int, max bool, eval_channel chan int, move_channel chan *chess.Move, last_move *chess.Move) {
+func (e *t_engine_p_pll) minimax_parallel_plain_midstep(position *chess.Position, ply int, max bool, eval_channel chan int, move_channel chan *chess.Move, last_move *chess.Move) {
 	// generate moves
 	var moves []*chess.Move = position.ValidMoves()
 	var length int = len(moves)
@@ -69,7 +74,7 @@ func minimax_parallel_plain_midstep(position *chess.Position, ply int, max bool,
 
 	// create goroutines for each move
     for _, move := range moves {
-        go minimax_parallel_plain_searcher(position.Update(move), ply-1, !max, eval_channel_local)
+        go e.minimax_parallel_plain_searcher(position.Update(move), ply-1, !max, eval_channel_local)
     }
 
 	// wait for all goroutines to finish
@@ -88,7 +93,7 @@ func minimax_parallel_plain_midstep(position *chess.Position, ply int, max bool,
 	return
 }
 
-func minimax_parallel_plain_searcher(position *chess.Position, ply int, max bool, eval_channel chan int) {
+func (e *t_engine_p_pll) minimax_parallel_plain_searcher(position *chess.Position, ply int, max bool, eval_channel chan int) {
 	explored++
 
 	// max ply reached
@@ -108,7 +113,7 @@ func minimax_parallel_plain_searcher(position *chess.Position, ply int, max bool
 
 	// create goroutines for each move
     for _, move := range moves {
-        go minimax_parallel_plain_searcher(position.Update(move), ply-1, !max, eval_channel_local)
+        go e.minimax_parallel_plain_searcher(position.Update(move), ply-1, !max, eval_channel_local)
     }
 
 	// wait for all goroutines to finish
