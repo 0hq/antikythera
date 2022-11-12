@@ -5,6 +5,7 @@ import (
 )
 
 // constants for minimax
+const CHESS_START_POSITION = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 var newGame = chess.NewGame()
 var explored int = 0
 var q_explored int = 0

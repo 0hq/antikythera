@@ -6,6 +6,8 @@ import (
 	"os"
 	"runtime"
 	"time"
+
+	"github.com/notnil/chess"
 	// "github.com/notnil/chess"
 )
 
@@ -59,6 +61,7 @@ func init() {
 func main() {
 	defer exit()
 	fmt.Println("Running engine...")
+	mini_challenge_stockfish()
 	// test_m2(engine_minimax_plain_ab_q)
 	// benchmark_engines(plain_engines, newGame)
 	// benchmark_pll(4)
@@ -79,11 +82,6 @@ func main() {
 	// fmt.Println(engine.Run_Engine(position))
 	// move, eval := engine.Run_Engine(game_from_fen("3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1").Position())
 	// fmt.Println(parse_test_file("tests/EigenmannRapidEngineTest.txt", parse_epd_record))
-	// go_simple_tests()
-	// mini_iterative_deepening()
-	mini_iterative_deepening_timed()
-
-	// simple_tests()
 	// benchmark_range(6, 6, engine_minimax_plain_ab_q, game_from_fen("5rk1/5Npp/8/3Q4/8/8/8/7K w - - 0 1").Position())
 	// test_m2(engine_minimax_plain)
 
@@ -95,6 +93,12 @@ func main() {
 	// fmt.Println(parse_epd_file("tests/EigenmannRapidEngineTest.txt"))
 	// run_tests(engine_minimax_plain_ab_q, EngineConfig{ply: 3}, "tests/EigenmannRapidEngineTest.txt")
 	// iterative_deepening_v0(engine_minimax_plain_ab_q, game_from_fen("5r1k/6pp/7N/3Q4/8/8/8/7K w - - 2 2").Position(), 30)
+}
+
+func mini_challenge_stockfish() {
+	engine := engine_minimax_id_ab_q
+	engine.Set_Time(15)
+	challenge_stockfish(&engine, chess.White, CHESS_START_POSITION)
 }
 
 func mini_iterative_deepening_timed() {
