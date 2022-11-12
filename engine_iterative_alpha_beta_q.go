@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"math"
 	"time"
 
@@ -33,33 +32,33 @@ var engine_minimax_id_ab_q = t_engine_p_ab_q_id{
 
 func (e *t_engine_p_ab_q_id) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
 	reset_counters()
-	log.Println("Running", e.name)
+	out("Running", e.name)
 	e.time_up = false
 	e.start_time = time.Now()
 	depth := 1
 	for {
-		log.Println()
-		log.Println("Iterative deepening depth", depth)
+		out()
+		out("Iterative deepening depth", depth)
 		t_best, t_eval := e.minimax_id_ab_q_starter(pos, depth, pos.Turn() == chess.White)
 		if e.Check_Time_Up() {
-			log.Println("Time up, returning best move so far.")
+			out("Time up, returning best move so far.")
 			break
 		} else {
 			best = t_best
 			eval = t_eval
 		}
-		log.Println("Best move:", best, "Eval:", eval)
-		log.Println("Depth:", depth, "Nodes:", explored)
+		out("Best move:", best, "Eval:", eval)
+		out("Depth:", depth, "Nodes:", explored)
 		
-		log.Println("Time since start_time:", time.Since(e.start_time))
+		out("Time since start_time:", time.Since(e.start_time))
 		if eval >= 30000 { // break on checkmate win
 			break
 		}
 		depth++
 	}
-	log.Println()
-	log.Println("Engine results", best, eval)
-	log.Println("Quiescence search explored", q_explored, "nodes")
+	out()
+	out("Engine results", best, eval)
+	out("Quiescence search explored", q_explored, "nodes")
 	return
 }
 
@@ -70,10 +69,10 @@ func (e *t_engine_p_ab_q_id) minimax_id_ab_q_starter(position *chess.Position, p
 		e.Check_Time_Up()
 		score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply-1, !max, -1 * math.MaxInt, math.MaxInt)
 		if PRINT_TOP_MOVES {
-			log.Println("Top Level Move:", move, "Eval:", score)
+			out("Top Level Move:", move, "Eval:", score)
 		}
 		if score > eval {
-			log.Println("New best move:", move)
+			out("New best move:", move)
 			eval = score
 			best = move
 		}

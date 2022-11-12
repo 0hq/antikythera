@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"math"
 
 	"github.com/notnil/chess"
@@ -28,7 +27,7 @@ var engine_minimax_plain_ab = t_engine_p_ab{
 func (e *t_engine_p_ab) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
 	reset_counters()
 	best, eval = e.minimax_plain_ab_starter(pos, e.engine_config.ply, pos.Turn() == chess.White)
-	log.Println("Plain minimax results", best, eval)
+	out("Plain minimax results", best, eval)
 	return
 }
 
@@ -37,9 +36,9 @@ func (e *t_engine_p_ab) minimax_plain_ab_starter(position *chess.Position, ply i
 	eval = -1 * math.MaxInt
 	for _, move := range moves {
 		score := -1 * e.minimax_plain_ab_searcher(position.Update(move), ply-1, !max, -1 * math.MaxInt, math.MaxInt)
-		log.Println("Top Level Move:", move, "Eval:", score)
+		out("Top Level Move:", move, "Eval:", score)
 		if score > eval {
-			log.Println("New best move:", move)
+			out("New best move:", move)
 			eval = score
 			best = move
 		}

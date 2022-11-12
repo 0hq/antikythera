@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"time"
 
 	"github.com/notnil/chess"
@@ -21,10 +20,10 @@ func challenge_stockfish(engine Engine, play_as_color chess.Color, starting_posi
 		panic(err)
 	}
 
-	log.Println("Stockfish challenge started.")
-	log.Println("Engine:", engine.Name())
-	log.Println("Playing as", play_as_color)
-	log.Println()
+	out("Stockfish challenge started.")
+	out("Engine:", engine.Name())
+	out("Playing as", play_as_color)
+	out()
 	
 	for game.Outcome() == chess.NoOutcome && len(game.Moves()) < max_moves {
 		var move *chess.Move
@@ -40,9 +39,9 @@ func challenge_stockfish(engine Engine, play_as_color chess.Color, starting_posi
 		}
 
 		game.Move(move)
-		log.Println(game.Position().Turn(), move, eval)
-		log.Println(game.Position().Board().Draw())
-		log.Println()
+		out(game.Position().Turn(), move, eval)
+		out(game.Position().Board().Draw())
+		out()
 	}
 
 }

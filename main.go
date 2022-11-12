@@ -33,7 +33,7 @@ Make iterative deepening play in time.
 */
 
 func init() {
-	fmt.Println("Initializing engine...")
+	out("Initializing engine...")
 	// create new log file that doesn't exist
 	for i := 0; ; i++ {
 		// create file name from timestamp date and hour
@@ -49,26 +49,35 @@ func init() {
 			break
 		}
 	}
-    log.Println("File initialization.")
+    out("File initialization.")
 
-	log.Println("Version", runtime.Version())
-    log.Println("NumCPU", runtime.NumCPU())
-    log.Println("GOMAXPROCS", runtime.GOMAXPROCS(0))
-	log.Println()
+	out("Version", runtime.Version())
+    out("NumCPU", runtime.NumCPU())
+    out("GOMAXPROCS", runtime.GOMAXPROCS(0))
+	out()
 	runtime.GOMAXPROCS(runtime.NumCPU())
 }
 
 func main() {
 	defer exit()
-	fmt.Println("Running engine...")
-	mini_challenge_manual()
+	out("Running engine...")
+	// test_opening()	
+	mini_challenge_manual_opening()
 	
+}
+
+func mini_challenge_manual_opening() {
+	game := game_from_fen(CHESS_START_POSITION)
+	subengine := engine_minimax_id_ab_q
+	subengine.Set_Time(15)
+	engine := NewOpeningWrapper(&subengine, game)
+	challenge_manual(engine, chess.Black, game)
 }
 
 func mini_challenge_manual() {
 	engine := engine_minimax_id_ab_q
 	engine.Set_Time(15)
-	challenge_manual(&engine, chess.Black, CHESS_START_POSITION)
+	challenge_manual(&engine, chess.Black, game_from_fen(CHESS_START_POSITION))
 }
 
 func mini_challenge_stockfish() {
@@ -99,8 +108,7 @@ func mini_simple_tests() {
 }
 
 func exit()	{
-	fmt.Println("Exiting engine.")
-	log.Println("Exiting engine.")
+	out("Exiting engine.")
 }
 
 func simple_tests(engine Engine) {

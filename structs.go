@@ -13,6 +13,7 @@ import (
 
 type Engine interface {
 	Run_Engine(*chess.Position) (*chess.Move, int)
+	Run_Engine_Game(*chess.Game) (*chess.Move, int)
 	Name() string
 	Set_Config(EngineConfig)
 	Check_Time_Up() bool
@@ -43,6 +44,14 @@ type EngineConfig struct {
 type MetaEngineConfig struct {
 	max_time int
 	max_depth int
+}
+
+func (e *EngineClass) Run_Engine(pos *chess.Position) (*chess.Move, int) {
+	panic("Run_Engine not implemented on null engine.")
+}
+
+func (e *EngineClass) Run_Engine_Game(game *chess.Game) (*chess.Move, int) {
+	return e.Run_Engine(game.Position())
 }
 
 func (e *EngineClass) Set_Time(seconds int) {

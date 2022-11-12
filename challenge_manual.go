@@ -2,31 +2,27 @@ package main
 
 import (
 	"fmt"
-	"log"
 
 	"github.com/notnil/chess"
 )
 
-func challenge_manual(engine Engine, play_as_color chess.Color, starting_position string) {
+func challenge_manual(engine Engine, play_as_color chess.Color, game *chess.Game) {
 	max_moves := 100
-	game := game_from_fen(starting_position)
 
-	log.Println("Manual challenge started.")
-	log.Println("Engine:", engine.Name())
-	log.Println("Playing as", play_as_color)
-	log.Println()
-
-	var test chess.UCINotation 
+	out("Manual challenge started.")
+	out("Engine:", engine.Name())
+	out("Playing as", play_as_color)
+	out()
 	
 	for game.Outcome() == chess.NoOutcome && len(game.Moves()) < max_moves {
 		var move *chess.Move
 		var eval int
 		if game.Position().Turn() == play_as_color {
-			move, eval = engine.Run_Engine(game.Position())
+			move, eval = engine.Run_Engine_Game(game)
 		} else {
 			var input string
 			fmt.Scanln(&input)
-			move, _ = test.Decode(game.Position(), input) 
+			move, _ = global_UCINotation.Decode(game.Position(), input) 
 		}
 
 		if move == nil {
@@ -37,12 +33,10 @@ func challenge_manual(engine Engine, play_as_color chess.Color, starting_positio
 		if err != nil {
 			panic(err)
 		}
-		fmt.Println(game.Position().Turn(), move, eval)
-		fmt.Println(game.Position().Board().Draw())
-		fmt.Println()
-		log.Println(game.Position().Turn(), move, eval)
-		log.Println(game.Position().Board().Draw())
-		log.Println()
+		out(game.Position().Turn(), move, eval)
+		out(game.FEN())
+		out(game.Position().Board().Draw())
+		out()
 	}
 
 }

@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-	"log"
 	"time"
 
 	"github.com/notnil/chess"
@@ -12,32 +10,27 @@ import (
 // returns time in seconds
 func benchmark(ply int, engine Engine, pos *chess.Position) float64 {
 	reset_counters()
-	log.Println("BEGIN BENCHMARKING -", engine.Name())
-	log.Println("Ply:", ply)
-	log.Println("Starting at time", time.Now())
+	out("BEGIN BENCHMARKING -", engine.Name())
+	out("Ply:", ply)
+	out("Starting at time", time.Now())
 
 	start := time.Now()
 	move, eval := engine.Run_Engine(pos)
 	elapsed := time.Since(start)
 
-	fmt.Println("Best move:", move)
-	log.Println("Complete at time", time.Now())
-	log.Println("Best move:", move)
-	log.Println("Evaluation:", eval)
-	log.Println("Elapsed time:", elapsed.Seconds(), "seconds")
-	log.Println("Nodes explored:", explored)
-	log.Println("END BENCHMARKING -")
+	out("Complete at time", time.Now())
+	out("Best move:", move)
+	out("Evaluation:", eval)
+	out("Elapsed time:", elapsed.Seconds(), "seconds")
+	out("Nodes explored:", explored)
+	out("END BENCHMARKING -")
 
 	return elapsed.Seconds()
 }
 
 func benchmark_range(plymin int, plymax int, engine Engine, pos *chess.Position) {
 	for i := plymin; i <= plymax; i++ {
-		elapsed := benchmark(i, engine, pos)
-		fmt.Println("Benchmark Ply:", i)
-		fmt.Println("Benchmark:", explored, elapsed)
-		fmt.Println("Nodes per second:", float64(explored)/elapsed)
-		fmt.Println()
+		benchmark(i, engine, pos)
 	}
 }
 
@@ -77,7 +70,7 @@ type type_benchmark_perft EngineClass
 func (e *type_benchmark_perft) Run_Engine(pos *chess.Position, cfg EngineConfig) (best *chess.Move, eval int) {
 	count := perft(cfg.ply, pos)
 	explored = count
-	log.Println("Perft nodes searched", count)
+	out("Perft nodes searched", count)
 	return nil, count
 }
 
@@ -122,7 +115,7 @@ func (e *type_benchmark_perft_pll) Run_Engine(pos *chess.Position, cfg EngineCon
 	go perft_parallel(cfg.ply, pos, count_channel)
 	count := <-count_channel
 	explored = count
-	log.Println("Perft nodes searched", count)
+	out("Perft nodes searched", count)
 	return nil, count
 }
 

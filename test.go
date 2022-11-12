@@ -18,10 +18,10 @@ Tests the move ordering function on a given position.
 */
 
 func move_sort_test(position *chess.Position) {
-	log.Println(position.Board().Draw())
+	out(position.Board().Draw())
 	moves := position.ValidMoves()
 	for _, move := range moves {
-		log.Println("Top Level Move:", move, "Move order score:", evaluate_move_v1(move, position.Board()))
+		out("Top Level Move:", move, "Move order score:", evaluate_move_v1(move, position.Board()))
 	}
 }
 
@@ -61,8 +61,8 @@ type test_record struct {
 
 
 func test(engine Engine, pos string, expected string) {
-	log.Println("Running test on engine:", engine.Name())
-	log.Println("FEN:", pos)
+	out("Running test on engine:", engine.Name())
+	out("FEN:", pos)
 
 	fen, err := chess.FEN(pos)
 	if err != nil {
@@ -85,19 +85,19 @@ func test(engine Engine, pos string, expected string) {
 	if move.String() != expected {
 		if (move.String()[2:4] == expected[len(expected)-2:]) {
 			if len(possible_moves) > 1 {
-				log.Println("!!! POSSIBLE PASS:", move, expected)
-				log.Println("Move is ambiguous, possible moves are:", possible_moves)
+				out("!!! POSSIBLE PASS:", move, expected)
+				out("Move is ambiguous, possible moves are:", possible_moves)
 			} else {
-				log.Println("TEST PASSED")
+				out("TEST PASSED")
 				return 
 			}
 		}
 		fmt.Println("TEST FAILED", move.String(), expected)
 		// fmt.Println("Possible moves:", possible_moves)
-		log.Println("TEST FAILED", move.String(), expected)
+		out("TEST FAILED", move.String(), expected)
 	} else {
 		fmt.Println("TEST PASSED")
-		log.Println("TEST PASSED")
+		out("TEST PASSED")
 	}
 }
 

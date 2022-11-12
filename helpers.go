@@ -1,10 +1,19 @@
 package main
 
 import (
+	"fmt"
+	"log"
 	"time"
 
 	"github.com/notnil/chess"
 )
+
+// Custom printLn function
+// logs and prints any input
+func out(a ...any) {
+	log.Println(a...)
+	fmt.Println(a...)
+}
 
 // function that turns boolean into either 1 or -1
 func bool_to_int(b bool) int {

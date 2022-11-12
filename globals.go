@@ -2,9 +2,12 @@ package main
 
 import (
 	"github.com/notnil/chess"
+	"github.com/notnil/chess/opening"
 )
 
 // constants for minimax
+var global_UCINotation chess.UCINotation 
+var global_Opening_Book = opening.NewBookECO()
 const CHESS_START_POSITION = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 var newGame = chess.NewGame()
 var explored int = 0

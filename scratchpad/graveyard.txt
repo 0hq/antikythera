@@ -13,7 +13,7 @@ func minimax_pll(position *chess.Position, ply int, max bool, last_move *chess.M
 	// generate moves
 	var moves []*chess.Move = position.ValidMoves()
 	if (isRoot) {
-		log.Println("Moves:", moves)
+		out("Moves:", moves)
 	}
 	var length int = len(moves)
 
@@ -102,3 +102,46 @@ func evaluate_position_v1(board *chess.Board, max bool) int {
 	// fmt.Println(parse_epd_file("tests/EigenmannRapidEngineTest.txt"))
 	// run_tests(engine_minimax_plain_ab_q, EngineConfig{ply: 3}, "tests/EigenmannRapidEngineTest.txt")
 	// iterative_deepening_v0(engine_minimax_plain_ab_q, game_from_fen("5r1k/6pp/7N/3Q4/8/8/8/7K w - - 2 2").Position(), 30)
+
+	func get_opening(g *chess.Game, retries int) *chess.Move {
+	moves := g.Moves()
+	if len(moves) == 0 && g.FEN() == "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1" {
+		var gx *chess.Game = chess.NewGame(chess.UseNotation(chess.UCINotation{}))
+		gx.MoveStr("e2e4")
+		fmt.Println(gx.Moves())
+		return gx.Moves()[0]
+	}
+	o := book.Find(moves) // find current opening
+	if o == nil {
+		return nil
+	}
+	fmt.Println("\nFrom:", o.Title())
+	// fmt.Println(g.Moves())
+	p := book.Possible(g.Moves()) // all openings available
+	if len(p) > 0 {
+		r := p[rand.Intn(len(p))] // random opening available
+		fmt.Println("To:", r.Title())
+		fmt.Println(r.PGN())
+		// pgn, err := chess.PGN(bytes.NewBufferString(r.PGN()))
+		// if err != nil {
+		// 	panic(err)
+		// }
+		split := strings.Split(r.PGN(), " ")
+		if len(split) <= len(g.Moves()) {
+			if len(p) == 1 || retries > 3 {
+				return nil
+			}
+			return get_opening(g, retries + 1)
+		}
+		gx := chess.NewGame(chess.UseNotation(chess.UCINotation{}))
+		for _, s := range split {
+			gx.MoveStr(s)
+		}
+		ms := gx.Moves()
+		// fmt.Println(split)
+		m := ms[len(g.Moves())]
+		fmt.Println(m)
+		return m
+	}
+	return nil
+}
