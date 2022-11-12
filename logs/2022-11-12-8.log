@@ -1,0 +1,79 @@
+2022/11/12 16:02:59 File initialization.
+2022/11/12 16:02:59 Version go1.19.3
+2022/11/12 16:02:59 NumCPU 6
+2022/11/12 16:02:59 GOMAXPROCS 6
+2022/11/12 16:02:59 
+2022/11/12 16:02:59 Manual challenge started.
+2022/11/12 16:02:59 Engine: Minimax Plain Alpha Beta + Quiescence
+2022/11/12 16:02:59 Playing as b
+2022/11/12 16:02:59 
+2022/11/12 16:03:07 b a2a3 0
+2022/11/12 16:03:07 
+ A B C D E F G H
+8♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜ 
+7♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟ 
+6- - - - - - - - 
+5- - - - - - - - 
+4- - - - - - - - 
+3♙ - - - - - - - 
+2- ♙ ♙ ♙ ♙ ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖ 
+
+2022/11/12 16:03:07 
+2022/11/12 16:03:07 Running Minimax Plain Alpha Beta + Quiescence
+2022/11/12 16:03:07 
+2022/11/12 16:03:07 Iterative deepening depth 1
+2022/11/12 16:03:07 New best move: b8a6
+2022/11/12 16:03:07 Best move: b8a6 Eval: 0
+2022/11/12 16:03:07 Depth: 1 Nodes: 40
+2022/11/12 16:03:07 Time since start_time: 509.6µs
+2022/11/12 16:03:07 
+2022/11/12 16:03:07 Iterative deepening depth 2
+2022/11/12 16:03:07 New best move: b8a6
+2022/11/12 16:03:07 Best move: b8a6 Eval: 0
+2022/11/12 16:03:07 Depth: 2 Nodes: 824
+2022/11/12 16:03:07 Time since start_time: 3.7777ms
+2022/11/12 16:03:07 
+2022/11/12 16:03:07 Iterative deepening depth 3
+2022/11/12 16:03:08 New best move: b8a6
+2022/11/12 16:03:08 Best move: b8a6 Eval: 0
+2022/11/12 16:03:08 Depth: 3 Nodes: 2978
+2022/11/12 16:03:08 Time since start_time: 23.8182ms
+2022/11/12 16:03:08 
+2022/11/12 16:03:08 Iterative deepening depth 4
+2022/11/12 16:03:08 New best move: b8a6
+2022/11/12 16:03:08 Best move: b8a6 Eval: 0
+2022/11/12 16:03:08 Depth: 4 Nodes: 21871
+2022/11/12 16:03:08 Time since start_time: 98.5659ms
+2022/11/12 16:03:08 
+2022/11/12 16:03:08 Iterative deepening depth 5
+2022/11/12 16:03:08 New best move: b8a6
+2022/11/12 16:03:08 Best move: b8a6 Eval: 0
+2022/11/12 16:03:08 Depth: 5 Nodes: 79574
+2022/11/12 16:03:08 Time since start_time: 532.4142ms
+2022/11/12 16:03:08 
+2022/11/12 16:03:08 Iterative deepening depth 6
+2022/11/12 16:03:08 New best move: b8a6
+2022/11/12 16:03:10 Best move: b8a6 Eval: 0
+2022/11/12 16:03:10 Depth: 6 Nodes: 578408
+2022/11/12 16:03:10 Time since start_time: 2.5667978s
+2022/11/12 16:03:10 
+2022/11/12 16:03:10 Iterative deepening depth 7
+2022/11/12 16:03:11 New best move: b8a6
+2022/11/12 16:03:25 Time up, returning best move so far.
+2022/11/12 16:03:25 
+2022/11/12 16:03:25 Engine results b8a6 0
+2022/11/12 16:03:25 Quiescence search explored 1246383 nodes
+2022/11/12 16:03:25 w b8a6 0
+2022/11/12 16:03:25 
+ A B C D E F G H
+8♜ - ♝ ♛ ♚ ♝ ♞ ♜ 
+7♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟ 
+6♞ - - - - - - - 
+5- - - - - - - - 
+4- - - - - - - - 
+3♙ - - - - - - - 
+2- ♙ ♙ ♙ ♙ ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖ 
+
+2022/11/12 16:03:25 

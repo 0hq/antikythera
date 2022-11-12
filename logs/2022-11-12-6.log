@@ -1,0 +1,49 @@
+2022/11/12 16:01:56 File initialization.
+2022/11/12 16:01:56 Version go1.19.3
+2022/11/12 16:01:56 NumCPU 6
+2022/11/12 16:01:56 GOMAXPROCS 6
+2022/11/12 16:01:56 
+2022/11/12 16:01:56 Manual challenge started.
+2022/11/12 16:01:56 Engine: Minimax Plain Alpha Beta + Quiescence
+2022/11/12 16:01:56 Playing as w
+2022/11/12 16:01:56 
+2022/11/12 16:01:56 Running Minimax Plain Alpha Beta + Quiescence
+2022/11/12 16:01:56 
+2022/11/12 16:01:56 Iterative deepening depth 1
+2022/11/12 16:01:56 New best move: b1a3
+2022/11/12 16:01:56 Best move: b1a3 Eval: 0
+2022/11/12 16:01:56 Depth: 1 Nodes: 40
+2022/11/12 16:01:56 Time since start_time: 525.6µs
+2022/11/12 16:01:56 
+2022/11/12 16:01:56 Iterative deepening depth 2
+2022/11/12 16:01:56 New best move: b1a3
+2022/11/12 16:01:56 Best move: b1a3 Eval: 0
+2022/11/12 16:01:56 Depth: 2 Nodes: 864
+2022/11/12 16:01:56 Time since start_time: 3.7735ms
+2022/11/12 16:01:56 
+2022/11/12 16:01:56 Iterative deepening depth 3
+2022/11/12 16:01:56 New best move: b1a3
+2022/11/12 16:01:56 Best move: b1a3 Eval: 0
+2022/11/12 16:01:56 Depth: 3 Nodes: 3016
+2022/11/12 16:01:56 Time since start_time: 22.5792ms
+2022/11/12 16:01:56 
+2022/11/12 16:01:56 Iterative deepening depth 4
+2022/11/12 16:01:56 New best move: b1a3
+2022/11/12 16:01:56 Best move: b1a3 Eval: 0
+2022/11/12 16:01:56 Depth: 4 Nodes: 22955
+2022/11/12 16:01:56 Time since start_time: 101.2888ms
+2022/11/12 16:01:56 
+2022/11/12 16:01:56 Iterative deepening depth 5
+2022/11/12 16:01:56 New best move: b1a3
+2022/11/12 16:01:56 Best move: b1a3 Eval: 0
+2022/11/12 16:01:56 Depth: 5 Nodes: 80111
+2022/11/12 16:01:56 Time since start_time: 527.7205ms
+2022/11/12 16:01:56 
+2022/11/12 16:01:56 Iterative deepening depth 6
+2022/11/12 16:01:56 New best move: b1a3
+2022/11/12 16:01:59 Best move: b1a3 Eval: 0
+2022/11/12 16:01:59 Depth: 6 Nodes: 614695
+2022/11/12 16:01:59 Time since start_time: 2.6559847s
+2022/11/12 16:01:59 
+2022/11/12 16:01:59 Iterative deepening depth 7
+2022/11/12 16:01:59 New best move: b1a3
