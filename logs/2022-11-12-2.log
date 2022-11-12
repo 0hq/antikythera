@@ -1,0 +1,35 @@
+2022/11/12 13:35:38 File initialization.
+2022/11/12 13:35:38 Version go1.19.3
+2022/11/12 13:35:38 NumCPU 6
+2022/11/12 13:35:38 GOMAXPROCS 6
+2022/11/12 13:35:38 
+2022/11/12 13:35:38 Running test on engine: Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:35:38 FEN: r1bqk1r1/1p1p1n2/p1n2pN1/2p1b2Q/2P1Pp2/1PN5/PB4PP/R4RK1 w - - 0 1
+2022/11/12 13:35:38 Running Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:35:38 
+2022/11/12 13:35:38 Iterative deepening depth 1
+2022/11/12 13:35:38 New best move: g6e5
+2022/11/12 13:35:38 New best move: g6f4
+2022/11/12 13:35:38 Best move: g6f4 Eval: -230
+2022/11/12 13:35:38 Depth: 1 Nodes: 432
+2022/11/12 13:35:38 
+2022/11/12 13:35:38 Iterative deepening depth 2
+2022/11/12 13:35:38 New best move: g6e5
+2022/11/12 13:35:38 Best move: g6e5 Eval: -320
+2022/11/12 13:35:38 Depth: 2 Nodes: 4088
+2022/11/12 13:35:38 
+2022/11/12 13:35:38 Iterative deepening depth 3
+2022/11/12 13:35:38 New best move: g6e5
+2022/11/12 13:35:38 New best move: g6f4
+2022/11/12 13:35:38 Best move: g6f4 Eval: -230
+2022/11/12 13:35:38 Depth: 3 Nodes: 25791
+2022/11/12 13:35:38 
+2022/11/12 13:35:38 Iterative deepening depth 4
+2022/11/12 13:35:38 New best move: g6e5
+2022/11/12 13:35:39 New best move: g6f4
+2022/11/12 13:35:39 Best move: g6f4 Eval: -230
+2022/11/12 13:35:39 Depth: 4 Nodes: 169766
+2022/11/12 13:35:39 
+2022/11/12 13:35:39 Iterative deepening depth 5
+2022/11/12 13:35:39 New best move: g6e5
+2022/11/12 13:35:45 New best move: h5h7

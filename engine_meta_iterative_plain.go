@@ -20,6 +20,10 @@ func (e *t_meta_engine_iterative_plain) Name() string {
 	return "Meta Engine Iterative Deepening v0 : " + e.engine.Name()
 }
 
+func (e *t_meta_engine_iterative_plain) Check_Time_Up() bool {
+	panic("Not implemented.")
+}
+
 func (e *t_meta_engine_iterative_plain) Set_Meta_Config(c MetaEngineConfig) {
 	e.config = c
 }

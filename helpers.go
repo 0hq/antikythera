@@ -1,6 +1,10 @@
 package main
 
-import "github.com/notnil/chess"
+import (
+	"time"
+
+	"github.com/notnil/chess"
+)
 
 // function that turns boolean into either 1 or -1
 func bool_to_int(b bool) int {
@@ -17,4 +21,8 @@ func game_from_fen(pos string) *chess.Game {
 		panic(err)
 	}
 	return chess.NewGame(fen)
+}
+
+func duration_from_sec(seconds int) time.Duration {
+	return time.Duration(seconds) * time.Second
 }

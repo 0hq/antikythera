@@ -21,8 +21,11 @@ Why isn't the parallel version faster for perft?
 // Engine now prioritize the shortest checkmate.
 // Add in Eigenmann rapid engine test.
 
-Turn iterative deepening into an engine.
-Change engine struct to be smarter.
+Better move ordering.
+   Pick and sort
+   Hash MVV/LVA
+// Turn iterative deepening into an engine.
+// Change engine struct to be smarter.
 Make iterative deepening play in time.
 
 */
@@ -77,7 +80,8 @@ func main() {
 	// move, eval := engine.Run_Engine(game_from_fen("3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1").Position())
 	// fmt.Println(parse_test_file("tests/EigenmannRapidEngineTest.txt", parse_epd_record))
 	// go_simple_tests()
-	mini_iterative_deepening()
+	// mini_iterative_deepening()
+	mini_iterative_deepening_timed()
 
 	// simple_tests()
 	// benchmark_range(6, 6, engine_minimax_plain_ab_q, game_from_fen("5rk1/5Npp/8/3Q4/8/8/8/7K w - - 0 1").Position())
@@ -93,11 +97,17 @@ func main() {
 	// iterative_deepening_v0(engine_minimax_plain_ab_q, game_from_fen("5r1k/6pp/7N/3Q4/8/8/8/7K w - - 2 2").Position(), 30)
 }
 
+func mini_iterative_deepening_timed() {
+	engine := engine_minimax_id_ab_q
+	engine.Set_Time(2)
+	simple_tests(&engine)
+}
+
 func mini_iterative_deepening() {
 	engine := engine_minimax_plain_ab_q
 	engine.Set_Config(EngineConfig{ply: 4})
 	var meta_engine t_meta_engine_iterative_plain
-	meta_engine.Set_Meta_Config(MetaEngineConfig{max_depth: 8, max_time: 30})
+	// meta_engine.Set_Meta_Config(MetaEngineConfig{max_depth: 8, max_time: 30})
 	meta_engine.Set_Engine(&engine)
 	simple_tests(&meta_engine)
 }

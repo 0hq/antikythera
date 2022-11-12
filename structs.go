@@ -1,10 +1,13 @@
 package main
 
-import "github.com/notnil/chess"
+import (
+	"time"
+
+	"github.com/notnil/chess"
+)
 
 // engine
 // owns config, features, name, and start engine_func
-
 // define new engine that houses the methods
 
 
@@ -12,12 +15,15 @@ type Engine interface {
 	Run_Engine(*chess.Position) (*chess.Move, int)
 	Name() string
 	Set_Config(EngineConfig)
+	Check_Time_Up() bool
 }
 
 type EngineClass struct {
     name string
 	features EngineFeatures
 	engine_config EngineConfig
+	start_time time.Time
+	time_duration time.Duration
 	time_up bool
 }
 
@@ -39,10 +45,23 @@ type MetaEngineConfig struct {
 	max_depth int
 }
 
+func (e *EngineClass) Set_Time(seconds int) {
+	e.time_duration = time.Duration(seconds) * time.Second
+	e.time_up = false
+}
+
 func (e *EngineClass) Set_Config(cfg EngineConfig) {
 	e.engine_config = cfg
 }
 
 func (e EngineClass) Name() string {
 	return e.name
+}
+
+// check time up
+func (e EngineClass) Check_Time_Up() bool {
+	if time.Since(e.start_time) > e.time_duration {
+		e.time_up = true
+	}
+	return e.time_up
 }

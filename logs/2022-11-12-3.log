@@ -1,0 +1,185 @@
+2022/11/12 13:36:15 File initialization.
+2022/11/12 13:36:15 Version go1.19.3
+2022/11/12 13:36:15 NumCPU 6
+2022/11/12 13:36:15 GOMAXPROCS 6
+2022/11/12 13:36:15 
+2022/11/12 13:36:15 Running test on engine: Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:36:15 FEN: r1bqk1r1/1p1p1n2/p1n2pN1/2p1b2Q/2P1Pp2/1PN5/PB4PP/R4RK1 w - - 0 1
+2022/11/12 13:36:15 Running Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:36:15 
+2022/11/12 13:36:15 Iterative deepening depth 1
+2022/11/12 13:36:15 New best move: g6e5
+2022/11/12 13:36:15 New best move: g6f4
+2022/11/12 13:36:15 Best move: g6f4 Eval: -230
+2022/11/12 13:36:15 Depth: 1 Nodes: 432
+2022/11/12 13:36:15 
+2022/11/12 13:36:15 Iterative deepening depth 2
+2022/11/12 13:36:15 New best move: g6e5
+2022/11/12 13:36:15 Best move: g6e5 Eval: -320
+2022/11/12 13:36:15 Depth: 2 Nodes: 4088
+2022/11/12 13:36:15 
+2022/11/12 13:36:15 Iterative deepening depth 3
+2022/11/12 13:36:15 New best move: g6e5
+2022/11/12 13:36:16 New best move: g6f4
+2022/11/12 13:36:16 Best move: g6f4 Eval: -230
+2022/11/12 13:36:16 Depth: 3 Nodes: 25791
+2022/11/12 13:36:16 
+2022/11/12 13:36:16 Iterative deepening depth 4
+2022/11/12 13:36:16 New best move: g6e5
+2022/11/12 13:36:16 New best move: g6f4
+2022/11/12 13:36:16 Best move: g6f4 Eval: -230
+2022/11/12 13:36:16 Depth: 4 Nodes: 169766
+2022/11/12 13:36:16 
+2022/11/12 13:36:16 Iterative deepening depth 5
+2022/11/12 13:36:16 New best move: g6e5
+2022/11/12 13:36:22 New best move: h5h7
+2022/11/12 13:36:35 Time up, returning best move so far
+2022/11/12 13:36:35 Engine results g6f4 -230
+2022/11/12 13:36:35 Quiescence search explored 1279125 nodes
+2022/11/12 13:36:35 !!! POSSIBLE PASS: g6f4 Rxf4
+2022/11/12 13:36:35 Move is ambiguous, possible moves are: [f1f4 g6f4]
+2022/11/12 13:36:35 TEST FAILED g6f4 Rxf4
+2022/11/12 13:36:35 Running test on engine: Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:36:35 FEN: r1n2N1k/2n2K1p/3pp3/5Pp1/b5R1/8/1PPP4/8 w - - 0 1
+2022/11/12 13:36:35 Running Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:36:35 
+2022/11/12 13:36:35 Iterative deepening depth 1
+2022/11/12 13:36:35 New best move: f8g6
+2022/11/12 13:36:35 New best move: f5e6
+2022/11/12 13:36:35 Best move: f5e6 Eval: -550
+2022/11/12 13:36:35 Depth: 1 Nodes: 208
+2022/11/12 13:36:35 
+2022/11/12 13:36:35 Iterative deepening depth 2
+2022/11/12 13:36:35 New best move: f8g6
+2022/11/12 13:36:35 New best move: f5e6
+2022/11/12 13:36:35 Best move: f5e6 Eval: -550
+2022/11/12 13:36:35 Depth: 2 Nodes: 1380
+2022/11/12 13:36:35 
+2022/11/12 13:36:35 Iterative deepening depth 3
+2022/11/12 13:36:35 New best move: f8g6
+2022/11/12 13:36:35 New best move: f5e6
+2022/11/12 13:36:35 Best move: f5e6 Eval: -550
+2022/11/12 13:36:35 Depth: 3 Nodes: 7989
+2022/11/12 13:36:35 
+2022/11/12 13:36:35 Iterative deepening depth 4
+2022/11/12 13:36:35 New best move: f8g6
+2022/11/12 13:36:35 New best move: f5e6
+2022/11/12 13:36:35 Best move: f5e6 Eval: -550
+2022/11/12 13:36:35 Depth: 4 Nodes: 45144
+2022/11/12 13:36:35 
+2022/11/12 13:36:35 Iterative deepening depth 5
+2022/11/12 13:36:35 New best move: f8g6
+2022/11/12 13:36:35 New best move: f5e6
+2022/11/12 13:36:36 Best move: f5e6 Eval: -550
+2022/11/12 13:36:36 Depth: 5 Nodes: 160691
+2022/11/12 13:36:36 
+2022/11/12 13:36:36 Iterative deepening depth 6
+2022/11/12 13:36:36 New best move: f8g6
+2022/11/12 13:36:37 New best move: f7f6
+2022/11/12 13:36:40 New best move: f8e6
+2022/11/12 13:36:40 Time up, returning best move so far
+2022/11/12 13:36:40 Engine results f5e6 -550
+2022/11/12 13:36:40 Quiescence search explored 495501 nodes
+2022/11/12 13:36:40 TEST FAILED f5e6 Ng6
+2022/11/12 13:36:40 Running test on engine: Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:36:40 FEN: r1b1r1k1/1pqn1pbp/p2pp1p1/P7/1n1NPP1Q/2NBBR2/1PP3PP/R6K w - - 0 1
+2022/11/12 13:36:40 Running Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:36:40 
+2022/11/12 13:36:40 Iterative deepening depth 1
+2022/11/12 13:36:40 New best move: h1g1
+2022/11/12 13:36:40 New best move: d3f1
+2022/11/12 13:36:40 Best move: d3f1 Eval: 0
+2022/11/12 13:36:40 Depth: 1 Nodes: 673
+2022/11/12 13:36:40 
+2022/11/12 13:36:40 Iterative deepening depth 2
+2022/11/12 13:36:40 New best move: h1g1
+2022/11/12 13:36:40 New best move: d3f1
+2022/11/12 13:36:40 Best move: d3f1 Eval: 0
+2022/11/12 13:36:40 Depth: 2 Nodes: 6101
+2022/11/12 13:36:40 
+2022/11/12 13:36:40 Iterative deepening depth 3
+2022/11/12 13:36:40 New best move: h1g1
+2022/11/12 13:36:40 New best move: d3f1
+2022/11/12 13:36:40 Best move: d3f1 Eval: 0
+2022/11/12 13:36:40 Depth: 3 Nodes: 45578
+2022/11/12 13:36:40 
+2022/11/12 13:36:40 Iterative deepening depth 4
+2022/11/12 13:36:41 New best move: h1g1
+2022/11/12 13:36:41 New best move: h4e1
+2022/11/12 13:36:41 New best move: f3h3
+2022/11/12 13:36:43 Time up, returning best move so far
+2022/11/12 13:36:43 Engine results d3f1 0
+2022/11/12 13:36:43 Quiescence search explored 213502 nodes
+2022/11/12 13:36:43 TEST FAILED d3f1 f5
+2022/11/12 13:36:43 Running test on engine: Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:36:43 FEN: 5b2/p2k1p2/P3pP1p/n2pP1p1/1p1P2P1/1P1KBN2/7P/8 w - - 0 1
+2022/11/12 13:36:43 Running Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:36:43 
+2022/11/12 13:36:43 Iterative deepening depth 1
+2022/11/12 13:36:43 New best move: d3c2
+2022/11/12 13:36:43 Best move: d3c2 Eval: 0
+2022/11/12 13:36:43 Depth: 1 Nodes: 86
+2022/11/12 13:36:43 
+2022/11/12 13:36:43 Iterative deepening depth 2
+2022/11/12 13:36:43 New best move: d3c2
+2022/11/12 13:36:43 Best move: d3c2 Eval: 0
+2022/11/12 13:36:43 Depth: 2 Nodes: 626
+2022/11/12 13:36:43 
+2022/11/12 13:36:43 Iterative deepening depth 3
+2022/11/12 13:36:43 New best move: d3c2
+2022/11/12 13:36:43 Best move: d3c2 Eval: 0
+2022/11/12 13:36:43 Depth: 3 Nodes: 2933
+2022/11/12 13:36:43 
+2022/11/12 13:36:43 Iterative deepening depth 4
+2022/11/12 13:36:43 New best move: d3c2
+2022/11/12 13:36:43 Best move: d3c2 Eval: 0
+2022/11/12 13:36:43 Depth: 4 Nodes: 14249
+2022/11/12 13:36:43 
+2022/11/12 13:36:43 Iterative deepening depth 5
+2022/11/12 13:36:43 New best move: d3c2
+2022/11/12 13:36:43 Best move: d3c2 Eval: 0
+2022/11/12 13:36:43 Depth: 5 Nodes: 49932
+2022/11/12 13:36:43 
+2022/11/12 13:36:43 Iterative deepening depth 6
+2022/11/12 13:36:43 New best move: d3c2
+2022/11/12 13:36:44 Best move: d3c2 Eval: 0
+2022/11/12 13:36:44 Depth: 6 Nodes: 223449
+2022/11/12 13:36:44 
+2022/11/12 13:36:44 Iterative deepening depth 7
+2022/11/12 13:36:44 New best move: d3c2
+2022/11/12 13:36:47 Time up, returning best move so far
+2022/11/12 13:36:47 Engine results d3c2 0
+2022/11/12 13:36:47 Quiescence search explored 355079 nodes
+2022/11/12 13:36:47 TEST FAILED d3c2 Nxg5
+2022/11/12 13:36:47 Running test on engine: Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:36:47 FEN: r3kbnr/1b3ppp/pqn5/1pp1P3/3p4/1BN2N2/PP2QPPP/R1BR2K1 w kq - 0 1
+2022/11/12 13:36:47 Running Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:36:47 
+2022/11/12 13:36:47 Iterative deepening depth 1
+2022/11/12 13:36:47 New best move: g1f1
+2022/11/12 13:36:47 New best move: c3b1
+2022/11/12 13:36:47 Best move: c3b1 Eval: -100
+2022/11/12 13:36:47 Depth: 1 Nodes: 439
+2022/11/12 13:36:47 
+2022/11/12 13:36:47 Iterative deepening depth 2
+2022/11/12 13:36:47 New best move: g1f1
+2022/11/12 13:36:47 New best move: c3b1
+2022/11/12 13:36:47 Best move: c3b1 Eval: -100
+2022/11/12 13:36:47 Depth: 2 Nodes: 3911
+2022/11/12 13:36:47 
+2022/11/12 13:36:47 Iterative deepening depth 3
+2022/11/12 13:36:47 New best move: g1f1
+2022/11/12 13:36:47 New best move: e2d2
+2022/11/12 13:36:47 New best move: e2d3
+2022/11/12 13:36:47 Best move: e2d3 Eval: -100
+2022/11/12 13:36:47 Depth: 3 Nodes: 43565
+2022/11/12 13:36:47 
+2022/11/12 13:36:47 Iterative deepening depth 4
+2022/11/12 13:36:47 New best move: g1f1
+2022/11/12 13:36:47 New best move: e2d2
+2022/11/12 13:36:47 New best move: e2d3
+2022/11/12 13:36:48 Best move: e2d3 Eval: -100
+2022/11/12 13:36:48 Depth: 4 Nodes: 192040
+2022/11/12 13:36:48 
+2022/11/12 13:36:48 Iterative deepening depth 5
+2022/11/12 13:36:49 New best move: g1f1

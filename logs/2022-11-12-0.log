@@ -1,0 +1,18 @@
+2022/11/12 13:05:28 File initialization.
+2022/11/12 13:05:28 Version go1.19.3
+2022/11/12 13:05:28 NumCPU 6
+2022/11/12 13:05:28 GOMAXPROCS 6
+2022/11/12 13:05:28 
+2022/11/12 13:05:28 Running test on engine: Meta Engine Iterative Deepening v1 : Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:05:28 FEN: r1bqk1r1/1p1p1n2/p1n2pN1/2p1b2Q/2P1Pp2/1PN5/PB4PP/R4RK1 w - - 0 1
+2022/11/12 13:05:28 Running iterative deepening v0 with engine  Minimax Plain Alpha Beta + Quiescence
+2022/11/12 13:05:28 
+2022/11/12 13:05:28 Iterative deepening depth 1
+2022/11/12 13:05:28 Running minimax_plain_ab_q_engine_func
+2022/11/12 13:05:28 New best move: g6e5
+2022/11/12 13:05:28 New best move: g6f4
+2022/11/12 13:05:28 Plain minimax results g6f4 -230
+2022/11/12 13:05:28 Quiescence search explored 386 nodes
+2022/11/12 13:05:28 Time up, returning best move so far
+2022/11/12 13:05:28 Engine results <nil> 0
+2022/11/12 13:05:28 Exiting engine.
