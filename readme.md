@@ -12,9 +12,9 @@ The files that begin with "engine\_" denote different engine versions, each with
 
 Want to play the engine?
 
-Download this repository.
-Run ```brew install go```, if you do not already have Golang installed.
-Open your terminal and navigate to the downloaded folder.
-Run ```go run .``` or (```go build``` and then ```./main``` for faster speeds).
+Download this repository.  
+Run ```brew install go```, if you do not already have Golang installed.  
+Open your terminal and navigate to the downloaded folder.  
+Run ```go run .``` or (```go build``` and then ```./main``` for faster speeds).  
 
 Thanks, Will.
