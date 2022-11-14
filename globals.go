@@ -6,6 +6,7 @@ import (
 )
 
 // constants for minimax
+var production_mode = true
 var global_UCINotation chess.UCINotation 
 var global_AlgebraicNotation chess.AlgebraicNotation
 var global_Opening_Book = opening.NewBookECO()

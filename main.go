@@ -37,21 +37,23 @@ Make iterative deepening play in time.
 func init() {
 	out("Initializing engine...")
 	// create new log file that doesn't exist
-	for i := 0; ; i++ {
-		// create file name from timestamp date and hour
-		date := time.Now().Format("2006-01-02")
-		filename := fmt.Sprintf("logs/%s-%d.log", date, i)
-		_, err := os.Stat(filename)
-		if os.IsNotExist(err) {
-			f, err := os.Create(filename)
-			if err != nil {
-				log.Fatal(err)
+	if !production_mode {
+		for i := 0; ; i++ {
+			// create file name from timestamp date and hour
+			date := time.Now().Format("2006-01-02")
+			filename := fmt.Sprintf("logs/%s-%d.log", date, i)
+			_, err := os.Stat(filename)
+			if os.IsNotExist(err) {
+				f, err := os.Create(filename)
+				if err != nil {
+					log.Fatal(err)
+				}
+				log.SetOutput(f)
+				break
 			}
-			log.SetOutput(f)
-			break
 		}
+		out("File initialization.")
 	}
-    out("File initialization.")
 
 	out("Version", runtime.Version())
     out("NumCPU", runtime.NumCPU())
@@ -64,7 +66,8 @@ func main() {
 	defer exit()
 	out("Running engine...")
 	// test_opening()	
-	mini_challenge_manual_opening_custom()
+	// mini_challenge_manual_opening_custom()
+	mini_challenge_manual_opening()
 	// game := game_from_fen("r1b1kb1r/pp2pppp/2n2n2/8/2q5/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 0 7")
 	// engine := engine_minimax_id_ab_q
 	// engine.Set_Time(15)

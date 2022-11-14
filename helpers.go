@@ -11,7 +11,9 @@ import (
 // Custom printLn function
 // logs and prints any input
 func out(a ...any) {
-	log.Println(a...)
+	if !production_mode {
+		log.Println(a...)
+	}
 	fmt.Println(a...)
 }
 
