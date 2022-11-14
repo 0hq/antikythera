@@ -91,7 +91,7 @@ func (e *t_engine_p_ab_q_id) minimax_id_ab_q_searcher(position *chess.Position, 
 
 	moves := sort_moves_v1(position.ValidMoves(), position.Board())
 	if len(moves) == 0 {
-		return evaluate_position_v2(position, e.engine_config.ply, ply, bool_to_int(max))
+		return evaluate_position_v3(position, e.engine_config.ply, ply, bool_to_int(max))
 	}
     for _, move := range moves {
         score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply - 1, !max, -beta, -alpha)
@@ -110,7 +110,7 @@ func (e *t_engine_p_ab_q_id) quiescence_minimax_id_ab_q(position *chess.Position
 	explored++
 	q_explored++
 
-	stand_pat := evaluate_position_v2(position, e.engine_config.ply, -plycount, bool_to_int(max))
+	stand_pat := evaluate_position_v3(position, e.engine_config.ply, -plycount, bool_to_int(max))
 	if stand_pat >= beta {
         return beta;
 	}

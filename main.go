@@ -23,9 +23,11 @@ Why isn't the parallel version faster for perft?
 // Engine now prioritize the shortest checkmate.
 // Add in Eigenmann rapid engine test.
 
+// Piece square tables.
 Better move ordering.
    Pick and sort
-   Hash MVV/LVA
+   // Hash MVV/LVA
+   SEE
 // Turn iterative deepening into an engine.
 // Change engine struct to be smarter.
 Make iterative deepening play in time.
@@ -63,6 +65,7 @@ func main() {
 	out("Running engine...")
 	// test_opening()	
 	mini_challenge_manual_opening()
+	// mini_iterative_deepening_timed()
 	
 }
 
@@ -92,14 +95,6 @@ func mini_iterative_deepening_timed() {
 	simple_tests(&engine)
 }
 
-func mini_iterative_deepening() {
-	engine := engine_minimax_plain_ab_q
-	engine.Set_Config(EngineConfig{ply: 4})
-	var meta_engine t_meta_engine_iterative_plain
-	// meta_engine.Set_Meta_Config(MetaEngineConfig{max_depth: 8, max_time: 30})
-	meta_engine.Set_Engine(&engine)
-	simple_tests(&meta_engine)
-}
 
 func mini_simple_tests() {
 	engine := engine_minimax_plain_ab_q
@@ -112,10 +107,13 @@ func exit()	{
 }
 
 func simple_tests(engine Engine) {
-	// test_exchange_7move(engine)
-	// test_exchange_5move(engine)
-	// test_exchange_3move(engine)
-	// test_m2(engine)
-	// run_tests(engine, parse_test_file("tests/WillsMateInThree.txt", parse_fen_record))
+	test_exchange_7move(engine)
+	test_exchange_5move(engine)
+	test_exchange_3move(engine)
+	test_m2(engine)
+	run_tests(engine, parse_test_file("tests/WillsMateInThree.txt", parse_fen_record))
+}
+
+func eigenmann_tests(engine Engine) {
 	run_tests(engine, parse_test_file("tests/EigenmannRapidEngineTest.txt", parse_epd_record))
 }
