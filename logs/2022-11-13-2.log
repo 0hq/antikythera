@@ -1,0 +1,11 @@
+2022/11/13 22:38:06 File initialization.
+2022/11/13 22:38:06 Version go1.19.3
+2022/11/13 22:38:06 NumCPU 6
+2022/11/13 22:38:06 GOMAXPROCS 6
+2022/11/13 22:38:06 
+2022/11/13 22:38:06 Running engine...
+2022/11/13 22:38:07 Manual challenge started.
+2022/11/13 22:38:07 Engine: Minimax Plain Alpha Beta + Quiescence
+2022/11/13 22:38:07 Playing as b
+2022/11/13 22:38:07 
+2022/11/13 22:38:07 Exiting engine.

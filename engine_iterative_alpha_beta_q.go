@@ -14,12 +14,12 @@ type t_engine_p_ab_q_id struct {
 // define new engine
 var engine_minimax_id_ab_q = t_engine_p_ab_q_id{
 	EngineClass{
-		name: "Minimax Plain Alpha Beta + Quiescence",
+		name: "Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3",
 		features: EngineFeatures{
 			plain: true,
 			parallel: false,
 			alphabeta: true,
-			iterative_deepening: false,
+			iterative_deepening: true,
 			mtdf: false,
 		},
 		engine_config: EngineConfig{
@@ -35,6 +35,7 @@ func (e *t_engine_p_ab_q_id) Run_Engine(pos *chess.Position) (best *chess.Move, 
 	out("Running", e.name)
 	e.time_up = false
 	e.start_time = time.Now()
+	out("Duration:", e.time_duration)
 	depth := 1
 	for {
 		out()
@@ -69,10 +70,9 @@ func (e *t_engine_p_ab_q_id) minimax_id_ab_q_starter(position *chess.Position, p
 		e.Check_Time_Up()
 		score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply-1, !max, -1 * math.MaxInt, math.MaxInt)
 		if PRINT_TOP_MOVES {
-			out("Top Level Move:", move, "Eval:", score)
+			out("Top Level Move:", move, "Eval:", score,)
 		}
 		if score > eval {
-			out("New best move:", move)
 			eval = score
 			best = move
 		}

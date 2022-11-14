@@ -1,0 +1,168 @@
+2022/11/13 22:38:51 File initialization.
+2022/11/13 22:38:51 Version go1.19.3
+2022/11/13 22:38:51 NumCPU 6
+2022/11/13 22:38:51 GOMAXPROCS 6
+2022/11/13 22:38:51 
+2022/11/13 22:38:51 Running engine...
+2022/11/13 22:38:51 Manual challenge started.
+2022/11/13 22:38:51 Engine: Minimax Plain Alpha Beta + Quiescence
+2022/11/13 22:38:51 Playing as b
+2022/11/13 22:38:51 
+2022/11/13 22:38:56 b f1c4 0
+2022/11/13 22:38:56 r1bqkb1r/pp2pppp/2n2n2/8/2B5/2N5/PPPP1PPP/R1BQK1NR b KQkq - 1 5
+2022/11/13 22:38:56 
+ A B C D E F G H
+8♜ - ♝ ♛ ♚ ♝ - ♜ 
+7♟ ♟ - - ♟ ♟ ♟ ♟ 
+6- - ♞ - - ♞ - - 
+5- - - - - - - - 
+4- - ♗ - - - - - 
+3- - ♘ - - - - - 
+2♙ ♙ ♙ ♙ - ♙ ♙ ♙ 
+1♖ - ♗ ♕ ♔ - ♘ ♖ 
+
+2022/11/13 22:38:56 
+2022/11/13 22:38:56 Running Minimax Plain Alpha Beta + Quiescence
+2022/11/13 22:38:56 
+2022/11/13 22:38:56 Iterative deepening depth 1
+2022/11/13 22:38:56 New best move: e8d7
+2022/11/13 22:38:56 New best move: d8d4
+2022/11/13 22:38:56 New best move: e7e5
+2022/11/13 22:38:56 Best move: e7e5 Eval: -40
+2022/11/13 22:38:56 Depth: 1 Nodes: 170
+2022/11/13 22:38:56 Time since start_time: 3.9999ms
+2022/11/13 22:38:56 
+2022/11/13 22:38:56 Iterative deepening depth 2
+2022/11/13 22:38:56 New best move: e8d7
+2022/11/13 22:38:56 New best move: d8d4
+2022/11/13 22:38:56 New best move: c8g4
+2022/11/13 22:38:56 New best move: e7e5
+2022/11/13 22:38:56 Best move: e7e5 Eval: -90
+2022/11/13 22:38:56 Depth: 2 Nodes: 3428
+2022/11/13 22:38:56 Time since start_time: 33.2936ms
+2022/11/13 22:38:56 
+2022/11/13 22:38:56 Iterative deepening depth 3
+2022/11/13 22:38:56 New best move: e8d7
+2022/11/13 22:38:57 New best move: d8d4
+2022/11/13 22:38:57 Best move: d8d4 Eval: -60
+2022/11/13 22:38:57 Depth: 3 Nodes: 55349
+2022/11/13 22:38:57 Time since start_time: 474.8786ms
+2022/11/13 22:38:57 
+2022/11/13 22:38:57 Iterative deepening depth 4
+2022/11/13 22:38:57 New best move: e8d7
+2022/11/13 22:38:57 New best move: d8d4
+2022/11/13 22:39:02 Best move: d8d4 Eval: -80
+2022/11/13 22:39:02 Depth: 4 Nodes: 718442
+2022/11/13 22:39:02 Time since start_time: 5.311818s
+2022/11/13 22:39:02 
+2022/11/13 22:39:02 Iterative deepening depth 5
+2022/11/13 22:39:03 New best move: e8d7
+2022/11/13 22:39:04 New best move: d8d4
+2022/11/13 22:39:05 New best move: d8a5
+2022/11/13 22:39:08 New best move: d8b6
+2022/11/13 22:39:20 New best move: c8f5
+2022/11/13 22:39:44 New best move: e7e5
+2022/11/13 22:39:53 Time up, returning best move so far.
+2022/11/13 22:39:53 
+2022/11/13 22:39:53 Engine results d8d4 -80
+2022/11/13 22:39:53 Quiescence search explored 4125051 nodes
+2022/11/13 22:39:53 w d8d4 -80
+2022/11/13 22:39:53 r1b1kb1r/pp2pppp/2n2n2/8/2Bq4/2N5/PPPP1PPP/R1BQK1NR w KQkq - 2 6
+2022/11/13 22:39:53 
+ A B C D E F G H
+8♜ - ♝ - ♚ ♝ - ♜ 
+7♟ ♟ - - ♟ ♟ ♟ ♟ 
+6- - ♞ - - ♞ - - 
+5- - - - - - - - 
+4- - ♗ ♛ - - - - 
+3- - ♘ - - - - - 
+2♙ ♙ ♙ ♙ - ♙ ♙ ♙ 
+1♖ - ♗ ♕ ♔ - ♘ ♖ 
+
+2022/11/13 22:39:53 
+2022/11/13 22:40:42 b g1f3 0
+2022/11/13 22:40:42 r1b1kb1r/pp2pppp/2n2n2/8/2Bq4/2N2N2/PPPP1PPP/R1BQK2R b KQkq - 3 6
+2022/11/13 22:40:42 
+ A B C D E F G H
+8♜ - ♝ - ♚ ♝ - ♜ 
+7♟ ♟ - - ♟ ♟ ♟ ♟ 
+6- - ♞ - - ♞ - - 
+5- - - - - - - - 
+4- - ♗ ♛ - - - - 
+3- - ♘ - - ♘ - - 
+2♙ ♙ ♙ ♙ - ♙ ♙ ♙ 
+1♖ - ♗ ♕ ♔ - - ♖ 
+
+2022/11/13 22:40:42 
+2022/11/13 22:40:42 Running Minimax Plain Alpha Beta + Quiescence
+2022/11/13 22:40:42 
+2022/11/13 22:40:42 Iterative deepening depth 1
+2022/11/13 22:40:42 New best move: d4e3
+2022/11/13 22:40:42 New best move: d4e4
+2022/11/13 22:40:42 New best move: d4e5
+2022/11/13 22:40:42 New best move: d4f4
+2022/11/13 22:40:42 New best move: d4c4
+2022/11/13 22:40:42 Best move: d4c4 Eval: 235
+2022/11/13 22:40:42 Depth: 1 Nodes: 338
+2022/11/13 22:40:42 Time since start_time: 8.7282ms
+2022/11/13 22:40:42 
+2022/11/13 22:40:42 Iterative deepening depth 2
+2022/11/13 22:40:42 New best move: d4e3
+2022/11/13 22:40:42 New best move: d4e4
+2022/11/13 22:40:42 New best move: d4e5
+2022/11/13 22:40:42 New best move: d4f4
+2022/11/13 22:40:42 New best move: d4g4
+2022/11/13 22:40:42 New best move: d4c5
+2022/11/13 22:40:42 New best move: d4c4
+2022/11/13 22:40:42 Best move: d4c4 Eval: 175
+2022/11/13 22:40:42 Depth: 2 Nodes: 3619
+2022/11/13 22:40:42 Time since start_time: 35.1932ms
+2022/11/13 22:40:42 
+2022/11/13 22:40:42 Iterative deepening depth 3
+2022/11/13 22:40:42 New best move: d4e3
+2022/11/13 22:40:42 New best move: d4e4
+2022/11/13 22:40:42 New best move: d4e5
+2022/11/13 22:40:43 New best move: d4f4
+2022/11/13 22:40:43 New best move: d4g4
+2022/11/13 22:40:43 New best move: d4c4
+2022/11/13 22:40:43 Best move: d4c4 Eval: 185
+2022/11/13 22:40:43 Depth: 3 Nodes: 44917
+2022/11/13 22:40:43 Time since start_time: 538.1354ms
+2022/11/13 22:40:43 
+2022/11/13 22:40:43 Iterative deepening depth 4
+2022/11/13 22:40:43 New best move: d4e3
+2022/11/13 22:40:43 New best move: d4e4
+2022/11/13 22:40:43 New best move: d4e5
+2022/11/13 22:40:43 New best move: d4f4
+2022/11/13 22:40:43 New best move: d4g4
+2022/11/13 22:40:45 New best move: d4c4
+2022/11/13 22:40:45 Best move: d4c4 Eval: 150
+2022/11/13 22:40:45 Depth: 4 Nodes: 320764
+2022/11/13 22:40:45 Time since start_time: 2.5783329s
+2022/11/13 22:40:45 
+2022/11/13 22:40:45 Iterative deepening depth 5
+2022/11/13 22:40:45 New best move: d4e3
+2022/11/13 22:40:45 New best move: d4e4
+2022/11/13 22:40:45 New best move: d4e5
+2022/11/13 22:40:49 New best move: d4f4
+2022/11/13 22:40:52 New best move: d4g4
+2022/11/13 22:41:11 New best move: d4c4
+2022/11/13 22:41:12 Time up, returning best move so far.
+2022/11/13 22:41:12 
+2022/11/13 22:41:12 Engine results d4c4 150
+2022/11/13 22:41:12 Quiescence search explored 1973003 nodes
+2022/11/13 22:41:12 w d4c4 150
+2022/11/13 22:41:12 r1b1kb1r/pp2pppp/2n2n2/8/2q5/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 0 7
+2022/11/13 22:41:12 
+ A B C D E F G H
+8♜ - ♝ - ♚ ♝ - ♜ 
+7♟ ♟ - - ♟ ♟ ♟ ♟ 
+6- - ♞ - - ♞ - - 
+5- - - - - - - - 
+4- - ♛ - - - - - 
+3- - ♘ - - ♘ - - 
+2♙ ♙ ♙ ♙ - ♙ ♙ ♙ 
+1♖ - ♗ ♕ ♔ - - ♖ 
+
+2022/11/13 22:41:12 
+2022/11/13 22:41:43 Exiting engine.

@@ -1,0 +1,18 @@
+2022/11/13 22:48:52 File initialization.
+2022/11/13 22:48:52 Version go1.19.3
+2022/11/13 22:48:52 NumCPU 6
+2022/11/13 22:48:52 GOMAXPROCS 6
+2022/11/13 22:48:52 
+2022/11/13 22:48:52 Running engine...
+2022/11/13 22:48:52 Running Minimax Plain Alpha Beta + Quiescence
+2022/11/13 22:48:52 
+2022/11/13 22:48:52 Iterative deepening depth 1
+2022/11/13 22:48:52 New best move: c4e4
+2022/11/13 22:48:52 New best move: c4e6
+2022/11/13 22:48:52 New best move: c4c5
+2022/11/13 22:48:52 Time up, returning best move so far.
+2022/11/13 22:48:52 
+2022/11/13 22:48:52 Engine results <nil> 0
+2022/11/13 22:48:52 Quiescence search explored 131 nodes
+2022/11/13 22:48:52 <nil> 0
+2022/11/13 22:48:52 Exiting engine.

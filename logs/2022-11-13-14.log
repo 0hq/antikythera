@@ -1,0 +1,164 @@
+2022/11/13 22:52:12 File initialization.
+2022/11/13 22:52:12 Version go1.19.3
+2022/11/13 22:52:12 NumCPU 6
+2022/11/13 22:52:12 GOMAXPROCS 6
+2022/11/13 22:52:12 
+2022/11/13 22:52:12 Running engine...
+2022/11/13 22:52:12 Setting time duration: 15s seconds: 15
+2022/11/13 22:52:12 Setting time up: false
+2022/11/13 22:52:12 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3
+2022/11/13 22:52:12 
+2022/11/13 22:52:12 Iterative deepening depth 1
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 980.8µs
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 New best move: c4e4
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 1.9815ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 New best move: c4e6
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 2.9813ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 3.9814ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 3.9814ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 4.9829ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 5.9825ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 6.9831ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 6.9831ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 7.9819ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 7.9819ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 8.9814ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 9.9817ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 New best move: c4c5
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 10.9841ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 11.7971ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 12.4665ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 13.0479ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 13.5857ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 14.6379ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 15.9483ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 16.4768ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 16.997ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 18.0557ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 18.6309ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 19.6723ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 20.3611ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 21.002ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 22.2419ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 22.7525ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 23.879ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 24.4069ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 24.9558ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 26.0977ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 26.8481ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 27.4745ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 27.987ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 30.3818ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 31.0266ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 31.5583ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 32.7268ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 33.254ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 34.3127ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 34.8369ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 35.3845ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 35.9122ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 36.6147ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 37.6742ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Checking time up
+2022/11/13 22:52:12 Time since start_time: 38.2296ms
+2022/11/13 22:52:12 Time duration: 0s
+2022/11/13 22:52:12 Time up, returning best move so far.
+2022/11/13 22:52:12 
+2022/11/13 22:52:12 Engine results <nil> 0
+2022/11/13 22:52:12 Quiescence search explored 131 nodes
+2022/11/13 22:52:12 <nil> 0
+2022/11/13 22:52:12 Exiting engine.

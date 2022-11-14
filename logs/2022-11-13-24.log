@@ -1,0 +1,102 @@
+2022/11/13 23:13:07 File initialization.
+2022/11/13 23:13:07 Version go1.19.3
+2022/11/13 23:13:07 NumCPU 6
+2022/11/13 23:13:07 GOMAXPROCS 6
+2022/11/13 23:13:07 
+2022/11/13 23:13:07 Running engine...
+2022/11/13 23:13:08 Manual challenge started.
+2022/11/13 23:13:08 Engine: Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3
+2022/11/13 23:13:08 Playing as b
+2022/11/13 23:13:08 Game: 
+ *
+2022/11/13 23:13:08 
+ A B C D E F G H
+8♜ - ♝ - ♚ ♝ - ♜ 
+7♟ ♟ - - ♟ ♟ ♟ ♟ 
+6- - ♞ - - ♞ - - 
+5- - - - - - - - 
+4- - ♛ - - - - - 
+3- - ♘ - - ♘ - - 
+2♙ ♙ ♙ ♙ - ♙ ♙ ♙ 
+1♖ - ♗ ♕ ♔ - - ♖ 
+
+2022/11/13 23:13:08 
+2022/11/13 23:13:11 b d2d3 0
+2022/11/13 23:13:11 r1b1kb1r/pp2pppp/2n2n2/8/2q5/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 0 7
+2022/11/13 23:13:11 
+ A B C D E F G H
+8♜ - ♝ - ♚ ♝ - ♜ 
+7♟ ♟ - - ♟ ♟ ♟ ♟ 
+6- - ♞ - - ♞ - - 
+5- - - - - - - - 
+4- - ♛ - - - - - 
+3- - ♘ ♙ - ♘ - - 
+2♙ ♙ ♙ - - ♙ ♙ ♙ 
+1♖ - ♗ ♕ ♔ - - ♖ 
+
+2022/11/13 23:13:11 
+2022/11/13 23:13:11 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3
+2022/11/13 23:13:11 Duration: 15s
+2022/11/13 23:13:11 
+2022/11/13 23:13:11 Iterative deepening depth 1
+2022/11/13 23:13:11 New best move: c4e4 Duration: 1.0369ms Time Up false Comparison Check false
+2022/11/13 23:13:11 New best move: c4e6 Duration: 1.0369ms Time Up false Comparison Check false
+2022/11/13 23:13:11 New best move: c4c5 Duration: 1.5586ms Time Up false Comparison Check false
+2022/11/13 23:13:11 Best move: c4c5 Eval: 185
+2022/11/13 23:13:11 Depth: 1 Nodes: 178
+2022/11/13 23:13:11 Time since start_time: 3.6388ms
+2022/11/13 23:13:11 
+2022/11/13 23:13:11 Iterative deepening depth 2
+2022/11/13 23:13:11 New best move: c4e4 Duration: 4.1804ms Time Up false Comparison Check false
+2022/11/13 23:13:11 New best move: c4e6 Duration: 4.7133ms Time Up false Comparison Check false
+2022/11/13 23:13:11 Best move: c4e6 Eval: 150
+2022/11/13 23:13:11 Depth: 2 Nodes: 3399
+2022/11/13 23:13:11 Time since start_time: 19.8958ms
+2022/11/13 23:13:11 
+2022/11/13 23:13:11 Iterative deepening depth 3
+2022/11/13 23:13:11 New best move: c4e4 Duration: 23.2432ms Time Up false Comparison Check false
+2022/11/13 23:13:11 New best move: c4e6 Duration: 25.4633ms Time Up false Comparison Check false
+2022/11/13 23:13:11 New best move: c4b4 Duration: 62.5088ms Time Up false Comparison Check false
+2022/11/13 23:13:11 New best move: c4g4 Duration: 95.8991ms Time Up false Comparison Check false
+2022/11/13 23:13:12 Best move: c4g4 Eval: 200
+2022/11/13 23:13:12 Depth: 3 Nodes: 28239
+2022/11/13 23:13:12 Time since start_time: 315.1017ms
+2022/11/13 23:13:12 
+2022/11/13 23:13:12 Iterative deepening depth 4
+2022/11/13 23:13:12 New best move: c4e4 Duration: 323.0605ms Time Up false Comparison Check false
+2022/11/13 23:13:12 New best move: c4e6 Duration: 333.0622ms Time Up false Comparison Check false
+2022/11/13 23:13:12 New best move: c4b4 Duration: 521.8054ms Time Up false Comparison Check false
+2022/11/13 23:13:12 New best move: c4g4 Duration: 654.3041ms Time Up false Comparison Check false
+2022/11/13 23:13:13 Best move: c4g4 Eval: 180
+2022/11/13 23:13:13 Depth: 4 Nodes: 172252
+2022/11/13 23:13:13 Time since start_time: 1.3429843s
+2022/11/13 23:13:13 
+2022/11/13 23:13:13 Iterative deepening depth 5
+2022/11/13 23:13:13 New best move: c4e4 Duration: 1.4145596s Time Up false Comparison Check false
+2022/11/13 23:13:13 New best move: c4e6 Duration: 1.5656226s Time Up false Comparison Check false
+2022/11/13 23:13:15 New best move: c4b4 Duration: 3.6040268s Time Up false Comparison Check false
+2022/11/13 23:13:25 Best move: c4b4 Eval: 200
+2022/11/13 23:13:25 Depth: 5 Nodes: 1612229
+2022/11/13 23:13:25 Time since start_time: 13.56666s
+2022/11/13 23:13:25 
+2022/11/13 23:13:25 Iterative deepening depth 6
+2022/11/13 23:13:25 New best move: c4e4 Duration: 14.1836556s Time Up false Comparison Check false
+2022/11/13 23:13:27 New best move: c4e6 Duration: 15.3633505s Time Up false Comparison Check true
+2022/11/13 23:13:27 Time up, returning best move so far.
+2022/11/13 23:13:27 
+2022/11/13 23:13:27 Engine results c4b4 200
+2022/11/13 23:13:27 Quiescence search explored 1052138 nodes
+2022/11/13 23:13:27 w c4b4 200
+2022/11/13 23:13:27 r1b1kb1r/pp2pppp/2n2n2/8/1q6/2NP1N2/PPP2PPP/R1BQK2R w KQkq - 1 8
+2022/11/13 23:13:27 
+ A B C D E F G H
+8♜ - ♝ - ♚ ♝ - ♜ 
+7♟ ♟ - - ♟ ♟ ♟ ♟ 
+6- - ♞ - - ♞ - - 
+5- - - - - - - - 
+4- ♛ - - - - - - 
+3- - ♘ ♙ - ♘ - - 
+2♙ ♙ ♙ - - ♙ ♙ ♙ 
+1♖ - ♗ ♕ ♔ - - ♖ 
+
+2022/11/13 23:13:27 

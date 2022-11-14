@@ -12,6 +12,8 @@ func challenge_manual(engine Engine, play_as_color chess.Color, game *chess.Game
 	out("Manual challenge started.")
 	out("Engine:", engine.Name())
 	out("Playing as", play_as_color)
+	out("Game:", game.String())
+	out(game.Position().Board().Draw())
 	out()
 	
 	for game.Outcome() == chess.NoOutcome && len(game.Moves()) < max_moves {

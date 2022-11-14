@@ -28,7 +28,7 @@ func NewOpeningWrapper(engine Engine, game *chess.Game) *OpeningWrapper {
 		engine: engine,
 		book: opening.NewBookECO(),
 		game: game,
-		opening: true,
+		opening: len(game.Moves()) == 0 && game.FEN() == chess.StartingPosition().String(),
 	}
 }
 

@@ -57,6 +57,8 @@ func (e *EngineClass) Run_Engine_Game(game *chess.Game) (*chess.Move, int) {
 func (e *EngineClass) Set_Time(seconds int) {
 	e.time_duration = time.Duration(seconds) * time.Second
 	e.time_up = false
+	// out("Setting time duration:", e.time_duration, "seconds:", seconds)
+	// out("Setting time up:", e.time_up)
 }
 
 func (e *EngineClass) Set_Config(cfg EngineConfig) {
@@ -68,8 +70,11 @@ func (e EngineClass) Name() string {
 }
 
 // check time up
-func (e EngineClass) Check_Time_Up() bool {
-	if time.Since(e.start_time) > e.time_duration {
+func (e *EngineClass) Check_Time_Up() bool {
+	// out("Checking time up")
+	// out("Time since start_time:", time.Since(e.start_time))
+	// out("Time duration:", e.time_duration)
+	if e.time_duration < time.Since(e.start_time) {
 		e.time_up = true
 	}
 	return e.time_up

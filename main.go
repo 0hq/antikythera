@@ -64,9 +64,22 @@ func main() {
 	defer exit()
 	out("Running engine...")
 	// test_opening()	
-	mini_challenge_manual_opening()
+	mini_challenge_manual_opening_custom()
+	// game := game_from_fen("r1b1kb1r/pp2pppp/2n2n2/8/2q5/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 0 7")
+	// engine := engine_minimax_id_ab_q
+	// engine.Set_Time(15)
+	// out(engine.Run_Engine(game.Position()))
+	
 	// mini_iterative_deepening_timed()
 	
+}
+
+func mini_challenge_manual_opening_custom() {
+	game := game_from_fen("r1b1kb1r/pp2pppp/2n2n2/8/2q5/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 0 7")
+	subengine := engine_minimax_id_ab_q
+	subengine.Set_Time(15)
+	engine := NewOpeningWrapper(&subengine, game)
+	challenge_manual(engine, chess.Black, game)
 }
 
 func mini_challenge_manual_opening() {
