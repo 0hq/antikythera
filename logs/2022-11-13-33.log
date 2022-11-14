@@ -1,0 +1,24 @@
+2022/11/13 23:26:58 File initialization.
+2022/11/13 23:26:58 Version go1.19.3
+2022/11/13 23:26:58 NumCPU 6
+2022/11/13 23:26:58 GOMAXPROCS 6
+2022/11/13 23:26:58 
+2022/11/13 23:26:58 Running engine...
+2022/11/13 23:26:58 Manual challenge started.
+2022/11/13 23:26:58 Engine: Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3
+2022/11/13 23:26:58 Playing as b
+2022/11/13 23:26:58 Game: 
+ *
+2022/11/13 23:26:58 
+ A B C D E F G H
+8- - ♚ ♜ - ♝ - ♜ 
+7♟ ♟ ♛ - - ♟ ♟ ♟ 
+6- - ♞ - ♝ ♞ - - 
+5- ♖ - - ♟ - ♗ - 
+4- - - - - - - - 
+3- - ♘ ♙ - ♘ - - 
+2♙ - ♙ - - ♙ ♙ ♙ 
+1- - - ♕ ♖ - ♔ - 
+
+2022/11/13 23:26:58 
+2022/11/13 23:27:11 Exiting engine.

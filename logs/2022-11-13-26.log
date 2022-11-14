@@ -1,0 +1,85 @@
+2022/11/13 23:15:41 File initialization.
+2022/11/13 23:15:41 Version go1.19.3
+2022/11/13 23:15:41 NumCPU 6
+2022/11/13 23:15:41 GOMAXPROCS 6
+2022/11/13 23:15:41 
+2022/11/13 23:15:41 Running engine...
+2022/11/13 23:15:42 Manual challenge started.
+2022/11/13 23:15:42 Engine: Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3
+2022/11/13 23:15:42 Playing as b
+2022/11/13 23:15:42 Game: 
+ *
+2022/11/13 23:15:42 
+ A B C D E F G H
+8♜ - ♝ - ♚ ♝ - ♜ 
+7♟ ♟ - - ♟ ♟ ♟ ♟ 
+6- - ♞ - - ♞ - - 
+5- - - - - - - - 
+4- - ♛ - - - - - 
+3- - ♘ - - ♘ - - 
+2♙ ♙ ♙ ♙ - ♙ ♙ ♙ 
+1♖ - ♗ ♕ ♔ - - ♖ 
+
+2022/11/13 23:15:42 
+2022/11/13 23:15:43 b d2d3 0
+2022/11/13 23:15:43 r1b1kb1r/pp2pppp/2n2n2/8/2q5/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 0 7
+2022/11/13 23:15:43 
+ A B C D E F G H
+8♜ - ♝ - ♚ ♝ - ♜ 
+7♟ ♟ - - ♟ ♟ ♟ ♟ 
+6- - ♞ - - ♞ - - 
+5- - - - - - - - 
+4- - ♛ - - - - - 
+3- - ♘ ♙ - ♘ - - 
+2♙ ♙ ♙ - - ♙ ♙ ♙ 
+1♖ - ♗ ♕ ♔ - - ♖ 
+
+2022/11/13 23:15:43 
+2022/11/13 23:15:43 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3
+2022/11/13 23:15:43 Duration: 15s
+2022/11/13 23:15:43 
+2022/11/13 23:15:43 Iterative deepening depth 1
+2022/11/13 23:15:43 Best move: c4c5 Eval: 185
+2022/11/13 23:15:43 Depth: 1 Nodes: 178
+2022/11/13 23:15:43 Time since start_time: 5.2809ms
+2022/11/13 23:15:43 
+2022/11/13 23:15:43 Iterative deepening depth 2
+2022/11/13 23:15:43 Best move: c4e6 Eval: 150
+2022/11/13 23:15:43 Depth: 2 Nodes: 3399
+2022/11/13 23:15:43 Time since start_time: 23.1688ms
+2022/11/13 23:15:43 
+2022/11/13 23:15:43 Iterative deepening depth 3
+2022/11/13 23:15:44 Best move: c4g4 Eval: 200
+2022/11/13 23:15:44 Depth: 3 Nodes: 28239
+2022/11/13 23:15:44 Time since start_time: 324.7792ms
+2022/11/13 23:15:44 
+2022/11/13 23:15:44 Iterative deepening depth 4
+2022/11/13 23:15:45 Best move: c4g4 Eval: 180
+2022/11/13 23:15:45 Depth: 4 Nodes: 172252
+2022/11/13 23:15:45 Time since start_time: 1.3107101s
+2022/11/13 23:15:45 
+2022/11/13 23:15:45 Iterative deepening depth 5
+2022/11/13 23:15:58 Best move: c4b4 Eval: 200
+2022/11/13 23:15:58 Depth: 5 Nodes: 1612229
+2022/11/13 23:15:58 Time since start_time: 14.2038259s
+2022/11/13 23:15:58 
+2022/11/13 23:15:58 Iterative deepening depth 6
+2022/11/13 23:16:00 Time up, returning best move so far.
+2022/11/13 23:16:00 
+2022/11/13 23:16:00 Engine results c4b4 200
+2022/11/13 23:16:00 Quiescence search explored 1052138 nodes
+2022/11/13 23:16:00 w c4b4 200
+2022/11/13 23:16:00 r1b1kb1r/pp2pppp/2n2n2/8/1q6/2NP1N2/PPP2PPP/R1BQK2R w KQkq - 1 8
+2022/11/13 23:16:00 
+ A B C D E F G H
+8♜ - ♝ - ♚ ♝ - ♜ 
+7♟ ♟ - - ♟ ♟ ♟ ♟ 
+6- - ♞ - - ♞ - - 
+5- - - - - - - - 
+4- ♛ - - - - - - 
+3- - ♘ ♙ - ♘ - - 
+2♙ ♙ ♙ - - ♙ ♙ ♙ 
+1♖ - ♗ ♕ ♔ - - ♖ 
+
+2022/11/13 23:16:00 
+2022/11/13 23:16:47 Exiting engine.

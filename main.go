@@ -75,7 +75,7 @@ func main() {
 }
 
 func mini_challenge_manual_opening_custom() {
-	game := game_from_fen("r1b1kb1r/pp2pppp/2n2n2/8/2q5/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 0 7")
+	game := game_from_fen("2k5/pp3p1p/5p2/8/P1P5/7P/2Pr2q1/R6K w - - 0 27")
 	subengine := engine_minimax_id_ab_q
 	subengine.Set_Time(15)
 	engine := NewOpeningWrapper(&subengine, game)
@@ -130,3 +130,5 @@ func simple_tests(engine Engine) {
 func eigenmann_tests(engine Engine) {
 	run_tests(engine, parse_test_file("tests/EigenmannRapidEngineTest.txt", parse_epd_record))
 }
+
+// current will vs antikythera 2kr1b1r/ppq2ppp/2n1bn2/1R2p1B1/8/2NP1N2/P1P2PPP/3QR1K1 w - - 10 15

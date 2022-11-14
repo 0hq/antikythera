@@ -1,0 +1,56 @@
+2022/11/13 23:20:12 File initialization.
+2022/11/13 23:20:12 Version go1.19.3
+2022/11/13 23:20:12 NumCPU 6
+2022/11/13 23:20:12 GOMAXPROCS 6
+2022/11/13 23:20:12 
+2022/11/13 23:20:12 Running engine...
+2022/11/13 23:20:12 Manual challenge started.
+2022/11/13 23:20:12 Engine: Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3
+2022/11/13 23:20:12 Playing as b
+2022/11/13 23:20:12 Game: 
+ *
+2022/11/13 23:20:12 
+ A B C D E F G H
+8♜ - ♝ - ♚ ♝ - ♜ 
+7♟ ♟ - - - ♟ ♟ ♟ 
+6- - ♞ - - ♞ - - 
+5- - - - ♟ - - - 
+4- ♛ - - - - - - 
+3- - ♘ ♙ - ♘ - - 
+2♙ ♙ ♙ - - ♙ ♙ ♙ 
+1♖ - ♗ ♕ - ♖ ♔ - 
+
+2022/11/13 23:20:12 
+2022/11/13 23:20:16 b g2g3 0
+2022/11/13 23:20:16 r1b1kb1r/pp3ppp/2n2n2/4p3/1q6/2NP1NP1/PPP2P1P/R1BQ1RK1 b kq - 0 9
+2022/11/13 23:20:16 
+ A B C D E F G H
+8♜ - ♝ - ♚ ♝ - ♜ 
+7♟ ♟ - - - ♟ ♟ ♟ 
+6- - ♞ - - ♞ - - 
+5- - - - ♟ - - - 
+4- ♛ - - - - - - 
+3- - ♘ ♙ - ♘ ♙ - 
+2♙ ♙ ♙ - - ♙ - ♙ 
+1♖ - ♗ ♕ - ♖ ♔ - 
+
+2022/11/13 23:20:16 
+2022/11/13 23:20:16 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3
+2022/11/13 23:20:16 Duration: 15s
+2022/11/13 23:20:16 
+2022/11/13 23:20:16 Iterative deepening depth 1
+2022/11/13 23:20:16 Best move: c8g4 Eval: 220
+2022/11/13 23:20:16 Depth: 1 Nodes: 243
+2022/11/13 23:20:16 Time since start_time: 5.0213ms
+2022/11/13 23:20:16 
+2022/11/13 23:20:16 Iterative deepening depth 2
+2022/11/13 23:20:16 Best move: c8g4 Eval: 215
+2022/11/13 23:20:16 Depth: 2 Nodes: 4221
+2022/11/13 23:20:16 Time since start_time: 38.8361ms
+2022/11/13 23:20:16 
+2022/11/13 23:20:16 Iterative deepening depth 3
+2022/11/13 23:20:17 Best move: c8g4 Eval: 235
+2022/11/13 23:20:17 Depth: 3 Nodes: 61022
+2022/11/13 23:20:17 Time since start_time: 559.8377ms
+2022/11/13 23:20:17 
+2022/11/13 23:20:17 Iterative deepening depth 4
