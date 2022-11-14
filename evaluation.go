@@ -115,7 +115,7 @@ func sort_moves_v1(moves []*chess.Move, board *chess.Board) []*chess.Move {
 	if !DO_MOVE_SORTING {
 		return moves
 	}
-	return quicksort(moves, board, evaluate_move_v1)
+	return quicksort(moves, board, evaluate_move_v2)
 }
 
 /*
@@ -232,9 +232,9 @@ func quiescence_moves_v1(moves []*chess.Move, board *chess.Board) []*chess.Move 
 		return q_moves
 	}
 	if DO_Q_MOVE_PRUNING {
-		return quicksort_prune(q_moves, board, evaluate_q_move_v1)
+		return quicksort_prune(q_moves, board, evaluate_q_move_v2)
 	}
-	return quicksort(q_moves, board, evaluate_q_move_v1)
+	return quicksort(q_moves, board, evaluate_q_move_v2)
 }
 
 /*
