@@ -15,6 +15,6 @@ Want to play the engine?
 1. Download this repository.  
 2. Run ```brew install go```, if you do not already have Golang installed.  
 3. Open your terminal and navigate to the downloaded folder.  
-4. Run ```go run .``` or (```go build``` and then ```./main``` for faster speeds).  
+4. Run ```go run .``` or (```go build``` and then ```./main``` for faster speeds) in that folder.  
 
 Thanks, Will.
