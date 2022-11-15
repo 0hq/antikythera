@@ -14,6 +14,7 @@ func challenge_manual(engine Engine, play_as_color chess.Color, game *chess.Game
 	out("Engine:", engine.Name())
 	out("Playing as", play_as_color)
 	out("Game:", game.String())
+	out("PGN:", game)
 	out(game.Position().Board().Draw())
 	out()
 	

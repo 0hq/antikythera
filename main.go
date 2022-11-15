@@ -67,7 +67,8 @@ func main() {
 	out("Running engine...")
 	// test_opening()	
 	// mini_challenge_manual_opening_custom()
-	mini_challenge_manual_opening()
+	// mini_challenge_manual_opening()
+	mini_self_challenge()
 	// game := game_from_fen("r1b1kb1r/pp2pppp/2n2n2/8/2q5/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 0 7")
 	// engine := engine_minimax_id_ab_q
 	// engine.Set_Time(15)
@@ -75,6 +76,17 @@ func main() {
 	
 	// mini_iterative_deepening_timed()
 	
+}
+
+func mini_self_challenge() {
+	game := game_from_fen(CHESS_START_POSITION)
+	subengine1 := engine_minimax_id_ab_q
+	subengine1.Set_Time(15)
+	engine1 := NewOpeningWrapper(&subengine1, game)
+	subengine2 := engine_minimax_id_ab_q
+	subengine2.Set_Time(15)
+	engine2 := NewOpeningWrapper(&subengine2, game)
+	challenge_self(engine1, engine2, game)
 }
 
 func mini_challenge_manual_opening_custom() {
