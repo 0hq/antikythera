@@ -8,29 +8,30 @@ import (
 	"time"
 
 	"github.com/notnil/chess"
-	// "github.com/notnil/chess"
 )
 
 /*
 
 // Replace position with board.
 // Evaluation function.
-UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 // Add in auto-testing using EPD files.
-Test different sorting algorithms.
-Why isn't the parallel version faster for perft?
+// Test different sorting algorithms.
 // Change checkmate value to not be max int.
 // Engine now prioritize the shortest checkmate.
 // Add in Eigenmann rapid engine test.
-
 // Piece square tables.
-Better move ordering.
-   Pick and sort
-   // Hash MVV/LVA
-   SEE
 // Turn iterative deepening into an engine.
 // Change engine struct to be smarter.
-Make iterative deepening play in time.
+// Make iterative deepening play in time.
+
+Why isn't the parallel version faster for perft?
+Better move ordering.
+   Pick and sort, changes engine structure.
+   // Hash MVV/LVA
+   SEE
+UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
+Killer moves.
+Transposition tables.
 
 */
 
@@ -100,7 +101,7 @@ func mini_challenge_manual_opening_custom() {
 func mini_challenge_manual_opening() {
 	game := game_from_fen(CHESS_START_POSITION)
 	subengine := engine_minimax_id_ab_q
-	subengine.Set_Time(15)
+	subengine.Set_Time(2)
 	engine := NewOpeningWrapper(&subengine, game)
 	challenge_manual(engine, chess.Black, game)
 }

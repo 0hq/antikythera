@@ -14,6 +14,9 @@ const CHESS_START_POSITION = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq
 var newGame = chess.NewGame()
 var explored int = 0
 var q_explored int = 0
+// make list of ints, initalized to 0
+var depth_count []int = make([]int, 100)
+
 const ENGINE_MINIMAX_PLAIN_PLY int = 4
 const ENGINE_MINIMAX_PARALLEL_PLAIN_PLY int = 4
 const DO_MOVE_SORTING bool = true
@@ -36,6 +39,10 @@ var plain_engines = []Engine{
 }
 
 func reset_counters() {
+	// initialize depth_count to all 0s
+	for i := range depth_count {
+		depth_count[i] = 0
+	}
 	explored = 0
 	q_explored = 0
 }
