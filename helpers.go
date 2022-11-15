@@ -26,6 +26,17 @@ func bool_to_int(b bool) int {
 	}
 }
 
+func reset_counters() {
+	// initialize depth_count to all 0s
+	// for i := range depth_count {
+	// 	depth_count[i] = 0
+	// }
+	// tests_run = 0
+	// tests_passed = 0
+	explored = 0
+	q_explored = 0
+}
+
 func game_from_fen(pos string) *chess.Game {
 	fen, err := chess.FEN(pos)
 	if err != nil {

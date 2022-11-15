@@ -24,16 +24,20 @@ import (
 // Change engine struct to be smarter.
 // Make iterative deepening play in time.
 
-Why isn't the parallel version faster for perft?
 Better move ordering.
-   Pick and sort, changes engine structure.
+   // Pick and sort, changes engine structure.
    // Hash MVV/LVA
    SEE
-UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 Killer moves.
-Transposition tables.
 PVS or MTD(f)
+Endgames
+	Draw detection
+	Tapered eval
+Transposition tables.
+UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 
+
+Why isn't the parallel version faster for perft?
 
 Possible:
 Aspirations?
@@ -64,6 +68,11 @@ func init() {
 	out("Version", runtime.Version())
     out("NumCPU", runtime.NumCPU())
     out("GOMAXPROCS", runtime.GOMAXPROCS(0))
+	if production_mode {
+		out("Production mode.")
+	} else {
+		out("WARNING: Development mode.")
+	}
 	out()
 	runtime.GOMAXPROCS(runtime.NumCPU())
 }
@@ -71,22 +80,28 @@ func init() {
 func main() {
 	defer exit()
 	out("Running engine...")
-	// test_opening()	
-	// mini_challenge_manual_opening_custom()
-	// mini_challenge_manual_opening()
+
 	mini_self_challenge()
-	// game := game_from_fen("r1b1kb1r/pp2pppp/2n2n2/8/2q5/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 0 7")
-	// engine := engine_minimax_id_ab_q
-	// engine.Set_Time(15)
-	// out(engine.Run_Engine(game.Position()))
-	
-	// mini_iterative_deepening_timed()
-	
+}
+
+func mini_test_iterative() {
+	game := game_from_fen("r1b1kb1r/pp2pppp/2n2n2/8/2q5/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 0 7")
+	engine := engine_minimax_id_ab_q
+	engine.Set_Time(15)
+	out(engine.Run_Engine(game.Position()))
+}
+
+func mini_iterative_deepening_timed() {
+	engine := engine_0dot1
+	engine.Set_Time(15)
+	simple_tests(&engine)
+	out("Tests passed:", tests_passed)
+	out("Tests run:", tests_run)
 }
 
 func mini_self_challenge() {
 	game := game_from_fen(CHESS_START_POSITION)
-	subengine1 := engine_minimax_id_ab_q
+	subengine1 := engine_0dot1
 	subengine1.Set_Time(15)
 	engine1 := NewOpeningWrapper(&subengine1, game)
 	subengine2 := engine_minimax_id_ab_q
@@ -123,17 +138,14 @@ func mini_challenge_stockfish() {
 	challenge_stockfish(&engine, chess.White, CHESS_START_POSITION)
 }
 
-func mini_iterative_deepening_timed() {
-	engine := engine_minimax_id_ab_q
-	engine.Set_Time(2)
-	simple_tests(&engine)
-}
 
 
 func mini_simple_tests() {
 	engine := engine_minimax_plain_ab_q
 	engine.Set_Config(EngineConfig{ply: 4})
 	simple_tests(&engine)
+	out("Tests run:", tests_run)
+	out("Tests passed:", tests_passed)
 }
 
 func exit()	{

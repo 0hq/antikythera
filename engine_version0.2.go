@@ -7,14 +7,24 @@ import (
 	"github.com/notnil/chess"
 )
 
-type t_engine_p_ab_q_id struct {
+/*
+
+Improvements over 0.1.
+New evaluation function that examines pawn structure, mobility, and space.
+SEE?
+Killer moves?
+Null move pruning?
+
+*/
+
+type t_engine_0dot2 struct {
 	EngineClass
 }
 
 // define new engine
-var engine_minimax_id_ab_q = t_engine_p_ab_q_id{
+var engine_0dot2 = t_engine_0dot2{
 	EngineClass{
-		name: "Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3",
+		name: "Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2",
 		features: EngineFeatures{
 			plain: true,
 			parallel: false,
@@ -30,7 +40,7 @@ var engine_minimax_id_ab_q = t_engine_p_ab_q_id{
 	// engine_func: minimax_id_ab_q_engine_func,
 } 
 
-func (e *t_engine_p_ab_q_id) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
+func (e *t_engine_0dot2) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
 	reset_counters()
 	out("Running", e.name)
 	e.time_up = false
@@ -56,18 +66,21 @@ func (e *t_engine_p_ab_q_id) Run_Engine(pos *chess.Position) (best *chess.Move, 
 		}
 		depth++
 	}
-	// out()
+	out()
 	out("Engine results", best, eval)
-	out("Quiescence search explored", q_explored, "nodes")
+	out("Total nodes", explored, "Quiescence search explored", q_explored, "nodes")
 	return
 }
 
-func (e *t_engine_p_ab_q_id) minimax_id_ab_q_starter(position *chess.Position, ply int, max bool) (best *chess.Move, eval int) {
-	moves := sort_moves_v1(position.ValidMoves(), position.Board())
-	eval = -1 * math.MaxInt
-	for _, move := range moves {
-		e.Check_Time_Up()
-		score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply-1, !max, -1 * math.MaxInt, math.MaxInt)
+func (e *t_engine_0dot2) minimax_id_ab_q_starter(position *chess.Position, ply int, max bool) (best *chess.Move, eval int) {
+	moves := position.ValidMoves()
+	eval = -1 * math.MaxInt // functions as alpha
+	for i := 0; i < len(moves); i++ {
+		if e.Check_Time_Up() {
+			break
+		}
+		move := pick_move_v1(moves, position.Board(), i) // mutates move list, moves best move to front
+		score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply-1, !max, -math.MaxInt, -eval)
 		if PRINT_TOP_MOVES {
 			out("Top Level Move:", move, "Eval:", score,)
 		}
@@ -82,7 +95,7 @@ func (e *t_engine_p_ab_q_id) minimax_id_ab_q_starter(position *chess.Position, p
 	return best, eval
 }
 
-func (e *t_engine_p_ab_q_id) minimax_id_ab_q_searcher(position *chess.Position, ply int, max bool, alpha int, beta int) (eval int) {
+func (e *t_engine_0dot2) minimax_id_ab_q_searcher(position *chess.Position, ply int, max bool, alpha int, beta int) (eval int) {
 	explored++
 	if ply == 0 {
 		return e.quiescence_minimax_id_ab_q(position, 0, max, alpha, beta)
@@ -91,11 +104,12 @@ func (e *t_engine_p_ab_q_id) minimax_id_ab_q_searcher(position *chess.Position, 
 		return 0
 	}
 
-	moves := sort_moves_v1(position.ValidMoves(), position.Board())
+	moves := position.ValidMoves()
 	if len(moves) == 0 {
 		return evaluate_position_v3(position, e.engine_config.ply, ply, bool_to_int(max))
 	}
-    for _, move := range moves {
+    for i := 0; i < len(moves); i++ {
+		move := pick_move_v1(moves, position.Board(), i) // mutates move list, moves best move to front
         score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply - 1, !max, -beta, -alpha)
 		if score >= beta {
 			return beta
@@ -108,7 +122,7 @@ func (e *t_engine_p_ab_q_id) minimax_id_ab_q_searcher(position *chess.Position, 
 	return alpha
 }
 
-func (e *t_engine_p_ab_q_id) quiescence_minimax_id_ab_q(position *chess.Position, plycount int, max bool, alpha int, beta int) (eval int) {
+func (e *t_engine_0dot2) quiescence_minimax_id_ab_q(position *chess.Position, plycount int, max bool, alpha int, beta int) (eval int) {
 	explored++
 	q_explored++
 
@@ -120,13 +134,17 @@ func (e *t_engine_p_ab_q_id) quiescence_minimax_id_ab_q(position *chess.Position
         alpha = stand_pat;
 	}
 	
-	moves := quiescence_moves_v1(position.ValidMoves(), position.Board())
+	moves := quiescence_moves_v2(position.ValidMoves())
 
-	if plycount > MAX_DEPTH || len(moves) == 0 {
+	if len(moves) == 0 || plycount > MAX_DEPTH {
 		return stand_pat 
 	}
 
-    for _, move := range moves {
+    for i := 0; i < len(moves); i++ {
+		move := pick_qmove_v1(moves, position.Board(), i) // mutates move list, moves best move to front
+		if move == nil { // other moves are pruned
+			break
+		}
         score := -1 * e.quiescence_minimax_id_ab_q(position.Update(move), plycount + 1, !max, -beta, -alpha)
 		if score >= beta {
 			return beta

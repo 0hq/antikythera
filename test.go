@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"log"
 	"os"
 	"strings"
@@ -82,6 +81,7 @@ func test(engine Engine, pos string, expected string) {
 		}
 	}
 
+	tests_run++
 	if move.String() != expected {
 		if (move.String()[2:4] == expected[len(expected)-2:]) {
 			if len(possible_moves) > 1 {
@@ -92,11 +92,9 @@ func test(engine Engine, pos string, expected string) {
 				return 
 			}
 		}
-		fmt.Println("TEST FAILED", move.String(), expected)
-		// fmt.Println("Possible moves:", possible_moves)
 		out("TEST FAILED", move.String(), expected)
 	} else {
-		fmt.Println("TEST PASSED")
+		tests_passed++
 		out("TEST PASSED")
 	}
 }

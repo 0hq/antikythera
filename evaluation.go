@@ -118,6 +118,33 @@ func sort_moves_v1(moves []*chess.Move, board *chess.Board) []*chess.Move {
 	return quicksort(moves, board, evaluate_move_v2)
 }
 
+
+// mutates moves list
+func pick_move_v1(moves []*chess.Move, board *chess.Board, start_index int) *chess.Move {
+	for i := start_index; i < len(moves); i++ {
+		if evaluate_move_v2(moves[i], board) > evaluate_move_v2(moves[start_index], board) {
+			moves[i], moves[start_index] = moves[start_index], moves[i]
+		}
+	}
+	return moves[start_index]
+}
+
+// mutates moves list
+// quiescence search moves
+func pick_qmove_v1(moves []*chess.Move, board *chess.Board, start_index int) *chess.Move {
+	for i := start_index; i < len(moves); i++ {
+		if evaluate_q_move_v2(moves[i], board) > evaluate_q_move_v2(moves[start_index], board) {
+			moves[i], moves[start_index] = moves[start_index], moves[i]
+		}
+	}
+	if DO_Q_MOVE_PRUNING {
+		if evaluate_q_move_v2(moves[start_index], board) < 0 {
+			return nil
+		}
+	}
+	return moves[start_index]
+}
+
 /*
 
 Version 1 of the move ordering function.
@@ -246,16 +273,37 @@ Sorts moves by how likely they are to be good.
 
 func evaluate_q_move_v1(move *chess.Move, board *chess.Board) int {
 	// if the move is a capture, return the difference in material
-	if move.HasTag(chess.Capture) {
+	// if move.HasTag(chess.Capture) {
 		return piece_map_v1[board.Piece(move.S2()).Type()] - piece_map_v1[board.Piece(move.S1()).Type()]
-	}
+	// }
 
 	// if the move is a promotion, return promotion value
 	// if move.Promo() != chess.NoPieceType {
 	// 	return piece_map_v1[move.Promo()]
 	// }
 	
-	return 0
+	// return 0
+}
+
+
+
+/*
+
+Version 2 of the quiescence move ordering function.
+Generates a list of q moves only! Doesn't sort like last version as we use pick moves func.
+Q moves may included moves that are captures, checks, or promotions.
+
+*/
+
+// only return moves that are captures or promotions or checks
+func quiescence_moves_v2(moves []*chess.Move) []*chess.Move {
+	var q_moves []*chess.Move = make([]*chess.Move, 0)
+	for _, move := range moves {
+		if move.HasTag(chess.Capture) { 
+			q_moves = append(q_moves, move)
+		}
+	}
+	return q_moves
 }
 
 /*
