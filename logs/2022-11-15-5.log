@@ -1,0 +1,29 @@
+2022/11/15 19:12:13 File initialization.
+2022/11/15 19:12:13 Version go1.19.3
+2022/11/15 19:12:13 NumCPU 6
+2022/11/15 19:12:13 GOMAXPROCS 6
+2022/11/15 19:12:13 WARNING: Development mode.
+2022/11/15 19:12:13 
+2022/11/15 19:12:13 Running engine...
+2022/11/15 19:12:14 Self challenge started.
+2022/11/15 19:12:14 Engine 1 (white): Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:12:14 Engine 2 (black): Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:12:14 Game: 
+ *
+2022/11/15 19:12:14 
+ A B C D E F G H
+8♜ ♞ ♝ ♛ ♚ - - ♜ 
+7♟ ♟ ♟ - ♟ ♟ ♝ ♟ 
+6- ♞ - ♟ - - ♟ - 
+5- - - - ♙ - - - 
+4♙ - - ♙ - - - - 
+3- ♗ - - - ♘ - - 
+2- ♙ ♙ - - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ - - ♖ 
+
+2022/11/15 19:12:14 
+2022/11/15 19:12:14 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:12:14 
+2022/11/15 19:12:14 Engine results <nil> 0
+2022/11/15 19:12:14 Total nodes 29 Quiescence search explored 27 nodes
+2022/11/15 19:12:14 Exiting engine.

@@ -110,7 +110,13 @@ func (e *t_engine_0dot2) minimax_id_ab_q_searcher(position *chess.Position, ply 
 	}
     for i := 0; i < len(moves); i++ {
 		move := pick_move_v1(moves, position.Board(), i) // mutates move list, moves best move to front
-        score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply - 1, !max, -beta, -alpha)
+		var score int
+		if move.HasTag(chess.Check) {
+			// extend search if move is a check
+			score = -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply, !max, -beta, -alpha)
+		} else {
+			score = -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply - 1, !max, -beta, -alpha)
+		}
 		if score >= beta {
 			return beta
 		}

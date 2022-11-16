@@ -54,8 +54,8 @@ func (e *EngineClass) Run_Engine_Game(game *chess.Game) (*chess.Move, int) {
 	return e.Run_Engine(game.Position())
 }
 
-func (e *EngineClass) Set_Time(seconds int) {
-	e.time_duration = time.Duration(seconds) * time.Second
+func (e *EngineClass) Set_Time(ms float64) {
+	e.time_duration = time.Duration(ms * 1000) * time.Millisecond
 	e.time_up = false
 	// out("Setting time duration:", e.time_duration, "seconds:", seconds)
 	// out("Setting time up:", e.time_up)

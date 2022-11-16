@@ -497,3 +497,42 @@ func evaluate_position_v3(pos *chess.Position, engine_ply int, current_ply int, 
 
 	return eval * flip
 }
+
+/*
+
+Version 4 of the evaluation function.
+Considers mobility.
+
+*/
+
+func evaluate_position_v4(pos *chess.Position, engine_ply int, current_ply int, flip int) int {
+	squares := pos.Board().SquareMap()
+	var eval int = 0
+	for square, piece := range squares {
+		if piece.Color() == chess.Black {
+			eval += piece_square_map_v1[piece.Type()][square] * -1
+			eval += piece_map_v1[piece.Type()] * -1  
+		} else {
+			eval += piece_square_map_v1[piece.Type()][FLIP[square]]
+			eval += piece_map_v1[piece.Type()]
+		}
+	}
+
+	// faster than doing two comparisons
+	if pos.Status() != chess.NoMethod { 
+		if pos.Status() == chess.Stalemate {
+			return 0
+		}
+		if pos.Status() == chess.Checkmate {
+			// calculate ply penalty
+			ply_penalty := (engine_ply - current_ply) * 1
+			if pos.Turn() == chess.White {
+				return -CHECKMATE_VALUE * flip + ply_penalty
+			} else {
+				return CHECKMATE_VALUE * flip + ply_penalty
+			}
+		}
+	}
+
+	return eval * flip
+}

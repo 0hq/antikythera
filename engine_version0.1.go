@@ -98,7 +98,7 @@ func (e *t_engine_0dot1) minimax_id_ab_q_searcher(position *chess.Position, ply 
 	if ply == 0 {
 		return e.quiescence_minimax_id_ab_q(position, 0, max, alpha, beta)
 	}
-	if e.time_up {
+	if e.Check_Time_Up() {
 		return 0
 	}
 

@@ -1,0 +1,51 @@
+2022/11/15 19:16:00 File initialization.
+2022/11/15 19:16:00 Version go1.19.3
+2022/11/15 19:16:00 NumCPU 6
+2022/11/15 19:16:00 GOMAXPROCS 6
+2022/11/15 19:16:00 WARNING: Development mode.
+2022/11/15 19:16:00 
+2022/11/15 19:16:00 Running engine...
+2022/11/15 19:16:00 Self challenge started.
+2022/11/15 19:16:00 Engine 1 (white): Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:16:00 Engine 2 (black): Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:16:00 Game: 
+ *
+2022/11/15 19:16:00 
+ A B C D E F G H
+8♜ ♞ ♝ ♛ ♚ - - ♜ 
+7♟ ♟ ♟ - ♟ ♟ ♝ ♟ 
+6- ♞ - ♟ - - ♟ - 
+5- - - - ♙ - - - 
+4♙ - - ♙ - - - - 
+3- ♗ - - - ♘ - - 
+2- ♙ ♙ - - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ - - ♖ 
+
+2022/11/15 19:16:00 
+2022/11/15 19:16:00 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:16:00 Depth: 1 Nodes: 104 Best move: e7e6 Eval: -50
+2022/11/15 19:16:00 Depth: 2 Nodes: 2877 Best move: e7e6 Eval: -80
+2022/11/15 19:16:00 Depth: 3 Nodes: 11404 Best move: d6e5 Eval: -40
+2022/11/15 19:16:01 
+2022/11/15 19:16:01 Engine results d6e5 -40
+2022/11/15 19:16:01 Total nodes 80255 Quiescence search explored 68798 nodes
+2022/11/15 19:16:01 w d6e5 -40
+2022/11/15 19:16:01 rnbqk2r/ppp1ppbp/1n4p1/4p3/P2P4/1B3N2/1PP2PPP/RNBQK2R w KQkq - 0 8
+2022/11/15 19:16:01 
+1. dxe5 *
+2022/11/15 19:16:01 
+ A B C D E F G H
+8♜ ♞ ♝ ♛ ♚ - - ♜ 
+7♟ ♟ ♟ - ♟ ♟ ♝ ♟ 
+6- ♞ - - - - ♟ - 
+5- - - - ♟ - - - 
+4♙ - - ♙ - - - - 
+3- ♗ - - - ♘ - - 
+2- ♙ ♙ - - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ - - ♖ 
+
+2022/11/15 19:16:01 
+2022/11/15 19:16:01 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:16:01 Depth: 1 Nodes: 113 Best move: d4e5 Eval: 100
+2022/11/15 19:16:01 Depth: 2 Nodes: 1367 Best move: d4e5 Eval: 40
+2022/11/15 19:16:01 Depth: 3 Nodes: 6418 Best move: d4e5 Eval: 80
