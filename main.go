@@ -23,20 +23,24 @@ import (
 // Turn iterative deepening into an engine.
 // Change engine struct to be smarter.
 // Make iterative deepening play in time.
+// Check extentions.
 
+Passed pawns, mobility, etc.
+Endgames
+	Draw detection
+	Tapered eval
+Clone go chess package to customize it.
 Better move ordering.
    // Pick and sort, changes engine structure.
    // Hash MVV/LVA
    SEE
 Killer moves.
 PVS or MTD(f)
-Endgames
-	Draw detection
-	Tapered eval
 Transposition tables.
 UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 
 
+Magic bitboards.
 Why isn't the parallel version faster for perft?
 
 Possible:
@@ -101,7 +105,7 @@ func mini_iterative_deepening_timed() {
 func mini_self_challenge() {
 	game := game_from_fen(CHESS_START_POSITION)
 	subengine1 := engine_0dot1
-	subengine1.Set_Time(15)
+	subengine1.Set_Time(0.1)
 	engine1 := NewOpeningWrapper(&subengine1, game)
 	subengine2 := engine_0dot1
 	subengine2.Set_Time(15)

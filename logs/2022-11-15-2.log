@@ -1,0 +1,2386 @@
+2022/11/15 19:02:03 File initialization.
+2022/11/15 19:02:03 Version go1.19.3
+2022/11/15 19:02:03 NumCPU 6
+2022/11/15 19:02:03 GOMAXPROCS 6
+2022/11/15 19:02:03 WARNING: Development mode.
+2022/11/15 19:02:03 
+2022/11/15 19:02:03 Running engine...
+2022/11/15 19:02:03 Self challenge started.
+2022/11/15 19:02:03 Engine 1 (white): Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:03 Engine 2 (black): Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:03 Game: 
+ *
+2022/11/15 19:02:03 
+ A B C D E F G H
+8♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜ 
+7♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟ 
+6- - - - - - - - 
+5- - - - - - - - 
+4- - - - - - - - 
+3- - - - - - - - 
+2♙ ♙ ♙ ♙ ♙ ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖ 
+
+2022/11/15 19:02:03 
+2022/11/15 19:02:04 b e2e4 0
+2022/11/15 19:02:04 rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1
+2022/11/15 19:02:04 
+1. e4 *
+2022/11/15 19:02:04 
+ A B C D E F G H
+8♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜ 
+7♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟ 
+6- - - - - - - - 
+5- - - - - - - - 
+4- - - - ♙ - - - 
+3- - - - - - - - 
+2♙ ♙ ♙ ♙ - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖ 
+
+2022/11/15 19:02:04 
+2022/11/15 19:02:04 w f7f6 0
+2022/11/15 19:02:04 rnbqkbnr/ppppp1pp/5p2/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2
+2022/11/15 19:02:04 
+1. e4 f6  *
+2022/11/15 19:02:04 
+ A B C D E F G H
+8♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜ 
+7♟ ♟ ♟ ♟ ♟ - ♟ ♟ 
+6- - - - - ♟ - - 
+5- - - - - - - - 
+4- - - - ♙ - - - 
+3- - - - - - - - 
+2♙ ♙ ♙ ♙ - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖ 
+
+2022/11/15 19:02:04 
+2022/11/15 19:02:05 b d2d4 0
+2022/11/15 19:02:05 rnbqkbnr/ppppp1pp/5p2/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq d3 0 2
+2022/11/15 19:02:05 
+1. e4 f6 2. d4 *
+2022/11/15 19:02:05 
+ A B C D E F G H
+8♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜ 
+7♟ ♟ ♟ ♟ ♟ - ♟ ♟ 
+6- - - - - ♟ - - 
+5- - - - - - - - 
+4- - - ♙ ♙ - - - 
+3- - - - - - - - 
+2♙ ♙ ♙ - - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖ 
+
+2022/11/15 19:02:05 
+2022/11/15 19:02:05 w b7b6 0
+2022/11/15 19:02:05 rnbqkbnr/p1ppp1pp/1p3p2/8/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3
+2022/11/15 19:02:05 
+1. e4 f6 2. d4 b6  *
+2022/11/15 19:02:05 
+ A B C D E F G H
+8♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜ 
+7♟ - ♟ ♟ ♟ - ♟ ♟ 
+6- ♟ - - - ♟ - - 
+5- - - - - - - - 
+4- - - ♙ ♙ - - - 
+3- - - - - - - - 
+2♙ ♙ ♙ - - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖ 
+
+2022/11/15 19:02:05 
+2022/11/15 19:02:05 b c2c4 0
+2022/11/15 19:02:05 rnbqkbnr/p1ppp1pp/1p3p2/8/2PPP3/8/PP3PPP/RNBQKBNR b KQkq c3 0 3
+2022/11/15 19:02:05 
+1. e4 f6 2. d4 b6 3. c4 *
+2022/11/15 19:02:05 
+ A B C D E F G H
+8♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜ 
+7♟ - ♟ ♟ ♟ - ♟ ♟ 
+6- ♟ - - - ♟ - - 
+5- - - - - - - - 
+4- - ♙ ♙ ♙ - - - 
+3- - - - - - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖ 
+
+2022/11/15 19:02:05 
+2022/11/15 19:02:06 w c8b7 0
+2022/11/15 19:02:06 rn1qkbnr/pbppp1pp/1p3p2/8/2PPP3/8/PP3PPP/RNBQKBNR w KQkq - 1 4
+2022/11/15 19:02:06 
+1. e4 f6 2. d4 b6 3. c4 Bb7  *
+2022/11/15 19:02:06 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ ♝ ♞ ♜ 
+7♟ ♝ ♟ ♟ ♟ - ♟ ♟ 
+6- ♟ - - - ♟ - - 
+5- - - - - - - - 
+4- - ♙ ♙ ♙ - - - 
+3- - - - - - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖ 
+
+2022/11/15 19:02:06 
+2022/11/15 19:02:06 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:06 Depth: 1 Nodes: 84 Best move: f1d3 Eval: 145
+2022/11/15 19:02:06 Depth: 2 Nodes: 306 Best move: d1h5 Eval: 125
+2022/11/15 19:02:06 Depth: 3 Nodes: 7719 Best move: d1h5 Eval: 130
+2022/11/15 19:02:06 Depth: 4 Nodes: 55643 Best move: f1d3 Eval: 75
+2022/11/15 19:02:08 
+2022/11/15 19:02:08 Engine results f1d3 75
+2022/11/15 19:02:08 Total nodes 313582 Quiescence search explored 175628 nodes
+2022/11/15 19:02:08 b f1d3 75
+2022/11/15 19:02:08 rn1qkbnr/pbppp1pp/1p3p2/8/2PPP3/3B4/PP3PPP/RNBQK1NR b KQkq - 2 4
+2022/11/15 19:02:08 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 *
+2022/11/15 19:02:08 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ ♝ ♞ ♜ 
+7♟ ♝ ♟ ♟ ♟ - ♟ ♟ 
+6- ♟ - - - ♟ - - 
+5- - - - - - - - 
+4- - ♙ ♙ ♙ - - - 
+3- - - ♗ - - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ - ♘ ♖ 
+
+2022/11/15 19:02:08 
+2022/11/15 19:02:09 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:09 Depth: 1 Nodes: 59 Best move: e7e5 Eval: -75
+2022/11/15 19:02:09 Depth: 2 Nodes: 856 Best move: e7e5 Eval: -95
+2022/11/15 19:02:09 Depth: 3 Nodes: 3370 Best move: e7e5 Eval: -75
+2022/11/15 19:02:09 Depth: 4 Nodes: 58601 Best move: e7e5 Eval: -80
+2022/11/15 19:02:11 
+2022/11/15 19:02:11 Engine results e7e5 -80
+2022/11/15 19:02:11 Total nodes 274190 Quiescence search explored 158656 nodes
+2022/11/15 19:02:11 w e7e5 -80
+2022/11/15 19:02:11 rn1qkbnr/pbpp2pp/1p3p2/4p3/2PPP3/3B4/PP3PPP/RNBQK1NR w KQkq e6 0 5
+2022/11/15 19:02:11 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5  *
+2022/11/15 19:02:11 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ ♝ ♞ ♜ 
+7♟ ♝ ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - ♟ - - 
+5- - - - ♟ - - - 
+4- - ♙ ♙ ♙ - - - 
+3- - - ♗ - - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ - ♘ ♖ 
+
+2022/11/15 19:02:11 
+2022/11/15 19:02:11 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:11 Depth: 1 Nodes: 97 Best move: c1e3 Eval: 95
+2022/11/15 19:02:11 Depth: 2 Nodes: 359 Best move: d1h5 Eval: 75
+2022/11/15 19:02:11 Depth: 3 Nodes: 7086 Best move: g1f3 Eval: 80
+2022/11/15 19:02:11 Depth: 4 Nodes: 23678 Best move: d4e5 Eval: 55
+2022/11/15 19:02:12 Depth: 5 Nodes: 233199 Best move: g1f3 Eval: 80
+2022/11/15 19:02:13 
+2022/11/15 19:02:13 Engine results g1f3 80
+2022/11/15 19:02:13 Total nodes 375064 Quiescence search explored 208401 nodes
+2022/11/15 19:02:13 b g1f3 80
+2022/11/15 19:02:13 rn1qkbnr/pbpp2pp/1p3p2/4p3/2PPP3/3B1N2/PP3PPP/RNBQK2R b KQkq - 1 5
+2022/11/15 19:02:13 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 *
+2022/11/15 19:02:13 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ ♝ ♞ ♜ 
+7♟ ♝ ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - ♟ - - 
+5- - - - ♟ - - - 
+4- - ♙ ♙ ♙ - - - 
+3- - - ♗ - ♘ - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ - - ♖ 
+
+2022/11/15 19:02:13 
+2022/11/15 19:02:13 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:13 Depth: 1 Nodes: 94 Best move: d7d6 Eval: -40
+2022/11/15 19:02:13 Depth: 2 Nodes: 1086 Best move: d7d6 Eval: -80
+2022/11/15 19:02:13 Depth: 3 Nodes: 4855 Best move: e5d4 Eval: -50
+2022/11/15 19:02:13 Depth: 4 Nodes: 33695 Best move: d7d6 Eval: -80
+2022/11/15 19:02:14 Depth: 5 Nodes: 147230 Best move: f8b4 Eval: -45
+2022/11/15 19:02:15 
+2022/11/15 19:02:15 Engine results f8b4 -45
+2022/11/15 19:02:15 Total nodes 362751 Quiescence search explored 197830 nodes
+2022/11/15 19:02:15 w f8b4 -45
+2022/11/15 19:02:15 rn1qk1nr/pbpp2pp/1p3p2/4p3/1bPPP3/3B1N2/PP3PPP/RNBQK2R w KQkq - 2 6
+2022/11/15 19:02:15 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+  *
+2022/11/15 19:02:15 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ - ♞ ♜ 
+7♟ ♝ ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - ♟ - - 
+5- - - - ♟ - - - 
+4- ♝ ♙ ♙ ♙ - - - 
+3- - - ♗ - ♘ - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ ♘ ♗ ♕ ♔ - - ♖ 
+
+2022/11/15 19:02:15 
+2022/11/15 19:02:15 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:15 Depth: 1 Nodes: 51 Best move: c1d2 Eval: 90
+2022/11/15 19:02:15 Depth: 2 Nodes: 532 Best move: c1d2 Eval: 85
+2022/11/15 19:02:15 Depth: 3 Nodes: 3649 Best move: c1d2 Eval: 95
+2022/11/15 19:02:16 Depth: 4 Nodes: 12630 Best move: c1d2 Eval: 45
+2022/11/15 19:02:16 Depth: 5 Nodes: 55357 Best move: c1d2 Eval: 85
+2022/11/15 19:02:18 
+2022/11/15 19:02:18 Engine results c1d2 85
+2022/11/15 19:02:18 Total nodes 251437 Quiescence search explored 157018 nodes
+2022/11/15 19:02:18 b c1d2 85
+2022/11/15 19:02:18 rn1qk1nr/pbpp2pp/1p3p2/4p3/1bPPP3/3B1N2/PP1B1PPP/RN1QK2R b KQkq - 3 6
+2022/11/15 19:02:18 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 *
+2022/11/15 19:02:18 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ - ♞ ♜ 
+7♟ ♝ ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - ♟ - - 
+5- - - - ♟ - - - 
+4- ♝ ♙ ♙ ♙ - - - 
+3- - - ♗ - ♘ - - 
+2♙ ♙ - ♗ - ♙ ♙ ♙ 
+1♖ ♘ - ♕ ♔ - - ♖ 
+
+2022/11/15 19:02:18 
+2022/11/15 19:02:18 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:18 Depth: 1 Nodes: 158 Best move: d8e7 Eval: -85
+2022/11/15 19:02:18 Depth: 2 Nodes: 1909 Best move: b4d2 Eval: -95
+2022/11/15 19:02:18 Depth: 3 Nodes: 6517 Best move: b4d2 Eval: -45
+2022/11/15 19:02:18 Depth: 4 Nodes: 20419 Best move: b4d2 Eval: -85
+2022/11/15 19:02:18 Depth: 5 Nodes: 110448 Best move: b4d2 Eval: -55
+2022/11/15 19:02:20 
+2022/11/15 19:02:20 Engine results b4d2 -55
+2022/11/15 19:02:20 Total nodes 291367 Quiescence search explored 171682 nodes
+2022/11/15 19:02:20 w b4d2 -55
+2022/11/15 19:02:20 rn1qk1nr/pbpp2pp/1p3p2/4p3/2PPP3/3B1N2/PP1b1PPP/RN1QK2R w KQkq - 0 7
+2022/11/15 19:02:20 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+  *
+2022/11/15 19:02:20 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ - ♞ ♜ 
+7♟ ♝ ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - ♟ - - 
+5- - - - ♟ - - - 
+4- - ♙ ♙ ♙ - - - 
+3- - - ♗ - ♘ - - 
+2♙ ♙ - ♝ - ♙ ♙ ♙ 
+1♖ ♘ - ♕ ♔ - - ♖ 
+
+2022/11/15 19:02:20 
+2022/11/15 19:02:20 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:20 Depth: 1 Nodes: 26 Best move: d1d2 Eval: 95
+2022/11/15 19:02:20 Depth: 2 Nodes: 369 Best move: d1d2 Eval: 45
+2022/11/15 19:02:20 Depth: 3 Nodes: 2990 Best move: d1d2 Eval: 85
+2022/11/15 19:02:20 Depth: 4 Nodes: 11040 Best move: d1d2 Eval: 55
+2022/11/15 19:02:20 Depth: 5 Nodes: 74608 Best move: d1d2 Eval: 85
+2022/11/15 19:02:22 
+2022/11/15 19:02:22 Engine results d1d2 85
+2022/11/15 19:02:22 Total nodes 258400 Quiescence search explored 167074 nodes
+2022/11/15 19:02:22 b d1d2 85
+2022/11/15 19:02:22 rn1qk1nr/pbpp2pp/1p3p2/4p3/2PPP3/3B1N2/PP1Q1PPP/RN2K2R b KQkq - 0 7
+2022/11/15 19:02:22 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 *
+2022/11/15 19:02:22 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ - ♞ ♜ 
+7♟ ♝ ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - ♟ - - 
+5- - - - ♟ - - - 
+4- - ♙ ♙ ♙ - - - 
+3- - - ♗ - ♘ - - 
+2♙ ♙ - ♕ - ♙ ♙ ♙ 
+1♖ ♘ - - ♔ - - ♖ 
+
+2022/11/15 19:02:22 
+2022/11/15 19:02:22 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:22 Depth: 1 Nodes: 110 Best move: d7d6 Eval: -45
+2022/11/15 19:02:22 Depth: 2 Nodes: 1277 Best move: f6f5 Eval: -85
+2022/11/15 19:02:22 Depth: 3 Nodes: 4543 Best move: e5d4 Eval: -55
+2022/11/15 19:02:22 Depth: 4 Nodes: 40477 Best move: f6f5 Eval: -85
+2022/11/15 19:02:24 
+2022/11/15 19:02:24 Engine results f6f5 -85
+2022/11/15 19:02:24 Total nodes 249213 Quiescence search explored 160371 nodes
+2022/11/15 19:02:24 w f6f5 -85
+2022/11/15 19:02:24 rn1qk1nr/pbpp2pp/1p6/4pp2/2PPP3/3B1N2/PP1Q1PPP/RN2K2R w KQkq - 0 8
+2022/11/15 19:02:24 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5  *
+2022/11/15 19:02:24 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ - ♞ ♜ 
+7♟ ♝ ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - - - - 
+5- - - - ♟ ♟ - - 
+4- - ♙ ♙ ♙ - - - 
+3- - - ♗ - ♘ - - 
+2♙ ♙ - ♕ - ♙ ♙ ♙ 
+1♖ ♘ - - ♔ - - ♖ 
+
+2022/11/15 19:02:24 
+2022/11/15 19:02:24 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:24 Depth: 1 Nodes: 414 Best move: d4d5 Eval: 85
+2022/11/15 19:02:24 Depth: 2 Nodes: 1367 Best move: d4d5 Eval: 85
+2022/11/15 19:02:24 Depth: 3 Nodes: 7526 Best move: d4d5 Eval: 85
+2022/11/15 19:02:24 Depth: 4 Nodes: 28903 Best move: d2c2 Eval: 80
+2022/11/15 19:02:26 Depth: 5 Nodes: 222762 Best move: d2e2 Eval: 80
+2022/11/15 19:02:26 
+2022/11/15 19:02:26 Engine results d2e2 80
+2022/11/15 19:02:26 Total nodes 311517 Quiescence search explored 180598 nodes
+2022/11/15 19:02:26 b d2e2 80
+2022/11/15 19:02:26 rn1qk1nr/pbpp2pp/1p6/4pp2/2PPP3/3B1N2/PP2QPPP/RN2K2R b KQkq - 1 8
+2022/11/15 19:02:26 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 *
+2022/11/15 19:02:26 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ - ♞ ♜ 
+7♟ ♝ ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - - - - 
+5- - - - ♟ ♟ - - 
+4- - ♙ ♙ ♙ - - - 
+3- - - ♗ - ♘ - - 
+2♙ ♙ - - ♕ ♙ ♙ ♙ 
+1♖ ♘ - - ♔ - - ♖ 
+
+2022/11/15 19:02:26 
+2022/11/15 19:02:26 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:26 Depth: 1 Nodes: 175 Best move: f5e4 Eval: -75
+2022/11/15 19:02:26 Depth: 2 Nodes: 1554 Best move: f5e4 Eval: -75
+2022/11/15 19:02:26 Depth: 3 Nodes: 7682 Best move: f5e4 Eval: -80
+2022/11/15 19:02:26 Depth: 4 Nodes: 29367 Best move: f5e4 Eval: -80
+2022/11/15 19:02:27 Depth: 5 Nodes: 152090 Best move: e5d4 Eval: -85
+2022/11/15 19:02:28 
+2022/11/15 19:02:28 Engine results e5d4 -85
+2022/11/15 19:02:28 Total nodes 300256 Quiescence search explored 175433 nodes
+2022/11/15 19:02:28 w e5d4 -85
+2022/11/15 19:02:28 rn1qk1nr/pbpp2pp/1p6/5p2/2PpP3/3B1N2/PP2QPPP/RN2K2R w KQkq - 0 9
+2022/11/15 19:02:28 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4  *
+2022/11/15 19:02:28 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ - ♞ ♜ 
+7♟ ♝ ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - - - - 
+5- - - - - ♟ - - 
+4- - ♙ ♟ ♙ - - - 
+3- - - ♗ - ♘ - - 
+2♙ ♙ - - ♕ ♙ ♙ ♙ 
+1♖ ♘ - - ♔ - - ♖ 
+
+2022/11/15 19:02:28 
+2022/11/15 19:02:28 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:28 Depth: 1 Nodes: 89 Best move: f3d4 Eval: 85
+2022/11/15 19:02:28 Depth: 2 Nodes: 474 Best move: f3d4 Eval: 85
+2022/11/15 19:02:28 Depth: 3 Nodes: 3101 Best move: f3d4 Eval: 85
+2022/11/15 19:02:28 Depth: 4 Nodes: 13929 Best move: f3d4 Eval: 85
+2022/11/15 19:02:29 Depth: 5 Nodes: 93336 Best move: f3d4 Eval: 90
+2022/11/15 19:02:30 
+2022/11/15 19:02:30 Engine results f3d4 90
+2022/11/15 19:02:30 Total nodes 276781 Quiescence search explored 157812 nodes
+2022/11/15 19:02:30 b f3d4 90
+2022/11/15 19:02:30 rn1qk1nr/pbpp2pp/1p6/5p2/2PNP3/3B4/PP2QPPP/RN2K2R b KQkq - 0 9
+2022/11/15 19:02:30 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 *
+2022/11/15 19:02:30 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ - ♞ ♜ 
+7♟ ♝ ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - - - - 
+5- - - - - ♟ - - 
+4- - ♙ ♘ ♙ - - - 
+3- - - ♗ - - - - 
+2♙ ♙ - - ♕ ♙ ♙ ♙ 
+1♖ ♘ - - ♔ - - ♖ 
+
+2022/11/15 19:02:30 
+2022/11/15 19:02:30 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:30 Depth: 1 Nodes: 85 Best move: f5e4 Eval: -85
+2022/11/15 19:02:30 Depth: 2 Nodes: 563 Best move: f5e4 Eval: -85
+2022/11/15 19:02:30 Depth: 3 Nodes: 4510 Best move: f5f4 Eval: -85
+2022/11/15 19:02:30 Depth: 4 Nodes: 15544 Best move: f5e4 Eval: -90
+2022/11/15 19:02:31 Depth: 5 Nodes: 107143 Best move: f5e4 Eval: -85
+2022/11/15 19:02:33 
+2022/11/15 19:02:33 Engine results f5e4 -85
+2022/11/15 19:02:33 Total nodes 358582 Quiescence search explored 199437 nodes
+2022/11/15 19:02:33 w f5e4 -85
+2022/11/15 19:02:33 rn1qk1nr/pbpp2pp/1p6/8/2PNp3/3B4/PP2QPPP/RN2K2R w KQkq - 0 10
+2022/11/15 19:02:33 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4  *
+2022/11/15 19:02:33 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ - ♞ ♜ 
+7♟ ♝ ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - - - - 
+5- - - - - - - - 
+4- - ♙ ♘ ♟ - - - 
+3- - - ♗ - - - - 
+2♙ ♙ - - ♕ ♙ ♙ ♙ 
+1♖ ♘ - - ♔ - - ♖ 
+
+2022/11/15 19:02:33 
+2022/11/15 19:02:33 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:33 Depth: 1 Nodes: 80 Best move: d3e4 Eval: 85
+2022/11/15 19:02:33 Depth: 2 Nodes: 557 Best move: d3e4 Eval: 90
+2022/11/15 19:02:33 Depth: 3 Nodes: 4507 Best move: d3e4 Eval: 90
+2022/11/15 19:02:33 Depth: 4 Nodes: 29117 Best move: d3e4 Eval: 85
+2022/11/15 19:02:34 Depth: 5 Nodes: 223682 Best move: d3e4 Eval: 85
+2022/11/15 19:02:35 
+2022/11/15 19:02:35 Engine results d3e4 85
+2022/11/15 19:02:35 Total nodes 392246 Quiescence search explored 228290 nodes
+2022/11/15 19:02:35 b d3e4 85
+2022/11/15 19:02:35 rn1qk1nr/pbpp2pp/1p6/8/2PNB3/8/PP2QPPP/RN2K2R b KQkq - 0 10
+2022/11/15 19:02:35 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 *
+2022/11/15 19:02:35 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ - ♞ ♜ 
+7♟ ♝ ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - - - - 
+5- - - - - - - - 
+4- - ♙ ♘ ♗ - - - 
+3- - - - - - - - 
+2♙ ♙ - - ♕ ♙ ♙ ♙ 
+1♖ ♘ - - ♔ - - ♖ 
+
+2022/11/15 19:02:35 
+2022/11/15 19:02:35 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:35 Depth: 1 Nodes: 101 Best move: b7e4 Eval: -90
+2022/11/15 19:02:35 Depth: 2 Nodes: 376 Best move: b7e4 Eval: -90
+2022/11/15 19:02:35 Depth: 3 Nodes: 3045 Best move: b7e4 Eval: -85
+2022/11/15 19:02:35 Depth: 4 Nodes: 13084 Best move: b7e4 Eval: -85
+2022/11/15 19:02:36 Depth: 5 Nodes: 79540 Best move: b7e4 Eval: -60
+2022/11/15 19:02:37 
+2022/11/15 19:02:37 Engine results b7e4 -60
+2022/11/15 19:02:37 Total nodes 333795 Quiescence search explored 179796 nodes
+2022/11/15 19:02:37 w b7e4 -60
+2022/11/15 19:02:37 rn1qk1nr/p1pp2pp/1p6/8/2PNb3/8/PP2QPPP/RN2K2R w KQkq - 0 11
+2022/11/15 19:02:37 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4  *
+2022/11/15 19:02:37 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ - ♞ ♜ 
+7♟ - ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - - - - 
+5- - - - - - - - 
+4- - ♙ ♘ ♝ - - - 
+3- - - - - - - - 
+2♙ ♙ - - ♕ ♙ ♙ ♙ 
+1♖ ♘ - - ♔ - - ♖ 
+
+2022/11/15 19:02:37 
+2022/11/15 19:02:37 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:37 Depth: 1 Nodes: 74 Best move: e2e4 Eval: 90
+2022/11/15 19:02:37 Depth: 2 Nodes: 371 Best move: e2e4 Eval: 85
+2022/11/15 19:02:37 Depth: 3 Nodes: 4852 Best move: e2e4 Eval: 85
+2022/11/15 19:02:38 Depth: 4 Nodes: 36702 Best move: e2e4 Eval: 60
+2022/11/15 19:02:39 Depth: 5 Nodes: 233265 Best move: e2e4 Eval: 100
+2022/11/15 19:02:41 
+2022/11/15 19:02:41 Engine results e2e4 100
+2022/11/15 19:02:41 Total nodes 514730 Quiescence search explored 316938 nodes
+2022/11/15 19:02:41 b e2e4 100
+2022/11/15 19:02:41 rn1qk1nr/p1pp2pp/1p6/8/2PNQ3/8/PP3PPP/RN2K2R b KQkq - 0 11
+2022/11/15 19:02:41 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ *
+2022/11/15 19:02:41 
+ A B C D E F G H
+8♜ ♞ - ♛ ♚ - ♞ ♜ 
+7♟ - ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - - - - 
+5- - - - - - - - 
+4- - ♙ ♘ ♕ - - - 
+3- - - - - - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ ♘ - - ♔ - - ♖ 
+
+2022/11/15 19:02:41 
+2022/11/15 19:02:41 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:41 Depth: 1 Nodes: 13 Best move: d8e7 Eval: -85
+2022/11/15 19:02:41 Depth: 2 Nodes: 219 Best move: d8e7 Eval: -85
+2022/11/15 19:02:41 Depth: 3 Nodes: 1658 Best move: d8e7 Eval: -60
+2022/11/15 19:02:41 Depth: 4 Nodes: 8158 Best move: d8e7 Eval: -100
+2022/11/15 19:02:41 Depth: 5 Nodes: 35641 Best move: d8e7 Eval: -45
+2022/11/15 19:02:43 
+2022/11/15 19:02:43 Engine results d8e7 -45
+2022/11/15 19:02:43 Total nodes 451333 Quiescence search explored 230218 nodes
+2022/11/15 19:02:43 w d8e7 -45
+2022/11/15 19:02:43 rn2k1nr/p1ppq1pp/1p6/8/2PNQ3/8/PP3PPP/RN2K2R w KQkq - 1 12
+2022/11/15 19:02:43 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7  *
+2022/11/15 19:02:43 
+ A B C D E F G H
+8♜ ♞ - - ♚ - ♞ ♜ 
+7♟ - ♟ ♟ ♛ - ♟ ♟ 
+6- ♟ - - - - - - 
+5- - - - - - - - 
+4- - ♙ ♘ ♕ - - - 
+3- - - - - - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ ♘ - - ♔ - - ♖ 
+
+2022/11/15 19:02:43 
+2022/11/15 19:02:43 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:43 Depth: 1 Nodes: 100 Best move: f2f3 Eval: 85
+2022/11/15 19:02:43 Depth: 2 Nodes: 359 Best move: e4e7 Eval: 60
+2022/11/15 19:02:43 Depth: 3 Nodes: 1186 Best move: e4e7 Eval: 100
+2022/11/15 19:02:43 Depth: 4 Nodes: 2951 Best move: e4e7 Eval: 45
+2022/11/15 19:02:44 Depth: 5 Nodes: 23855 Best move: f2f3 Eval: 85
+2022/11/15 19:02:44 Depth: 6 Nodes: 120158 Best move: b1c3 Eval: 50
+2022/11/15 19:02:46 
+2022/11/15 19:02:46 Engine results b1c3 50
+2022/11/15 19:02:46 Total nodes 492807 Quiescence search explored 252109 nodes
+2022/11/15 19:02:46 b b1c3 50
+2022/11/15 19:02:46 rn2k1nr/p1ppq1pp/1p6/8/2PNQ3/2N5/PP3PPP/R3K2R b KQkq - 2 12
+2022/11/15 19:02:46 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 *
+2022/11/15 19:02:46 
+ A B C D E F G H
+8♜ ♞ - - ♚ - ♞ ♜ 
+7♟ - ♟ ♟ ♛ - ♟ ♟ 
+6- ♟ - - - - - - 
+5- - - - - - - - 
+4- - ♙ ♘ ♕ - - - 
+3- - ♘ - - - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ - - - ♔ - - ♖ 
+
+2022/11/15 19:02:46 
+2022/11/15 19:02:46 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:46 Depth: 1 Nodes: 53 Best move: d7d6 Eval: -45
+2022/11/15 19:02:46 Depth: 2 Nodes: 370 Best move: g8f6 Eval: -55
+2022/11/15 19:02:46 Depth: 3 Nodes: 646 Best move: e7e4 Eval: -25
+2022/11/15 19:02:46 Depth: 4 Nodes: 1470 Best move: e7e4 Eval: -60
+2022/11/15 19:02:46 Depth: 5 Nodes: 17169 Best move: g8f6 Eval: -50
+2022/11/15 19:02:47 Depth: 6 Nodes: 96447 Best move: e7e4 Eval: -65
+2022/11/15 19:02:48 
+2022/11/15 19:02:48 Engine results e7e4 -65
+2022/11/15 19:02:48 Total nodes 326181 Quiescence search explored 169637 nodes
+2022/11/15 19:02:48 w e7e4 -65
+2022/11/15 19:02:48 rn2k1nr/p1pp2pp/1p6/8/2PNq3/2N5/PP3PPP/R3K2R w KQkq - 0 13
+2022/11/15 19:02:48 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+  *
+2022/11/15 19:02:48 
+ A B C D E F G H
+8♜ ♞ - - ♚ - ♞ ♜ 
+7♟ - ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - - - - 
+5- - - - - - - - 
+4- - ♙ ♘ ♛ - - - 
+3- - ♘ - - - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ - - - ♔ - - ♖ 
+
+2022/11/15 19:02:48 
+2022/11/15 19:02:48 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:48 Depth: 1 Nodes: 12 Best move: c3e4 Eval: 75
+2022/11/15 19:02:48 Depth: 2 Nodes: 77 Best move: c3e4 Eval: 25
+2022/11/15 19:02:48 Depth: 3 Nodes: 548 Best move: c3e4 Eval: 60
+2022/11/15 19:02:48 Depth: 4 Nodes: 2875 Best move: c3e4 Eval: 55
+2022/11/15 19:02:48 Depth: 5 Nodes: 24447 Best move: c3e4 Eval: 65
+2022/11/15 19:02:49 Depth: 6 Nodes: 111458 Best move: c3e4 Eval: 45
+2022/11/15 19:02:53 
+2022/11/15 19:02:53 Engine results c3e4 45
+2022/11/15 19:02:53 Total nodes 772199 Quiescence search explored 395954 nodes
+2022/11/15 19:02:53 b c3e4 45
+2022/11/15 19:02:53 rn2k1nr/p1pp2pp/1p6/8/2PNN3/8/PP3PPP/R3K2R b KQkq - 0 13
+2022/11/15 19:02:53 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 *
+2022/11/15 19:02:53 
+ A B C D E F G H
+8♜ ♞ - - ♚ - ♞ ♜ 
+7♟ - ♟ ♟ - - ♟ ♟ 
+6- ♟ - - - - - - 
+5- - - - - - - - 
+4- - ♙ ♘ ♘ - - - 
+3- - - - - - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ - - - ♔ - - ♖ 
+
+2022/11/15 19:02:53 
+2022/11/15 19:02:53 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:53 Depth: 1 Nodes: 45 Best move: d7d6 Eval: -25
+2022/11/15 19:02:53 Depth: 2 Nodes: 429 Best move: g8f6 Eval: -60
+2022/11/15 19:02:53 Depth: 3 Nodes: 2597 Best move: e8f7 Eval: -55
+2022/11/15 19:02:53 Depth: 4 Nodes: 22902 Best move: e8f7 Eval: -65
+2022/11/15 19:02:53 Depth: 5 Nodes: 107867 Best move: b8c6 Eval: -45
+2022/11/15 19:02:55 
+2022/11/15 19:02:55 Engine results b8c6 -45
+2022/11/15 19:02:55 Total nodes 449584 Quiescence search explored 227792 nodes
+2022/11/15 19:02:55 w b8c6 -45
+2022/11/15 19:02:55 r3k1nr/p1pp2pp/1pn5/8/2PNN3/8/PP3PPP/R3K2R w KQkq - 1 14
+2022/11/15 19:02:55 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6  *
+2022/11/15 19:02:55 
+ A B C D E F G H
+8♜ - - - ♚ - ♞ ♜ 
+7♟ - ♟ ♟ - - ♟ ♟ 
+6- ♟ ♞ - - - - - 
+5- - - - - - - - 
+4- - ♙ ♘ ♘ - - - 
+3- - - - - - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ - - - ♔ - - ♖ 
+
+2022/11/15 19:02:55 
+2022/11/15 19:02:55 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:55 Depth: 1 Nodes: 78 Best move: e1c1 Eval: 90
+2022/11/15 19:02:55 Depth: 2 Nodes: 390 Best move: e1c1 Eval: 65
+2022/11/15 19:02:55 Depth: 3 Nodes: 4218 Best move: e1c1 Eval: 65
+2022/11/15 19:02:55 Depth: 4 Nodes: 16277 Best move: d4c6 Eval: 45
+2022/11/15 19:02:56 Depth: 5 Nodes: 144136 Best move: d4f5 Eval: 55
+2022/11/15 19:02:57 
+2022/11/15 19:02:57 Engine results d4f5 55
+2022/11/15 19:02:57 Total nodes 355203 Quiescence search explored 183901 nodes
+2022/11/15 19:02:57 b d4f5 55
+2022/11/15 19:02:57 r3k1nr/p1pp2pp/1pn5/5N2/2P1N3/8/PP3PPP/R3K2R b KQkq - 2 14
+2022/11/15 19:02:57 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 *
+2022/11/15 19:02:57 
+ A B C D E F G H
+8♜ - - - ♚ - ♞ ♜ 
+7♟ - ♟ ♟ - - ♟ ♟ 
+6- ♟ ♞ - - - - - 
+5- - - - - ♘ - - 
+4- - ♙ - ♘ - - - 
+3- - - - - - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ - - - ♔ - - ♖ 
+
+2022/11/15 19:02:57 
+2022/11/15 19:02:57 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:57 Depth: 1 Nodes: 68 Best move: e8f8 Eval: -55
+2022/11/15 19:02:57 Depth: 2 Nodes: 486 Best move: g7g6 Eval: -65
+2022/11/15 19:02:57 Depth: 3 Nodes: 3297 Best move: g7g6 Eval: -35
+2022/11/15 19:02:57 Depth: 4 Nodes: 20379 Best move: e8f8 Eval: -55
+2022/11/15 19:02:58 Depth: 5 Nodes: 141288 Best move: g7g6 Eval: -15
+2022/11/15 19:02:59 
+2022/11/15 19:02:59 Engine results g7g6 -15
+2022/11/15 19:02:59 Total nodes 391300 Quiescence search explored 205952 nodes
+2022/11/15 19:02:59 w g7g6 -15
+2022/11/15 19:02:59 r3k1nr/p1pp3p/1pn3p1/5N2/2P1N3/8/PP3PPP/R3K2R w KQkq - 0 15
+2022/11/15 19:02:59 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6  *
+2022/11/15 19:02:59 
+ A B C D E F G H
+8♜ - - - ♚ - ♞ ♜ 
+7♟ - ♟ ♟ - - - ♟ 
+6- ♟ ♞ - - - ♟ - 
+5- - - - - ♘ - - 
+4- - ♙ - ♘ - - - 
+3- - - - - - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ - - - ♔ - - ♖ 
+
+2022/11/15 19:02:59 
+2022/11/15 19:02:59 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:02:59 Depth: 1 Nodes: 94 Best move: f5e3 Eval: 65
+2022/11/15 19:02:59 Depth: 2 Nodes: 292 Best move: f5g7 Eval: 35
+2022/11/15 19:02:59 Depth: 3 Nodes: 4583 Best move: f5e3 Eval: 55
+2022/11/15 19:02:59 Depth: 4 Nodes: 17908 Best move: f5e3 Eval: 15
+2022/11/15 19:03:00 Depth: 5 Nodes: 166357 Best move: f5e3 Eval: 25
+2022/11/15 19:03:01 
+2022/11/15 19:03:01 Engine results f5e3 25
+2022/11/15 19:03:01 Total nodes 363914 Quiescence search explored 183161 nodes
+2022/11/15 19:03:01 b f5e3 25
+2022/11/15 19:03:01 r3k1nr/p1pp3p/1pn3p1/8/2P1N3/4N3/PP3PPP/R3K2R b KQkq - 1 15
+2022/11/15 19:03:01 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 *
+2022/11/15 19:03:01 
+ A B C D E F G H
+8♜ - - - ♚ - ♞ ♜ 
+7♟ - ♟ ♟ - - - ♟ 
+6- ♟ ♞ - - - ♟ - 
+5- - - - - - - - 
+4- - ♙ - ♘ - - - 
+3- - - - ♘ - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ - - - ♔ - - ♖ 
+
+2022/11/15 19:03:01 
+2022/11/15 19:03:01 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:01 Depth: 1 Nodes: 55 Best move: d7d6 Eval: -15
+2022/11/15 19:03:01 Depth: 2 Nodes: 293 Best move: d7d6 Eval: -55
+2022/11/15 19:03:01 Depth: 3 Nodes: 2789 Best move: e8c8 Eval: -15
+2022/11/15 19:03:01 Depth: 4 Nodes: 14366 Best move: e8c8 Eval: -25
+2022/11/15 19:03:02 Depth: 5 Nodes: 78361 Best move: e8c8 Eval: -15
+2022/11/15 19:03:04 
+2022/11/15 19:03:04 Engine results e8c8 -15
+2022/11/15 19:03:04 Total nodes 458451 Quiescence search explored 242367 nodes
+2022/11/15 19:03:04 w e8c8 -15
+2022/11/15 19:03:04 2kr2nr/p1pp3p/1pn3p1/8/2P1N3/4N3/PP3PPP/R3K2R w KQ - 2 16
+2022/11/15 19:03:04 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O  *
+2022/11/15 19:03:04 
+ A B C D E F G H
+8- - ♚ ♜ - - ♞ ♜ 
+7♟ - ♟ ♟ - - - ♟ 
+6- ♟ ♞ - - - ♟ - 
+5- - - - - - - - 
+4- - ♙ - ♘ - - - 
+3- - - - ♘ - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ - - - ♔ - - ♖ 
+
+2022/11/15 19:03:04 
+2022/11/15 19:03:04 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:04 Depth: 1 Nodes: 70 Best move: e1g1 Eval: 65
+2022/11/15 19:03:04 Depth: 2 Nodes: 1142 Best move: e1g1 Eval: 15
+2022/11/15 19:03:04 Depth: 3 Nodes: 8478 Best move: e1g1 Eval: 25
+2022/11/15 19:03:04 Depth: 4 Nodes: 39009 Best move: e1g1 Eval: 15
+2022/11/15 19:03:06 
+2022/11/15 19:03:06 Engine results e1g1 15
+2022/11/15 19:03:06 Total nodes 348546 Quiescence search explored 186428 nodes
+2022/11/15 19:03:06 b e1g1 15
+2022/11/15 19:03:06 2kr2nr/p1pp3p/1pn3p1/8/2P1N3/4N3/PP3PPP/R4RK1 b - - 3 16
+2022/11/15 19:03:06 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O *
+2022/11/15 19:03:06 
+ A B C D E F G H
+8- - ♚ ♜ - - ♞ ♜ 
+7♟ - ♟ ♟ - - - ♟ 
+6- ♟ ♞ - - - ♟ - 
+5- - - - - - - - 
+4- - ♙ - ♘ - - - 
+3- - - - ♘ - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ - - - - ♖ ♔ - 
+
+2022/11/15 19:03:06 
+2022/11/15 19:03:06 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:06 Depth: 1 Nodes: 48 Best move: d7d6 Eval: -15
+2022/11/15 19:03:06 Depth: 2 Nodes: 417 Best move: d7d6 Eval: -25
+2022/11/15 19:03:06 Depth: 3 Nodes: 3638 Best move: d8e8 Eval: -15
+2022/11/15 19:03:06 Depth: 4 Nodes: 28209 Best move: d8e8 Eval: -25
+2022/11/15 19:03:07 Depth: 5 Nodes: 328129 Best move: d8e8 Eval: -20
+2022/11/15 19:03:12 
+2022/11/15 19:03:12 Engine results d8e8 -20
+2022/11/15 19:03:12 Total nodes 1138004 Quiescence search explored 618205 nodes
+2022/11/15 19:03:12 w d8e8 -20
+2022/11/15 19:03:12 2k1r1nr/p1pp3p/1pn3p1/8/2P1N3/4N3/PP3PPP/R4RK1 w - - 4 17
+2022/11/15 19:03:12 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8  *
+2022/11/15 19:03:12 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7♟ - ♟ ♟ - - - ♟ 
+6- ♟ ♞ - - - ♟ - 
+5- - - - - - - - 
+4- - ♙ - ♘ - - - 
+3- - - - ♘ - - - 
+2♙ ♙ - - - ♙ ♙ ♙ 
+1♖ - - - - ♖ ♔ - 
+
+2022/11/15 19:03:12 
+2022/11/15 19:03:12 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:12 Depth: 1 Nodes: 101 Best move: f2f3 Eval: 65
+2022/11/15 19:03:12 Depth: 2 Nodes: 624 Best move: f2f3 Eval: 15
+2022/11/15 19:03:12 Depth: 3 Nodes: 6604 Best move: f2f3 Eval: 25
+2022/11/15 19:03:13 Depth: 4 Nodes: 75319 Best move: f2f3 Eval: 20
+2022/11/15 19:03:14 
+2022/11/15 19:03:14 Engine results f2f3 20
+2022/11/15 19:03:14 Total nodes 355593 Quiescence search explored 203556 nodes
+2022/11/15 19:03:14 b f2f3 20
+2022/11/15 19:03:14 2k1r1nr/p1pp3p/1pn3p1/8/2P1N3/4NP2/PP4PP/R4RK1 b - - 0 17
+2022/11/15 19:03:14 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 *
+2022/11/15 19:03:14 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7♟ - ♟ ♟ - - - ♟ 
+6- ♟ ♞ - - - ♟ - 
+5- - - - - - - - 
+4- - ♙ - ♘ - - - 
+3- - - - ♘ ♙ - - 
+2♙ ♙ - - - - ♙ ♙ 
+1♖ - - - - ♖ ♔ - 
+
+2022/11/15 19:03:14 
+2022/11/15 19:03:14 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:14 Depth: 1 Nodes: 62 Best move: d7d6 Eval: -15
+2022/11/15 19:03:14 Depth: 2 Nodes: 891 Best move: d7d6 Eval: -25
+2022/11/15 19:03:14 Depth: 3 Nodes: 11494 Best move: d7d6 Eval: -20
+2022/11/15 19:03:15 Depth: 4 Nodes: 90070 Best move: d7d6 Eval: -20
+2022/11/15 19:03:17 
+2022/11/15 19:03:17 Engine results d7d6 -20
+2022/11/15 19:03:17 Total nodes 345724 Quiescence search explored 195668 nodes
+2022/11/15 19:03:17 w d7d6 -20
+2022/11/15 19:03:17 2k1r1nr/p1p4p/1pnp2p1/8/2P1N3/4NP2/PP4PP/R4RK1 w - - 0 18
+2022/11/15 19:03:17 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6  *
+2022/11/15 19:03:17 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7♟ - ♟ - - - - ♟ 
+6- ♟ ♞ ♟ - - ♟ - 
+5- - - - - - - - 
+4- - ♙ - ♘ - - - 
+3- - - - ♘ ♙ - - 
+2♙ ♙ - - - - ♙ ♙ 
+1♖ - - - - ♖ ♔ - 
+
+2022/11/15 19:03:17 
+2022/11/15 19:03:17 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:17 Depth: 1 Nodes: 75 Best move: a1d1 Eval: 25
+2022/11/15 19:03:17 Depth: 2 Nodes: 877 Best move: a1d1 Eval: 20
+2022/11/15 19:03:17 Depth: 3 Nodes: 13886 Best move: a1d1 Eval: 20
+2022/11/15 19:03:17 Depth: 4 Nodes: 70580 Best move: a1d1 Eval: 20
+2022/11/15 19:03:19 
+2022/11/15 19:03:19 Engine results a1d1 20
+2022/11/15 19:03:19 Total nodes 336610 Quiescence search explored 199195 nodes
+2022/11/15 19:03:19 b a1d1 20
+2022/11/15 19:03:19 2k1r1nr/p1p4p/1pnp2p1/8/2P1N3/4NP2/PP4PP/3R1RK1 b - - 1 18
+2022/11/15 19:03:19 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 *
+2022/11/15 19:03:19 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7♟ - ♟ - - - - ♟ 
+6- ♟ ♞ ♟ - - ♟ - 
+5- - - - - - - - 
+4- - ♙ - ♘ - - - 
+3- - - - ♘ ♙ - - 
+2♙ ♙ - - - - ♙ ♙ 
+1- - - ♖ - ♖ ♔ - 
+
+2022/11/15 19:03:19 
+2022/11/15 19:03:19 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:19 Depth: 1 Nodes: 94 Best move: c6e5 Eval: -20
+2022/11/15 19:03:19 Depth: 2 Nodes: 1060 Best move: c6e5 Eval: -20
+2022/11/15 19:03:19 Depth: 3 Nodes: 11625 Best move: c6e5 Eval: -20
+2022/11/15 19:03:20 Depth: 4 Nodes: 112050 Best move: a7a5 Eval: -20
+2022/11/15 19:03:21 
+2022/11/15 19:03:21 Engine results a7a5 -20
+2022/11/15 19:03:21 Total nodes 298702 Quiescence search explored 179373 nodes
+2022/11/15 19:03:21 w a7a5 -20
+2022/11/15 19:03:21 2k1r1nr/2p4p/1pnp2p1/p7/2P1N3/4NP2/PP4PP/3R1RK1 w - a6 0 19
+2022/11/15 19:03:21 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5  *
+2022/11/15 19:03:21 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7- - ♟ - - - - ♟ 
+6- ♟ ♞ ♟ - - ♟ - 
+5♟ - - - - - - - 
+4- - ♙ - ♘ - - - 
+3- - - - ♘ ♙ - - 
+2♙ ♙ - - - - ♙ ♙ 
+1- - - ♖ - ♖ ♔ - 
+
+2022/11/15 19:03:21 
+2022/11/15 19:03:21 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:21 Depth: 1 Nodes: 90 Best move: d1e1 Eval: 25
+2022/11/15 19:03:21 Depth: 2 Nodes: 1589 Best move: a2a4 Eval: 20
+2022/11/15 19:03:21 Depth: 3 Nodes: 20544 Best move: a2a4 Eval: 20
+2022/11/15 19:03:22 Depth: 4 Nodes: 109988 Best move: d1e1 Eval: 20
+2022/11/15 19:03:24 
+2022/11/15 19:03:24 Engine results d1e1 20
+2022/11/15 19:03:24 Total nodes 360341 Quiescence search explored 216508 nodes
+2022/11/15 19:03:24 b d1e1 20
+2022/11/15 19:03:24 2k1r1nr/2p4p/1pnp2p1/p7/2P1N3/4NP2/PP4PP/4RRK1 b - - 1 19
+2022/11/15 19:03:24 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 *
+2022/11/15 19:03:24 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7- - ♟ - - - - ♟ 
+6- ♟ ♞ ♟ - - ♟ - 
+5♟ - - - - - - - 
+4- - ♙ - ♘ - - - 
+3- - - - ♘ ♙ - - 
+2♙ ♙ - - - - ♙ ♙ 
+1- - - - ♖ ♖ ♔ - 
+
+2022/11/15 19:03:24 
+2022/11/15 19:03:24 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:24 Depth: 1 Nodes: 67 Best move: a5a4 Eval: -10
+2022/11/15 19:03:24 Depth: 2 Nodes: 892 Best move: a5a4 Eval: -10
+2022/11/15 19:03:24 Depth: 3 Nodes: 12325 Best move: e8e6 Eval: -20
+2022/11/15 19:03:24 Depth: 4 Nodes: 112862 Best move: c6e5 Eval: -20
+2022/11/15 19:03:26 
+2022/11/15 19:03:26 Engine results c6e5 -20
+2022/11/15 19:03:26 Total nodes 290017 Quiescence search explored 172458 nodes
+2022/11/15 19:03:26 w c6e5 -20
+2022/11/15 19:03:26 2k1r1nr/2p4p/1p1p2p1/p3n3/2P1N3/4NP2/PP4PP/4RRK1 w - - 2 20
+2022/11/15 19:03:26 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5  *
+2022/11/15 19:03:26 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7- - ♟ - - - - ♟ 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - - ♞ - - - 
+4- - ♙ - ♘ - - - 
+3- - - - ♘ ♙ - - 
+2♙ ♙ - - - - ♙ ♙ 
+1- - - - ♖ ♖ ♔ - 
+
+2022/11/15 19:03:26 
+2022/11/15 19:03:26 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:26 Depth: 1 Nodes: 91 Best move: f3f4 Eval: 25
+2022/11/15 19:03:26 Depth: 2 Nodes: 1169 Best move: f3f4 Eval: 25
+2022/11/15 19:03:26 Depth: 3 Nodes: 13799 Best move: b2b3 Eval: 20
+2022/11/15 19:03:26 Depth: 4 Nodes: 108157 Best move: b2b3 Eval: 20
+2022/11/15 19:03:28 
+2022/11/15 19:03:28 Engine results b2b3 20
+2022/11/15 19:03:28 Total nodes 311341 Quiescence search explored 198290 nodes
+2022/11/15 19:03:28 b b2b3 20
+2022/11/15 19:03:28 2k1r1nr/2p4p/1p1p2p1/p3n3/2P1N3/1P2NP2/P5PP/4RRK1 b - - 0 20
+2022/11/15 19:03:28 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 *
+2022/11/15 19:03:28 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7- - ♟ - - - - ♟ 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - - ♞ - - - 
+4- - ♙ - ♘ - - - 
+3- ♙ - - ♘ ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - ♖ ♖ ♔ - 
+
+2022/11/15 19:03:28 
+2022/11/15 19:03:28 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:28 Depth: 1 Nodes: 79 Best move: e8d8 Eval: -20
+2022/11/15 19:03:28 Depth: 2 Nodes: 924 Best move: e5d3 Eval: -20
+2022/11/15 19:03:28 Depth: 3 Nodes: 11181 Best move: e5d3 Eval: -20
+2022/11/15 19:03:28 Depth: 4 Nodes: 69126 Best move: e5d3 Eval: -10
+2022/11/15 19:03:30 
+2022/11/15 19:03:30 Engine results e5d3 -10
+2022/11/15 19:03:30 Total nodes 291512 Quiescence search explored 191060 nodes
+2022/11/15 19:03:30 w e5d3 -10
+2022/11/15 19:03:30 2k1r1nr/2p4p/1p1p2p1/p7/2P1N3/1P1nNP2/P5PP/4RRK1 w - - 1 21
+2022/11/15 19:03:30 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3  *
+2022/11/15 19:03:30 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7- - ♟ - - - - ♟ 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - - - - - - 
+4- - ♙ - ♘ - - - 
+3- ♙ - ♞ ♘ ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - ♖ ♖ ♔ - 
+
+2022/11/15 19:03:30 
+2022/11/15 19:03:30 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:30 Depth: 1 Nodes: 71 Best move: e1d1 Eval: 20
+2022/11/15 19:03:30 Depth: 2 Nodes: 499 Best move: e1d1 Eval: 20
+2022/11/15 19:03:30 Depth: 3 Nodes: 4441 Best move: e1d1 Eval: 10
+2022/11/15 19:03:30 Depth: 4 Nodes: 23947 Best move: e1d1 Eval: 10
+2022/11/15 19:03:31 Depth: 5 Nodes: 154073 Best move: e1e2 Eval: 15
+2022/11/15 19:03:32 
+2022/11/15 19:03:32 Engine results e1e2 15
+2022/11/15 19:03:32 Total nodes 341321 Quiescence search explored 192504 nodes
+2022/11/15 19:03:32 b e1e2 15
+2022/11/15 19:03:32 2k1r1nr/2p4p/1p1p2p1/p7/2P1N3/1P1nNP2/P3R1PP/5RK1 b - - 2 21
+2022/11/15 19:03:32 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 *
+2022/11/15 19:03:32 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7- - ♟ - - - - ♟ 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - - - - - - 
+4- - ♙ - ♘ - - - 
+3- ♙ - ♞ ♘ ♙ - - 
+2♙ - - - ♖ - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:03:32 
+2022/11/15 19:03:32 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:32 Depth: 1 Nodes: 80 Best move: e8d8 Eval: -10
+2022/11/15 19:03:32 Depth: 2 Nodes: 918 Best move: e8f8 Eval: -10
+2022/11/15 19:03:32 Depth: 3 Nodes: 7035 Best move: e8d8 Eval: -10
+2022/11/15 19:03:33 Depth: 4 Nodes: 51955 Best move: h7h5 Eval: -15
+2022/11/15 19:03:34 
+2022/11/15 19:03:34 Engine results h7h5 -15
+2022/11/15 19:03:34 Total nodes 275639 Quiescence search explored 164174 nodes
+2022/11/15 19:03:34 w h7h5 -15
+2022/11/15 19:03:34 2k1r1nr/2p5/1p1p2p1/p6p/2P1N3/1P1nNP2/P3R1PP/5RK1 w - h6 0 22
+2022/11/15 19:03:34 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5  *
+2022/11/15 19:03:34 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7- - ♟ - - - - - 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - - - - - ♟ 
+4- - ♙ - ♘ - - - 
+3- ♙ - ♞ ♘ ♙ - - 
+2♙ - - - ♖ - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:03:34 
+2022/11/15 19:03:34 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:34 Depth: 1 Nodes: 85 Best move: f1d1 Eval: 10
+2022/11/15 19:03:34 Depth: 2 Nodes: 905 Best move: f1d1 Eval: 10
+2022/11/15 19:03:34 Depth: 3 Nodes: 11620 Best move: e3d5 Eval: 15
+2022/11/15 19:03:35 Depth: 4 Nodes: 71589 Best move: e3d5 Eval: 10
+2022/11/15 19:03:37 
+2022/11/15 19:03:37 Engine results e3d5 10
+2022/11/15 19:03:37 Total nodes 319159 Quiescence search explored 191496 nodes
+2022/11/15 19:03:37 b e3d5 10
+2022/11/15 19:03:37 2k1r1nr/2p5/1p1p2p1/p2N3p/2P1N3/1P1n1P2/P3R1PP/5RK1 b - - 1 22
+2022/11/15 19:03:37 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 *
+2022/11/15 19:03:37 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7- - ♟ - - - - - 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - ♘ - - - ♟ 
+4- - ♙ - ♘ - - - 
+3- ♙ - ♞ - ♙ - - 
+2♙ - - - ♖ - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:03:37 
+2022/11/15 19:03:37 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:37 Depth: 1 Nodes: 132 Best move: e8d8 Eval: -10
+2022/11/15 19:03:37 Depth: 2 Nodes: 1113 Best move: e8d8 Eval: -15
+2022/11/15 19:03:37 Depth: 3 Nodes: 9209 Best move: e8d8 Eval: -10
+2022/11/15 19:03:37 Depth: 4 Nodes: 52345 Best move: e8d8 Eval: -20
+2022/11/15 19:03:39 
+2022/11/15 19:03:39 Engine results e8d8 -20
+2022/11/15 19:03:39 Total nodes 269221 Quiescence search explored 181598 nodes
+2022/11/15 19:03:39 w e8d8 -20
+2022/11/15 19:03:39 2kr2nr/2p5/1p1p2p1/p2N3p/2P1N3/1P1n1P2/P3R1PP/5RK1 w - - 2 23
+2022/11/15 19:03:39 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8  *
+2022/11/15 19:03:39 
+ A B C D E F G H
+8- - ♚ ♜ - - ♞ ♜ 
+7- - ♟ - - - - - 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - ♘ - - - ♟ 
+4- - ♙ - ♘ - - - 
+3- ♙ - ♞ - ♙ - - 
+2♙ - - - ♖ - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:03:39 
+2022/11/15 19:03:39 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:39 Depth: 1 Nodes: 98 Best move: f3f4 Eval: 15
+2022/11/15 19:03:39 Depth: 2 Nodes: 1071 Best move: f1d1 Eval: 10
+2022/11/15 19:03:39 Depth: 3 Nodes: 9454 Best move: f1d1 Eval: 20
+2022/11/15 19:03:40 Depth: 4 Nodes: 64470 Best move: e4g5 Eval: 20
+2022/11/15 19:03:41 
+2022/11/15 19:03:41 Engine results e4g5 20
+2022/11/15 19:03:41 Total nodes 308405 Quiescence search explored 182678 nodes
+2022/11/15 19:03:41 b e4g5 20
+2022/11/15 19:03:41 2kr2nr/2p5/1p1p2p1/p2N2Np/2P5/1P1n1P2/P3R1PP/5RK1 b - - 3 23
+2022/11/15 19:03:41 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 *
+2022/11/15 19:03:41 
+ A B C D E F G H
+8- - ♚ ♜ - - ♞ ♜ 
+7- - ♟ - - - - - 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - ♘ - - ♘ ♟ 
+4- - ♙ - - - - - 
+3- ♙ - ♞ - ♙ - - 
+2♙ - - - ♖ - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:03:41 
+2022/11/15 19:03:41 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:41 Depth: 1 Nodes: 67 Best move: h5h4 Eval: 25
+2022/11/15 19:03:41 Depth: 2 Nodes: 934 Best move: h5h4 Eval: 5
+2022/11/15 19:03:41 Depth: 3 Nodes: 10605 Best move: d8d7 Eval: -20
+2022/11/15 19:03:41 Depth: 4 Nodes: 76568 Best move: d8f8 Eval: -25
+2022/11/15 19:03:43 
+2022/11/15 19:03:43 Engine results d8f8 -25
+2022/11/15 19:03:43 Total nodes 250743 Quiescence search explored 166037 nodes
+2022/11/15 19:03:43 w d8f8 -25
+2022/11/15 19:03:43 2k2rnr/2p5/1p1p2p1/p2N2Np/2P5/1P1n1P2/P3R1PP/5RK1 w - - 4 24
+2022/11/15 19:03:43 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8  *
+2022/11/15 19:03:43 
+ A B C D E F G H
+8- - ♚ - - ♜ ♞ ♜ 
+7- - ♟ - - - - - 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - ♘ - - ♘ ♟ 
+4- - ♙ - - - - - 
+3- ♙ - ♞ - ♙ - - 
+2♙ - - - ♖ - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:03:43 
+2022/11/15 19:03:43 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:43 Depth: 1 Nodes: 102 Best move: g5e4 Eval: 10
+2022/11/15 19:03:43 Depth: 2 Nodes: 1367 Best move: g5e6 Eval: 20
+2022/11/15 19:03:43 Depth: 3 Nodes: 13722 Best move: g5e6 Eval: 25
+2022/11/15 19:03:44 Depth: 4 Nodes: 53694 Best move: d5c7 Eval: 80
+2022/11/15 19:03:45 Depth: 5 Nodes: 315131 Best move: d5c7 Eval: 80
+2022/11/15 19:03:46 
+2022/11/15 19:03:46 Engine results d5c7 80
+2022/11/15 19:03:46 Total nodes 378104 Quiescence search explored 212904 nodes
+2022/11/15 19:03:46 b d5c7 80
+2022/11/15 19:03:46 2k2rnr/2N5/1p1p2p1/p5Np/2P5/1P1n1P2/P3R1PP/5RK1 b - - 0 24
+2022/11/15 19:03:46 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 *
+2022/11/15 19:03:46 
+ A B C D E F G H
+8- - ♚ - - ♜ ♞ ♜ 
+7- - ♘ - - - - - 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - - - - ♘ ♟ 
+4- - ♙ - - - - - 
+3- ♙ - ♞ - ♙ - - 
+2♙ - - - ♖ - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:03:46 
+2022/11/15 19:03:46 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:46 Depth: 1 Nodes: 58 Best move: c8c7 Eval: 220
+2022/11/15 19:03:46 Depth: 2 Nodes: 415 Best move: c8c7 Eval: 200
+2022/11/15 19:03:46 Depth: 3 Nodes: 7133 Best move: d3f4 Eval: -80
+2022/11/15 19:03:46 Depth: 4 Nodes: 51133 Best move: d3f4 Eval: -80
+2022/11/15 19:03:48 
+2022/11/15 19:03:48 Engine results d3f4 -80
+2022/11/15 19:03:48 Total nodes 256728 Quiescence search explored 151336 nodes
+2022/11/15 19:03:48 w d3f4 -80
+2022/11/15 19:03:48 2k2rnr/2N5/1p1p2p1/p5Np/2P2n2/1P3P2/P3R1PP/5RK1 w - - 1 25
+2022/11/15 19:03:48 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4  *
+2022/11/15 19:03:48 
+ A B C D E F G H
+8- - ♚ - - ♜ ♞ ♜ 
+7- - ♘ - - - - - 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - - - - ♘ ♟ 
+4- - ♙ - - ♞ - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - ♖ - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:03:48 
+2022/11/15 19:03:48 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:48 Depth: 1 Nodes: 90 Best move: e2e8 Eval: 75
+2022/11/15 19:03:48 Depth: 2 Nodes: 223 Best move: e2e8 Eval: 80
+2022/11/15 19:03:48 Depth: 3 Nodes: 1154 Best move: e2e8 Eval: 80
+2022/11/15 19:03:48 Depth: 4 Nodes: 3323 Best move: e2e8 Eval: 85
+2022/11/15 19:03:48 Depth: 5 Nodes: 24279 Best move: e2e8 Eval: 80
+2022/11/15 19:03:48 Depth: 6 Nodes: 79742 Best move: e2e8 Eval: 115
+2022/11/15 19:03:52 
+2022/11/15 19:03:52 Engine results e2e8 115
+2022/11/15 19:03:52 Total nodes 949333 Quiescence search explored 475746 nodes
+2022/11/15 19:03:52 b e2e8 115
+2022/11/15 19:03:52 2k1Rrnr/2N5/1p1p2p1/p5Np/2P2n2/1P3P2/P5PP/5RK1 b - - 2 25
+2022/11/15 19:03:52 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ *
+2022/11/15 19:03:52 
+ A B C D E F G H
+8- - ♚ - ♖ ♜ ♞ ♜ 
+7- - ♘ - - - - - 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - - - - ♘ ♟ 
+4- - ♙ - - ♞ - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:03:52 
+2022/11/15 19:03:52 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:52 Depth: 1 Nodes: 13 Best move: f8e8 Eval: -80
+2022/11/15 19:03:52 Depth: 2 Nodes: 84 Best move: f8e8 Eval: -80
+2022/11/15 19:03:52 Depth: 3 Nodes: 356 Best move: f8e8 Eval: -85
+2022/11/15 19:03:52 Depth: 4 Nodes: 1837 Best move: f8e8 Eval: -80
+2022/11/15 19:03:52 Depth: 5 Nodes: 6934 Best move: f8e8 Eval: -115
+2022/11/15 19:03:52 Depth: 6 Nodes: 34250 Best move: f8e8 Eval: -110
+2022/11/15 19:03:53 Depth: 7 Nodes: 123898 Best move: f8e8 Eval: -130
+2022/11/15 19:03:55 
+2022/11/15 19:03:55 Engine results f8e8 -130
+2022/11/15 19:03:55 Total nodes 531424 Quiescence search explored 256563 nodes
+2022/11/15 19:03:55 w f8e8 -130
+2022/11/15 19:03:55 2k1r1nr/2N5/1p1p2p1/p5Np/2P2n2/1P3P2/P5PP/5RK1 w - - 0 26
+2022/11/15 19:03:55 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8  *
+2022/11/15 19:03:55 
+ A B C D E F G H
+8- - ♚ - ♜ - ♞ ♜ 
+7- - ♘ - - - - - 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - - - - ♘ ♟ 
+4- - ♙ - - ♞ - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:03:55 
+2022/11/15 19:03:55 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:55 Depth: 1 Nodes: 56 Best move: c7e8 Eval: 80
+2022/11/15 19:03:55 Depth: 2 Nodes: 213 Best move: c7e8 Eval: 85
+2022/11/15 19:03:55 Depth: 3 Nodes: 1467 Best move: c7e8 Eval: 80
+2022/11/15 19:03:55 Depth: 4 Nodes: 4822 Best move: c7e8 Eval: 115
+2022/11/15 19:03:55 Depth: 5 Nodes: 28655 Best move: c7e8 Eval: 110
+2022/11/15 19:03:55 Depth: 6 Nodes: 94479 Best move: c7e8 Eval: 130
+2022/11/15 19:03:57 
+2022/11/15 19:03:57 Engine results c7e8 130
+2022/11/15 19:03:57 Total nodes 430976 Quiescence search explored 209567 nodes
+2022/11/15 19:03:57 b c7e8 130
+2022/11/15 19:03:57 2k1N1nr/8/1p1p2p1/p5Np/2P2n2/1P3P2/P5PP/5RK1 b - - 0 26
+2022/11/15 19:03:57 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 *
+2022/11/15 19:03:57 
+ A B C D E F G H
+8- - ♚ - ♘ - ♞ ♜ 
+7- - - - - - - - 
+6- ♟ - ♟ - - ♟ - 
+5♟ - - - - - ♘ ♟ 
+4- - ♙ - - ♞ - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:03:57 
+2022/11/15 19:03:57 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:57 Depth: 1 Nodes: 58 Best move: d6d5 Eval: -85
+2022/11/15 19:03:57 Depth: 2 Nodes: 193 Best move: f4e2 Eval: -80
+2022/11/15 19:03:57 Depth: 3 Nodes: 1289 Best move: d6d5 Eval: -115
+2022/11/15 19:03:57 Depth: 4 Nodes: 5883 Best move: c8d7 Eval: -110
+2022/11/15 19:03:57 Depth: 5 Nodes: 31647 Best move: d6d5 Eval: -130
+2022/11/15 19:03:57 Depth: 6 Nodes: 166382 Best move: d6d5 Eval: -150
+2022/11/15 19:03:59 
+2022/11/15 19:03:59 Engine results d6d5 -150
+2022/11/15 19:03:59 Total nodes 349561 Quiescence search explored 192651 nodes
+2022/11/15 19:03:59 w d6d5 -150
+2022/11/15 19:03:59 2k1N1nr/8/1p4p1/p2p2Np/2P2n2/1P3P2/P5PP/5RK1 w - - 0 27
+2022/11/15 19:03:59 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5  *
+2022/11/15 19:03:59 
+ A B C D E F G H
+8- - ♚ - ♘ - ♞ ♜ 
+7- - - - - - - - 
+6- ♟ - - - - ♟ - 
+5♟ - - ♟ - - ♘ ♟ 
+4- - ♙ - - ♞ - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:03:59 
+2022/11/15 19:03:59 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:03:59 Depth: 1 Nodes: 55 Best move: e8d6 Eval: 95
+2022/11/15 19:03:59 Depth: 2 Nodes: 240 Best move: e8d6 Eval: 115
+2022/11/15 19:03:59 Depth: 3 Nodes: 1851 Best move: e8d6 Eval: 115
+2022/11/15 19:03:59 Depth: 4 Nodes: 7063 Best move: c4d5 Eval: 130
+2022/11/15 19:03:59 Depth: 5 Nodes: 49550 Best move: c4d5 Eval: 150
+2022/11/15 19:04:00 Depth: 6 Nodes: 165769 Best move: e8d6 Eval: 305
+2022/11/15 19:04:01 
+2022/11/15 19:04:01 Engine results e8d6 305
+2022/11/15 19:04:01 Total nodes 408768 Quiescence search explored 215586 nodes
+2022/11/15 19:04:01 b e8d6 305
+2022/11/15 19:04:01 2k3nr/8/1p1N2p1/p2p2Np/2P2n2/1P3P2/P5PP/5RK1 b - - 1 27
+2022/11/15 19:04:01 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ *
+2022/11/15 19:04:01 
+ A B C D E F G H
+8- - ♚ - - - ♞ ♜ 
+7- - - - - - - - 
+6- ♟ - ♘ - - ♟ - 
+5♟ - - ♟ - - ♘ ♟ 
+4- - ♙ - - ♞ - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:04:01 
+2022/11/15 19:04:01 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:01 Depth: 1 Nodes: 10 Best move: c8c7 Eval: -115
+2022/11/15 19:04:01 Depth: 2 Nodes: 184 Best move: c8c7 Eval: -115
+2022/11/15 19:04:01 Depth: 3 Nodes: 808 Best move: c8c7 Eval: -130
+2022/11/15 19:04:01 Depth: 4 Nodes: 3905 Best move: c8c7 Eval: -115
+2022/11/15 19:04:01 Depth: 5 Nodes: 39198 Best move: c8c7 Eval: -305
+2022/11/15 19:04:02 Depth: 6 Nodes: 245818 Best move: c8c7 Eval: -305
+2022/11/15 19:04:03 
+2022/11/15 19:04:03 Engine results c8c7 -305
+2022/11/15 19:04:03 Total nodes 381858 Quiescence search explored 206765 nodes
+2022/11/15 19:04:03 w c8c7 -305
+2022/11/15 19:04:03 6nr/2k5/1p1N2p1/p2p2Np/2P2n2/1P3P2/P5PP/5RK1 w - - 2 28
+2022/11/15 19:04:03 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7  *
+2022/11/15 19:04:03 
+ A B C D E F G H
+8- - - - - - ♞ ♜ 
+7- - ♚ - - - - - 
+6- ♟ - ♘ - - ♟ - 
+5♟ - - ♟ - - ♘ ♟ 
+4- - ♙ - - ♞ - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:04:03 
+2022/11/15 19:04:03 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:03 Depth: 1 Nodes: 89 Best move: g5f7 Eval: 115
+2022/11/15 19:04:03 Depth: 2 Nodes: 398 Best move: g5f7 Eval: 130
+2022/11/15 19:04:03 Depth: 3 Nodes: 2189 Best move: g5f7 Eval: 115
+2022/11/15 19:04:04 Depth: 4 Nodes: 14092 Best move: d6f7 Eval: 305
+2022/11/15 19:04:04 Depth: 5 Nodes: 86444 Best move: d6f7 Eval: 305
+2022/11/15 19:04:05 Depth: 6 Nodes: 222483 Best move: d6f7 Eval: 310
+2022/11/15 19:04:06 
+2022/11/15 19:04:06 Engine results d6f7 310
+2022/11/15 19:04:06 Total nodes 484600 Quiescence search explored 262715 nodes
+2022/11/15 19:04:06 b d6f7 310
+2022/11/15 19:04:06 6nr/2k2N2/1p4p1/p2p2Np/2P2n2/1P3P2/P5PP/5RK1 b - - 3 28
+2022/11/15 19:04:06 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 *
+2022/11/15 19:04:06 
+ A B C D E F G H
+8- - - - - - ♞ ♜ 
+7- - ♚ - - ♘ - - 
+6- ♟ - - - - ♟ - 
+5♟ - - ♟ - - ♘ ♟ 
+4- - ♙ - - ♞ - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:04:06 
+2022/11/15 19:04:06 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:06 Depth: 1 Nodes: 107 Best move: f4e2 Eval: -115
+2022/11/15 19:04:06 Depth: 2 Nodes: 270 Best move: f4e2 Eval: -95
+2022/11/15 19:04:06 Depth: 3 Nodes: 1751 Best move: h8h6 Eval: -305
+2022/11/15 19:04:06 Depth: 4 Nodes: 6562 Best move: h8h6 Eval: -305
+2022/11/15 19:04:07 Depth: 5 Nodes: 32904 Best move: h8h6 Eval: -310
+2022/11/15 19:04:07 Depth: 6 Nodes: 125514 Best move: h8h6 Eval: -325
+2022/11/15 19:04:09 
+2022/11/15 19:04:09 Engine results h8h6 -325
+2022/11/15 19:04:09 Total nodes 395038 Quiescence search explored 210616 nodes
+2022/11/15 19:04:09 w h8h6 -325
+2022/11/15 19:04:09 6n1/2k2N2/1p4pr/p2p2Np/2P2n2/1P3P2/P5PP/5RK1 w - - 4 29
+2022/11/15 19:04:09 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6  *
+2022/11/15 19:04:09 
+ A B C D E F G H
+8- - - - - - ♞ - 
+7- - ♚ - - ♘ - - 
+6- ♟ - - - - ♟ ♜ 
+5♟ - - ♟ - - ♘ ♟ 
+4- - ♙ - - ♞ - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:04:09 
+2022/11/15 19:04:09 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:09 Depth: 1 Nodes: 59 Best move: f7h6 Eval: 305
+2022/11/15 19:04:09 Depth: 2 Nodes: 437 Best move: f7h6 Eval: 305
+2022/11/15 19:04:09 Depth: 3 Nodes: 2245 Best move: f7h6 Eval: 305
+2022/11/15 19:04:09 Depth: 4 Nodes: 10183 Best move: f7h6 Eval: 310
+2022/11/15 19:04:09 Depth: 5 Nodes: 45153 Best move: f7h6 Eval: 325
+2022/11/15 19:04:10 Depth: 6 Nodes: 163841 Best move: c4d5 Eval: 315
+2022/11/15 19:04:11 
+2022/11/15 19:04:11 Engine results c4d5 315
+2022/11/15 19:04:11 Total nodes 401966 Quiescence search explored 207440 nodes
+2022/11/15 19:04:11 b c4d5 315
+2022/11/15 19:04:11 6n1/2k2N2/1p4pr/p2P2Np/5n2/1P3P2/P5PP/5RK1 b - - 0 29
+2022/11/15 19:04:11 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 *
+2022/11/15 19:04:11 
+ A B C D E F G H
+8- - - - - - ♞ - 
+7- - ♚ - - ♘ - - 
+6- ♟ - - - - ♟ ♜ 
+5♟ - - ♙ - - ♘ ♟ 
+4- - - - - ♞ - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:04:11 
+2022/11/15 19:04:11 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:11 Depth: 1 Nodes: 89 Best move: f4e2 Eval: -270
+2022/11/15 19:04:11 Depth: 2 Nodes: 276 Best move: f4e2 Eval: -250
+2022/11/15 19:04:11 Depth: 3 Nodes: 1314 Best move: f4d5 Eval: -305
+2022/11/15 19:04:11 Depth: 4 Nodes: 5563 Best move: f4d5 Eval: -325
+2022/11/15 19:04:11 Depth: 5 Nodes: 25607 Best move: f4d5 Eval: -315
+2022/11/15 19:04:12 Depth: 6 Nodes: 133823 Best move: f4d5 Eval: -325
+2022/11/15 19:04:15 
+2022/11/15 19:04:15 Engine results f4d5 -325
+2022/11/15 19:04:15 Total nodes 526745 Quiescence search explored 300730 nodes
+2022/11/15 19:04:15 w f4d5 -325
+2022/11/15 19:04:15 6n1/2k2N2/1p4pr/p2n2Np/8/1P3P2/P5PP/5RK1 w - - 0 30
+2022/11/15 19:04:15 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5  *
+2022/11/15 19:04:15 
+ A B C D E F G H
+8- - - - - - ♞ - 
+7- - ♚ - - ♘ - - 
+6- ♟ - - - - ♟ ♜ 
+5♟ - - ♞ - - ♘ ♟ 
+4- - - - - - - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:04:15 
+2022/11/15 19:04:15 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:15 Depth: 1 Nodes: 51 Best move: f7h6 Eval: 305
+2022/11/15 19:04:15 Depth: 2 Nodes: 266 Best move: f7h6 Eval: 305
+2022/11/15 19:04:15 Depth: 3 Nodes: 1730 Best move: f7h6 Eval: 325
+2022/11/15 19:04:15 Depth: 4 Nodes: 7737 Best move: g5e6 Eval: 315
+2022/11/15 19:04:15 Depth: 5 Nodes: 58654 Best move: f7h6 Eval: 325
+2022/11/15 19:04:17 
+2022/11/15 19:04:17 Engine results f7h6 325
+2022/11/15 19:04:17 Total nodes 253197 Quiescence search explored 145289 nodes
+2022/11/15 19:04:17 b f7h6 325
+2022/11/15 19:04:17 6n1/2k5/1p4pN/p2n2Np/8/1P3P2/P5PP/5RK1 b - - 0 30
+2022/11/15 19:04:17 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 *
+2022/11/15 19:04:17 
+ A B C D E F G H
+8- - - - - - ♞ - 
+7- - ♚ - - - - - 
+6- ♟ - - - - ♟ ♘ 
+5♟ - - ♞ - - ♘ ♟ 
+4- - - - - - - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:04:17 
+2022/11/15 19:04:17 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:17 Depth: 1 Nodes: 38 Best move: g8h6 Eval: -305
+2022/11/15 19:04:17 Depth: 2 Nodes: 143 Best move: g8h6 Eval: -325
+2022/11/15 19:04:17 Depth: 3 Nodes: 833 Best move: g8h6 Eval: -305
+2022/11/15 19:04:17 Depth: 4 Nodes: 3470 Best move: g8h6 Eval: -325
+2022/11/15 19:04:17 Depth: 5 Nodes: 16496 Best move: g8h6 Eval: -300
+2022/11/15 19:04:18 Depth: 6 Nodes: 94935 Best move: g8h6 Eval: -305
+2022/11/15 19:04:20 
+2022/11/15 19:04:20 Engine results g8h6 -305
+2022/11/15 19:04:20 Total nodes 373026 Quiescence search explored 185843 nodes
+2022/11/15 19:04:20 w g8h6 -305
+2022/11/15 19:04:20 8/2k5/1p4pn/p2n2Np/8/1P3P2/P5PP/5RK1 w - - 0 31
+2022/11/15 19:04:20 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6  *
+2022/11/15 19:04:20 
+ A B C D E F G H
+8- - - - - - - - 
+7- - ♚ - - - - - 
+6- ♟ - - - - ♟ ♞ 
+5♟ - - ♞ - - ♘ ♟ 
+4- - - - - - - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - - - - ♖ ♔ - 
+
+2022/11/15 19:04:20 
+2022/11/15 19:04:20 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:20 Depth: 1 Nodes: 42 Best move: g5e6 Eval: 325
+2022/11/15 19:04:20 Depth: 2 Nodes: 151 Best move: g5e6 Eval: 305
+2022/11/15 19:04:20 Depth: 3 Nodes: 1825 Best move: f1d1 Eval: 325
+2022/11/15 19:04:20 Depth: 4 Nodes: 9367 Best move: g5e6 Eval: 300
+2022/11/15 19:04:20 Depth: 5 Nodes: 77834 Best move: f1c1 Eval: 305
+2022/11/15 19:04:22 
+2022/11/15 19:04:22 Engine results f1c1 305
+2022/11/15 19:04:22 Total nodes 319776 Quiescence search explored 160812 nodes
+2022/11/15 19:04:22 b f1c1 305
+2022/11/15 19:04:22 8/2k5/1p4pn/p2n2Np/8/1P3P2/P5PP/2R3K1 b - - 1 31
+2022/11/15 19:04:22 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ *
+2022/11/15 19:04:22 
+ A B C D E F G H
+8- - - - - - - - 
+7- - ♚ - - - - - 
+6- ♟ - - - - ♟ ♞ 
+5♟ - - ♞ - - ♘ ♟ 
+4- - - - - - - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - ♖ - - - ♔ - 
+
+2022/11/15 19:04:22 
+2022/11/15 19:04:22 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:22 Depth: 1 Nodes: 12 Best move: c7d6 Eval: -295
+2022/11/15 19:04:22 Depth: 2 Nodes: 168 Best move: c7d6 Eval: -315
+2022/11/15 19:04:22 Depth: 3 Nodes: 882 Best move: c7d6 Eval: -295
+2022/11/15 19:04:22 Depth: 4 Nodes: 7131 Best move: c7d6 Eval: -305
+2022/11/15 19:04:22 Depth: 5 Nodes: 46519 Best move: c7b7 Eval: -300
+2022/11/15 19:04:23 Depth: 6 Nodes: 375494 Best move: c7b7 Eval: -300
+2022/11/15 19:04:25 
+2022/11/15 19:04:25 Engine results c7b7 -300
+2022/11/15 19:04:25 Total nodes 583999 Quiescence search explored 294578 nodes
+2022/11/15 19:04:25 w c7b7 -300
+2022/11/15 19:04:25 8/1k6/1p4pn/p2n2Np/8/1P3P2/P5PP/2R3K1 w - - 2 32
+2022/11/15 19:04:25 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7  *
+2022/11/15 19:04:25 
+ A B C D E F G H
+8- - - - - - - - 
+7- ♚ - - - - - - 
+6- ♟ - - - - ♟ ♞ 
+5♟ - - ♞ - - ♘ ♟ 
+4- - - - - - - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - ♖ - - - ♔ - 
+
+2022/11/15 19:04:25 
+2022/11/15 19:04:25 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:25 Depth: 1 Nodes: 58 Best move: g5e4 Eval: 315
+2022/11/15 19:04:25 Depth: 2 Nodes: 387 Best move: c1d1 Eval: 305
+2022/11/15 19:04:25 Depth: 3 Nodes: 3709 Best move: c1d1 Eval: 315
+2022/11/15 19:04:25 Depth: 4 Nodes: 24911 Best move: g5e4 Eval: 300
+2022/11/15 19:04:26 Depth: 5 Nodes: 244089 Best move: g5e4 Eval: 300
+2022/11/15 19:04:27 
+2022/11/15 19:04:27 Engine results g5e4 300
+2022/11/15 19:04:27 Total nodes 487306 Quiescence search explored 243267 nodes
+2022/11/15 19:04:27 b g5e4 300
+2022/11/15 19:04:27 8/1k6/1p4pn/p2n3p/4N3/1P3P2/P5PP/2R3K1 b - - 3 32
+2022/11/15 19:04:27 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 *
+2022/11/15 19:04:27 
+ A B C D E F G H
+8- - - - - - - - 
+7- ♚ - - - - - - 
+6- ♟ - - - - ♟ ♞ 
+5♟ - - ♞ - - - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - ♖ - - - ♔ - 
+
+2022/11/15 19:04:27 
+2022/11/15 19:04:27 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:27 Depth: 1 Nodes: 40 Best move: h6f5 Eval: -290
+2022/11/15 19:04:27 Depth: 2 Nodes: 347 Best move: h6f5 Eval: -300
+2022/11/15 19:04:27 Depth: 3 Nodes: 2206 Best move: h6f5 Eval: -300
+2022/11/15 19:04:27 Depth: 4 Nodes: 15678 Best move: h6f5 Eval: -300
+2022/11/15 19:04:28 Depth: 5 Nodes: 93617 Best move: h6f5 Eval: -290
+2022/11/15 19:04:30 
+2022/11/15 19:04:30 Engine results h6f5 -290
+2022/11/15 19:04:30 Total nodes 604391 Quiescence search explored 302648 nodes
+2022/11/15 19:04:30 w h6f5 -290
+2022/11/15 19:04:30 8/1k6/1p4p1/p2n1n1p/4N3/1P3P2/P5PP/2R3K1 w - - 4 33
+2022/11/15 19:04:30 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5  *
+2022/11/15 19:04:30 
+ A B C D E F G H
+8- - - - - - - - 
+7- ♚ - - - - - - 
+6- ♟ - - - - ♟ - 
+5♟ - - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ - - 
+2♙ - - - - - ♙ ♙ 
+1- - ♖ - - - ♔ - 
+
+2022/11/15 19:04:30 
+2022/11/15 19:04:30 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:30 Depth: 1 Nodes: 67 Best move: c1d1 Eval: 300
+2022/11/15 19:04:30 Depth: 2 Nodes: 313 Best move: c1d1 Eval: 300
+2022/11/15 19:04:30 Depth: 3 Nodes: 2935 Best move: c1d1 Eval: 300
+2022/11/15 19:04:30 Depth: 4 Nodes: 17196 Best move: c1d1 Eval: 290
+2022/11/15 19:04:32 Depth: 5 Nodes: 237692 Best move: g2g3 Eval: 300
+2022/11/15 19:04:33 
+2022/11/15 19:04:33 Engine results g2g3 300
+2022/11/15 19:04:33 Total nodes 444655 Quiescence search explored 224802 nodes
+2022/11/15 19:04:33 b g2g3 300
+2022/11/15 19:04:33 8/1k6/1p4p1/p2n1n1p/4N3/1P3PP1/P6P/2R3K1 b - - 0 33
+2022/11/15 19:04:33 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 *
+2022/11/15 19:04:33 
+ A B C D E F G H
+8- - - - - - - - 
+7- ♚ - - - - - - 
+6- ♟ - - - - ♟ - 
+5♟ - - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - ♖ - - - ♔ - 
+
+2022/11/15 19:04:33 
+2022/11/15 19:04:33 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:33 Depth: 1 Nodes: 52 Best move: b7a7 Eval: -290
+2022/11/15 19:04:33 Depth: 2 Nodes: 477 Best move: b7a7 Eval: -300
+2022/11/15 19:04:33 Depth: 3 Nodes: 2892 Best move: d5b4 Eval: -290
+2022/11/15 19:04:33 Depth: 4 Nodes: 24145 Best move: b7b8 Eval: -300
+2022/11/15 19:04:33 Depth: 5 Nodes: 120183 Best move: b7b8 Eval: -295
+2022/11/15 19:04:35 
+2022/11/15 19:04:35 Engine results b7b8 -295
+2022/11/15 19:04:35 Total nodes 426859 Quiescence search explored 217014 nodes
+2022/11/15 19:04:35 w b7b8 -295
+2022/11/15 19:04:35 1k6/8/1p4p1/p2n1n1p/4N3/1P3PP1/P6P/2R3K1 w - - 1 34
+2022/11/15 19:04:35 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8  *
+2022/11/15 19:04:35 
+ A B C D E F G H
+8- ♚ - - - - - - 
+7- - - - - - - - 
+6- ♟ - - - - ♟ - 
+5♟ - - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - ♖ - - - ♔ - 
+
+2022/11/15 19:04:35 
+2022/11/15 19:04:35 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:35 Depth: 1 Nodes: 68 Best move: c1d1 Eval: 300
+2022/11/15 19:04:35 Depth: 2 Nodes: 435 Best move: c1d1 Eval: 300
+2022/11/15 19:04:35 Depth: 3 Nodes: 4675 Best move: c1d1 Eval: 300
+2022/11/15 19:04:35 Depth: 4 Nodes: 25352 Best move: f3f4 Eval: 295
+2022/11/15 19:04:36 Depth: 5 Nodes: 205311 Best move: c1d1 Eval: 295
+2022/11/15 19:04:37 
+2022/11/15 19:04:37 Engine results c1d1 295
+2022/11/15 19:04:37 Total nodes 450237 Quiescence search explored 232514 nodes
+2022/11/15 19:04:37 b c1d1 295
+2022/11/15 19:04:37 1k6/8/1p4p1/p2n1n1p/4N3/1P3PP1/P6P/3R2K1 b - - 2 34
+2022/11/15 19:04:37 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 *
+2022/11/15 19:04:37 
+ A B C D E F G H
+8- ♚ - - - - - - 
+7- - - - - - - - 
+6- ♟ - - - - ♟ - 
+5♟ - - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - - ♖ - - ♔ - 
+
+2022/11/15 19:04:37 
+2022/11/15 19:04:37 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:37 Depth: 1 Nodes: 70 Best move: d5e3 Eval: -300
+2022/11/15 19:04:37 Depth: 2 Nodes: 320 Best move: f5e3 Eval: -300
+2022/11/15 19:04:37 Depth: 3 Nodes: 1530 Best move: d5e3 Eval: -290
+2022/11/15 19:04:37 Depth: 4 Nodes: 7159 Best move: d5e3 Eval: -295
+2022/11/15 19:04:37 Depth: 5 Nodes: 30900 Best move: d5e3 Eval: -290
+2022/11/15 19:04:38 Depth: 6 Nodes: 166196 Best move: d5e3 Eval: -305
+2022/11/15 19:04:40 
+2022/11/15 19:04:40 Engine results d5e3 -305
+2022/11/15 19:04:40 Total nodes 426990 Quiescence search explored 219963 nodes
+2022/11/15 19:04:40 w d5e3 -305
+2022/11/15 19:04:40 1k6/8/1p4p1/p4n1p/4N3/1P2nPP1/P6P/3R2K1 w - - 3 35
+2022/11/15 19:04:40 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3  *
+2022/11/15 19:04:40 
+ A B C D E F G H
+8- ♚ - - - - - - 
+7- - - - - - - - 
+6- ♟ - - - - ♟ - 
+5♟ - - - - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - ♞ ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - - ♖ - - ♔ - 
+
+2022/11/15 19:04:40 
+2022/11/15 19:04:40 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:40 Depth: 1 Nodes: 60 Best move: d1d7 Eval: 310
+2022/11/15 19:04:40 Depth: 2 Nodes: 203 Best move: d1d8 Eval: 290
+2022/11/15 19:04:40 Depth: 3 Nodes: 2381 Best move: d1c1 Eval: 295
+2022/11/15 19:04:40 Depth: 4 Nodes: 8540 Best move: d1d8 Eval: 290
+2022/11/15 19:04:40 Depth: 5 Nodes: 46508 Best move: d1d8 Eval: 305
+2022/11/15 19:04:41 Depth: 6 Nodes: 201763 Best move: d1d8 Eval: 295
+2022/11/15 19:04:42 
+2022/11/15 19:04:42 Engine results d1d8 295
+2022/11/15 19:04:42 Total nodes 444699 Quiescence search explored 228385 nodes
+2022/11/15 19:04:42 b d1d8 295
+2022/11/15 19:04:42 1k1R4/8/1p4p1/p4n1p/4N3/1P2nPP1/P6P/6K1 b - - 4 35
+2022/11/15 19:04:42 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ *
+2022/11/15 19:04:42 
+ A B C D E F G H
+8- ♚ - ♖ - - - - 
+7- - - - - - - - 
+6- ♟ - - - - ♟ - 
+5♟ - - - - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - ♞ ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - - - - - ♔ - 
+
+2022/11/15 19:04:42 
+2022/11/15 19:04:42 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:42 Depth: 1 Nodes: 6 Best move: b8a7 Eval: -290
+2022/11/15 19:04:42 Depth: 2 Nodes: 138 Best move: b8c7 Eval: -290
+2022/11/15 19:04:42 Depth: 3 Nodes: 943 Best move: b8c7 Eval: -290
+2022/11/15 19:04:42 Depth: 4 Nodes: 8762 Best move: b8c7 Eval: -305
+2022/11/15 19:04:42 Depth: 5 Nodes: 41693 Best move: b8b7 Eval: -295
+2022/11/15 19:04:44 Depth: 6 Nodes: 284628 Best move: b8c7 Eval: -300
+2022/11/15 19:04:46 
+2022/11/15 19:04:46 Engine results b8c7 -300
+2022/11/15 19:04:46 Total nodes 604063 Quiescence search explored 323342 nodes
+2022/11/15 19:04:46 w b8c7 -300
+2022/11/15 19:04:46 3R4/2k5/1p4p1/p4n1p/4N3/1P2nPP1/P6P/6K1 w - - 5 36
+2022/11/15 19:04:46 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7  *
+2022/11/15 19:04:46 
+ A B C D E F G H
+8- - - ♖ - - - - 
+7- - ♚ - - - - - 
+6- ♟ - - - - ♟ - 
+5♟ - - - - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - ♞ ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - - - - - ♔ - 
+
+2022/11/15 19:04:46 
+2022/11/15 19:04:46 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:46 Depth: 1 Nodes: 67 Best move: d8d2 Eval: 290
+2022/11/15 19:04:46 Depth: 2 Nodes: 390 Best move: d8a8 Eval: 290
+2022/11/15 19:04:46 Depth: 3 Nodes: 2958 Best move: d8g8 Eval: 305
+2022/11/15 19:04:46 Depth: 4 Nodes: 13936 Best move: d8g8 Eval: 295
+2022/11/15 19:04:47 Depth: 5 Nodes: 90132 Best move: d8f8 Eval: 300
+2022/11/15 19:04:48 
+2022/11/15 19:04:48 Engine results d8f8 300
+2022/11/15 19:04:48 Total nodes 343396 Quiescence search explored 183772 nodes
+2022/11/15 19:04:48 b d8f8 300
+2022/11/15 19:04:48 5R2/2k5/1p4p1/p4n1p/4N3/1P2nPP1/P6P/6K1 b - - 6 36
+2022/11/15 19:04:48 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 *
+2022/11/15 19:04:48 
+ A B C D E F G H
+8- - - - - ♖ - - 
+7- - ♚ - - - - - 
+6- ♟ - - - - ♟ - 
+5♟ - - - - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - ♞ ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - - - - - ♔ - 
+
+2022/11/15 19:04:48 
+2022/11/15 19:04:48 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:48 Depth: 1 Nodes: 56 Best move: c7b7 Eval: -290
+2022/11/15 19:04:48 Depth: 2 Nodes: 361 Best move: f5d6 Eval: -290
+2022/11/15 19:04:48 Depth: 3 Nodes: 2721 Best move: e3d5 Eval: -290
+2022/11/15 19:04:48 Depth: 4 Nodes: 14935 Best move: f5d4 Eval: -300
+2022/11/15 19:04:49 Depth: 5 Nodes: 71742 Best move: c7b7 Eval: -295
+2022/11/15 19:04:50 Depth: 6 Nodes: 327078 Best move: e3d5 Eval: -305
+2022/11/15 19:04:50 
+2022/11/15 19:04:50 Engine results e3d5 -305
+2022/11/15 19:04:50 Total nodes 391505 Quiescence search explored 201067 nodes
+2022/11/15 19:04:50 w e3d5 -305
+2022/11/15 19:04:50 5R2/2k5/1p4p1/p2n1n1p/4N3/1P3PP1/P6P/6K1 w - - 7 37
+2022/11/15 19:04:50 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5  *
+2022/11/15 19:04:50 
+ A B C D E F G H
+8- - - - - ♖ - - 
+7- - ♚ - - - - - 
+6- ♟ - - - - ♟ - 
+5♟ - - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - - - - - ♔ - 
+
+2022/11/15 19:04:50 
+2022/11/15 19:04:50 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:50 Depth: 1 Nodes: 57 Best move: f8f7 Eval: 305
+2022/11/15 19:04:50 Depth: 2 Nodes: 443 Best move: f8a8 Eval: 290
+2022/11/15 19:04:50 Depth: 3 Nodes: 3681 Best move: f8g8 Eval: 305
+2022/11/15 19:04:51 Depth: 4 Nodes: 18323 Best move: f3f4 Eval: 295
+2022/11/15 19:04:51 Depth: 5 Nodes: 100931 Best move: f8f7 Eval: 305
+2022/11/15 19:04:53 
+2022/11/15 19:04:53 Engine results f8f7 305
+2022/11/15 19:04:53 Total nodes 346130 Quiescence search explored 188856 nodes
+2022/11/15 19:04:53 b f8f7 305
+2022/11/15 19:04:53 8/2k2R2/1p4p1/p2n1n1p/4N3/1P3PP1/P6P/6K1 b - - 8 37
+2022/11/15 19:04:53 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ *
+2022/11/15 19:04:53 
+ A B C D E F G H
+8- - - - - - - - 
+7- - ♚ - - ♖ - - 
+6- ♟ - - - - ♟ - 
+5♟ - - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - - - - - ♔ - 
+
+2022/11/15 19:04:53 
+2022/11/15 19:04:53 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:53 Depth: 1 Nodes: 16 Best move: c7c8 Eval: -285
+2022/11/15 19:04:53 Depth: 2 Nodes: 212 Best move: c7c8 Eval: -290
+2022/11/15 19:04:53 Depth: 3 Nodes: 1313 Best move: c7c8 Eval: -290
+2022/11/15 19:04:53 Depth: 4 Nodes: 9284 Best move: c7c6 Eval: -305
+2022/11/15 19:04:53 Depth: 5 Nodes: 47945 Best move: c7c8 Eval: -290
+2022/11/15 19:04:54 Depth: 6 Nodes: 176450 Best move: c7c6 Eval: -305
+2022/11/15 19:04:57 
+2022/11/15 19:04:57 Engine results c7c6 -305
+2022/11/15 19:04:57 Total nodes 705746 Quiescence search explored 380162 nodes
+2022/11/15 19:04:57 w c7c6 -305
+2022/11/15 19:04:57 8/5R2/1pk3p1/p2n1n1p/4N3/1P3PP1/P6P/6K1 w - - 9 38
+2022/11/15 19:04:57 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6  *
+2022/11/15 19:04:57 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- ♟ ♚ - - - ♟ - 
+5♟ - - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - - - - - ♔ - 
+
+2022/11/15 19:04:57 
+2022/11/15 19:04:57 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:04:57 Depth: 1 Nodes: 73 Best move: f3f4 Eval: 310
+2022/11/15 19:04:57 Depth: 2 Nodes: 459 Best move: f7a7 Eval: 305
+2022/11/15 19:04:57 Depth: 3 Nodes: 5274 Best move: f7a7 Eval: 305
+2022/11/15 19:04:58 Depth: 4 Nodes: 24717 Best move: f7a7 Eval: 305
+2022/11/15 19:04:58 Depth: 5 Nodes: 128336 Best move: f7a7 Eval: 305
+2022/11/15 19:05:00 
+2022/11/15 19:05:00 Engine results f7a7 305
+2022/11/15 19:05:00 Total nodes 356679 Quiescence search explored 189840 nodes
+2022/11/15 19:05:00 b f7a7 305
+2022/11/15 19:05:00 8/R7/1pk3p1/p2n1n1p/4N3/1P3PP1/P6P/6K1 b - - 10 38
+2022/11/15 19:05:00 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 *
+2022/11/15 19:05:00 
+ A B C D E F G H
+8- - - - - - - - 
+7♖ - - - - - - - 
+6- ♟ ♚ - - - ♟ - 
+5♟ - - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - - - - - ♔ - 
+
+2022/11/15 19:05:00 
+2022/11/15 19:05:00 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:00 Depth: 1 Nodes: 51 Best move: d5e3 Eval: -305
+2022/11/15 19:05:00 Depth: 2 Nodes: 595 Best move: f5d6 Eval: -305
+2022/11/15 19:05:00 Depth: 3 Nodes: 3455 Best move: d5e3 Eval: -305
+2022/11/15 19:05:00 Depth: 4 Nodes: 13691 Best move: d5e3 Eval: -305
+2022/11/15 19:05:00 Depth: 5 Nodes: 80065 Best move: f5d4 Eval: -290
+2022/11/15 19:05:02 
+2022/11/15 19:05:02 Engine results f5d4 -290
+2022/11/15 19:05:02 Total nodes 353528 Quiescence search explored 189439 nodes
+2022/11/15 19:05:02 w f5d4 -290
+2022/11/15 19:05:02 8/R7/1pk3p1/p2n3p/3nN3/1P3PP1/P6P/6K1 w - - 11 39
+2022/11/15 19:05:02 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4  *
+2022/11/15 19:05:02 
+ A B C D E F G H
+8- - - - - - - - 
+7♖ - - - - - - - 
+6- ♟ ♚ - - - ♟ - 
+5♟ - - ♞ - - - ♟ 
+4- - - ♞ ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - - - - - ♔ - 
+
+2022/11/15 19:05:02 
+2022/11/15 19:05:02 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:02 Depth: 1 Nodes: 80 Best move: f3f4 Eval: 310
+2022/11/15 19:05:02 Depth: 2 Nodes: 380 Best move: a7f7 Eval: 305
+2022/11/15 19:05:02 Depth: 3 Nodes: 2083 Best move: a7f7 Eval: 305
+2022/11/15 19:05:02 Depth: 4 Nodes: 8533 Best move: f3f4 Eval: 290
+2022/11/15 19:05:02 Depth: 5 Nodes: 59371 Best move: f3f4 Eval: 290
+2022/11/15 19:05:03 Depth: 6 Nodes: 236486 Best move: a7f7 Eval: 290
+2022/11/15 19:05:05 
+2022/11/15 19:05:05 Engine results a7f7 290
+2022/11/15 19:05:05 Total nodes 642749 Quiescence search explored 328743 nodes
+2022/11/15 19:05:05 b a7f7 290
+2022/11/15 19:05:05 8/5R2/1pk3p1/p2n3p/3nN3/1P3PP1/P6P/6K1 b - - 12 39
+2022/11/15 19:05:05 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 *
+2022/11/15 19:05:05 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- ♟ ♚ - - - ♟ - 
+5♟ - - ♞ - - - ♟ 
+4- - - ♞ ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - - - - - ♔ - 
+
+2022/11/15 19:05:05 
+2022/11/15 19:05:05 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:05 Depth: 1 Nodes: 45 Best move: c6b5 Eval: -305
+2022/11/15 19:05:05 Depth: 2 Nodes: 367 Best move: d4e2 Eval: -305
+2022/11/15 19:05:05 Depth: 3 Nodes: 1676 Best move: d4e2 Eval: -285
+2022/11/15 19:05:05 Depth: 4 Nodes: 7918 Best move: d4e2 Eval: -285
+2022/11/15 19:05:05 Depth: 5 Nodes: 45297 Best move: b6b5 Eval: -290
+2022/11/15 19:05:06 Depth: 6 Nodes: 206703 Best move: b6b5 Eval: -285
+2022/11/15 19:05:07 
+2022/11/15 19:05:07 Engine results b6b5 -285
+2022/11/15 19:05:07 Total nodes 351233 Quiescence search explored 180065 nodes
+2022/11/15 19:05:07 w b6b5 -285
+2022/11/15 19:05:07 8/5R2/2k3p1/pp1n3p/3nN3/1P3PP1/P6P/6K1 w - - 0 40
+2022/11/15 19:05:07 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5  *
+2022/11/15 19:05:07 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- - ♚ - - - ♟ - 
+5♟ ♟ - ♞ - - - ♟ 
+4- - - ♞ ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - - ♙ 
+1- - - - - - ♔ - 
+
+2022/11/15 19:05:07 
+2022/11/15 19:05:07 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:07 Depth: 1 Nodes: 113 Best move: f3f4 Eval: 310
+2022/11/15 19:05:07 Depth: 2 Nodes: 712 Best move: f3f4 Eval: 295
+2022/11/15 19:05:07 Depth: 3 Nodes: 5223 Best move: h2h3 Eval: 290
+2022/11/15 19:05:07 Depth: 4 Nodes: 14169 Best move: f3f4 Eval: 290
+2022/11/15 19:05:08 Depth: 5 Nodes: 91019 Best move: g1f2 Eval: 285
+2022/11/15 19:05:09 Depth: 6 Nodes: 262596 Best move: g1f2 Eval: 290
+2022/11/15 19:05:10 
+2022/11/15 19:05:10 Engine results g1f2 290
+2022/11/15 19:05:10 Total nodes 558518 Quiescence search explored 288664 nodes
+2022/11/15 19:05:10 b g1f2 290
+2022/11/15 19:05:10 8/5R2/2k3p1/pp1n3p/3nN3/1P3PP1/P4K1P/8 b - - 1 40
+2022/11/15 19:05:10 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 *
+2022/11/15 19:05:10 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- - ♚ - - - ♟ - 
+5♟ ♟ - ♞ - - - ♟ 
+4- - - ♞ ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - ♔ - ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:10 
+2022/11/15 19:05:10 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:10 Depth: 1 Nodes: 44 Best move: a5a4 Eval: -270
+2022/11/15 19:05:10 Depth: 2 Nodes: 402 Best move: a5a4 Eval: -270
+2022/11/15 19:05:11 Depth: 3 Nodes: 2597 Best move: d5b4 Eval: -285
+2022/11/15 19:05:11 Depth: 4 Nodes: 16943 Best move: d5b4 Eval: -285
+2022/11/15 19:05:11 Depth: 5 Nodes: 63263 Best move: d4f5 Eval: -290
+2022/11/15 19:05:12 Depth: 6 Nodes: 344754 Best move: d4f5 Eval: -290
+2022/11/15 19:05:13 
+2022/11/15 19:05:13 Engine results d4f5 -290
+2022/11/15 19:05:13 Total nodes 410512 Quiescence search explored 210496 nodes
+2022/11/15 19:05:13 w d4f5 -290
+2022/11/15 19:05:13 8/5R2/2k3p1/pp1n1n1p/4N3/1P3PP1/P4K1P/8 w - - 2 41
+2022/11/15 19:05:13 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5  *
+2022/11/15 19:05:13 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- - ♚ - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - ♔ - ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:13 
+2022/11/15 19:05:13 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:13 Depth: 1 Nodes: 68 Best move: f2g1 Eval: 305
+2022/11/15 19:05:13 Depth: 2 Nodes: 626 Best move: f2g1 Eval: 290
+2022/11/15 19:05:13 Depth: 3 Nodes: 5565 Best move: f2g1 Eval: 295
+2022/11/15 19:05:13 Depth: 4 Nodes: 25254 Best move: f7a7 Eval: 290
+2022/11/15 19:05:14 Depth: 5 Nodes: 148610 Best move: f2g2 Eval: 290
+2022/11/15 19:05:15 
+2022/11/15 19:05:15 Engine results f2g2 290
+2022/11/15 19:05:15 Total nodes 325885 Quiescence search explored 174435 nodes
+2022/11/15 19:05:15 b f2g2 290
+2022/11/15 19:05:15 8/5R2/2k3p1/pp1n1n1p/4N3/1P3PP1/P5KP/8 b - - 3 41
+2022/11/15 19:05:15 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 *
+2022/11/15 19:05:15 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- - ♚ - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - ♔ ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:15 
+2022/11/15 19:05:15 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:15 Depth: 1 Nodes: 53 Best move: a5a4 Eval: -270
+2022/11/15 19:05:15 Depth: 2 Nodes: 521 Best move: f5d6 Eval: -285
+2022/11/15 19:05:15 Depth: 3 Nodes: 2700 Best move: a5a4 Eval: -270
+2022/11/15 19:05:15 Depth: 4 Nodes: 11674 Best move: d5e3 Eval: -290
+2022/11/15 19:05:15 Depth: 5 Nodes: 58715 Best move: a5a4 Eval: -270
+2022/11/15 19:05:17 Depth: 6 Nodes: 280307 Best move: c6b6 Eval: -290
+2022/11/15 19:05:17 
+2022/11/15 19:05:17 Engine results c6b6 -290
+2022/11/15 19:05:17 Total nodes 406298 Quiescence search explored 211894 nodes
+2022/11/15 19:05:17 w c6b6 -290
+2022/11/15 19:05:17 8/5R2/1k4p1/pp1n1n1p/4N3/1P3PP1/P5KP/8 w - - 4 42
+2022/11/15 19:05:17 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6  *
+2022/11/15 19:05:17 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- ♚ - - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - ♔ ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:17 
+2022/11/15 19:05:17 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:17 Depth: 1 Nodes: 68 Best move: g2g1 Eval: 305
+2022/11/15 19:05:17 Depth: 2 Nodes: 489 Best move: g2g1 Eval: 290
+2022/11/15 19:05:17 Depth: 3 Nodes: 4934 Best move: g2g1 Eval: 295
+2022/11/15 19:05:18 Depth: 4 Nodes: 18036 Best move: g2g1 Eval: 295
+2022/11/15 19:05:18 Depth: 5 Nodes: 123675 Best move: g2f2 Eval: 290
+2022/11/15 19:05:19 
+2022/11/15 19:05:19 Engine results g2f2 290
+2022/11/15 19:05:19 Total nodes 347221 Quiescence search explored 187622 nodes
+2022/11/15 19:05:19 b g2f2 290
+2022/11/15 19:05:19 8/5R2/1k4p1/pp1n1n1p/4N3/1P3PP1/P4K1P/8 b - - 5 42
+2022/11/15 19:05:19 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 *
+2022/11/15 19:05:19 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- ♚ - - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - ♔ - ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:19 
+2022/11/15 19:05:19 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:19 Depth: 1 Nodes: 54 Best move: a5a4 Eval: -270
+2022/11/15 19:05:19 Depth: 2 Nodes: 579 Best move: a5a4 Eval: -290
+2022/11/15 19:05:20 Depth: 3 Nodes: 3076 Best move: a5a4 Eval: -275
+2022/11/15 19:05:20 Depth: 4 Nodes: 18284 Best move: a5a4 Eval: -290
+2022/11/15 19:05:20 Depth: 5 Nodes: 78665 Best move: a5a4 Eval: -275
+2022/11/15 19:05:21 Depth: 6 Nodes: 325282 Best move: b6c6 Eval: -290
+2022/11/15 19:05:22 
+2022/11/15 19:05:22 Engine results b6c6 -290
+2022/11/15 19:05:22 Total nodes 370341 Quiescence search explored 193873 nodes
+2022/11/15 19:05:22 w b6c6 -290
+2022/11/15 19:05:22 8/5R2/2k3p1/pp1n1n1p/4N3/1P3PP1/P4K1P/8 w - - 6 43
+2022/11/15 19:05:22 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6  *
+2022/11/15 19:05:22 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- - ♚ - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - ♔ - ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:22 
+2022/11/15 19:05:22 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:22 Depth: 1 Nodes: 68 Best move: f2g1 Eval: 305
+2022/11/15 19:05:22 Depth: 2 Nodes: 626 Best move: f2g1 Eval: 290
+2022/11/15 19:05:22 Depth: 3 Nodes: 5565 Best move: f2g1 Eval: 295
+2022/11/15 19:05:22 Depth: 4 Nodes: 25254 Best move: f7a7 Eval: 290
+2022/11/15 19:05:22 Depth: 5 Nodes: 148610 Best move: f2g2 Eval: 290
+2022/11/15 19:05:24 
+2022/11/15 19:05:24 Engine results f2g2 290
+2022/11/15 19:05:24 Total nodes 355154 Quiescence search explored 190427 nodes
+2022/11/15 19:05:24 b f2g2 290
+2022/11/15 19:05:24 8/5R2/2k3p1/pp1n1n1p/4N3/1P3PP1/P5KP/8 b - - 7 43
+2022/11/15 19:05:24 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6 43. Kg2 *
+2022/11/15 19:05:24 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- - ♚ - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - ♔ ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:24 
+2022/11/15 19:05:24 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:24 Depth: 1 Nodes: 53 Best move: a5a4 Eval: -270
+2022/11/15 19:05:24 Depth: 2 Nodes: 521 Best move: f5d6 Eval: -285
+2022/11/15 19:05:24 Depth: 3 Nodes: 2700 Best move: a5a4 Eval: -270
+2022/11/15 19:05:24 Depth: 4 Nodes: 11674 Best move: d5e3 Eval: -290
+2022/11/15 19:05:24 Depth: 5 Nodes: 58715 Best move: a5a4 Eval: -270
+2022/11/15 19:05:25 Depth: 6 Nodes: 280307 Best move: c6b6 Eval: -290
+2022/11/15 19:05:26 
+2022/11/15 19:05:26 Engine results c6b6 -290
+2022/11/15 19:05:26 Total nodes 406298 Quiescence search explored 211894 nodes
+2022/11/15 19:05:26 w c6b6 -290
+2022/11/15 19:05:26 8/5R2/1k4p1/pp1n1n1p/4N3/1P3PP1/P5KP/8 w - - 8 44
+2022/11/15 19:05:26 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6 43. Kg2 Kb6  *
+2022/11/15 19:05:26 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- ♚ - - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - ♔ ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:26 
+2022/11/15 19:05:26 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:26 Depth: 1 Nodes: 68 Best move: g2g1 Eval: 305
+2022/11/15 19:05:26 Depth: 2 Nodes: 489 Best move: g2g1 Eval: 290
+2022/11/15 19:05:26 Depth: 3 Nodes: 4934 Best move: g2g1 Eval: 295
+2022/11/15 19:05:26 Depth: 4 Nodes: 18036 Best move: g2g1 Eval: 295
+2022/11/15 19:05:27 Depth: 5 Nodes: 123675 Best move: g2f2 Eval: 290
+2022/11/15 19:05:28 
+2022/11/15 19:05:28 Engine results g2f2 290
+2022/11/15 19:05:28 Total nodes 333545 Quiescence search explored 179837 nodes
+2022/11/15 19:05:28 b g2f2 290
+2022/11/15 19:05:28 8/5R2/1k4p1/pp1n1n1p/4N3/1P3PP1/P4K1P/8 b - - 9 44
+2022/11/15 19:05:28 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6 43. Kg2 Kb6 44. Kf2 *
+2022/11/15 19:05:28 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- ♚ - - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - ♔ - ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:28 
+2022/11/15 19:05:28 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:28 Depth: 1 Nodes: 54 Best move: a5a4 Eval: -270
+2022/11/15 19:05:28 Depth: 2 Nodes: 579 Best move: a5a4 Eval: -290
+2022/11/15 19:05:28 Depth: 3 Nodes: 3076 Best move: a5a4 Eval: -275
+2022/11/15 19:05:28 Depth: 4 Nodes: 18284 Best move: a5a4 Eval: -290
+2022/11/15 19:05:29 Depth: 5 Nodes: 78665 Best move: a5a4 Eval: -275
+2022/11/15 19:05:30 Depth: 6 Nodes: 325282 Best move: b6c6 Eval: -290
+2022/11/15 19:05:30 
+2022/11/15 19:05:30 Engine results b6c6 -290
+2022/11/15 19:05:30 Total nodes 370341 Quiescence search explored 193873 nodes
+2022/11/15 19:05:30 w b6c6 -290
+2022/11/15 19:05:30 8/5R2/2k3p1/pp1n1n1p/4N3/1P3PP1/P4K1P/8 w - - 10 45
+2022/11/15 19:05:30 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6 43. Kg2 Kb6 44. Kf2 Kc6  *
+2022/11/15 19:05:30 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- - ♚ - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - ♔ - ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:30 
+2022/11/15 19:05:30 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:30 Depth: 1 Nodes: 68 Best move: f2g1 Eval: 305
+2022/11/15 19:05:30 Depth: 2 Nodes: 626 Best move: f2g1 Eval: 290
+2022/11/15 19:05:30 Depth: 3 Nodes: 5565 Best move: f2g1 Eval: 295
+2022/11/15 19:05:30 Depth: 4 Nodes: 25254 Best move: f7a7 Eval: 290
+2022/11/15 19:05:31 Depth: 5 Nodes: 148610 Best move: f2g2 Eval: 290
+2022/11/15 19:05:32 
+2022/11/15 19:05:32 Engine results f2g2 290
+2022/11/15 19:05:32 Total nodes 325885 Quiescence search explored 174435 nodes
+2022/11/15 19:05:32 b f2g2 290
+2022/11/15 19:05:32 8/5R2/2k3p1/pp1n1n1p/4N3/1P3PP1/P5KP/8 b - - 11 45
+2022/11/15 19:05:32 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6 43. Kg2 Kb6 44. Kf2 Kc6 45. Kg2 *
+2022/11/15 19:05:32 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- - ♚ - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - ♔ ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:32 
+2022/11/15 19:05:32 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:32 Depth: 1 Nodes: 53 Best move: a5a4 Eval: -270
+2022/11/15 19:05:32 Depth: 2 Nodes: 521 Best move: f5d6 Eval: -285
+2022/11/15 19:05:32 Depth: 3 Nodes: 2700 Best move: a5a4 Eval: -270
+2022/11/15 19:05:32 Depth: 4 Nodes: 11674 Best move: d5e3 Eval: -290
+2022/11/15 19:05:33 Depth: 5 Nodes: 58715 Best move: a5a4 Eval: -270
+2022/11/15 19:05:34 Depth: 6 Nodes: 280307 Best move: c6b6 Eval: -290
+2022/11/15 19:05:35 
+2022/11/15 19:05:35 Engine results c6b6 -290
+2022/11/15 19:05:35 Total nodes 406298 Quiescence search explored 211894 nodes
+2022/11/15 19:05:35 w c6b6 -290
+2022/11/15 19:05:35 8/5R2/1k4p1/pp1n1n1p/4N3/1P3PP1/P5KP/8 w - - 12 46
+2022/11/15 19:05:35 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6 43. Kg2 Kb6 44. Kf2 Kc6 45. Kg2 Kb6  *
+2022/11/15 19:05:35 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- ♚ - - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - ♔ ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:35 
+2022/11/15 19:05:35 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:35 Depth: 1 Nodes: 68 Best move: g2g1 Eval: 305
+2022/11/15 19:05:35 Depth: 2 Nodes: 489 Best move: g2g1 Eval: 290
+2022/11/15 19:05:35 Depth: 3 Nodes: 4934 Best move: g2g1 Eval: 295
+2022/11/15 19:05:35 Depth: 4 Nodes: 18036 Best move: g2g1 Eval: 295
+2022/11/15 19:05:35 Depth: 5 Nodes: 123675 Best move: g2f2 Eval: 290
+2022/11/15 19:05:37 
+2022/11/15 19:05:37 Engine results g2f2 290
+2022/11/15 19:05:37 Total nodes 347221 Quiescence search explored 187622 nodes
+2022/11/15 19:05:37 b g2f2 290
+2022/11/15 19:05:37 8/5R2/1k4p1/pp1n1n1p/4N3/1P3PP1/P4K1P/8 b - - 13 46
+2022/11/15 19:05:37 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6 43. Kg2 Kb6 44. Kf2 Kc6 45. Kg2 Kb6 46. Kf2 *
+2022/11/15 19:05:37 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- ♚ - - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - ♔ - ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:37 
+2022/11/15 19:05:37 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:37 Depth: 1 Nodes: 54 Best move: a5a4 Eval: -270
+2022/11/15 19:05:37 Depth: 2 Nodes: 579 Best move: a5a4 Eval: -290
+2022/11/15 19:05:37 Depth: 3 Nodes: 3076 Best move: a5a4 Eval: -275
+2022/11/15 19:05:37 Depth: 4 Nodes: 18284 Best move: a5a4 Eval: -290
+2022/11/15 19:05:37 Depth: 5 Nodes: 78665 Best move: a5a4 Eval: -275
+2022/11/15 19:05:39 Depth: 6 Nodes: 325282 Best move: b6c6 Eval: -290
+2022/11/15 19:05:39 
+2022/11/15 19:05:39 Engine results b6c6 -290
+2022/11/15 19:05:39 Total nodes 370341 Quiescence search explored 193873 nodes
+2022/11/15 19:05:39 w b6c6 -290
+2022/11/15 19:05:39 8/5R2/2k3p1/pp1n1n1p/4N3/1P3PP1/P4K1P/8 w - - 14 47
+2022/11/15 19:05:39 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6 43. Kg2 Kb6 44. Kf2 Kc6 45. Kg2 Kb6 46. Kf2 Kc6  *
+2022/11/15 19:05:39 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- - ♚ - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - ♔ - ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:39 
+2022/11/15 19:05:39 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:39 Depth: 1 Nodes: 68 Best move: f2g1 Eval: 305
+2022/11/15 19:05:39 Depth: 2 Nodes: 626 Best move: f2g1 Eval: 290
+2022/11/15 19:05:39 Depth: 3 Nodes: 5565 Best move: f2g1 Eval: 295
+2022/11/15 19:05:39 Depth: 4 Nodes: 25254 Best move: f7a7 Eval: 290
+2022/11/15 19:05:40 Depth: 5 Nodes: 148610 Best move: f2g2 Eval: 290
+2022/11/15 19:05:41 
+2022/11/15 19:05:41 Engine results f2g2 290
+2022/11/15 19:05:41 Total nodes 355154 Quiescence search explored 190427 nodes
+2022/11/15 19:05:41 b f2g2 290
+2022/11/15 19:05:41 8/5R2/2k3p1/pp1n1n1p/4N3/1P3PP1/P5KP/8 b - - 15 47
+2022/11/15 19:05:41 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6 43. Kg2 Kb6 44. Kf2 Kc6 45. Kg2 Kb6 46. Kf2 Kc6 47. Kg2 *
+2022/11/15 19:05:41 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- - ♚ - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - ♔ ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:41 
+2022/11/15 19:05:41 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:41 Depth: 1 Nodes: 53 Best move: a5a4 Eval: -270
+2022/11/15 19:05:41 Depth: 2 Nodes: 521 Best move: f5d6 Eval: -285
+2022/11/15 19:05:41 Depth: 3 Nodes: 2700 Best move: a5a4 Eval: -270
+2022/11/15 19:05:41 Depth: 4 Nodes: 11674 Best move: d5e3 Eval: -290
+2022/11/15 19:05:41 Depth: 5 Nodes: 58715 Best move: a5a4 Eval: -270
+2022/11/15 19:05:43 Depth: 6 Nodes: 280307 Best move: c6b6 Eval: -290
+2022/11/15 19:05:43 
+2022/11/15 19:05:43 Engine results c6b6 -290
+2022/11/15 19:05:43 Total nodes 406298 Quiescence search explored 211894 nodes
+2022/11/15 19:05:43 w c6b6 -290
+2022/11/15 19:05:43 8/5R2/1k4p1/pp1n1n1p/4N3/1P3PP1/P5KP/8 w - - 16 48
+2022/11/15 19:05:43 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6 43. Kg2 Kb6 44. Kf2 Kc6 45. Kg2 Kb6 46. Kf2 Kc6 47. Kg2 Kb6  *
+2022/11/15 19:05:43 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- ♚ - - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - - ♔ ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:43 
+2022/11/15 19:05:43 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:43 Depth: 1 Nodes: 68 Best move: g2g1 Eval: 305
+2022/11/15 19:05:43 Depth: 2 Nodes: 489 Best move: g2g1 Eval: 290
+2022/11/15 19:05:43 Depth: 3 Nodes: 4934 Best move: g2g1 Eval: 295
+2022/11/15 19:05:43 Depth: 4 Nodes: 18036 Best move: g2g1 Eval: 295
+2022/11/15 19:05:44 Depth: 5 Nodes: 123675 Best move: g2f2 Eval: 290
+2022/11/15 19:05:45 
+2022/11/15 19:05:45 Engine results g2f2 290
+2022/11/15 19:05:45 Total nodes 347221 Quiescence search explored 187622 nodes
+2022/11/15 19:05:45 b g2f2 290
+2022/11/15 19:05:45 8/5R2/1k4p1/pp1n1n1p/4N3/1P3PP1/P4K1P/8 b - - 17 48
+2022/11/15 19:05:45 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6 43. Kg2 Kb6 44. Kf2 Kc6 45. Kg2 Kb6 46. Kf2 Kc6 47. Kg2 Kb6 48. Kf2 *
+2022/11/15 19:05:45 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- ♚ - - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - ♔ - ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:45 
+2022/11/15 19:05:45 Running Minimax Iterative Deepening Alpha Beta + Quiescence + Eval v3 + Move Sort v2
+2022/11/15 19:05:45 Depth: 1 Nodes: 54 Best move: a5a4 Eval: -270
+2022/11/15 19:05:45 Depth: 2 Nodes: 579 Best move: a5a4 Eval: -290
+2022/11/15 19:05:45 Depth: 3 Nodes: 3076 Best move: a5a4 Eval: -275
+2022/11/15 19:05:46 Depth: 4 Nodes: 18284 Best move: a5a4 Eval: -290
+2022/11/15 19:05:46 Depth: 5 Nodes: 78665 Best move: a5a4 Eval: -275
+2022/11/15 19:05:47 Depth: 6 Nodes: 325282 Best move: b6c6 Eval: -290
+2022/11/15 19:05:48 
+2022/11/15 19:05:48 Engine results b6c6 -290
+2022/11/15 19:05:48 Total nodes 370341 Quiescence search explored 193873 nodes
+2022/11/15 19:05:48 w b6c6 -290
+2022/11/15 19:05:48 8/5R2/2k3p1/pp1n1n1p/4N3/1P3PP1/P4K1P/8 w - - 18 49
+2022/11/15 19:05:48 
+1. e4 f6 2. d4 b6 3. c4 Bb7 4. Bd3 e5 5. Nf3 Bb4+ 6. Bd2 Bxd2+ 7. Qxd2 f5 8. Qe2 exd4 9. Nxd4 fxe4 10. Bxe4 Bxe4 11. Qxe4+ Qe7 12. Nc3 Qxe4+ 13. Nxe4 Nc6 14. Nf5 g6 15. Ne3 O-O-O 16. O-O Re8 17. f3 d6 18. Rad1 a5 19. Rde1 Ne5 20. b3 Nd3 21. Re2 h5 22. Nd5 Rd8 23. Ng5 Rf8 24. Nxc7 Nf4 25. Re8+ Rxe8 26. Nxe8 d5 27. Nd6+ Kc7 28. Ndf7 Rh6 29. cxd5 Nxd5 30. Nxh6 Nxh6 31. Rc1+ Kb7 32. Ne4 Nf5 33. g3 Kb8 34. Rd1 Nde3 35. Rd8+ Kc7 36. Rf8 Nd5 37. Rf7+ Kc6 38. Ra7 Nd4 39. Rf7 b5 40. Kf2 Nf5 41. Kg2 Kb6 42. Kf2 Kc6 43. Kg2 Kb6 44. Kf2 Kc6 45. Kg2 Kb6 46. Kf2 Kc6 47. Kg2 Kb6 48. Kf2 Kc6  1/2-1/2
+2022/11/15 19:05:48 
+ A B C D E F G H
+8- - - - - - - - 
+7- - - - - ♖ - - 
+6- - ♚ - - - ♟ - 
+5♟ ♟ - ♞ - ♞ - ♟ 
+4- - - - ♘ - - - 
+3- ♙ - - - ♙ ♙ - 
+2♙ - - - - ♔ - ♙ 
+1- - - - - - - - 
+
+2022/11/15 19:05:48 
+2022/11/15 19:05:48 Exiting engine.
