@@ -80,7 +80,6 @@ func init() {
 func main() {
 	defer exit()
 	out("Running engine...")
-
 	mini_self_challenge()
 }
 
@@ -104,7 +103,7 @@ func mini_self_challenge() {
 	subengine1 := engine_0dot1
 	subengine1.Set_Time(15)
 	engine1 := NewOpeningWrapper(&subengine1, game)
-	subengine2 := engine_minimax_id_ab_q
+	subengine2 := engine_0dot1
 	subengine2.Set_Time(15)
 	engine2 := NewOpeningWrapper(&subengine2, game)
 	challenge_self(engine1, engine2, game)

@@ -40,7 +40,7 @@ var engine_0dot1 = t_engine_0dot1{
 
 func (e *t_engine_0dot1) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
 	reset_counters()
-	out("Running", e.name)
+	out("Running", e.name, "as player", pos.Turn())
 	e.time_up = false
 	e.start_time = time.Now()
 	// out("Duration:", e.time_duration)
