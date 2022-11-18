@@ -47,7 +47,7 @@ Configuration.
 var production_mode = false
 const DO_MOVE_SORTING bool = true
 const DO_Q_MOVE_SORTING bool = true
-const MAX_DEPTH int = 16
+const MAX_DEPTH int = 30
 const DO_Q_MOVE_PRUNING bool = true
 const PRINT_TOP_MOVES bool = false
 // const DO_Q_MOVE_CHECKS bool = false

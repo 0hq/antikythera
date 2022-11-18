@@ -9,24 +9,21 @@ import (
 
 /*
 
-Improvements over 0.1.
-New evaluation function that examines pawn structure, mobility, and space.
-SEE?
-Killer moves?
-Null move pruning?
+Improvements over engine_iterative_alpha_beta_q.
+Starter now maintains an alpha value (massive improvement).
+Picks moves and sorts as you go, instead of sorting all moves at the start.
 
 */
 
-type t_engine_0dot2 struct {
+type t_engine_0dot3 struct {
 	EngineClass
-	killer_moves [MAX_DEPTH][2]*chess.Move
-	current_depth int
+	tt TransTable[SearchEntry]
 }
 
 // define new engine
-var engine_0dot2 = t_engine_0dot2{
+var engine_0dot3 = t_engine_0dot3{
 	EngineClass{
-		name: "Engine 0.2",
+		name: "Engine 0.3",
 		features: EngineFeatures{
 			plain: true,
 			parallel: false,
@@ -39,23 +36,25 @@ var engine_0dot2 = t_engine_0dot2{
 		},
 		time_up: false,
 	},
-	[MAX_DEPTH][2]*chess.Move{},
-	0,
+	TransTable[SearchEntry]{},
 	// engine_func: minimax_id_ab_q_engine_func,
-} 
+}
 
-func (e *t_engine_0dot2) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
+func (e *t_engine_0dot3) Reset() {
+	e.tt.Clear()
+	e.tt.Resize(64, 16)
+}
+
+func (e *t_engine_0dot3) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
 	reset_counters()
-	out("Running", e.name)
+	out("Running", e.name, "as player", pos.Turn())
 	e.time_up = false
 	e.start_time = time.Now()
-	out("Killer moves", e.killer_moves)
 	// out("Duration:", e.time_duration)
 	depth := 1
 	for {
 		// out()
 		// out("Iterative deepening depth", depth)
-		e.current_depth = depth
 		t_best, t_eval := e.minimax_id_ab_q_starter(pos, depth, pos.Turn() == chess.White)
 		if e.Check_Time_Up() {
 			// out("Time up, returning best move so far.")
@@ -64,7 +63,8 @@ func (e *t_engine_0dot2) Run_Engine(pos *chess.Position) (best *chess.Move, eval
 			best = t_best
 			eval = t_eval
 		}
-		out("Depth:", depth, "Nodes:", explored, "Best move:", best, "Eval:", eval, "Time:", time.Since(e.start_time))		
+		out("Depth:", depth, "Nodes:", explored, "Best move:", best, "Eval:", eval, "Time:", time.Since(e.start_time))
+
 		// out("Time since start_time:", time.Since(e.start_time))
 		if eval >= 30000 { // break on checkmate win
 			break
@@ -77,7 +77,7 @@ func (e *t_engine_0dot2) Run_Engine(pos *chess.Position) (best *chess.Move, eval
 	return
 }
 
-func (e *t_engine_0dot2) minimax_id_ab_q_starter(position *chess.Position, ply int, max bool) (best *chess.Move, eval int) {
+func (e *t_engine_0dot3) minimax_id_ab_q_starter(position *chess.Position, ply int, max bool) (best *chess.Move, eval int) {
 	moves := position.ValidMoves()
 	eval = -1 * math.MaxInt // functions as alpha
 	for i := 0; i < len(moves); i++ {
@@ -100,14 +100,7 @@ func (e *t_engine_0dot2) minimax_id_ab_q_starter(position *chess.Position, ply i
 	return best, eval
 }
 
-func store_killer_move(km *[2]*chess.Move, move *chess.Move) {
-	if move != km[0] {
-		km[1] = km[0]
-		km[0] = move
-	}
-}
-
-func (e *t_engine_0dot2) minimax_id_ab_q_searcher(position *chess.Position, ply int, max bool, alpha int, beta int) (eval int) {
+func (e *t_engine_0dot3) minimax_id_ab_q_searcher(position *chess.Position, ply int, max bool, alpha int, beta int) (eval int) {
 	explored++
 	if ply == 0 {
 		return e.quiescence_minimax_id_ab_q(position, 0, max, alpha, beta)
@@ -116,52 +109,48 @@ func (e *t_engine_0dot2) minimax_id_ab_q_searcher(position *chess.Position, ply 
 		return 0
 	}
 
+	hash := Zobrist.GenHash(position)
+	entry := e.tt.Probe(hash)
+	ttScore, shouldUse := entry.Get(hash, uint8(ply), uint8(ply), int16(alpha), int16(beta), nil)
+	if shouldUse {
+		return int(ttScore)
+	}
+
 	moves := position.ValidMoves()
 	if len(moves) == 0 {
 		return evaluate_position_v3(position, e.engine_config.ply, ply, bool_to_int(max))
 	}
+	var tt_flag = AlphaFlag
+	var best_move *chess.Move = nil
+	var best_score = alpha
     for i := 0; i < len(moves); i++ {
-		move := e.pick_move_v2(moves, position.Board(), i) // mutates move list, moves best move to front
-		var score int
-		if move.HasTag(chess.Check) {
-			// extend search if move is a check
-			score = -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply, !max, -beta, -alpha)
-		} else {
-			score = -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply - 1, !max, -beta, -alpha)
-		}
+		move := pick_move_v1(moves, position.Board(), i) // mutates move list, moves best move to front
+        score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply - 1, !max, -beta, -alpha)
 		if score >= beta {
-			store_killer_move(&e.killer_moves[e.current_depth - ply], move)
-			return beta
+			tt_flag = BetaFlag
+			best_score = beta // fail hard beta-cutoff
+			best_move = move
+			break
 		}
         if score > alpha {
-            alpha = score
+			tt_flag = ExactFlag
+			alpha = score
+			best_score = score
         }
     }
 
-	return alpha
+	// // If we're not out of time, store the result of the search for this position.
+	if !e.Check_Time_Up() && best_move != nil {
+		entry := e.tt.Store(hash, uint8(ply), 0)
+		entry.Set(
+			hash, int16(best_score), *best_move, uint8(ply), uint8(ply), tt_flag, 0,
+		)
+	}
+
+	return best_score
 }
 
-func (e *t_engine_0dot2) pick_move_v2(moves []*chess.Move, board *chess.Board, start_index int) *chess.Move {
-	if start_index < 2 {
-		killer := e.killer_moves[e.current_depth - e.engine_config.ply][start_index]
-		if killer != (&chess.Move{}) {
-			for i := start_index; i < len(moves); i++ {
-				if moves[i] == killer {
-					moves[i], moves[start_index] = moves[start_index], moves[i]
-					return moves[start_index]
-				}
-			}
-		}
-	}
-	for i := start_index; i < len(moves); i++ {
-		if evaluate_move_v2(moves[i], board) > evaluate_move_v2(moves[start_index], board) {
-			moves[i], moves[start_index] = moves[start_index], moves[i]
-		}
-	}
-	return moves[start_index]
-}
-
-func (e *t_engine_0dot2) quiescence_minimax_id_ab_q(position *chess.Position, plycount int, max bool, alpha int, beta int) (eval int) {
+func (e *t_engine_0dot3) quiescence_minimax_id_ab_q(position *chess.Position, plycount int, max bool, alpha int, beta int) (eval int) {
 	explored++
 	q_explored++
 
@@ -172,11 +161,11 @@ func (e *t_engine_0dot2) quiescence_minimax_id_ab_q(position *chess.Position, pl
     if alpha < stand_pat {
         alpha = stand_pat;
 	}
-	
+
 	moves := quiescence_moves_v2(position.ValidMoves())
 
 	if len(moves) == 0 || plycount > MAX_DEPTH {
-		return stand_pat 
+		return stand_pat
 	}
 
     for i := 0; i < len(moves); i++ {

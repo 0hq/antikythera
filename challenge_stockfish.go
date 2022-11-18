@@ -7,9 +7,9 @@ import (
 	"github.com/notnil/chess/uci"
 )
 
-func challenge_stockfish(engine Engine, play_as_color chess.Color, starting_position string) {
-	max_moves := 20
-	game := game_from_fen(starting_position)
+func challenge_stockfish(engine Engine, play_as_color chess.Color, game *chess.Game) {
+	max_moves := 100
+	// game.UseNotation(global_AlgebraicNotation)
 
 	eng, err := uci.New("stockfish")
 	if err != nil {
@@ -21,15 +21,16 @@ func challenge_stockfish(engine Engine, play_as_color chess.Color, starting_posi
 	}
 
 	out("Stockfish challenge started.")
-	out("Engine:", engine.Name())
-	out("Playing as", play_as_color)
+	out("Engine 1:", engine.Name(), "playing as", play_as_color)
+	out("Game:", game.String())
+	out(game.Position().Board().Draw())
 	out()
 	
 	for game.Outcome() == chess.NoOutcome && len(game.Moves()) < max_moves {
 		var move *chess.Move
 		var eval int
 		if game.Position().Turn() == play_as_color {
-			move, eval = engine.Run_Engine(game.Position())
+			move, eval = engine.Run_Engine_Game(game)
 		} else {
 			move, eval = stockfish(game, eng)
 		}
@@ -38,8 +39,17 @@ func challenge_stockfish(engine Engine, play_as_color chess.Color, starting_posi
 			panic("NO MOVE")
 		}
 
-		game.Move(move)
+		err := game.Move(move)
+		if err != nil {
+			out("ERROR:", err)
+			out("GAME:", game.String())
+			out("MOVE:", move)
+			out("FEN:", game.FEN())
+			panic(err)
+		}
 		out(game.Position().Turn(), move, eval)
+		out(game.FEN())
+		out(game.String())
 		out(game.Position().Board().Draw())
 		out()
 	}

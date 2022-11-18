@@ -50,6 +50,7 @@ Aspirations?
 
 func init() {
 	out("Initializing engine...")
+	InitZobrist()
 	// create new log file that doesn't exist
 	if !production_mode {
 		for i := 0; ; i++ {
@@ -84,7 +85,13 @@ func init() {
 func main() {
 	defer exit()
 	out("Running engine...")
-	mini_self_challenge()
+	mini_challenge_stockfish()
+	// mini_self_challenge()
+	// mini_challenge_manual_opening()
+	// mini_iterative_deepening_timed()
+	// simple_tests(&engine)
+	// out("Tests passed:", tests_passed)
+	// out("Tests run:", tests_run)
 }
 
 func mini_test_iterative() {
@@ -95,8 +102,9 @@ func mini_test_iterative() {
 }
 
 func mini_iterative_deepening_timed() {
-	engine := engine_0dot1
-	engine.Set_Time(15)
+	engine := engine_0dot2
+	// engine.Reset()
+	engine.Set_Time(1)
 	simple_tests(&engine)
 	out("Tests passed:", tests_passed)
 	out("Tests run:", tests_run)
@@ -104,10 +112,11 @@ func mini_iterative_deepening_timed() {
 
 func mini_self_challenge() {
 	game := game_from_fen(CHESS_START_POSITION)
-	subengine1 := engine_0dot1
-	subengine1.Set_Time(0.1)
+	subengine1 := engine_0dot3
+	subengine1.Reset()
+	subengine1.Set_Time(15)
 	engine1 := NewOpeningWrapper(&subengine1, game)
-	subengine2 := engine_0dot1
+	subengine2 := engine_0dot2
 	subengine2.Set_Time(15)
 	engine2 := NewOpeningWrapper(&subengine2, game)
 	challenge_self(engine1, engine2, game)
@@ -123,8 +132,8 @@ func mini_challenge_manual_opening_custom() {
 
 func mini_challenge_manual_opening() {
 	game := game_from_fen(CHESS_START_POSITION)
-	subengine := engine_minimax_id_ab_q
-	subengine.Set_Time(2)
+	subengine := engine_0dot2
+	subengine.Set_Time(5)
 	engine := NewOpeningWrapper(&subengine, game)
 	challenge_manual(engine, chess.Black, game)
 }
@@ -136,10 +145,17 @@ func mini_challenge_manual() {
 }
 
 func mini_challenge_stockfish() {
-	engine := engine_minimax_id_ab_q
-	engine.Set_Time(15)
-	challenge_stockfish(&engine, chess.White, CHESS_START_POSITION)
+	subengine := engine_0dot2
+	subengine.Set_Time(15)
+	engine := NewOpeningWrapper(&subengine, game_from_fen(CHESS_START_POSITION))
+	challenge_stockfish(engine, chess.White, game_from_fen(CHESS_START_POSITION))
 }
+
+// func wrap_engine(engine Engine, time int, game *chess.Game) Engine {
+// 	subengine := engine
+// 	subengine.Set_Time(5)
+// 	return NewOpeningWrapper(&subengine, game)
+// }
 
 
 

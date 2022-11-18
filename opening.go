@@ -32,6 +32,10 @@ func NewOpeningWrapper(engine Engine, game *chess.Game) *OpeningWrapper {
 	}
 }
 
+// func (o OpeningWrapper) Set_Time(time int) {
+// 	o.engine.Set_Time(time)
+// }
+
 func (o OpeningWrapper) Run_Engine(position *chess.Position) (*chess.Move, int) {
 	return o.engine.Run_Engine(position)
 }
