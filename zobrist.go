@@ -1,6 +1,6 @@
 package main
 
-import "github.com/notnil/chess"
+import "github.com/0hq/chess"
 
 // Borrowed from https://github.com/algerbrex/blunder/blob/main/engine/zobrist.go
 // Thanks Algerbrex, I didn't want to have to deal with debugging my own implementation.

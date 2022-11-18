@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/notnil/chess"
-)
+import "github.com/0hq/chess"
 
 func challenge_self(white Engine, black Engine, game *chess.Game) {
 	max_moves := 100

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/notnil/chess"
+	"github.com/0hq/chess"
 )
 
 func challenge_manual(engine Engine, play_as_color chess.Color, game *chess.Game) {

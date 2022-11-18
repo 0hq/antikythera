@@ -3,7 +3,7 @@ package main
 import (
 	"math"
 
-	"github.com/notnil/chess"
+	"github.com/0hq/chess"
 )
 
 type t_engine_p_ab struct {

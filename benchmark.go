@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 
-	"github.com/notnil/chess"
+	"github.com/0hq/chess"
 )
 
 // measure how long minimax_plain takes run

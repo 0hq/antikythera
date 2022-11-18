@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/notnil/chess"
+	"github.com/0hq/chess"
 )
 
 // transposition.go contains an implementation of a transposition table (TT) to use

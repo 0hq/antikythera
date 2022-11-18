@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"strings"
 
-	"github.com/notnil/chess"
-	"github.com/notnil/chess/opening"
+	"github.com/0hq/chess"
+	"github.com/0hq/chess/opening"
 )
 
 /*

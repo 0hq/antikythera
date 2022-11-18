@@ -1,12 +1,12 @@
 package main
 
-import (
-	// "fmt"
-	// "log"
-	// "math"
+import "github.com/0hq/chess"
 
-	"github.com/notnil/chess"
-)
+// "fmt"
+// "log"
+// "math"
+
+// "github.com/0hq/chess"
 
 /*
 

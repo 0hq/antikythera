@@ -3,8 +3,8 @@ package main
 import (
 	"time"
 
-	"github.com/notnil/chess"
-	"github.com/notnil/chess/uci"
+	"github.com/0hq/chess"
+	"github.com/0hq/chess/uci"
 )
 
 func challenge_stockfish(engine Engine, play_as_color chess.Color, game *chess.Game) {

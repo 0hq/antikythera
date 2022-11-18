@@ -223,7 +223,7 @@ package main
 import (
 	"time"
 
-	"github.com/notnil/chess"
+	"github.com/0hq/chess"
 )
 
 type t_meta_engine_iterative_plain struct {
