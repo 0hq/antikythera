@@ -23,20 +23,24 @@ import (
 // Turn iterative deepening into an engine.
 // Change engine struct to be smarter.
 // Make iterative deepening play in time.
-// Check extentions.
+// Clone go chess package to customize it.
+// Killer moves.
+// Mobility is done, but seems to be a massive perf. hit.
 
+
+Check extentions.
+
+Transposition tables.
+Investigate mobility.
 Passed pawns, mobility, etc.
 Endgames
 	Draw detection
 	Tapered eval
-Clone go chess package to customize it.
 Better move ordering.
    // Pick and sort, changes engine structure.
    // Hash MVV/LVA
    SEE
-Killer moves.
 PVS or MTD(f)
-Transposition tables.
 UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 
 
@@ -78,16 +82,22 @@ func init() {
 	} else {
 		out("WARNING: Development mode.")
 	}
+	out("Initialization complete.")
 	out()
 	runtime.GOMAXPROCS(runtime.NumCPU())
 }
 
 func main() {
+	out("Running main program.", "\n")
 	defer exit()
-	out("Running engine...")
-	engine := new_engine(&engine_0dot2, 15)
 
-	simple_tests(engine)
+	// engine := new_engine(&engine_0dot2dot2, 10)
+	// test(engine, "6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24", "g2g1", false)
+	// simple_tests(engine)
+	// eigenmann_tests(engine)
+	// mini_performance_challenge()
+	// out(evaluate_position_v3(game_from_fen("rnb1k2r/ppp3pp/8/5p2/3qnP2/2N5/PPPNQbPP/R1BK1B1R w kq - 18 19").Position(), 0, 0, 1))
+	mini_self_challenge()
 }
 
 func exit()	{
@@ -96,10 +106,18 @@ func exit()	{
 
 // current will vs antikythera 2kr1b1r/ppq2ppp/2n1bn2/1R2p1B1/8/2NP1N2/P1P2PPP/3QR1K1 w - - 10 15
 
+func mini_performance_challenge() {
+	game := game_from_fen("6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24")
+	engine1 := wrap_engine(&engine_0dot2dot1, 30, game)
+	engine2 := wrap_engine(&engine_0dot2dot2, 30, game)
+	engine1.Run_Engine(game.Position())
+	engine2.Run_Engine(game.Position())
+}
+
 func mini_self_challenge() {
-	game := game_from_fen(CHESS_START_POSITION)
-	engine1 := wrap_engine(&engine_0dot2, 15, game)
-	engine2 := wrap_engine(&engine_0dot2, 15, game)
+	game := game_from_fen("rnb1k2r/ppp3pp/8/5p2/3qNP2/8/PPPNQbPP/R1BK1B1R b kq - 0 19")
+	engine1 := wrap_engine(&engine_0dot2dot2, 2, game)
+	engine2 := wrap_engine(&engine_0dot2dot2, 2, game)
 	challenge_self(engine1, engine2, game)
 }
 
@@ -116,6 +134,6 @@ func mini_challenge_stockfish() {
 }
 
 func mini_simple() {
-	engine := new_engine(&engine_0dot2, 15)
+	engine := new_engine(&engine_0dot2dot1, 15)
 	simple_tests(engine)
 }

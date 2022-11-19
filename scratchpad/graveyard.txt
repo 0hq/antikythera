@@ -259,7 +259,7 @@ func (e *t_meta_engine_iterative_plain) Set_Config(c EngineConfig) {
 }
 
 func (e *t_meta_engine_iterative_plain) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
-	reset_counters()
+	Reset_Global_Counters()
 	out("Running iterative deepening v0 with engine ", e.engine.Name())
 	best, eval = iterative_deepening_v0(e.engine, pos, e.config.max_time)
 	out("Engine results", best, eval)

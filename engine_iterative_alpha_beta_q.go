@@ -31,7 +31,7 @@ var engine_minimax_id_ab_q = t_engine_p_ab_q_id{
 } 
 
 func (e *t_engine_p_ab_q_id) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
-	reset_counters()
+	Reset_Global_Counters()
 	out("Running", e.name)
 	e.time_up = false
 	e.start_time = time.Now()

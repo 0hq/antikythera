@@ -42,7 +42,8 @@ func bool_to_int(b bool) int {
 	}
 }
 
-func reset_counters() {
+
+func Reset_Global_Counters() {
 	// initialize depth_count to all 0s
 	for i := range depth_count {
 		depth_count[i] = 0

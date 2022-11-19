@@ -14,13 +14,13 @@ func simple_tests(engine Engine) {
 	test_exchange_5move(engine)
 	test_exchange_3move(engine)
 	test_m2(engine)
-	run_tests(engine, parse_test_file("tests/WillsMateInThree.txt", parse_fen_record))
+	run_tests(engine, parse_test_file("tests/WillsMateInThree.txt", parse_fen_record), false)
 	out("Tests passed:", tests_passed)
 	out("Tests run:", tests_run)
 }
 
 func eigenmann_tests(engine Engine) {
-	run_tests(engine, parse_test_file("tests/EigenmannRapidEngineTest.txt", parse_epd_record))
+	run_tests(engine, parse_test_file("tests/EigenmannRapidEngineTest.txt", parse_epd_record), true)
 	out("Tests passed:", tests_passed)
 	out("Tests run:", tests_run)
 }
@@ -48,19 +48,19 @@ Simple checkmate or exchange positions.
 */
 
 func test_m2(engine Engine) {
-	test(engine, "3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1", "d5g8")
+	test(engine, "3qr2k/pbpp2pp/1p5N/3Q2b1/2P1P3/P7/1PP2PPP/R4RK1 w - - 0 1", "d5g8", false)
 }
 
 func test_exchange_7move(engine Engine) {
-	test(engine, "6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24", "g2g1")
+	test(engine, "6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24", "g2g1", false)
 }
 
 func test_exchange_5move(engine Engine) {
-	test(engine, "6r1/pppk4/3p4/8/2PnPp1Q/7P/PP6/6RK b - - 0 25", "g8g1")
+	test(engine, "6r1/pppk4/3p4/8/2PnPp1Q/7P/PP6/6RK b - - 0 25", "g8g1", false)
 }
 
 func test_exchange_3move(engine Engine) {
-	test(engine, "8/pppk4/3p4/8/2PnPp1Q/7P/PP6/6K1 b - - 0 26", "d4f3")
+	test(engine, "8/pppk4/3p4/8/2PnPp1Q/7P/PP6/6K1 b - - 0 26", "d4f3", false)
 }
 
 /*
@@ -75,9 +75,11 @@ type test_record struct {
 }
 
 
-func test(engine Engine, pos string, expected string) {
+func test(engine Engine, pos string, expected string, algebraic bool) {
 	out("Running test on engine:", engine.Name())
+	out("Expected move:", expected)
 	out("FEN:", pos)
+	out()
 
 	fen, err := chess.FEN(pos)
 	if err != nil {
@@ -89,37 +91,33 @@ func test(engine Engine, pos string, expected string) {
 	move, _ := engine.Run_Engine(game.Position())
 
 	// this is to format the move in a way that is compatible with the test file
-	moves := game.Position().ValidMoves()
-	possible_moves := make([]string, 0)
-	for _, move := range moves {
-		// if last two characters are the same, save the move
-		if move.String()[2:4] == expected[len(expected)-2:] {
-			possible_moves = append(possible_moves, move.String())
-		}
-	}
+	// moves := game.Position().ValidMoves()
+	// possible_moves := make([]string, 0)
+	// for _, move := range moves {
+	// 	// if last two characters are the same, save the move
+	// 	if move.String()[2:4] == expected[len(expected)-2:] {
+	// 		possible_moves = append(possible_moves, move.String())
+	// 	}
+	// }
 
 	tests_run++
-	if move.String() != expected {
-		if (move.String()[2:4] == expected[len(expected)-2:]) {
-			if len(possible_moves) > 1 {
-				out("!!! POSSIBLE PASS:", move, expected)
-				out("Move is ambiguous, possible moves are:", possible_moves)
-			} else {
-				out("TEST PASSED")
-				return 
-			}
-		}
-		out("TEST FAILED", move.String(), expected)
+	move_string := move.String()
+	if algebraic {
+		move_string = global_AlgebraicNotation.Encode(game.Position(), move)
+	}
+	if move_string != expected {
+		out("TEST FAILED", move_string, expected)
 	} else {
 		tests_passed++
 		out("TEST PASSED")
 	}
+	out()
 }
 
 
-func run_tests(engine Engine,records []test_record) {
+func run_tests(engine Engine,records []test_record, algebraic bool) {
 	for _, record := range records {
-		test(engine, record.pos, record.expected)
+		test(engine, record.pos, record.expected, algebraic)
 	}
 }
 

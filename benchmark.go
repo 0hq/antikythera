@@ -9,7 +9,7 @@ import (
 // measure how long minimax_plain takes run
 // returns time in seconds
 func benchmark(ply int, engine Engine, pos *chess.Position) float64 {
-	reset_counters()
+	Reset_Global_Counters()
 	out("BEGIN BENCHMARKING -", engine.Name())
 	out("Ply:", ply)
 	out("Starting at time", time.Now())

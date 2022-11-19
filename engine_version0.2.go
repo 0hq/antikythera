@@ -10,10 +10,6 @@ import (
 /*
 
 Improvements over 0.1.
-New evaluation function that examines pawn structure, mobility, and space.
-SEE?
-Killer moves?
-Null move pruning?
 
 */
 
@@ -26,7 +22,7 @@ type t_engine_0dot2 struct {
 // define new engine
 var engine_0dot2 = t_engine_0dot2{
 	EngineClass{
-		name: "Engine 0.2",
+		name: "Engine 0.2 (deprecated)",
 		features: EngineFeatures{
 			plain: true,
 			parallel: false,
@@ -51,7 +47,7 @@ func (e *t_engine_0dot2) Reset() {
 }
 
 func (e *t_engine_0dot2) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
-	reset_counters()
+	Reset_Global_Counters()
 	e.Reset_Time()
 	out("Running", e.name)
 	
@@ -111,13 +107,6 @@ func (e *t_engine_0dot2) minimax_id_ab_q_starter(position *chess.Position, ply i
 	return best, eval
 }
 
-func store_killer_move(km *[2]*chess.Move, move *chess.Move) {
-	if move != km[0] {
-		km[1] = km[0]
-		km[0] = move
-	}
-}
-
 func (e *t_engine_0dot2) minimax_id_ab_q_searcher(position *chess.Position, ply int, max bool, alpha int, beta int) (eval int) {
 	explored++
 	// extend search if in check, do not enter quiescence search
@@ -143,7 +132,7 @@ func (e *t_engine_0dot2) minimax_id_ab_q_searcher(position *chess.Position, ply 
 		move := e.pick_move(moves, position.Board(), i) // mutates move list, moves best move to front
 		var score = -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply - 1, !max, -beta, -alpha)
 		if score >= beta {
-			store_killer_move(&e.killer_moves[e.current_depth - ply], move)
+			// store_killer_move(&e.killer_moves[e.current_depth - ply], move)
 			return beta
 		}
         if score > alpha {
@@ -152,11 +141,6 @@ func (e *t_engine_0dot2) minimax_id_ab_q_searcher(position *chess.Position, ply 
     }
 
 	return alpha
-}
-
-type scored_move struct {
-	move *chess.Move
-	score int
 }
 
 func (e *t_engine_0dot2) score_moves(moves []*chess.Move, board *chess.Board) []scored_move {

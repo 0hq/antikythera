@@ -1,6 +1,8 @@
 package main
 
 import (
+	"math"
+
 	"github.com/0hq/chess"
 	"github.com/0hq/chess/opening"
 )
@@ -37,6 +39,12 @@ Engine constants.
 */
 
 const CHECKMATE_VALUE int = 30000
+const MVV_LVA_OFFSET int = math.MaxInt - 256
+const KILLER_VALUE int = 10;
+const TT_MOVE_VALUE int = 100;
+const KILLER_ONE_VALUE int = MVV_LVA_OFFSET - KILLER_VALUE 
+const KILLER_TWO_VALUE int = MVV_LVA_OFFSET - KILLER_VALUE * 2
+const NORMAL_MOVE_VALUE int = MVV_LVA_OFFSET - KILLER_VALUE * 2 - 100
 
 /*
 
