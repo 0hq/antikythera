@@ -32,8 +32,8 @@ const (
 // A struct for a transposition table entry used in the search.
 type SearchEntry struct {
 	Hash       uint64
-	Depth      uint8
-	Score      int16
+	Depth      int
+	Score      int
 	Best       chess.Move
 	FlagAndAge uint8
 }
@@ -49,7 +49,7 @@ func (entry SearchEntry) GetHash() uint64 {
 	return entry.Hash
 }
 
-func (entry SearchEntry) GetDepth() uint8 {
+func (entry SearchEntry) GetDepth() int {
 	return entry.Depth
 }
 
@@ -71,9 +71,11 @@ func (entry *SearchEntry) SetAge(age uint8) {
 	entry.FlagAndAge |= age << 4
 }
 
-func (entry *SearchEntry) Get(hash uint64, ply, depth uint8, alpha, beta int16, best *chess.Move) (int16, bool) {
-	adjustedScore := int16(0)
+func (entry *SearchEntry) Get(hash uint64, ply int, depth int, alpha int, beta int, best *chess.Move) (int, bool) {
+	var adjustedScore int = 0
 	shouldUse := false
+
+	hash_reads++
 
 	// Since index collisions can occur, test if the hash of the entry at this index
 	// actually matches the hash for the current position.
@@ -104,11 +106,11 @@ func (entry *SearchEntry) Get(hash uint64, ply, depth uint8, alpha, beta int16, 
 			// the table in a node that's 4 plies from the root, we need to return the score as
 			// checkmate-in-7.
 			if score > 30000 {
-				score -= int16(ply)
+				score -= ply
 			}
 
 			if score < -30000 {
-				score += int16(ply)
+				score += ply
 			}
 
 			if entry.GetFlag() == ExactFlag {
@@ -117,22 +119,41 @@ func (entry *SearchEntry) Get(hash uint64, ply, depth uint8, alpha, beta int16, 
 				shouldUse = true
 			}
 
-			if entry.GetFlag() == AlphaFlag && score <= alpha {
+			if entry.GetFlag() == AlphaFlag  { // && score >= alpha
 				// If we have an alpha entry, and the entry's score is less than our
 				// current alpha, then we know that our current alpha is the best score
 				// we can get in this node, so we can stop searching and use alpha.
-				adjustedScore = alpha
+				adjustedScore = score
 				shouldUse = true
 			}
 
-			if entry.GetFlag() == BetaFlag && score >= beta {
+			if entry.GetFlag() == BetaFlag { //   && score <= beta
 				// If we have a beta entry, and the entry's score is greater than our
 				// current beta, then we have a beta-cutoff, since while
 				// searching this node previously, we found a value greater than the current
 				// beta. so we can stop searching and use beta.
-				adjustedScore = beta
+				adjustedScore = score
 				shouldUse = true
 			}
+		}
+
+		// if ply == 1 {
+		// 	out("Hash hit:", entry.Score, entry.Depth, entry.FlagAndAge, shouldUse)
+		// }
+
+		// if ply == 1 && !shouldUse {
+		// 	out("Right depth?", entry.Depth >= depth)
+		// 	out("What flag? (exact, alpha, beta)", entry.GetFlag() == ExactFlag, entry.GetFlag() == AlphaFlag, entry.GetFlag() == BetaFlag)
+		// 	out("Right less than alpha?", entry.Score <= alpha, entry.Score, alpha)
+		// 	out("Right greater than beta?", entry.Score >= beta, entry.Score, beta)
+		// 	out()
+		// }
+	} else {
+		if entry.Hash != 0 {
+			// out(entry.Hash, hash)
+			// out(entry)
+			// panic("hash mismatch")
+			hash_collisions++
 		}
 	}
 
@@ -140,7 +161,7 @@ func (entry *SearchEntry) Get(hash uint64, ply, depth uint8, alpha, beta int16, 
 	return adjustedScore, shouldUse
 }
 
-func (entry *SearchEntry) Set(hash uint64, score int16, best chess.Move, ply, depth, flag, age uint8) {
+func (entry *SearchEntry) Set(hash uint64, score int, best chess.Move, ply, depth int, flag, age uint8) {
 	entry.Hash = hash
 	entry.Depth = depth
 	entry.Best = best
@@ -155,11 +176,11 @@ func (entry *SearchEntry) Set(hash uint64, score int16, best chess.Move, ply, de
 	// the table in a node that's 4 plies from the root, we need to return the score as
 	// checkmate-in-7.
 	if score > 30000 {
-		score += int16(ply)
+		score += ply
 	}
 
 	if score < -30000 {
-		score -= int16(ply)
+		score -= ply
 	}
 
 	entry.Score = score
@@ -199,7 +220,7 @@ type TransTable[Entry interface {
 	SearchEntry | PerftEntry
 	GetHash() uint64
 	GetAge() uint8
-	GetDepth() uint8
+	GetDepth() int
 }] struct {
 	entries []Entry
 	size    uint64
@@ -219,35 +240,36 @@ func (tt *TransTable[Entry]) Probe(hash uint64) *Entry {
 	// more efficently make use of the table.
 
 	index := hash % tt.size
-	if index+1 == tt.size {
-		return &tt.entries[index]
-	}
+	// if index+1 == tt.size {
+	// 	return &tt.entries[index]
+	// }
 
 	first := tt.entries[index]
-	if first.GetHash() == hash {
-		return &tt.entries[index]
-	}
+	return &first
+	// if first.GetHash() == hash {
+	// 	return &tt.entries[index]
+	// }
 
-	return &tt.entries[index+1]
+	// return &tt.entries[index+1]
 }
 
 // Get an entry from the table to store in it.
 func (tt *TransTable[Entry])  Store(hash uint64, depth uint8, currAge uint8) *Entry {
 	index := hash % tt.size
-	if index+1 == tt.size {
-		return &tt.entries[index]
-	}
+	// if index+1 == tt.size {
+	// 	return &tt.entries[index]
+	// }
 
-	first := tt.entries[index]
-	if first.GetDepth() <= depth { // || first.GetAge() != currAge
-		// Note that returning &first caused a bug where the transposition
-		// table entry was never modifed, and so the table was always empty.
-		// Have to figure out why that is, but for now return &tt.entries[index]
-		// directly.
-		return &tt.entries[index]
-	}
+	// first := tt.entries[index]
+	// if first.GetDepth() <= depth { // || first.GetAge() != currAge
+	// 	// Note that returning &first caused a bug where the transposition
+	// 	// table entry was never modifed, and so the table was always empty.
+	// 	// Have to figure out why that is, but for now return &tt.entries[index]
+	// 	// directly.
+	// 	return &tt.entries[index]
+	// }
 
-	return &tt.entries[index+1]
+	return &tt.entries[index]
 }
 
 // Unitialize the memory used by the transposition table

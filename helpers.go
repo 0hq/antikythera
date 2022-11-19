@@ -42,6 +42,13 @@ func bool_to_int(b bool) int {
 	}
 }
 
+func Reset_Hash_Counters() {
+	hash_hits = 0
+	hash_reads = 0
+	hash_writes = 0
+	hash_collisions = 0
+}
+
 
 func Reset_Global_Counters() {
 	// initialize depth_count to all 0s

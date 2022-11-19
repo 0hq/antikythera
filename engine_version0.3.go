@@ -15,6 +15,9 @@ Picks moves and sorts as you go, instead of sorting all moves at the start.
 
 */
 
+var stop_at_depth = 2
+var do_tt_output = false
+
 type t_engine_0dot3 struct {
 	EngineClass
 	tt TransTable[SearchEntry]
@@ -48,11 +51,17 @@ func (e *t_engine_0dot3) Reset() {
 func (e *t_engine_0dot3) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
 	Reset_Global_Counters()
 	out("Running", e.name, "as player", pos.Turn())
+	// out(e.tt)
 	e.time_up = false
 	e.start_time = time.Now()
 	// out("Duration:", e.time_duration)
 	depth := 1
 	for {
+		Reset_Hash_Counters()
+
+		if depth > stop_at_depth {
+			break	
+		}
 		// out()
 		// out("Iterative deepening depth", depth)
 		t_best, t_eval := e.minimax_id_ab_q_starter(pos, depth, pos.Turn() == chess.White)
@@ -64,6 +73,7 @@ func (e *t_engine_0dot3) Run_Engine(pos *chess.Position) (best *chess.Move, eval
 			eval = t_eval
 		}
 		out("Depth:", depth, "Nodes:", explored, "Best move:", best, "Eval:", eval, "Time:", time.Since(e.start_time))
+		out("         Hash hits", hash_hits, "writes", hash_writes, "reads", hash_reads, "collisions", hash_collisions)
 
 		// out("Time since start_time:", time.Since(e.start_time))
 		if eval >= 30000 { // break on checkmate win
@@ -74,6 +84,7 @@ func (e *t_engine_0dot3) Run_Engine(pos *chess.Position) (best *chess.Move, eval
 	out()
 	out("Engine results", best, eval)
 	out("Total nodes", explored, "Quiescence search explored", q_explored, "nodes")
+	
 	return
 }
 
@@ -89,7 +100,7 @@ func (e *t_engine_0dot3) minimax_id_ab_q_starter(position *chess.Position, ply i
 		if PRINT_TOP_MOVES {
 			out("Top Level Move:", move, "Eval:", score,)
 		}
-		if score > eval {
+		if score >= eval {
 			if PRINT_TOP_MOVES {
 				out("New best move:", move, "Eval:", score)
 			}
@@ -111,8 +122,23 @@ func (e *t_engine_0dot3) minimax_id_ab_q_searcher(position *chess.Position, ply 
 
 	hash := Zobrist.GenHash(position)
 	entry := e.tt.Probe(hash)
-	ttScore, shouldUse := entry.Get(hash, uint8(ply), uint8(ply), int16(alpha), int16(beta), nil)
+	// if entry.Hash != hash {
+	// 	if entry.Hash != 0 {
+	// 		out("Probed entry", entry)
+	// 		out("Generated hash", hash)
+	// 		panic("hash mismatch")
+	// 	}
+	// }
+	ttScore, shouldUse := entry.Get(hash, ply, ply, alpha, beta, nil)
 	if shouldUse {
+		// out("Using saved.")
+		hash_hits++
+		// if ttScore == -1 {
+			if do_tt_output {
+				out(ttScore, entry, ply, alpha, beta)
+			}
+		// }
+
 		return int(ttScore)
 	}
 
@@ -141,10 +167,9 @@ func (e *t_engine_0dot3) minimax_id_ab_q_searcher(position *chess.Position, ply 
 
 	// // If we're not out of time, store the result of the search for this position.
 	if !e.Check_Time_Up() && best_move != nil {
+		hash_writes++
 		entry := e.tt.Store(hash, uint8(ply), 0)
-		entry.Set(
-			hash, int16(best_score), *best_move, uint8(ply), uint8(ply), tt_flag, 0,
-		)
+		entry.Set(hash, best_score, *best_move, ply, ply, tt_flag, 0)
 	}
 
 	return best_score

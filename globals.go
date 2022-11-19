@@ -18,6 +18,10 @@ var tests_passed int = 0
 var explored int = 0
 var q_explored int = 0
 var depth_count []int = make([]int, MAX_DEPTH)
+var hash_writes int = 0
+var hash_reads int = 0
+var hash_hits int = 0
+var hash_collisions int = 0
 
 
 /*

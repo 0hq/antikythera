@@ -26,20 +26,20 @@ import (
 // Clone go chess package to customize it.
 // Killer moves.
 // Mobility is done, but seems to be a massive perf. hit.
-
-
-Check extentions.
+// Pick and sort, changes engine structure.
+// Hash MVV/LVA
 
 Transposition tables.
+Check extentions.
+Null Move Pruning.
 Investigate mobility.
-Passed pawns, mobility, etc.
+Passed pawns, blocked pawns, etc.
 Endgames
 	Draw detection
 	Tapered eval
 Better move ordering.
-   // Pick and sort, changes engine structure.
-   // Hash MVV/LVA
    SEE
+   History heuristic
 PVS or MTD(f)
 UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 
@@ -91,13 +91,17 @@ func main() {
 	out("Running main program.", "\n")
 	defer exit()
 
-	// engine := new_engine(&engine_0dot2dot2, 10)
+	// move := chess.Move{0, 6, 0, 4}
+	// entry := SearchEntry{15505591996432951795, 1, -60, move, 128}
+	// entry.Get(15505591996432951795, ,-9223372036854775807, 9223372036854775807, nil)
+	// engine := new_engine(&engine_0dot3, 10)
 	// test(engine, "6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24", "g2g1", false)
 	// simple_tests(engine)
 	// eigenmann_tests(engine)
 	// mini_performance_challenge()
+	mini_test_transposition()
 	// out(evaluate_position_v3(game_from_fen("rnb1k2r/ppp3pp/8/5p2/3qnP2/2N5/PPPNQbPP/R1BK1B1R w kq - 18 19").Position(), 0, 0, 1))
-	mini_self_challenge()
+	// mini_self_challenge()
 }
 
 func exit()	{
@@ -106,10 +110,20 @@ func exit()	{
 
 // current will vs antikythera 2kr1b1r/ppq2ppp/2n1bn2/1R2p1B1/8/2NP1N2/P1P2PPP/3QR1K1 w - - 10 15
 
+func mini_test_transposition() {
+	game := game_from_fen("6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24")
+	engine2 := wrap_engine(&engine_0dot3, 30, game)
+	stop_at_depth = 7
+	engine2.Run_Engine(game.Position())
+	// do_tt_output = true
+	stop_at_depth = 12
+	engine2.Run_Engine(game.Position())
+}
+
 func mini_performance_challenge() {
 	game := game_from_fen("6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24")
 	engine1 := wrap_engine(&engine_0dot2dot1, 30, game)
-	engine2 := wrap_engine(&engine_0dot2dot2, 30, game)
+	engine2 := wrap_engine(&engine_0dot3, 30, game)
 	engine1.Run_Engine(game.Position())
 	engine2.Run_Engine(game.Position())
 }

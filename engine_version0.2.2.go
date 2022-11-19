@@ -10,7 +10,8 @@ import (
 /*
 
 Improvements over 0.2.1
-New evaluation function.
+New evaluation function with mobility.
+Sucks.
 
 */
 
