@@ -17,6 +17,9 @@ type Engine interface {
 	Name() string
 	Set_Config(EngineConfig)
 	Check_Time_Up() bool
+	Set_Time(float64)
+	Reset()
+	Reset_Time()
 }
 
 type EngineClass struct {
@@ -60,6 +63,16 @@ func (e *EngineClass) Set_Time(ms float64) {
 	// out("Setting time duration:", e.time_duration, "seconds:", seconds)
 	// out("Setting time up:", e.time_up)
 }
+
+func (e *EngineClass) Reset() {
+	e.time_up = false
+}
+
+func (e *EngineClass) Reset_Time() {
+	e.time_up = false
+	e.start_time = time.Now()
+}
+
 
 func (e *EngineClass) Set_Config(cfg EngineConfig) {
 	e.engine_config = cfg

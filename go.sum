@@ -2,6 +2,8 @@ github.com/0hq/chess v0.0.0-20221116004413-d0cdcfaf2a79 h1:jv+oWA/X6NO/9U0ECJXY8
 github.com/0hq/chess v0.0.0-20221116004413-d0cdcfaf2a79/go.mod h1:HjSOf6l0EFqmOiZBuLXt7HrSTZdRv+STUCkp/ocwRwg=
 github.com/0hq/chess v0.0.0-20221118230209-2e10d2d0d93c h1:QvR5ZRpc6FdrnA2e2uctO3B/86ESFfNgwlaVMyMpAvs=
 github.com/0hq/chess v0.0.0-20221118230209-2e10d2d0d93c/go.mod h1:vWM6wlpQhpxvMb6K4qrUWB+Tw43Mmk+KQgEOSEFddMg=
+github.com/0hq/chess v0.0.0-20221119000934-9d6e8e743b6c h1:yvdFk0UmJGC8UHak1fSP2D/MaTwzUmqkMcwh5hjYKvE=
+github.com/0hq/chess v0.0.0-20221119000934-9d6e8e743b6c/go.mod h1:vWM6wlpQhpxvMb6K4qrUWB+Tw43Mmk+KQgEOSEFddMg=
 github.com/ajstarks/svgo v0.0.0-20200320125537-f189e35d30ca/go.mod h1:K08gAheRH3/J6wwsYMMT4xOr94bZjxIelGM0+d/wbFw=
 github.com/notnil/chess v1.9.0 h1:YMxR5kUVjtwcuFptGU0/3q7eG3MSHQNbg0VUekvRKV0=
 github.com/notnil/chess v1.9.0/go.mod h1:cRuJUIBFq9Xki05TWHJxHYkC+fFpq45IWwk94DdlCrA=

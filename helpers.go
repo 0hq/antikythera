@@ -8,6 +8,22 @@ import (
 	"github.com/0hq/chess"
 )
 
+// wraps an engine with opening book
+func wrap_engine(engine Engine, time float64, game *chess.Game) Engine {
+	subengine := engine
+	subengine.Reset()
+	subengine.Set_Time(time)
+	return NewOpeningWrapper(subengine, game)
+}
+
+// returns engine from engine and time
+func new_engine(engine Engine, time float64) Engine {
+	engine.Reset()
+	engine.Set_Time(time)
+	return engine
+}
+
+
 // Custom printLn function
 // logs and prints any input
 func out(a ...any) {
@@ -28,13 +44,16 @@ func bool_to_int(b bool) int {
 
 func reset_counters() {
 	// initialize depth_count to all 0s
-	// for i := range depth_count {
-	// 	depth_count[i] = 0
-	// }
-	// tests_run = 0
-	// tests_passed = 0
+	for i := range depth_count {
+		depth_count[i] = 0
+	}
 	explored = 0
 	q_explored = 0
+}
+
+func reset_test_counters() {
+	tests_run = 0
+	tests_passed = 0
 }
 
 func game_from_fen(pos string) *chess.Game {

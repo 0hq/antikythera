@@ -85,102 +85,37 @@ func init() {
 func main() {
 	defer exit()
 	out("Running engine...")
-	mini_challenge_stockfish()
-	// mini_self_challenge()
-	// mini_challenge_manual_opening()
-	// mini_iterative_deepening_timed()
-	// simple_tests(&engine)
-	// out("Tests passed:", tests_passed)
-	// out("Tests run:", tests_run)
-}
+	engine := new_engine(&engine_0dot2, 15)
 
-func mini_test_iterative() {
-	game := game_from_fen("r1b1kb1r/pp2pppp/2n2n2/8/2q5/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 0 7")
-	engine := engine_minimax_id_ab_q
-	engine.Set_Time(15)
-	out(engine.Run_Engine(game.Position()))
-}
-
-func mini_iterative_deepening_timed() {
-	engine := engine_0dot2
-	// engine.Reset()
-	engine.Set_Time(1)
-	simple_tests(&engine)
-	out("Tests passed:", tests_passed)
-	out("Tests run:", tests_run)
-}
-
-func mini_self_challenge() {
-	game := game_from_fen(CHESS_START_POSITION)
-	subengine1 := engine_0dot3
-	subengine1.Reset()
-	subengine1.Set_Time(15)
-	engine1 := NewOpeningWrapper(&subengine1, game)
-	subengine2 := engine_0dot2
-	subengine2.Set_Time(15)
-	engine2 := NewOpeningWrapper(&subengine2, game)
-	challenge_self(engine1, engine2, game)
-}
-
-func mini_challenge_manual_opening_custom() {
-	game := game_from_fen("2k5/pp3p1p/5p2/8/P1P5/7P/2Pr2q1/R6K w - - 0 27")
-	subengine := engine_minimax_id_ab_q
-	subengine.Set_Time(15)
-	engine := NewOpeningWrapper(&subengine, game)
-	challenge_manual(engine, chess.Black, game)
-}
-
-func mini_challenge_manual_opening() {
-	game := game_from_fen(CHESS_START_POSITION)
-	subengine := engine_0dot2
-	subengine.Set_Time(5)
-	engine := NewOpeningWrapper(&subengine, game)
-	challenge_manual(engine, chess.Black, game)
-}
-
-func mini_challenge_manual() {
-	engine := engine_minimax_id_ab_q
-	engine.Set_Time(15)
-	challenge_manual(&engine, chess.Black, game_from_fen(CHESS_START_POSITION))
-}
-
-func mini_challenge_stockfish() {
-	subengine := engine_0dot2
-	subengine.Set_Time(15)
-	engine := NewOpeningWrapper(&subengine, game_from_fen(CHESS_START_POSITION))
-	challenge_stockfish(engine, chess.White, game_from_fen(CHESS_START_POSITION))
-}
-
-// func wrap_engine(engine Engine, time int, game *chess.Game) Engine {
-// 	subengine := engine
-// 	subengine.Set_Time(5)
-// 	return NewOpeningWrapper(&subengine, game)
-// }
-
-
-
-func mini_simple_tests() {
-	engine := engine_minimax_plain_ab_q
-	engine.Set_Config(EngineConfig{ply: 4})
-	simple_tests(&engine)
-	out("Tests run:", tests_run)
-	out("Tests passed:", tests_passed)
+	simple_tests(engine)
 }
 
 func exit()	{
 	out("Exiting engine.")
 }
 
-func simple_tests(engine Engine) {
-	test_exchange_7move(engine)
-	test_exchange_5move(engine)
-	test_exchange_3move(engine)
-	test_m2(engine)
-	run_tests(engine, parse_test_file("tests/WillsMateInThree.txt", parse_fen_record))
-}
-
-func eigenmann_tests(engine Engine) {
-	run_tests(engine, parse_test_file("tests/EigenmannRapidEngineTest.txt", parse_epd_record))
-}
-
 // current will vs antikythera 2kr1b1r/ppq2ppp/2n1bn2/1R2p1B1/8/2NP1N2/P1P2PPP/3QR1K1 w - - 10 15
+
+func mini_self_challenge() {
+	game := game_from_fen(CHESS_START_POSITION)
+	engine1 := wrap_engine(&engine_0dot2, 15, game)
+	engine2 := wrap_engine(&engine_0dot2, 15, game)
+	challenge_self(engine1, engine2, game)
+}
+
+func mini_challenge_manual() {
+	game := game_from_fen(CHESS_START_POSITION)
+	engine := wrap_engine(&engine_0dot2, 15, game)
+	challenge_manual(engine, chess.Black, game)
+}
+
+func mini_challenge_stockfish() {
+	game := game_from_fen(CHESS_START_POSITION)
+	engine := wrap_engine(&engine_0dot2, 15, game)
+	challenge_stockfish(engine, chess.Black, game)
+}
+
+func mini_simple() {
+	engine := new_engine(&engine_0dot2, 15)
+	simple_tests(engine)
+}

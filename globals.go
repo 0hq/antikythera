@@ -15,7 +15,7 @@ var tests_run int = 0
 var tests_passed int = 0
 var explored int = 0
 var q_explored int = 0
-// var depth_count []int = make([]int, 100)
+var depth_count []int = make([]int, MAX_DEPTH)
 
 
 /*
@@ -48,8 +48,9 @@ var production_mode = false
 const DO_MOVE_SORTING bool = true
 const DO_Q_MOVE_SORTING bool = true
 const MAX_DEPTH int = 30
-const DO_Q_MOVE_PRUNING bool = true
-const PRINT_TOP_MOVES bool = false
+const DO_Q_MOVE_PRUNING bool = true 
+const PRINT_TOP_MOVES bool = false 
+const DO_DEPTH_COUNT bool = true // disable for performance
 // const DO_Q_MOVE_CHECKS bool = false
 // const DO_Q_MOVE_PROMOS bool = false // disabled manually
 

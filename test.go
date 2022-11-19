@@ -9,6 +9,22 @@ import (
 	"github.com/0hq/chess"
 )
 
+func simple_tests(engine Engine) {
+	test_exchange_7move(engine)
+	test_exchange_5move(engine)
+	test_exchange_3move(engine)
+	test_m2(engine)
+	run_tests(engine, parse_test_file("tests/WillsMateInThree.txt", parse_fen_record))
+	out("Tests passed:", tests_passed)
+	out("Tests run:", tests_run)
+}
+
+func eigenmann_tests(engine Engine) {
+	run_tests(engine, parse_test_file("tests/EigenmannRapidEngineTest.txt", parse_epd_record))
+	out("Tests passed:", tests_passed)
+	out("Tests run:", tests_run)
+}
+
 /*
 
 Move Sorting Test
@@ -69,6 +85,7 @@ func test(engine Engine, pos string, expected string) {
 		panic(err)
 	}
 	game := chess.NewGame(fen)
+	engine.Reset()
 	move, _ := engine.Run_Engine(game.Position())
 
 	// this is to format the move in a way that is compatible with the test file

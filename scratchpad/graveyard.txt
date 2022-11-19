@@ -1,3 +1,5 @@
+GOPROXY=direct go get -u
+
 
 func minimax_pll(position *chess.Position, ply int, max bool, last_move *chess.Move, move_channel chan *chess.Move, eval_channel chan int, isRoot bool) {
 	explored++
