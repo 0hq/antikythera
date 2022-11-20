@@ -40,7 +40,7 @@ var engine_0dot2 = t_engine_0dot2{
 	// engine_func: minimax_id_ab_q_engine_func,
 } 
 
-func (e *t_engine_0dot2) Reset() {
+func (e *t_engine_0dot2) Reset(pos *chess.Position) {
 	e.time_up = false
 	e.killer_moves = [MAX_DEPTH][2]*chess.Move{}
 	e.current_depth = 0

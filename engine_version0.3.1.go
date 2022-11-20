@@ -65,8 +65,7 @@ func (e *t_engine_0dot3dot1) Run_Engine(pos *chess.Position) (best *chess.Move, 
 		best = t_best
 		eval = t_eval
 
-		out("Depth:", depth, "Nodes:", explored, "Best move:", best, "Eval:", eval, "Time:", time.Since(e.start_time), "Hash hits", hash_hits, "writes", hash_writes, "reads", hash_reads, "collisions", hash_collisions)	
-	
+		e.Print_Iterative_Deepening(depth, best, eval)
 
 		// break only on checkmate win, not on checkmate loss
 		if eval >= CHECKMATE_VALUE { 
@@ -234,7 +233,7 @@ func (e *t_engine_0dot3dot1) quiescence_minimax_id_ab_q(position *chess.Position
 	return alpha
 }
 
-func (e *t_engine_0dot3dot1) Reset() {
+func (e *t_engine_0dot3dot1) Reset(pos *chess.Position) {
 	e.tt.Clear()
 	e.tt.Resize(64, 16)
 	e.time_up = false
@@ -242,13 +241,26 @@ func (e *t_engine_0dot3dot1) Reset() {
 	e.current_depth = 0
 }
 
+func (e *t_engine_0dot3dot1) Print_Iterative_Deepening(depth int, best *chess.Move, eval int) {
+	if QUIET_MODE {
+		return
+	}
+	out("Depth:", depth, "Nodes:", explored, "Best move:", best, "Eval:", eval, "Time:", time.Since(e.start_time), "Hash hits", hash_hits, "writes", hash_writes, "reads", hash_reads, "collisions", hash_collisions)	
+}
+
 func (e *t_engine_0dot3dot1) Print_Start() {
+	if QUIET_MODE {
+		return
+	}
 	out("Starting", e.name)
 	// out("Killer moves", e.killer_moves)
 	out("Duration:", e.time_duration)
 }
 
 func (e *t_engine_0dot3dot1) Print_End(best *chess.Move, eval int) {
+	if QUIET_MODE {
+		return
+	}
 	out("Engine results", best, eval)
 	out("Total nodes", explored, "Quiescence search explored", q_explored, "nodes")
 	out("Depth count", depth_count)

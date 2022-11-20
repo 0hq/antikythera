@@ -62,8 +62,17 @@ const DO_MOVE_SORTING bool = true
 const DO_Q_MOVE_SORTING bool = true
 const MAX_DEPTH int = 30
 const DO_Q_MOVE_PRUNING bool = true 
-const PRINT_TOP_MOVES bool = false 
 const DO_DEPTH_COUNT bool = true // disable for performance
+
+/*
+
+Logging options
+
+*/
+
+const PRINT_TOP_MOVES bool = false 
+const QUIET_MODE bool = true
+
 // const DO_Q_MOVE_CHECKS bool = false
 // const DO_Q_MOVE_PROMOS bool = false // disabled manually
 

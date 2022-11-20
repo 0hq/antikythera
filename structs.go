@@ -18,7 +18,7 @@ type Engine interface {
 	Set_Config(EngineConfig)
 	Check_Time_Up() bool
 	Set_Time(float64)
-	Reset()
+	Reset(*chess.Position)
 	Reset_Time()
 }
 
@@ -64,7 +64,7 @@ func (e *EngineClass) Set_Time(ms float64) {
 	// out("Setting time up:", e.time_up)
 }
 
-func (e *EngineClass) Reset() {
+func (e *EngineClass) Reset(pos *chess.Position) {
 	e.time_up = false
 }
 

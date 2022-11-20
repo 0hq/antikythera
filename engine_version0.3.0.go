@@ -42,7 +42,7 @@ var engine_0dot3 = t_engine_0dot3{
 	// engine_func: minimax_id_ab_q_engine_func,
 }
 
-func (e *t_engine_0dot3) Reset() {
+func (e *t_engine_0dot3) Reset(pos *chess.Position) {
 	e.tt.Clear()
 	e.tt.Resize(64, 16)
 }

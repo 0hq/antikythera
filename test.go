@@ -87,7 +87,7 @@ func test(engine Engine, pos string, expected string, algebraic bool) {
 		panic(err)
 	}
 	game := chess.NewGame(fen)
-	engine.Reset()
+	engine.Reset(game.Position())
 	move, _ := engine.Run_Engine(game.Position())
 
 	// this is to format the move in a way that is compatible with the test file

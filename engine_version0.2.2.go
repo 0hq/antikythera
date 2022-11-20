@@ -200,7 +200,7 @@ func (e *t_engine_0dot2dot2) quiescence_minimax_id_ab_q(position *chess.Position
 	return alpha
 }
 
-func (e *t_engine_0dot2dot2) Reset() {
+func (e *t_engine_0dot2dot2) Reset(pos *chess.Position) {
 	e.time_up = false
 	e.killer_moves = [MAX_DEPTH][2]*chess.Move{}
 	e.current_depth = 0

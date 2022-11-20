@@ -44,8 +44,8 @@ func (o *OpeningWrapper) Reset_Time() {
 	o.engine.Reset_Time()
 }
 
-func (o *OpeningWrapper) Reset() {
-	o.engine.Reset()
+func (o *OpeningWrapper) Reset(pos *chess.Position) {
+	o.engine.Reset(pos)
 }
 
 func (o OpeningWrapper) Run_Engine(position *chess.Position) (*chess.Move, int) {

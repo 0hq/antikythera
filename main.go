@@ -30,30 +30,33 @@ import (
 // Hash MVV/LVA
 // Transposition tables.
 // TT Move ordering.
+// Draw detection
 
 MTD(f)
-Opening book analysis,
-Transposition work saving.
-Lines.
+Opening book analysis.
+Lines via linked list.
 PSTO evaluation.
 	Tapered eval
 	Endgames
-Draw detection
 Better move ordering.
    SEE
    History heuristic
 Parallel search via LAZY SMP
+
 UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 
 Null Move Pruning.
 Check extentions.
 Investigate mobility.
 Passed pawns, blocked pawns, etc.
+Investigate transposition work saving.
+
+Extensive testing positions.
+	Better test parsing.
+	Zugzwang.
 
 Magic bitboards.
 Why isn't the parallel version faster for perft?
-
-Possible:
 Aspirations?
 
 */
@@ -97,14 +100,14 @@ func main() {
 	out("Running main program.", "\n")
 	defer exit()
 
-	// engine := new_engine(&engine_0dot3dot2, 1)
+	// engine := new_engine(&engine_0dot3dot3, 1, nil)
 	// simple_tests(engine)
 	// eigenmann_tests(engine)
 
 	// mini_performance_challenge()
 	// mini_test_transposition()
-	// mini_self_challenge()
-	mini_challenge_stockfish()
+	mini_self_challenge()
+	// mini_challenge_stockfish()
 }
 
 func exit()	{
@@ -131,9 +134,9 @@ func mini_performance_challenge() {
 
 func mini_self_challenge() {
 	game := game_from_fen(CHESS_START_POSITION)
-	engine1 := wrap_engine(&engine_0dot3dot2, 5, game)
-	engine2 := wrap_engine(&engine_0dot3dot1, 5, game)
-	challenge_self(engine2, engine1, game)
+	engine1 := wrap_engine(&engine_0dot3dot3, 0.8, game)
+	engine2 := wrap_engine(&engine_0dot3dot1, 0.8, game)
+	challenge_self(engine1, engine2, game)
 }
 
 func mini_challenge_manual() {
@@ -149,10 +152,9 @@ func mini_challenge_stockfish() {
 }
 
 func mini_simple() {
-	engine := new_engine(&engine_0dot2dot1, 15)
+	engine := new_engine(&engine_0dot2dot1, 15, nil)
 	simple_tests(engine)
 }
-
 
 // current will vs antikythera 2kr1b1r/ppq2ppp/2n1bn2/1R2p1B1/8/2NP1N2/P1P2PPP/3QR1K1 w - - 10 15
 // out(evaluate_position_v3(game_from_fen("rnb1k2r/ppp3pp/8/5p2/3qnP2/2N5/PPPNQbPP/R1BK1B1R w kq - 18 19").Position(), 0, 0, 1))

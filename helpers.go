@@ -11,14 +11,16 @@ import (
 // wraps an engine with opening book
 func wrap_engine(engine Engine, time float64, game *chess.Game) Engine {
 	subengine := engine
-	subengine.Reset()
+	subengine.Reset(game.Position())
 	subengine.Set_Time(time)
 	return NewOpeningWrapper(subengine, game)
 }
 
 // returns engine from engine and time
-func new_engine(engine Engine, time float64) Engine {
-	engine.Reset()
+func new_engine(engine Engine, time float64, game *chess.Game) Engine {
+	if game != nil {
+		engine.Reset(game.Position())
+	}
 	engine.Set_Time(time)
 	return engine
 }
