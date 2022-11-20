@@ -140,7 +140,9 @@ func (e *t_engine_0dot2dot1) minimax_id_ab_q_searcher(position *chess.Position, 
 		score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply - 1, !max, -beta, -alpha)
 
 		if score >= beta {
-			store_killer_move(&e.killer_moves[e.current_depth - ply], move)
+			if !move.HasTag(chess.Capture) {
+				store_killer_move(&e.killer_moves[e.current_depth - ply], move)
+			}
 			return beta
 		}
 

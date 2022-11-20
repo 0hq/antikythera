@@ -119,20 +119,20 @@ func (entry *SearchEntry) Get(hash uint64, ply int, depth int, alpha int, beta i
 				shouldUse = true
 			}
 
-			if entry.GetFlag() == AlphaFlag  { // && score >= alpha
+			if entry.GetFlag() == AlphaFlag && score <= alpha { // && score >= alpha
 				// If we have an alpha entry, and the entry's score is less than our
 				// current alpha, then we know that our current alpha is the best score
 				// we can get in this node, so we can stop searching and use alpha.
-				adjustedScore = score
+				adjustedScore = alpha
 				shouldUse = true
 			}
 
-			if entry.GetFlag() == BetaFlag { //   && score <= beta
+			if entry.GetFlag() == BetaFlag && score >= beta { //   && score <= beta
 				// If we have a beta entry, and the entry's score is greater than our
 				// current beta, then we have a beta-cutoff, since while
 				// searching this node previously, we found a value greater than the current
 				// beta. so we can stop searching and use beta.
-				adjustedScore = score
+				adjustedScore = beta
 				shouldUse = true
 			}
 		}
@@ -161,10 +161,12 @@ func (entry *SearchEntry) Get(hash uint64, ply int, depth int, alpha int, beta i
 	return adjustedScore, shouldUse
 }
 
-func (entry *SearchEntry) Set(hash uint64, score int, best chess.Move, ply, depth int, flag, age uint8) {
+func (entry *SearchEntry) Set(hash uint64, score int, best *chess.Move, ply int, depth int, flag, age uint8) {
 	entry.Hash = hash
 	entry.Depth = depth
-	entry.Best = best
+	if best != nil {
+		entry.Best = *best
+	}
 	entry.SetFlag(flag)
 	entry.SetAge(age)
 
@@ -240,36 +242,35 @@ func (tt *TransTable[Entry]) Probe(hash uint64) *Entry {
 	// more efficently make use of the table.
 
 	index := hash % tt.size
-	// if index+1 == tt.size {
-	// 	return &tt.entries[index]
-	// }
+	if index+1 == tt.size {
+		return &tt.entries[index]
+	}
 
 	first := tt.entries[index]
-	return &first
-	// if first.GetHash() == hash {
-	// 	return &tt.entries[index]
-	// }
+	if first.GetHash() == hash {
+		return &tt.entries[index]
+	}
 
-	// return &tt.entries[index+1]
+	return &tt.entries[index+1]
 }
 
 // Get an entry from the table to store in it.
-func (tt *TransTable[Entry])  Store(hash uint64, depth uint8, currAge uint8) *Entry {
+func (tt *TransTable[Entry])  Store(hash uint64, depth int, currAge uint8) *Entry {
 	index := hash % tt.size
-	// if index+1 == tt.size {
-	// 	return &tt.entries[index]
-	// }
+	if index+1 == tt.size {
+		return &tt.entries[index]
+	}
 
-	// first := tt.entries[index]
-	// if first.GetDepth() <= depth { // || first.GetAge() != currAge
-	// 	// Note that returning &first caused a bug where the transposition
-	// 	// table entry was never modifed, and so the table was always empty.
-	// 	// Have to figure out why that is, but for now return &tt.entries[index]
-	// 	// directly.
-	// 	return &tt.entries[index]
-	// }
+	first := tt.entries[index]
+	if first.GetDepth() <= depth || first.GetAge() != currAge {
+		// Note that returning &first caused a bug where the transposition
+		// table entry was never modifed, and so the table was always empty.
+		// Have to figure out why that is, but for now return &tt.entries[index]
+		// directly.
+		return &tt.entries[index]
+	}
 
-	return &tt.entries[index]
+	return &tt.entries[index+1]
 }
 
 // Unitialize the memory used by the transposition table

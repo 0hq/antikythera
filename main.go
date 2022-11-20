@@ -28,8 +28,10 @@ import (
 // Mobility is done, but seems to be a massive perf. hit.
 // Pick and sort, changes engine structure.
 // Hash MVV/LVA
+// Transposition tables.
+// TT Move ordering.
 
-Transposition tables.
+Work saving.
 Check extentions.
 Null Move Pruning.
 Investigate mobility.
@@ -91,48 +93,43 @@ func main() {
 	out("Running main program.", "\n")
 	defer exit()
 
-	// move := chess.Move{0, 6, 0, 4}
-	// entry := SearchEntry{15505591996432951795, 1, -60, move, 128}
-	// entry.Get(15505591996432951795, ,-9223372036854775807, 9223372036854775807, nil)
-	// engine := new_engine(&engine_0dot3, 10)
-	// test(engine, "6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24", "g2g1", false)
+	// engine := new_engine(&engine_0dot3dot2, 1)
 	// simple_tests(engine)
 	// eigenmann_tests(engine)
+
 	// mini_performance_challenge()
-	mini_test_transposition()
-	// out(evaluate_position_v3(game_from_fen("rnb1k2r/ppp3pp/8/5p2/3qnP2/2N5/PPPNQbPP/R1BK1B1R w kq - 18 19").Position(), 0, 0, 1))
+	// mini_test_transposition()
 	// mini_self_challenge()
+	mini_challenge_stockfish()
 }
 
 func exit()	{
 	out("Exiting engine.")
 }
 
-// current will vs antikythera 2kr1b1r/ppq2ppp/2n1bn2/1R2p1B1/8/2NP1N2/P1P2PPP/3QR1K1 w - - 10 15
-
 func mini_test_transposition() {
 	game := game_from_fen("6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24")
-	engine2 := wrap_engine(&engine_0dot3, 30, game)
-	stop_at_depth = 7
+	engine2 := wrap_engine(&engine_0dot3, 5, game)
+	// stop_at_depth = 7
 	engine2.Run_Engine(game.Position())
 	// do_tt_output = true
-	stop_at_depth = 12
+	// stop_at_depth = 12
 	engine2.Run_Engine(game.Position())
 }
 
 func mini_performance_challenge() {
 	game := game_from_fen("6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24")
-	engine1 := wrap_engine(&engine_0dot2dot1, 30, game)
-	engine2 := wrap_engine(&engine_0dot3, 30, game)
+	engine1 := wrap_engine(&engine_0dot3dot2, 5, game)
+	engine2 := wrap_engine(&engine_0dot3dot1, 5, game)
 	engine1.Run_Engine(game.Position())
 	engine2.Run_Engine(game.Position())
 }
 
 func mini_self_challenge() {
-	game := game_from_fen("rnb1k2r/ppp3pp/8/5p2/3qNP2/8/PPPNQbPP/R1BK1B1R b kq - 0 19")
-	engine1 := wrap_engine(&engine_0dot2dot2, 2, game)
-	engine2 := wrap_engine(&engine_0dot2dot2, 2, game)
-	challenge_self(engine1, engine2, game)
+	game := game_from_fen(CHESS_START_POSITION)
+	engine1 := wrap_engine(&engine_0dot3dot2, 5, game)
+	engine2 := wrap_engine(&engine_0dot3dot1, 5, game)
+	challenge_self(engine2, engine1, game)
 }
 
 func mini_challenge_manual() {
@@ -143,11 +140,16 @@ func mini_challenge_manual() {
 
 func mini_challenge_stockfish() {
 	game := game_from_fen(CHESS_START_POSITION)
-	engine := wrap_engine(&engine_0dot2, 15, game)
-	challenge_stockfish(engine, chess.Black, game)
+	engine := wrap_engine(&engine_0dot3dot2, 15, game)
+	challenge_stockfish(engine, chess.White, game)
 }
 
 func mini_simple() {
 	engine := new_engine(&engine_0dot2dot1, 15)
 	simple_tests(engine)
 }
+
+
+// current will vs antikythera 2kr1b1r/ppq2ppp/2n1bn2/1R2p1B1/8/2NP1N2/P1P2PPP/3QR1K1 w - - 10 15
+// out(evaluate_position_v3(game_from_fen("rnb1k2r/ppp3pp/8/5p2/3qnP2/2N5/PPPNQbPP/R1BK1B1R w kq - 18 19").Position(), 0, 0, 1))
+// test(engine, "6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24", "g2g1", false)

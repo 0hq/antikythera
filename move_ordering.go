@@ -283,6 +283,31 @@ func score_moves_v2(moves []*chess.Move, board *chess.Board, killer_moves [2]*ch
 	return scores
 }
 
+/*
+
+Score Moves v3
+Implements TT move ordering.
+
+*/
+
+func score_moves_v3(moves []*chess.Move, board *chess.Board, killer_moves [2]*chess.Move, tt_move *chess.Move) []scored_move {
+	scores := make([]scored_move, len(moves))
+	for i := 0; i < len(moves); i++ {
+		if moves[i] == tt_move {
+			scores[i] = scored_move{moves[i], TT_MOVE_VALUE}
+		} else if moves[i].HasTag(chess.Capture) {
+			scores[i] = scored_move{moves[i], MVV_LVA(moves[i], board) + MVV_LVA_OFFSET}
+		} else if moves[i] == killer_moves[0] {
+			scores[i] = scored_move{moves[i], KILLER_ONE_VALUE}
+		} else if moves[i] == killer_moves[1] {
+			scores[i] = scored_move{moves[i], KILLER_TWO_VALUE}
+		} else {
+			scores[i] = scored_move{moves[i], NORMAL_MOVE_VALUE}
+		}
+	}
+	return scores
+}
+
 func score_q_moves_v2(moves []*chess.Move, board *chess.Board) []scored_move {
 	scores := make([]scored_move, len(moves))
 	for i := 0; i < len(moves); i++ {

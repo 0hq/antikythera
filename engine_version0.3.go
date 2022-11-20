@@ -15,12 +15,10 @@ Picks moves and sorts as you go, instead of sorting all moves at the start.
 
 */
 
-var stop_at_depth = 2
-var do_tt_output = false
-
 type t_engine_0dot3 struct {
 	EngineClass
 	tt TransTable[SearchEntry]
+	age uint8 // this is used to age off entries in the transposition table, in the form of a half move clock
 }
 
 // define new engine
@@ -40,6 +38,7 @@ var engine_0dot3 = t_engine_0dot3{
 		time_up: false,
 	},
 	TransTable[SearchEntry]{},
+	0,
 	// engine_func: minimax_id_ab_q_engine_func,
 }
 
@@ -52,16 +51,13 @@ func (e *t_engine_0dot3) Run_Engine(pos *chess.Position) (best *chess.Move, eval
 	Reset_Global_Counters()
 	out("Running", e.name, "as player", pos.Turn())
 	// out(e.tt)
+	e.age ^= 1
 	e.time_up = false
 	e.start_time = time.Now()
 	// out("Duration:", e.time_duration)
 	depth := 1
 	for {
 		Reset_Hash_Counters()
-
-		if depth > stop_at_depth {
-			break	
-		}
 		// out()
 		// out("Iterative deepening depth", depth)
 		t_best, t_eval := e.minimax_id_ab_q_starter(pos, depth, pos.Turn() == chess.White)
@@ -88,7 +84,7 @@ func (e *t_engine_0dot3) Run_Engine(pos *chess.Position) (best *chess.Move, eval
 	return
 }
 
-func (e *t_engine_0dot3) minimax_id_ab_q_starter(position *chess.Position, ply int, max bool) (best *chess.Move, eval int) {
+func (e *t_engine_0dot3) minimax_id_ab_q_starter(position *chess.Position, depth int, max bool) (best *chess.Move, eval int) {
 	moves := position.ValidMoves()
 	eval = -1 * math.MaxInt // functions as alpha
 	for i := 0; i < len(moves); i++ {
@@ -96,7 +92,7 @@ func (e *t_engine_0dot3) minimax_id_ab_q_starter(position *chess.Position, ply i
 			break
 		}
 		move := pick_move_v1(moves, position.Board(), i) // mutates move list, moves best move to front
-		score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply-1, !max, -math.MaxInt, -eval)
+		score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), depth - 1, 1, !max, -math.MaxInt, -eval)
 		if PRINT_TOP_MOVES {
 			out("Top Level Move:", move, "Eval:", score,)
 		}
@@ -111,47 +107,33 @@ func (e *t_engine_0dot3) minimax_id_ab_q_starter(position *chess.Position, ply i
 	return best, eval
 }
 
-func (e *t_engine_0dot3) minimax_id_ab_q_searcher(position *chess.Position, ply int, max bool, alpha int, beta int) (eval int) {
+func (e *t_engine_0dot3) minimax_id_ab_q_searcher(position *chess.Position, depth int, ply int, max bool, alpha int, beta int) (eval int) {
 	explored++
-	if ply == 0 {
+	if depth == 0 {
 		return e.quiescence_minimax_id_ab_q(position, 0, max, alpha, beta)
 	}
-	if e.Check_Time_Up() {
+	if e.Check_Time_Up() { 
 		return 0
 	}
 
-	hash := Zobrist.GenHash(position)
-	entry := e.tt.Probe(hash)
-	// if entry.Hash != hash {
-	// 	if entry.Hash != 0 {
-	// 		out("Probed entry", entry)
-	// 		out("Generated hash", hash)
-	// 		panic("hash mismatch")
-	// 	}
+	// hash := Zobrist.GenHash(position)
+	// entry := e.tt.Probe(hash)
+	// ttScore, shouldUse := entry.Get(hash, ply, depth, alpha, beta, nil)
+	// if shouldUse {
+	// 	hash_hits++
+	// 	return int(ttScore)
 	// }
-	ttScore, shouldUse := entry.Get(hash, ply, ply, alpha, beta, nil)
-	if shouldUse {
-		// out("Using saved.")
-		hash_hits++
-		// if ttScore == -1 {
-			if do_tt_output {
-				out(ttScore, entry, ply, alpha, beta)
-			}
-		// }
-
-		return int(ttScore)
-	}
 
 	moves := position.ValidMoves()
 	if len(moves) == 0 {
-		return evaluate_position_v3(position, e.engine_config.ply, ply, bool_to_int(max))
+		return evaluate_position_v3(position, e.engine_config.ply, depth, bool_to_int(max))
 	}
 	var tt_flag = AlphaFlag
 	var best_move *chess.Move = nil
 	var best_score = alpha
     for i := 0; i < len(moves); i++ {
 		move := pick_move_v1(moves, position.Board(), i) // mutates move list, moves best move to front
-        score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), ply - 1, !max, -beta, -alpha)
+        score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), depth - 1, ply + 1, !max, -beta, -alpha)
 		if score >= beta {
 			tt_flag = BetaFlag
 			best_score = beta // fail hard beta-cutoff
@@ -165,21 +147,25 @@ func (e *t_engine_0dot3) minimax_id_ab_q_searcher(position *chess.Position, ply 
         }
     }
 
-	// // If we're not out of time, store the result of the search for this position.
-	if !e.Check_Time_Up() && best_move != nil {
-		hash_writes++
-		entry := e.tt.Store(hash, uint8(ply), 0)
-		entry.Set(hash, best_score, *best_move, ply, ply, tt_flag, 0)
+	if false {
+		out("Depth:", depth, "Ply:", ply, "Best move:", best_move, "Eval:", best_score, tt_flag)
 	}
+
+	// // // If we're not out of time, store the result of the search for this position.
+	// if !e.Check_Time_Up() && best_move != nil {
+	// 	hash_writes++
+	// 	entry := e.tt.Store(hash, depth, e.age)
+	// 	entry.Set(hash, best_score, *best_move, ply, depth, tt_flag, 0)
+	// }
 
 	return best_score
 }
 
-func (e *t_engine_0dot3) quiescence_minimax_id_ab_q(position *chess.Position, plycount int, max bool, alpha int, beta int) (eval int) {
+func (e *t_engine_0dot3) quiescence_minimax_id_ab_q(position *chess.Position, depthcount int, max bool, alpha int, beta int) (eval int) {
 	explored++
 	q_explored++
 
-	stand_pat := evaluate_position_v3(position, e.engine_config.ply, -plycount, bool_to_int(max))
+	stand_pat := evaluate_position_v3(position, e.engine_config.ply, -depthcount, bool_to_int(max))
 	if stand_pat >= beta {
         return beta;
 	}
@@ -189,7 +175,7 @@ func (e *t_engine_0dot3) quiescence_minimax_id_ab_q(position *chess.Position, pl
 
 	moves := quiescence_moves_v2(position.ValidMoves())
 
-	if len(moves) == 0 || plycount > MAX_DEPTH {
+	if len(moves) == 0 || depthcount > MAX_DEPTH {
 		return stand_pat
 	}
 
@@ -198,7 +184,7 @@ func (e *t_engine_0dot3) quiescence_minimax_id_ab_q(position *chess.Position, pl
 		if move == nil { // other moves are pruned
 			break
 		}
-        score := -1 * e.quiescence_minimax_id_ab_q(position.Update(move), plycount + 1, !max, -beta, -alpha)
+        score := -1 * e.quiescence_minimax_id_ab_q(position.Update(move), depthcount + 1, !max, -beta, -alpha)
 		if score >= beta {
 			return beta
 		}
