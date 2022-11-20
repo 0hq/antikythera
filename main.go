@@ -31,20 +31,24 @@ import (
 // Transposition tables.
 // TT Move ordering.
 
-Work saving.
-Check extentions.
-Null Move Pruning.
-Investigate mobility.
-Passed pawns, blocked pawns, etc.
-Endgames
-	Draw detection
+MTD(f)
+Opening book analysis,
+Transposition work saving.
+Lines.
+PSTO evaluation.
 	Tapered eval
+	Endgames
+Draw detection
 Better move ordering.
    SEE
    History heuristic
-PVS or MTD(f)
+Parallel search via LAZY SMP
 UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 
+Null Move Pruning.
+Check extentions.
+Investigate mobility.
+Passed pawns, blocked pawns, etc.
 
 Magic bitboards.
 Why isn't the parallel version faster for perft?
