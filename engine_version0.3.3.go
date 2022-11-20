@@ -126,10 +126,10 @@ func (e *t_engine_0dot3dot3) minimax_id_ab_q_searcher(position *chess.Position, 
 		return 0
 	}
 
-	var tt_move *chess.Move = nil
 	var hash uint64 = Zobrist.GenHash(position)
 	var entry *SearchEntry = e.tt.Probe(hash)
-	var ttScore, shouldUse = entry.Get(hash, ply, depth, alpha, beta, tt_move)
+	var ttScore, shouldUse, tt_move = entry.Get(hash, ply, depth, alpha, beta)
+
 
 	if shouldUse {
 		hash_hits++
@@ -144,7 +144,7 @@ func (e *t_engine_0dot3dot3) minimax_id_ab_q_searcher(position *chess.Position, 
 		return 0
 	}
 	
-	var moves []scored_move = score_moves_v2(position.ValidMoves(), position.Board(), e.killer_moves[e.current_depth - depth])
+	var moves []scored_move = score_moves_v3(position.ValidMoves(), position.Board(), e.killer_moves[e.current_depth - depth], tt_move)
 
 	// if no moves, checkmate or stalemate
 	if len(moves) == 0 {

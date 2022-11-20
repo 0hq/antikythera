@@ -71,7 +71,7 @@ Logging options
 */
 
 const PRINT_TOP_MOVES bool = false 
-const QUIET_MODE bool = true
+const QUIET_MODE bool = false
 
 // const DO_Q_MOVE_CHECKS bool = false
 // const DO_Q_MOVE_PROMOS bool = false // disabled manually

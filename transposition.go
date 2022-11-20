@@ -71,9 +71,10 @@ func (entry *SearchEntry) SetAge(age uint8) {
 	entry.FlagAndAge |= age << 4
 }
 
-func (entry *SearchEntry) Get(hash uint64, ply int, depth int, alpha int, beta int, best *chess.Move) (int, bool) {
+func (entry *SearchEntry) Get(hash uint64, ply int, depth int, alpha int, beta int) (int, bool, *chess.Move) {
 	var adjustedScore int = 0
 	shouldUse := false
+	var best *chess.Move = nil
 
 	hash_reads++
 
@@ -84,9 +85,8 @@ func (entry *SearchEntry) Get(hash uint64, ply int, depth int, alpha int, beta i
 		// Even if we don't get a score we can use from the table, we can still
 		// use the best move in this entry and put it first in our move ordering
 		// scheme.
-		if best != nil {
-			*best = entry.Best
-		}
+		best = &entry.Best
+		
 
 		// Return the score of the position to use as an estimate for various
 		// pruning and extension techniques in the search.
@@ -158,7 +158,7 @@ func (entry *SearchEntry) Get(hash uint64, ply int, depth int, alpha int, beta i
 	}
 
 	// Return the score
-	return adjustedScore, shouldUse
+	return adjustedScore, shouldUse, best
 }
 
 func (entry *SearchEntry) Set(hash uint64, score int, best *chess.Move, ply int, depth int, flag, age uint8) {

@@ -311,7 +311,7 @@ func score_moves_v3(moves []*chess.Move, board *chess.Board, killer_moves [2]*ch
 func score_q_moves_v2(moves []*chess.Move, board *chess.Board) []scored_move {
 	scores := make([]scored_move, len(moves))
 	for i := 0; i < len(moves); i++ {
-		scores[i] = scored_move{moves[i], MVV_LVA(moves[i], board) + MVV_LVA_OFFSET}
+		scores[i] = scored_move{moves[i], MVV_LVA(moves[i], board)}
 	}
 	return scores
 }

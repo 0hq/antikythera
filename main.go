@@ -43,6 +43,9 @@ Better move ordering.
    History heuristic
 Parallel search via LAZY SMP
 
+Investigate 0.3.1 beating 0.3.4 in performance. Probably just hashing slowdowns from static?
+Make total nodes trustable.
+
 UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 
 Null Move Pruning.
@@ -86,13 +89,16 @@ func init() {
 	out("Version", runtime.Version())
     out("NumCPU", runtime.NumCPU())
     out("GOMAXPROCS", runtime.GOMAXPROCS(0))
+	out("Initialization complete.")
+	out()
 	if production_mode {
 		out("Production mode.")
 	} else {
 		out("WARNING: Development mode.")
 	}
-	out("Initialization complete.")
-	out()
+	if QUIET_MODE {
+		out("WARNING: Quiet mode!")
+	}
 	runtime.GOMAXPROCS(runtime.NumCPU())
 }
 
@@ -100,13 +106,13 @@ func main() {
 	out("Running main program.", "\n")
 	defer exit()
 
-	// engine := new_engine(&engine_0dot3dot3, 1, nil)
+	// engine := new_engine(&engine_0dot3dot4, 1, nil)
 	// simple_tests(engine)
 	// eigenmann_tests(engine)
 
 	// mini_performance_challenge()
 	// mini_test_transposition()
-	mini_self_challenge()
+	// mini_self_challenge()
 	// mini_challenge_stockfish()
 }
 
@@ -125,17 +131,22 @@ func mini_test_transposition() {
 }
 
 func mini_performance_challenge() {
-	game := game_from_fen("6r1/pppk4/3p4/8/2PnPp1Q/7P/PP4r1/R5RK b - - 1 24")
-	engine1 := wrap_engine(&engine_0dot3dot2, 5, game)
-	engine2 := wrap_engine(&engine_0dot3dot1, 5, game)
+	out("Performance challenge!", "\n")
+	game := game_from_fen("r3kb1r/2p2ppp/p1p5/4P3/4n3/8/PPP3PP/RNB2RK1 b kq - 0 13")
+	engine1 := wrap_engine(&engine_0dot3dot4, 10, game)
+	engine2 := wrap_engine(&engine_0dot3dot1, 10, game)
 	engine1.Run_Engine(game.Position())
+	engine1.Run_Engine(game.Position())
+
 	engine2.Run_Engine(game.Position())
+	engine2.Run_Engine(game.Position())
+
 }
 
 func mini_self_challenge() {
 	game := game_from_fen(CHESS_START_POSITION)
-	engine1 := wrap_engine(&engine_0dot3dot3, 0.8, game)
-	engine2 := wrap_engine(&engine_0dot3dot1, 0.8, game)
+	engine1 := wrap_engine(&engine_0dot3dot4, 5, game)
+	engine2 := wrap_engine(&engine_0dot3dot1, 5, game)
 	challenge_self(engine1, engine2, game)
 }
 
