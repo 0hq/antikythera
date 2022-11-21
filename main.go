@@ -34,6 +34,7 @@ import (
 // MTD(f)
 // MTD(bi)
 
+Aspiration search
 PSTO evaluation.
 	Tapered eval
 	Endgames
@@ -48,7 +49,6 @@ Quiescence check escapes.
 Fix Zobrist castles and en passant
 Mate distance pruning
 Root PVS
-Aspiration window
 
 Parallel search via LAZY SMP
 
@@ -122,9 +122,10 @@ func main() {
 	// simple_tests(engine)
 	// eigenmann_tests(engine)
 
+	mini_challenge_manual()
 	// mini_performance_challenge()
 	// mini_test_transposition()
-	mini_self_challenge()
+	// mini_self_challenge()
 	// mini_challenge_stockfish()
 }
 
@@ -167,7 +168,8 @@ func mini_self_challenge() {
 
 func mini_challenge_manual() {
 	game := game_from_fen(CHESS_START_POSITION)
-	engine := wrap_engine(&engine_0dot2, 15, game)
+	inner := new_engine_0dot4dot1()
+	engine := wrap_engine(&inner, 15, game)
 	challenge_manual(engine, chess.Black, game)
 }
 

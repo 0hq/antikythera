@@ -29,7 +29,7 @@ type t_engine_0dot4dot1 struct {
 func new_engine_0dot4dot1() t_engine_0dot4dot1 {
 	return t_engine_0dot4dot1{
 		EngineClass{
-			name: "Engine 0.4.0 (experimental: mtdbi)",
+			name: "Engine 0.4.1 (experimental: mtdbi)",
 			features: EngineFeatures{
 				plain: true,
 				parallel: false,
