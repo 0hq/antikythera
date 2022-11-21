@@ -33,7 +33,7 @@ import (
 // Draw detection
 
 MTD(f)
-Opening book analysis.
+Opening book analysis. (fuck)
 Lines via linked list.
 PSTO evaluation.
 	Tapered eval
@@ -146,7 +146,7 @@ func mini_performance_challenge() {
 func mini_self_challenge() {
 	game := game_from_fen(CHESS_START_POSITION)
 	engine1 := wrap_engine(&engine_0dot3dot4, 5, game)
-	engine2 := wrap_engine(&engine_0dot3dot1, 5, game)
+	engine2 := wrap_engine(&engine_0dot3dot4, 5, game)
 	challenge_self(engine1, engine2, game)
 }
 
