@@ -44,7 +44,7 @@ Better move ordering.
 Parallel search via LAZY SMP
 
 Investigate 0.3.1 beating 0.3.4 in performance. Probably just hashing slowdowns from static?
-Make total nodes trustable.
+Make total nodes trustable. Local tracking.
 
 UCI compatibility. Ugh, this sucks. I might give up on this and do a web server.
 
@@ -112,7 +112,7 @@ func main() {
 
 	// mini_performance_challenge()
 	// mini_test_transposition()
-	// mini_self_challenge()
+	mini_self_challenge()
 	// mini_challenge_stockfish()
 }
 
@@ -133,7 +133,8 @@ func mini_test_transposition() {
 func mini_performance_challenge() {
 	out("Performance challenge!", "\n")
 	game := game_from_fen("r3kb1r/2p2ppp/p1p5/4P3/4n3/8/PPP3PP/RNB2RK1 b kq - 0 13")
-	engine1 := wrap_engine(&engine_0dot3dot4, 10, game)
+	first := engine_0dot3dot4_x()
+	engine1 := wrap_engine(&first, 10, game)
 	engine2 := wrap_engine(&engine_0dot3dot1, 10, game)
 	engine1.Run_Engine(game.Position())
 	engine1.Run_Engine(game.Position())
@@ -145,9 +146,11 @@ func mini_performance_challenge() {
 
 func mini_self_challenge() {
 	game := game_from_fen(CHESS_START_POSITION)
-	engine1 := wrap_engine(&engine_0dot3dot4, 5, game)
-	engine2 := wrap_engine(&engine_0dot3dot4, 5, game)
-	challenge_self(engine1, engine2, game)
+	engine1 := engine_0dot3dot4_x()
+	wrapped1 := wrap_engine(&engine1, 5, game)
+	engine2 := engine_0dot3dot4_x()
+	wrapped2 := wrap_engine(&engine2, 5, game)
+	challenge_self(wrapped1, wrapped2, game)
 }
 
 func mini_challenge_manual() {

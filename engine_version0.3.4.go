@@ -24,26 +24,54 @@ type t_engine_0dot3dot4 struct {
 	zobristHistoryPly uint16 // draw detection ply
 }
 
-var engine_0dot3dot4 = t_engine_0dot3dot4{
-	EngineClass{
-		name: "Engine 0.3.4",
-		features: EngineFeatures{
-			plain: true,
-			parallel: false,
-			alphabeta: true,
-			iterative_deepening: true,
-			mtdf: false,
+func engine_0dot3dot4_x() t_engine_0dot3dot4 {
+	var engine_0dot3dot4 = t_engine_0dot3dot4{
+		EngineClass{
+			name: "Engine 0.3.4",
+			features: EngineFeatures{
+				plain: true,
+				parallel: false,
+				alphabeta: true,
+				iterative_deepening: true,
+				mtdf: false,
+			},
+			engine_config: EngineConfig{0}, // redundant
+			time_up: false,
 		},
-		engine_config: EngineConfig{0}, // redundant
-		time_up: false,
-	},
-	[MAX_DEPTH][2]*chess.Move{},
-	0,
-	TransTable[SearchEntry]{},
-	0,
-	[1024]uint64{},
-	0,
-} 
+		[MAX_DEPTH][2]*chess.Move{},
+		0,
+		TransTable[SearchEntry]{},
+		0,
+		[1024]uint64{},
+		0,
+	} 
+	return engine_0dot3dot4
+}
+
+var engine_0dot3dot4 = engine_0dot3dot4_x()
+
+// t_engine_0dot3dot4{
+// 	EngineClass{
+// 		name: "Engine 0.3.4",
+// 		features: EngineFeatures{
+// 			plain: true,
+// 			parallel: false,
+// 			alphabeta: true,
+// 			iterative_deepening: true,
+// 			mtdf: false,
+// 		},
+// 		engine_config: EngineConfig{0}, // redundant
+// 		time_up: false,
+// 	},
+// 	[MAX_DEPTH][2]*chess.Move{},
+// 	0,
+// 	TransTable[SearchEntry]{},
+// 	0,
+// 	[1024]uint64{},
+// 	0,
+// } 
+
+
 
 func (e *t_engine_0dot3dot4) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
 	// Reset_Global_Counters()
@@ -87,6 +115,11 @@ func (e *t_engine_0dot3dot4) Run_Engine(pos *chess.Position) (best *chess.Move, 
 		depth++
 	}
 
+	tt_move := e.tt.Probe(Zobrist.GenHash(pos)).Best.String()
+	out("Transposition table best", tt_move)
+	if tt_move != best.String() {
+		panic("AHHHH")
+	}
 	e.Print_End(best, eval)
 	return best, eval
 }

@@ -46,7 +46,6 @@ var engine_0dot4dot0 = t_engine_0dot4dot0{
 } 
 
 func (e *t_engine_0dot4dot0) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
-	// Reset_Global_Counters()
 	e.Reset_Time()
 	e.Print_Start()
 	
@@ -90,6 +89,29 @@ func (e *t_engine_0dot4dot0) Run_Engine(pos *chess.Position) (best *chess.Move, 
 	e.Print_End(best, eval)
 	return best, eval
 }
+
+func (e *t_engine_0dot4dot0) mtdf(position *chess.Position, depth int, max bool, first_guess int) (best *chess.Move, eval int) {
+	guess := first_guess
+	upper_bound := math.MaxInt
+	lower_bound := -math.MaxInt
+	
+	for lower_bound < upper_bound {
+		beta := lower_bound + 1
+		if guess > beta {
+			beta = guess
+		}
+		_, temp_score := e.minimax_id_ab_q_starter(position, depth, max)
+
+		if temp_score < beta {
+			upper_bound = temp_score
+		} else {
+			lower_bound = temp_score
+		}
+	}
+
+	return best, eval
+}
+
 
 func (e *t_engine_0dot4dot0) minimax_id_ab_q_starter(position *chess.Position, depth int, max bool) (best *chess.Move, eval int) {
 
