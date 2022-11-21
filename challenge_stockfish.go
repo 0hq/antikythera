@@ -1,6 +1,7 @@
 package main
 
 import (
+	"math"
 	"time"
 
 	"github.com/0hq/chess"
@@ -8,7 +9,7 @@ import (
 )
 
 func challenge_stockfish(engine Engine, play_as_color chess.Color, game *chess.Game) {
-	max_moves := 100
+	max_moves := math.MaxInt
 	// game.UseNotation(global_AlgebraicNotation)
 
 	eng, err := uci.New("stockfish")

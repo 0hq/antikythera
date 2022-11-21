@@ -23,7 +23,7 @@ type t_engine_0dot2dot2 struct {
 
 var engine_0dot2dot2 = t_engine_0dot2dot2{
 	EngineClass{
-		name: "Engine 0.2.2",
+		name: "Engine 0.2.2 (deprecated)",
 		features: EngineFeatures{
 			plain: true,
 			parallel: false,

@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
+	"math"
 
 	"github.com/0hq/chess"
 )
 
 func challenge_manual(engine Engine, play_as_color chess.Color, game *chess.Game) {
-	max_moves := 100
+	max_moves := math.MaxInt
 	// game.UseNotation(global_AlgebraicNotation)
 
 	out("Manual challenge started.")

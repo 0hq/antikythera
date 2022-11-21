@@ -34,18 +34,26 @@ import (
 // MTD(f)
 // MTD(bi)
 
-50 move rule.
-Insufficient material.
-Opening book analysis. (fuck)
-Lines via linked list.
 PSTO evaluation.
 	Tapered eval
 	Endgames
+50 move rule.
+Insufficient material.
+Opening book analysis. (fuck)
 Better move ordering.
    SEE
    History heuristic
+Internal iterative deepening
+Quiescence check escapes.
+Fix Zobrist castles and en passant
+Mate distance pruning
+Root PVS
+Aspiration window
+
 Parallel search via LAZY SMP
 
+Lines via linked list.
+Build PVS to benchmark.
 Investigate 0.3.1 beating 0.3.4 in performance. Probably just hashing slowdowns from static?
 Make total nodes trustable. Local tracking.
 
@@ -109,14 +117,14 @@ func main() {
 	out("Running main program.", "\n")
 	defer exit()
 
-	inner := new_engine_0dot4dot1()
-	engine := new_engine(&inner, 1, nil)
-	simple_tests(engine)
+	// inner := new_engine_0dot4dot1()
+	// engine := new_engine(&inner, 1, nil)
+	// simple_tests(engine)
 	// eigenmann_tests(engine)
 
 	// mini_performance_challenge()
 	// mini_test_transposition()
-	// mini_self_challenge()
+	mini_self_challenge()
 	// mini_challenge_stockfish()
 }
 
@@ -150,10 +158,10 @@ func mini_performance_challenge() {
 
 func mini_self_challenge() {
 	game := game_from_fen(CHESS_START_POSITION)
-	engine1 := new_engine_0dot4dot0()
-	wrapped1 := wrap_engine(&engine1, 5, game)
-	engine2 := new_engine_0dot4dot1()
-	wrapped2 := wrap_engine(&engine2, 5, game)
+	// engine1 := new_engine_0dot4dot1()
+	wrapped1 := wrap_engine(&engine_0dot3dot4, 5, game)
+	// engine2 := new_engine_0dot4dot1()
+	wrapped2 := wrap_engine(&engine_0dot2dot1, 5, game)
 	challenge_self(wrapped1, wrapped2, game)
 }
 
