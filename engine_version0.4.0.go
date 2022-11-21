@@ -24,26 +24,28 @@ type t_engine_0dot4dot0 struct {
 	zobristHistoryPly uint16 // draw detection ply
 }
 
-var engine_0dot4dot0 = t_engine_0dot4dot0{
-	EngineClass{
-		name: "Engine 0.3.4",
-		features: EngineFeatures{
-			plain: true,
-			parallel: false,
-			alphabeta: true,
-			iterative_deepening: true,
-			mtdf: false,
+func new_engine_0dot4dot0() t_engine_0dot4dot0 {
+	return t_engine_0dot4dot0{
+		EngineClass{
+			name: "Engine 0.4.0",
+			features: EngineFeatures{
+				plain: true,
+				parallel: false,
+				alphabeta: true,
+				iterative_deepening: true,
+				mtdf: false,
+			},
+			engine_config: EngineConfig{0}, // redundant
+			time_up: false,
 		},
-		engine_config: EngineConfig{0}, // redundant
-		time_up: false,
-	},
-	[MAX_DEPTH][2]*chess.Move{},
-	0,
-	TransTable[SearchEntry]{},
-	0,
-	[1024]uint64{},
-	0,
-} 
+		[MAX_DEPTH][2]*chess.Move{},
+		0,
+		TransTable[SearchEntry]{},
+		0,
+		[1024]uint64{},
+		0,
+	} 
+}
 
 func (e *t_engine_0dot4dot0) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
 	e.Reset_Time()
@@ -61,7 +63,7 @@ func (e *t_engine_0dot4dot0) Run_Engine(pos *chess.Position) (best *chess.Move, 
 		e.current_depth = depth 
 		
 		// temporary storage, in case time runs out
-		t_best, t_eval := e.minimax_id_ab_q_starter(pos, depth, pos.Turn() == chess.White)
+		t_best, t_eval := e.minimax_id_ab_q_starter(pos, depth, pos.Turn() == chess.White, -math.MaxInt, math.MaxInt)
 
 		if e.Check_Time_Up() {
 			break
@@ -90,30 +92,36 @@ func (e *t_engine_0dot4dot0) Run_Engine(pos *chess.Position) (best *chess.Move, 
 	return best, eval
 }
 
-func (e *t_engine_0dot4dot0) mtdf(position *chess.Position, depth int, max bool, first_guess int) (best *chess.Move, eval int) {
-	guess := first_guess
-	upper_bound := math.MaxInt
-	lower_bound := -math.MaxInt
+// func (e *t_engine_0dot4dot0) mtdf(position *chess.Position, depth int, max bool, first_guess int) (best *chess.Move, eval int) {
+// 	guess := first_guess
+// 	upper_bound := math.MaxInt
+// 	lower_bound := -math.MaxInt
 	
-	for lower_bound < upper_bound {
-		beta := lower_bound + 1
-		if guess > beta {
-			beta = guess
-		}
-		_, temp_score := e.minimax_id_ab_q_starter(position, depth, max)
+// 	for lower_bound < upper_bound {
+// 		beta := lower_bound + 1
+// 		if guess > beta {
+// 			beta = guess
+// 		}
+// 		_, temp_score := e.minimax_id_ab_q_starter(position, depth, max)
 
-		if temp_score < beta {
-			upper_bound = temp_score
-		} else {
-			lower_bound = temp_score
-		}
+// 		if temp_score < beta {
+// 			upper_bound = temp_score
+// 		} else {
+// 			lower_bound = temp_score
+// 		}
+// 	}
+
+// 	return best, eval
+// }
+
+
+func (e *t_engine_0dot4dot0) minimax_id_ab_q_starter(position *chess.Position, depth int, max bool, alpha int, beta int) (*chess.Move, int) {
+
+	explored++
+
+	if e.Check_Time_Up() {
+		return nil, 0
 	}
-
-	return best, eval
-}
-
-
-func (e *t_engine_0dot4dot0) minimax_id_ab_q_starter(position *chess.Position, depth int, max bool) (best *chess.Move, eval int) {
 
 	var hash uint64 = Zobrist.GenHash(position)
 	var entry *SearchEntry = e.tt.Probe(hash)
@@ -121,53 +129,75 @@ func (e *t_engine_0dot4dot0) minimax_id_ab_q_starter(position *chess.Position, d
 
 	if should_use {
 		hash_hits++
-		if tt_move == nil {
-			out(entry)
-			panic("Nil should use top move.")
-		}
 		return tt_move, tt_score
 	}
+	
+	var moves []scored_move = score_moves_v3(position.ValidMoves(), position.Board(), e.killer_moves[e.current_depth - depth], tt_move)
 
-	moves := score_moves_v2(position.ValidMoves(), position.Board(), e.killer_moves[e.current_depth - depth])
-	eval = -1 * math.MaxInt // functions as alpha
+	var tt_flag = AlphaFlag
+	var best_move *chess.Move = nil
+	var best_score = alpha
 
 	for i := 0; i < len(moves); i++ {
-
-		if e.Check_Time_Up() {
-			break
-		}
-
-		move := pick_move_v2(moves, position.Board(), i) // mutates move list, moves best move to front
-		score := -1 * e.minimax_id_ab_q_searcher(position.Update(move), 1, depth-1, !max, -math.MaxInt, -eval)
-
-		if PRINT_TOP_MOVES {
-			out("Top Level Move:", move, "Eval:", score,)
-		}
 
 		if DO_DEPTH_COUNT {
 			depth_count[e.current_depth - depth]++
 		}
 
-		if score > eval {
-			eval = score
-			best = move
+		var move *chess.Move = pick_move_v2(moves, position.Board(), i)
+		var updated_position = position.Update(move)
+
+		var updated_hash = Zobrist.GenHash(updated_position)
+		e.Add_Zobrist_History(updated_hash)
+
+		var score int = -1 * e.minimax_id_ab_q_searcher(position.Update(move), 1, depth-1, !max, -beta, -alpha)
+
+		e.Remove_Zobrist_History()
+
+		if PRINT_TOP_MOVES {
+			out("Top Level Move:", move, "Eval:", score,)
+		}
+
+		if score >= beta {
+
+			if !move.HasTag(chess.Capture) {
+				store_killer_move(&e.killer_moves[e.current_depth - depth], move)
+			}
+
+			tt_flag = BetaFlag
+			best_move = move
+
+			best_score = beta
+			break
+
+		}
+
+		if score > alpha {
+
+			alpha = score
+			best_score = score
+
+			tt_flag = ExactFlag
+			best_move = move
 
 			if PRINT_TOP_MOVES {
-				out("New best move:", move, "Eval:", score)
+				out("New best move:", move, "Eval:", alpha)
 			}
+
 		}
+
 	}
 
-	if !e.Check_Time_Up() && best != nil { // this is off
+	if !e.Check_Time_Up() {
 
 		var entry *SearchEntry = e.tt.Store(hash, depth, e.age)
-		entry.Set(hash, eval, best, 0, depth, ExactFlag, e.age)
+		entry.Set(hash, best_score, best_move, 0, depth, tt_flag, e.age)
 
 		hash_writes++
 
 	}
 	
-	return best, eval
+	return best_move, best_score
 }
 
 func (e *t_engine_0dot4dot0) minimax_id_ab_q_searcher(position *chess.Position, ply int, depth int, max bool, alpha int, beta int) (eval int) {
@@ -233,6 +263,7 @@ func (e *t_engine_0dot4dot0) minimax_id_ab_q_searcher(position *chess.Position, 
 
 			best_score = beta
 			break
+
 		}
 
         if score > alpha {

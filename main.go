@@ -106,13 +106,14 @@ func main() {
 	out("Running main program.", "\n")
 	defer exit()
 
-	// engine := new_engine(&engine_0dot3dot4, 1, nil)
-	// simple_tests(engine)
+	inner := new_engine_0dot4dot0()
+	engine := new_engine(&inner, 1, nil)
+	simple_tests(engine)
 	// eigenmann_tests(engine)
 
 	// mini_performance_challenge()
 	// mini_test_transposition()
-	mini_self_challenge()
+	// mini_self_challenge()
 	// mini_challenge_stockfish()
 }
 
@@ -133,7 +134,7 @@ func mini_test_transposition() {
 func mini_performance_challenge() {
 	out("Performance challenge!", "\n")
 	game := game_from_fen("r3kb1r/2p2ppp/p1p5/4P3/4n3/8/PPP3PP/RNB2RK1 b kq - 0 13")
-	first := engine_0dot3dot4_x()
+	first := new_engine_0dot3dot4()
 	engine1 := wrap_engine(&first, 10, game)
 	engine2 := wrap_engine(&engine_0dot3dot1, 10, game)
 	engine1.Run_Engine(game.Position())
@@ -146,9 +147,9 @@ func mini_performance_challenge() {
 
 func mini_self_challenge() {
 	game := game_from_fen(CHESS_START_POSITION)
-	engine1 := engine_0dot3dot4_x()
+	engine1 := new_engine_0dot3dot4()
 	wrapped1 := wrap_engine(&engine1, 5, game)
-	engine2 := engine_0dot3dot4_x()
+	engine2 := new_engine_0dot3dot4()
 	wrapped2 := wrap_engine(&engine2, 5, game)
 	challenge_self(wrapped1, wrapped2, game)
 }

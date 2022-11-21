@@ -24,7 +24,7 @@ type t_engine_0dot3dot4 struct {
 	zobristHistoryPly uint16 // draw detection ply
 }
 
-func engine_0dot3dot4_x() t_engine_0dot3dot4 {
+func new_engine_0dot3dot4() t_engine_0dot3dot4 {
 	var engine_0dot3dot4 = t_engine_0dot3dot4{
 		EngineClass{
 			name: "Engine 0.3.4",
@@ -48,7 +48,7 @@ func engine_0dot3dot4_x() t_engine_0dot3dot4 {
 	return engine_0dot3dot4
 }
 
-var engine_0dot3dot4 = engine_0dot3dot4_x()
+var engine_0dot3dot4 = new_engine_0dot3dot4()
 
 // t_engine_0dot3dot4{
 // 	EngineClass{
