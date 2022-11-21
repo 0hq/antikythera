@@ -9,12 +9,12 @@ import (
 
 /*
 
-Experimental engine version.
-Adds MTD(f)
+Experimental Engine
+Adds MTD(bi)
 
 */
 
-type t_engine_0dot4dot0 struct {
+type t_engine_0dot4dot1 struct {
 	EngineClass
 	killer_moves [MAX_DEPTH][2]*chess.Move
 	current_depth int
@@ -26,10 +26,10 @@ type t_engine_0dot4dot0 struct {
 	last_depth int // for score guess replacement
 }
 
-func new_engine_0dot4dot0() t_engine_0dot4dot0 {
-	return t_engine_0dot4dot0{
+func new_engine_0dot4dot1() t_engine_0dot4dot1 {
+	return t_engine_0dot4dot1{
 		EngineClass{
-			name: "Engine 0.4.0 (experimental: mdtf)",
+			name: "Engine 0.4.0 (experimental: mtdbi)",
 			features: EngineFeatures{
 				plain: true,
 				parallel: false,
@@ -51,7 +51,7 @@ func new_engine_0dot4dot0() t_engine_0dot4dot0 {
 	} 
 }
 
-func (e *t_engine_0dot4dot0) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
+func (e *t_engine_0dot4dot1) Run_Engine(pos *chess.Position) (best *chess.Move, eval int) {
 	e.Reset_Time()
 	e.Print_Start()
 	
@@ -67,7 +67,7 @@ func (e *t_engine_0dot4dot0) Run_Engine(pos *chess.Position) (best *chess.Move, 
 		e.current_depth = depth 
 		
 		// temporary storage, in case time runs out
-		t_best, t_eval := e.mtdf(pos, depth, pos.Turn() == chess.White, e.best_guess)
+		t_best, t_eval := e.mtdbi(pos, depth, pos.Turn() == chess.White)
 
 		if e.Check_Time_Up() {
 			break
@@ -102,24 +102,25 @@ func (e *t_engine_0dot4dot0) Run_Engine(pos *chess.Position) (best *chess.Move, 
 	return best, eval
 }
 
-func (e *t_engine_0dot4dot0) mtdf(position *chess.Position, depth int, max bool, first_guess int) (*chess.Move, int) {
-	var eval int = first_guess
-	upper_bound := 30000
-	lower_bound := -30000
+func (e *t_engine_0dot4dot1) mtdbi(position *chess.Position, depth int, max bool) (*chess.Move, int) {
+	var eval int
+	upper_bound := CHECKMATE_VALUE
+	lower_bound := -CHECKMATE_VALUE
 	
 	for lower_bound < upper_bound - EVAL_ROUGHNESS {
-		beta := lower_bound + 1
-		if eval > beta {
-			beta = eval
-		}
-		_, eval = e.minimax_id_ab_q_starter(position, depth, max, beta - 1, beta)
+		var gamma int = (lower_bound + upper_bound + 1) / 2
+		_, eval = e.minimax_id_ab_q_starter(position, depth, max, gamma, gamma + 1)
 
-		if eval < beta {
-			upper_bound = eval
-		} else {
+		if eval > gamma {
 			lower_bound = eval
+		} else {
+			upper_bound = eval
 		}
 	}
+	
+	// if eval == nil {
+	// 	panic()
+	// }
 
 	// get best move from transposition table
 	best_move := e.tt.Probe(Zobrist.GenHash(position)).Best
@@ -127,7 +128,8 @@ func (e *t_engine_0dot4dot0) mtdf(position *chess.Position, depth int, max bool,
 	return &best_move, eval
 }
 
-func (e *t_engine_0dot4dot0) minimax_id_ab_q_starter(position *chess.Position, depth int, max bool, alpha int, beta int) (*chess.Move, int) {
+
+func (e *t_engine_0dot4dot1) minimax_id_ab_q_starter(position *chess.Position, depth int, max bool, alpha int, beta int) (*chess.Move, int) {
 
 	explored++
 
@@ -212,7 +214,7 @@ func (e *t_engine_0dot4dot0) minimax_id_ab_q_starter(position *chess.Position, d
 	return best_move, best_score
 }
 
-func (e *t_engine_0dot4dot0) minimax_id_ab_q_searcher(position *chess.Position, ply int, depth int, max bool, alpha int, beta int) (eval int) {
+func (e *t_engine_0dot4dot1) minimax_id_ab_q_searcher(position *chess.Position, ply int, depth int, max bool, alpha int, beta int) (eval int) {
 	
 	explored++
 
@@ -301,7 +303,7 @@ func (e *t_engine_0dot4dot0) minimax_id_ab_q_searcher(position *chess.Position, 
 	return best_score
 }
 
-func (e *t_engine_0dot4dot0) quiescence_minimax_id_ab_q(position *chess.Position, depthcount int, max bool, alpha int, beta int) (eval int) {
+func (e *t_engine_0dot4dot1) quiescence_minimax_id_ab_q(position *chess.Position, depthcount int, max bool, alpha int, beta int) (eval int) {
 	explored++
 	q_explored++
 
@@ -349,17 +351,17 @@ func (e *t_engine_0dot4dot0) quiescence_minimax_id_ab_q(position *chess.Position
 }
 
 // adds to zobrist history, which is used for draw detection
-func (e *t_engine_0dot4dot0) Add_Zobrist_History(hash uint64) {
+func (e *t_engine_0dot4dot1) Add_Zobrist_History(hash uint64) {
 	e.zobristHistoryPly++
 	e.zobristHistory[e.zobristHistoryPly] = hash
 }
 
 // decrements ply counter, which means history will be overwritten
-func (e *t_engine_0dot4dot0) Remove_Zobrist_History() {
+func (e *t_engine_0dot4dot1) Remove_Zobrist_History() {
 	e.zobristHistoryPly--
 }
 
-func (e *t_engine_0dot4dot0) Is_Draw_By_Repition(hash uint64) bool {
+func (e *t_engine_0dot4dot1) Is_Draw_By_Repition(hash uint64) bool {
 	for i := uint16(0); i < e.zobristHistoryPly; i++ {
 		if e.zobristHistory[i] == hash {
 			return true
@@ -368,7 +370,7 @@ func (e *t_engine_0dot4dot0) Is_Draw_By_Repition(hash uint64) bool {
 	return false
 }
 
-func (e *t_engine_0dot4dot0) Reset(position *chess.Position) {
+func (e *t_engine_0dot4dot1) Reset(position *chess.Position) {
 	e.tt.Clear()
 	e.tt.Resize(64, 16)
 	e.time_up = false
@@ -381,14 +383,14 @@ func (e *t_engine_0dot4dot0) Reset(position *chess.Position) {
 }
 
 
-func (e *t_engine_0dot4dot0) Print_Iterative_Deepening(depth int, best *chess.Move, eval int) {
+func (e *t_engine_0dot4dot1) Print_Iterative_Deepening(depth int, best *chess.Move, eval int) {
 	if QUIET_MODE {
 		return
 	}
 	out("Depth:", depth, "Nodes:", explored, "Best move:", best, "Eval:", eval, "Time:", time.Since(e.start_time), "Hash hits", hash_hits, "writes", hash_writes, "reads", hash_reads, "collisions", hash_collisions)	
 }
 
-func (e *t_engine_0dot4dot0) Print_Start() {
+func (e *t_engine_0dot4dot1) Print_Start() {
 	if QUIET_MODE {
 		return
 	}
@@ -398,7 +400,7 @@ func (e *t_engine_0dot4dot0) Print_Start() {
 	out("Guess", e.best_guess, "from", e.last_depth)
 }
 
-func (e *t_engine_0dot4dot0) Print_End(best *chess.Move, eval int) {
+func (e *t_engine_0dot4dot1) Print_End(best *chess.Move, eval int) {
 	if QUIET_MODE {
 		return
 	}

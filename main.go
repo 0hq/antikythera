@@ -31,8 +31,11 @@ import (
 // Transposition tables.
 // TT Move ordering.
 // Draw detection
+// MTD(f)
+// MTD(bi)
 
-MTD(f)
+50 move rule.
+Insufficient material.
 Opening book analysis. (fuck)
 Lines via linked list.
 PSTO evaluation.
@@ -106,7 +109,7 @@ func main() {
 	out("Running main program.", "\n")
 	defer exit()
 
-	inner := new_engine_0dot4dot0()
+	inner := new_engine_0dot4dot1()
 	engine := new_engine(&inner, 1, nil)
 	simple_tests(engine)
 	// eigenmann_tests(engine)
@@ -147,9 +150,9 @@ func mini_performance_challenge() {
 
 func mini_self_challenge() {
 	game := game_from_fen(CHESS_START_POSITION)
-	engine1 := new_engine_0dot3dot4()
+	engine1 := new_engine_0dot4dot0()
 	wrapped1 := wrap_engine(&engine1, 5, game)
-	engine2 := new_engine_0dot3dot4()
+	engine2 := new_engine_0dot4dot1()
 	wrapped2 := wrap_engine(&engine2, 5, game)
 	challenge_self(wrapped1, wrapped2, game)
 }

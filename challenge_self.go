@@ -1,9 +1,13 @@
 package main
 
-import "github.com/0hq/chess"
+import (
+	"math"
+
+	"github.com/0hq/chess"
+)
 
 func challenge_self(white Engine, black Engine, game *chess.Game) {
-	max_moves := 100
+	max_moves := math.MaxInt
 	// game.UseNotation(global_AlgebraicNotation)
 
 	out("Self challenge started.")

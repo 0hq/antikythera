@@ -50,6 +50,7 @@ const TT_MOVE_VALUE int = MVV_LVA_OFFSET + TT_MOVE_BONUS;
 const KILLER_ONE_VALUE int = MVV_LVA_OFFSET - KILLER_VALUE 
 const KILLER_TWO_VALUE int = MVV_LVA_OFFSET - KILLER_VALUE * 2
 const NORMAL_MOVE_VALUE int = MVV_LVA_OFFSET - KILLER_VALUE * 2 - 100
+const EVAL_ROUGHNESS int = 13
 
 /*
 
@@ -63,6 +64,7 @@ const DO_Q_MOVE_SORTING bool = true
 const MAX_DEPTH int = 30
 const DO_Q_MOVE_PRUNING bool = true 
 const DO_DEPTH_COUNT bool = true // disable for performance
+
 
 /*
 
