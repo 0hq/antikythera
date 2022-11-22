@@ -34,6 +34,7 @@ import (
 // MTD(f)
 // MTD(bi)
 
+Fix checkmate depth.
 Aspiration search
 PSTO evaluation.
 	Tapered eval
@@ -117,8 +118,8 @@ func main() {
 	out("Running main program.", "\n")
 	defer exit()
 
-	// inner := new_engine_0dot4dot1()
-	// engine := new_engine(&inner, 1, nil)
+	// inner := new_engine_0dot4dot0()
+	// engine := new_engine(&inner, 10, nil)
 	// simple_tests(engine)
 	// eigenmann_tests(engine)
 
@@ -145,10 +146,11 @@ func mini_test_transposition() {
 
 func mini_performance_challenge() {
 	out("Performance challenge!", "\n")
-	game := game_from_fen("r3kb1r/2p2ppp/p1p5/4P3/4n3/8/PPP3PP/RNB2RK1 b kq - 0 13")
-	first := new_engine_0dot3dot4()
-	engine1 := wrap_engine(&first, 10, game)
-	engine2 := wrap_engine(&engine_0dot3dot1, 10, game)
+	game := game_from_fen("r1bqk2r/pp2bp1p/2nppnpB/8/4P3/2NB1N2/PPP2PPP/R2Q1RK1 b kq - 5 9")
+	first := new_engine_0dot4dot1()
+	engine1 := wrap_engine(&first, 20, game)
+	second := new_engine_0dot3dot4()
+	engine2 := wrap_engine(&second, 20, game)
 	engine1.Run_Engine(game.Position())
 	engine1.Run_Engine(game.Position())
 
@@ -158,17 +160,17 @@ func mini_performance_challenge() {
 }
 
 func mini_self_challenge() {
-	game := game_from_fen(CHESS_START_POSITION)
-	// engine1 := new_engine_0dot4dot1()
-	wrapped1 := wrap_engine(&engine_0dot3dot4, 5, game)
-	// engine2 := new_engine_0dot4dot1()
-	wrapped2 := wrap_engine(&engine_0dot2dot1, 5, game)
+	game := game_from_fen("8/3K4/8/8/8/8/4k3/1r3q2 b - - 72 186")
+	engine1 := new_engine_0dot4dot1()
+	wrapped1 := wrap_engine(&engine1, 10, game)
+	engine2 := new_engine_0dot3dot4()
+	wrapped2 := wrap_engine(&engine2, 10, game)
 	challenge_self(wrapped1, wrapped2, game)
 }
 
 func mini_challenge_manual() {
 	game := game_from_fen(CHESS_START_POSITION)
-	inner := new_engine_0dot4dot1()
+	inner := new_engine_0dot3dot4()
 	engine := wrap_engine(&inner, 15, game)
 	challenge_manual(engine, chess.Black, game)
 }
