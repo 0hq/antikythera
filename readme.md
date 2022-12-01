@@ -12,7 +12,7 @@ If you want to learn more about how this engine works, go to [chessengines.org](
 
 ---
 
-Features + a tiny explainer for each.
+**Features + a tiny explainer for each.**
 
 Evaluation function - Are we winning or losing in a certain position? Count the number of pieces each person has and how much each one is worth.  
 
