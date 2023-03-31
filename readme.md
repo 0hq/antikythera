@@ -2,11 +2,11 @@
 
 > A parrallelized Chess engine written in Golang.
 
-This engine is a rebuild of the old engine I built this summer, as I was unhappy with the strength of the previous engine (considering it was built in 2.5 weeks). I've already massively increased the power of the engine through some bugfixing / rewriting.
+This engine is mainly written with educational intent: I start with an engine that is as simple as possible and add more complex features one-by-one. I chose to not focus on building a game representation / move generator from scratch as it distracts from the exciting part: watching simple algorithms translate to increased intelligence.
 
 ---
 
-Here's a quick overview if you want to read the engine code:
+Here's a quick overview to read the engine code:
 
 The files that begin with "engine\_" denote different engine versions, each with different levels of sophistication. In optimizing the engine, I've started with the simplest possible architecture to gradually improve the system. The parallelized parts are somewhat complex to wrap your head around if you don't understand Goroutines and the way Go works with concurrent operations. A good way to think about is that the engine runs all the different parts at once, then pulls them back in one by one as soon as they finish.
 
@@ -14,7 +14,7 @@ If you want to learn more about how this engine works, go to [chessengines.org](
 
 ---
 
-**Features + a tiny explainer for each.**
+**Features + a over-simplified explainer for each.**
 
 Evaluation function - Are we winning or losing in a certain position? Count the number of pieces each person has and how much each one is worth.  
 
